@@ -5,48 +5,36 @@ import { MuiThemeProvider } from "@material-ui/core/styles";
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-    const getInitialMode = () => {
-        if (typeof localStorage === "undefined") return true;
-        const isReturningUser = "dark" in localStorage;
-        const savedMode = JSON.parse(localStorage.getItem("dark"));
-        const userPrefersDark = getPrefColorScheme();
-        if (isReturningUser) {
-            return savedMode;
-        }
-        return !!userPrefersDark;
+    const getPrefColorScheme = () => {
+        if (!window.matchMedia) return false;
+        return window.matchMedia("(prefers-color-scheme: dark)").matches;
     };
 
-    const getPrefColorScheme = () => {
-        if (!window.matchMedia) return;
+    // Force dark mode by default, fallback to user preference if needed
+    const getInitialMode = () => {
+        if (typeof localStorage === "undefined") return true;
+        const isReturningUser = localStorage.getItem("dark") !== null;
+        const savedMode = JSON.parse(localStorage.getItem("dark"));
 
-        return window.matchMedia("(prefers-color-scheme: dark)").matches;
+        if (isReturningUser) return savedMode;
+        return getPrefColorScheme();
     };
 
     const [theme, setTheme] = useState(getInitialMode() ? "dark" : "light");
 
     const toggleTheme = () => {
-        if (theme === "light") {
-            setTheme("dark");
-        } else {
-            setTheme("light");
-        }
+        setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
     };
 
     useEffect(() => {
-        typeof localStorage !== "undefined" &&
+        if (typeof localStorage !== "undefined") {
             localStorage.setItem("dark", JSON.stringify(theme === "dark"));
+        }
     }, [theme]);
 
     return (
-        <ThemeContext.Provider
-            value={{
-                theme,
-                toggleTheme,
-            }}
-        >
-            <MuiThemeProvider
-                theme={theme === "light" ? LightTheme : DarkTheme}
-            >
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+            <MuiThemeProvider theme={theme === "light" ? LightTheme : DarkTheme}>
                 {children}
             </MuiThemeProvider>
         </ThemeContext.Provider>
