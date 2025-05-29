@@ -8,6 +8,7 @@ import { ThemeToggle } from '../components/theme/ThemeToggle';
 import { FooterText } from '../components/footer/FooterText';
 import { SocialIcons } from '../components/content/SocialIcons';
 import { SpeedDials } from '../components/speedDial/SpeedDial';
+import NOGProjectSection from '../components/nog/NOGProjectSection';
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -19,7 +20,6 @@ const useStyles = makeStyles(() => ({
 
 export const Home = () => {
   const classes = useStyles();
-
   return (
     <>
       <div className={classes.root}>
@@ -35,6 +35,9 @@ export const Home = () => {
         </Hidden>
         <FooterText />
       </div>
+      
+      {/* Nouvelle section N.O.G PROJECT */}
+      <NOGProjectSection />
     </>
   );
 };
