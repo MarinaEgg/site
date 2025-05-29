@@ -39,15 +39,28 @@ void main() {
   #include <clipping_planes_fragment>
 
   vec3 color = vec3(vUv * (0.2 - 2.0 * noise), 1.0);
+  vec3 finalColors = vec3(color.b * 1.5, color.r, color.r); // color.r est vUv.x * (0.2 - 2.0 * noise)
 
-  // Jaune vif sans zones sombres
-  vec3 finalColors = vec3(1.0, 0.9, 0.2) + noise * 0.3;
-  finalColors = clamp(finalColors, 0.0, 1.0);
-
-  vec4 diffuseColor = vec4(finalColors, 1.0);
+  // MODIFICATION POUR L'EFFET JAUNE :
+  // Calcul original des arguments pour la fonction cosinus
+  vec3 cos_args = finalColors * noise * 3.0;
+  
+  // Calcul des valeurs cosinus originales
+  vec3 original_cos_values = cos(cos_args);
+  
+  // Ré-mappage des composantes R et G de [-1, 1] vers [0, 1]
+  float r_component = original_cos_values.r * 0.5 + 0.5; 
+  float g_component = original_cos_values.g * 0.5 + 0.5; 
+  
+  // Création de la couleur jaune animée (R, G, B=0)
+  vec3 yellow_animated_color = vec3(r_component, g_component, 0.0); 
+  
+  // Application à diffuseColor, en conservant l'alpha à 1.0
+  vec4 diffuseColor = vec4(yellow_animated_color, 1.0);
+  // FIN DE LA MODIFICATION
 
   ReflectedLight reflectedLight = ReflectedLight(vec3(0.0), vec3(0.0), vec3(0.0), vec3(0.0));
-  vec3 totalEmissiveRadiance = emissive + finalColors * 0.2;
+  vec3 totalEmissiveRadiance = emissive;
 
   #include <logdepthbuf_fragment>
   #include <map_fragment>
@@ -58,13 +71,13 @@ void main() {
   #include <normal_fragment_begin>
   #include <normal_fragment_maps>
   #include <emissivemap_fragment>
-  #include <lights_phong_fragment>
+  #include <lights_phong_fragment> // diffuseColor est utilisé ici
   #include <lights_fragment_begin>
   #include <lights_fragment_maps>
   #include <lights_fragment_end>
   #include <aomap_fragment>
 
-  vec3 outgoingLight = reflectedLight.directDiffuse + reflectedLight.indirectDiffuse + reflectedLight.directSpecular + reflectedLight.indirectSpecular + totalEmissiveRadiance + finalColors * 0.8;
+  vec3 outgoingLight = reflectedLight.directDiffuse + reflectedLight.indirectDiffuse + reflectedLight.directSpecular + reflectedLight.indirectSpecular + totalEmissiveRadiance;
 
   #include <envmap_fragment>
   #include <premultiplied_alpha_fragment>
@@ -72,5 +85,5 @@ void main() {
   #include <encodings_fragment>
   #include <fog_fragment>
 
-  gl_FragColor = vec4(outgoingLight, diffuseColor.a);
-}`;
+  gl_FragColor = vec4(outgoingLight, diffuseColor.a); // diffuseColor.a est bien 1.0 ici
+}
