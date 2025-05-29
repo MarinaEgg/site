@@ -38,14 +38,14 @@ varying float noise;
 void main() {
   #include <clipping_planes_fragment>
 
-  vec3 color = vec3(vUv * (0.2 - 2.0 * noise), 1.0);
-
-  // Conserver la logique d'origine mais adapter les poids pour un jaune naturel
-  vec3 finalColors = vec3(color.r * 1.2 + color.g * 0.8, color.r * 1.5, color.b * 0.1);
+  vec3 baseYellow = vec3(1.0, 0.85, 0.2); // Jaune chaud
+  vec3 animColor = vec3(vUv * (0.2 - 2.0 * noise), 1.0);
+  
+  // Combine animation with base yellow, modulate pour garder dynamique
+  vec3 finalColors = baseYellow * cos(animColor * noise * 3.0);
   finalColors = clamp(finalColors, 0.0, 1.0);
-
-  vec4 diffuseColor = vec4(cos(finalColors * noise * 3.0), 1.0);
-
+  
+  vec4 diffuseColor = vec4(finalColors, 1.0);
   ReflectedLight reflectedLight = ReflectedLight(vec3(0.0), vec3(0.0), vec3(0.0), vec3(0.0));
   vec3 totalEmissiveRadiance = emissive;
 
@@ -73,4 +73,5 @@ void main() {
   #include <fog_fragment>
 
   gl_FragColor = vec4(outgoingLight, diffuseColor.a);
-}`;
+}
+`;
