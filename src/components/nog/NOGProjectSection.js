@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { useInViewport } from '../../hooks/useInViewport';
+import { useInViewport } from '../../hooks/useInViewport'; // Changement ici : utilisation des accolades pour l'import nommé
 import './NOGProjectSection.css';
 
 const NOGProjectSection = () => {
