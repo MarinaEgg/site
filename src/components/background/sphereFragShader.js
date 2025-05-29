@@ -37,12 +37,21 @@ varying float noise;
 
 void main() {
   #include <clipping_planes_fragment>
-
+  
   vec3 color = vec3(vUv * (0.2 - 2.0 * noise), 1.0);
-  vec3 finalColors = vec3(1.0, 0.84, 0.0);
+  
+  // Couleur jaune avec variations basées sur le bruit
+  float intensity = (color.r + color.g + color.b) / 3.0;
+  vec3 finalColors = vec3(
+    1.0 * (0.8 + intensity * 0.4),     // Rouge : jaune de base + variations
+    0.84 * (0.8 + intensity * 0.4),    // Vert : jaune de base + variations
+    0.1 * intensity                     // Bleu : très faible pour garder le jaune
+  );
+  
   vec4 diffuseColor = vec4(cos(finalColors * noise * 3.0), 1.0);
   ReflectedLight reflectedLight = ReflectedLight(vec3(0.0), vec3(0.0), vec3(0.0), vec3(0.0));
   vec3 totalEmissiveRadiance = emissive;
+}
 
   #include <logdepthbuf_fragment>
   #include <map_fragment>
