@@ -63,10 +63,11 @@ void main() {
   // Calcul de l'intensité basée sur le bruit (inversé pour avoir blanc sur les bords)
   float noiseIntensity = abs(noise); // Valeur absolue du bruit
   
-  // Les zones avec plus de bruit (bords/pointes) deviennent blanches
-  float whiteFactor = smoothstep(0.3, 0.8, noiseIntensity);
+  // Inverser : les zones avec MOINS de bruit restent jaunes (centre)
+  // Les zones avec PLUS de bruit deviennent blanches (pointes/bords)
+  float whiteFactor = smoothstep(0.1, 0.5, noiseIntensity);
   
-  // Mélange : jaune au centre (bruit faible) vers blanc sur les bords (bruit fort)
+  // Mélange : jaune foncé au centre (bruit faible) vers blanc sur les pointes (bruit fort)
   vec3 finalColor = mix(baseYellow, vec3(1.0, 1.0, 1.0), whiteFactor);
   
   // Appliquer la couleur à la lumière sortante
