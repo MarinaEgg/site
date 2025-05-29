@@ -1,6 +1,5 @@
 export default `
 #define PHONG
-
 uniform vec3 diffuse;
 uniform vec3 emissive;
 uniform vec3 specular;
@@ -10,7 +9,6 @@ uniform float time;
 varying vec2 vUv;
 varying vec3 newPosition;
 varying float noise;
-
 #include <common>
 #include <packing>
 #include <color_pars_fragment>
@@ -37,23 +35,36 @@ varying float noise;
 
 void main() {
   #include <clipping_planes_fragment>
-
-  vec3 baseYellow = vec3(1.0, 0.843, 0.0); // #FFD700 exact
-  vec3 animColor = vec3(vUv * (0.2 - 2.0 * noise), 1.0);
-
-  // Intensité variable avec bruit
-  vec3 yellowTint = baseYellow * (0.7 + 0.3 * noise);
-
-  // Dégradé blanc sur les pointes (zones lumineuses)
-  float brightness = smoothstep(0.8, 1.0, length(animColor));
-  vec3 finalColor = mix(yellowTint, vec3(1.0), brightness);
-
+  
+  // Couleur de base jaune dorée
+  vec3 baseYellow = vec3(1.0, 0.843, 0.0); // #FFD700
+  
+  // Calcul de l'intensité basée sur le bruit et la position
+  float noiseIntensity = 0.5 + 0.5 * noise; // Normalisation du bruit entre 0.5 et 1.0
+  
+  // Facteur de hauteur/position pour le dégradé (ajustez selon votre géométrie)
+  float heightFactor = smoothstep(-1.0, 1.0, newPosition.y);
+  
+  // Combine bruit et position pour créer des zones de transition
+  float transitionFactor = noiseIntensity * (0.3 + 0.7 * heightFactor);
+  
+  // Création du dégradé jaune vers blanc
+  // Les zones avec plus de bruit et plus hautes deviennent blanches
+  float whiteFactor = smoothstep(0.6, 0.9, transitionFactor);
+  
+  // Mélange entre jaune de base et blanc
+  vec3 finalColor = mix(baseYellow, vec3(1.0, 1.0, 1.0), whiteFactor);
+  
+  // Ajout d'une légère variation de luminosité pour plus de dynamisme
+  finalColor *= (0.9 + 0.1 * sin(time * 2.0 + noise * 10.0));
+  
+  // S'assurer que les valeurs restent dans la plage valide
   finalColor = clamp(finalColor, 0.0, 1.0);
-  vec4 diffuseColor = vec4(finalColor, 1.0);
-
+  
+  vec4 diffuseColor = vec4(finalColor, opacity);
   ReflectedLight reflectedLight = ReflectedLight(vec3(0.0), vec3(0.0), vec3(0.0), vec3(0.0));
   vec3 totalEmissiveRadiance = emissive;
-
+  
   #include <logdepthbuf_fragment>
   #include <map_fragment>
   #include <color_fragment>
@@ -68,15 +79,15 @@ void main() {
   #include <lights_fragment_maps>
   #include <lights_fragment_end>
   #include <aomap_fragment>
-
+  
   vec3 outgoingLight = reflectedLight.directDiffuse + reflectedLight.indirectDiffuse + reflectedLight.directSpecular + reflectedLight.indirectSpecular + totalEmissiveRadiance;
-
+  
   #include <envmap_fragment>
   #include <premultiplied_alpha_fragment>
   #include <tonemapping_fragment>
   #include <encodings_fragment>
   #include <fog_fragment>
-
+  
   gl_FragColor = vec4(outgoingLight, diffuseColor.a);
 }
 `;
