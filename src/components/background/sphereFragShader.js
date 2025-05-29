@@ -65,7 +65,7 @@ void main() {
   
   // Inverser : les zones avec MOINS de bruit restent jaunes (centre)
   // Les zones avec PLUS de bruit deviennent blanches (pointes/bords)
-  float whiteFactor = smoothstep(0.02, 0.2, noiseIntensity);
+  float whiteFactor = smoothstep(0.1, 0.4, noiseIntensity);
   
   // Mélange : blanc au centre (bruit faible) vers jaune foncé sur les pointes (bruit fort)
   vec3 finalColor = mix(vec3(1.0, 1.0, 1.0), baseYellow, whiteFactor);
@@ -78,6 +78,10 @@ void main() {
   #include <tonemapping_fragment>
   #include <encodings_fragment>
   #include <fog_fragment>
+  
+  gl_FragColor = vec4(outgoingLight, diffuseColor.a);
+}
+`;
   
   gl_FragColor = vec4(outgoingLight, diffuseColor.a);
 }
