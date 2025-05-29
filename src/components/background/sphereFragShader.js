@@ -38,9 +38,10 @@ varying float noise;
 void main() {
   #include <clipping_planes_fragment>
 
-  vec3 color = vec3(vUv * (0.2 - 2.0 * noise), 1.0);
-  // Pour une teinte jaune, on maximise R et G, on minimise B
-  vec3 finalColors = vec3(1.5 * color.r + 0.5 * noise, 1.5 * color.g + 0.5 * noise, 0.1 * color.b);
+  // Teinte jaune pure animée légèrement avec le bruit
+  vec3 baseYellow = vec3(1.0, 1.0, 0.0);
+  vec3 finalColors = baseYellow + vec3(0.2 * noise);
+  finalColors = clamp(finalColors, 0.0, 1.0);
   vec4 diffuseColor = vec4(finalColors, 1.0);
 
   ReflectedLight reflectedLight = ReflectedLight(vec3(0.0), vec3(0.0), vec3(0.0), vec3(0.0));
@@ -71,4 +72,3 @@ void main() {
 
   gl_FragColor = vec4(outgoingLight, diffuseColor.a);
 }`;
-
