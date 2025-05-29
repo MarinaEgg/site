@@ -1,9 +1,10 @@
-import React from 'react';
-import useInViewport from '../../hooks/useInViewport';
+import React, { useRef } from 'react';
+import { useInViewport } from '../../hooks/useInViewport';
 import './NOGProjectSection.css';
 
 const NOGProjectSection = () => {
-  const [sectionRef, isVisible] = useInViewport({ threshold: 0.3 });
+  const sectionRef = useRef(null);
+  const isVisible = useInViewport(sectionRef, false, { threshold: 0.3 });
 
   return (
     <section 
