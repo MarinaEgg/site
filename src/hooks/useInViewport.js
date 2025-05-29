@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const useInViewport = (
+const useInViewport = (
     elementRef,
     unobserveOnIntersect,
     options = {}
@@ -31,3 +31,5 @@ export const useInViewport = (
 
     return intersect;
 };
+
+export default useInViewport;
