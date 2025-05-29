@@ -61,13 +61,16 @@ void main() {
   // S'assurer que les valeurs restent dans la plage valide
   finalColor = clamp(finalColor, 0.0, 1.0);
   
-  vec4 diffuseColor = vec4(finalColor, opacity);
+  vec4 diffuseColor = vec4(diffuse, opacity);
   ReflectedLight reflectedLight = ReflectedLight(vec3(0.0), vec3(0.0), vec3(0.0), vec3(0.0));
   vec3 totalEmissiveRadiance = emissive;
   
   #include <logdepthbuf_fragment>
   #include <map_fragment>
   #include <color_fragment>
+  
+  // Appliquer notre couleur personnalisée après les calculs de base
+  diffuseColor.rgb *= finalColor;
   #include <alphamap_fragment>
   #include <alphatest_fragment>
   #include <specularmap_fragment>
