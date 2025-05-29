@@ -38,10 +38,12 @@ varying float noise;
 void main() {
   #include <clipping_planes_fragment>
 
-  // Teinte jaune pure animée légèrement avec le bruit
-  vec3 baseYellow = vec3(1.0, 1.0, 0.0);
-  vec3 finalColors = baseYellow + vec3(0.2 * noise);
+  vec3 color = vec3(vUv * (0.2 - 2.0 * noise), 1.0);
+
+  // Jaune équilibré et animé sans perdre le relief
+  vec3 finalColors = vec3(color.r * 1.4 + noise * 0.2, color.r * 1.2 + noise * 0.2, color.r * 0.1);
   finalColors = clamp(finalColors, 0.0, 1.0);
+
   vec4 diffuseColor = vec4(finalColors, 1.0);
 
   ReflectedLight reflectedLight = ReflectedLight(vec3(0.0), vec3(0.0), vec3(0.0), vec3(0.0));
@@ -62,7 +64,7 @@ void main() {
   #include <lights_fragment_end>
   #include <aomap_fragment>
 
-  vec3 outgoingLight = reflectedLight.directDiffuse + reflectedLight.indirectDiffuse + reflectedLight.directSpecular + reflectedLight.indirectSpecular + totalEmissiveRadiance + finalColors;
+  vec3 outgoingLight = reflectedLight.directDiffuse + reflectedLight.indirectDiffuse + reflectedLight.directSpecular + reflectedLight.indirectSpecular + totalEmissiveRadiance + finalColors * 0.5;
 
   #include <envmap_fragment>
   #include <premultiplied_alpha_fragment>
