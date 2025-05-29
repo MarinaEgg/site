@@ -1,33 +1,9 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React from 'react';
+import useInViewport from '../../hooks/useInViewport';
 import './NOGProjectSection.css';
 
 const NOGProjectSection = () => {
-  const sectionRef = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      {
-        threshold: 0.3, // Déclenche quand 30% de la section est visible
-        rootMargin: '-50px 0px', // Ajuste le moment du déclenchement
-      }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
-  }, []);
+  const [sectionRef, isVisible] = useInViewport({ threshold: 0.3 });
 
   return (
     <section 
