@@ -39,9 +39,15 @@ void main() {
   #include <clipping_planes_fragment>
 
   vec3 color = vec3(vUv * (0.2 - 2.0 * noise), 1.0);
-  // Conversion équilibrée vers le jaune : priorité au rouge + vert
-  vec3 finalColors = vec3(color.r * 1.4 + color.g * 0.6, color.r * 1.2 + color.g * 0.8, color.b * 0.1);
+
+  // Teinte jaune basée sur l'équilibre R+G, désaturation B
+  float r = color.b * 1.2 + noise * 0.4;
+  float g = color.r * 1.2 + noise * 0.4;
+  float b = color.r * 0.2; // réduction du bleu pour du jaune
+
+  vec3 finalColors = vec3(r, g, b);
   vec4 diffuseColor = vec4(cos(finalColors * noise * 3.0), 1.0);
+
   ReflectedLight reflectedLight = ReflectedLight(vec3(0.0), vec3(0.0), vec3(0.0), vec3(0.0));
   vec3 totalEmissiveRadiance = emissive;
 
