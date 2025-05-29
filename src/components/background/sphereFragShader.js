@@ -60,13 +60,13 @@ void main() {
   // Couleur de base jaune dorée
   vec3 baseYellow = vec3(1.0, 0.843, 0.0); // #FFD700
   
-  // Calcul de l'intensité basée sur le bruit
-  float noiseIntensity = 0.5 + 0.5 * noise;
+  // Calcul de l'intensité basée sur le bruit (inversé pour avoir blanc sur les bords)
+  float noiseIntensity = abs(noise); // Valeur absolue du bruit
   
-  // Facteur pour les pointes blanches basé sur le bruit
-  float whiteFactor = smoothstep(0.7, 1.0, noiseIntensity);
+  // Les zones avec plus de bruit (bords/pointes) deviennent blanches
+  float whiteFactor = smoothstep(0.3, 0.8, noiseIntensity);
   
-  // Mélange entre jaune de base et blanc pour les pointes
+  // Mélange : jaune au centre (bruit faible) vers blanc sur les bords (bruit fort)
   vec3 finalColor = mix(baseYellow, vec3(1.0, 1.0, 1.0), whiteFactor);
   
   // Appliquer la couleur à la lumière sortante
