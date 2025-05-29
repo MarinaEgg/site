@@ -39,26 +39,9 @@ void main() {
   #include <clipping_planes_fragment>
 
   vec3 color = vec3(vUv * (0.2 - 2.0 * noise), 1.0);
-  vec3 finalColors = vec3(color.b * 1.5, color.r, color.r); // color.r est vUv.x * (0.2 - 2.0 * noise)
-
-  // MODIFICATION POUR L'EFFET JAUNE :
-  // Calcul original des arguments pour la fonction cosinus
-  vec3 cos_args = finalColors * noise * 3.0;
-  
-  // Calcul des valeurs cosinus originales
-  vec3 original_cos_values = cos(cos_args);
-  
-  // Ré-mappage des composantes R et G de [-1, 1] vers [0, 1]
-  float r_component = original_cos_values.r * 0.5 + 0.5; 
-  float g_component = original_cos_values.g * 0.5 + 0.5; 
-  
-  // Création de la couleur jaune animée (R, G, B=0)
-  vec3 yellow_animated_color = vec3(r_component, g_component, 0.0); 
-  
-  // Application à diffuseColor, en conservant l'alpha à 1.0
-  vec4 diffuseColor = vec4(yellow_animated_color, 1.0);
-  // FIN DE LA MODIFICATION
-
+  // Remplacement du cyan par un jaune équilibré : priorité au rouge et vert, très peu de bleu
+  vec3 finalColors = vec3(color.r * 1.5, color.g * 1.2, color.b * 0.2);
+  vec4 diffuseColor = vec4(cos(finalColors * noise * 3.0), 1.0);
   ReflectedLight reflectedLight = ReflectedLight(vec3(0.0), vec3(0.0), vec3(0.0), vec3(0.0));
   vec3 totalEmissiveRadiance = emissive;
 
@@ -71,7 +54,7 @@ void main() {
   #include <normal_fragment_begin>
   #include <normal_fragment_maps>
   #include <emissivemap_fragment>
-  #include <lights_phong_fragment> // diffuseColor est utilisé ici
+  #include <lights_phong_fragment>
   #include <lights_fragment_begin>
   #include <lights_fragment_maps>
   #include <lights_fragment_end>
@@ -85,5 +68,5 @@ void main() {
   #include <encodings_fragment>
   #include <fog_fragment>
 
-  gl_FragColor = vec4(outgoingLight, diffuseColor.a); // diffuseColor.a est bien 1.0 ici
-}
+  gl_FragColor = vec4(outgoingLight, diffuseColor.a);
+}`;
