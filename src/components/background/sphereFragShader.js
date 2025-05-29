@@ -67,8 +67,8 @@ void main() {
   // Les zones avec PLUS de bruit deviennent blanches (pointes/bords)
   float whiteFactor = smoothstep(0.05, 0.3, noiseIntensity);
   
-  // Mélange : jaune foncé au centre (bruit faible) vers blanc sur les pointes (bruit fort)
-  vec3 finalColor = mix(baseYellow, vec3(1.0, 1.0, 1.0), whiteFactor);
+  // Mélange : blanc au centre (bruit faible) vers jaune foncé sur les pointes (bruit fort)
+  vec3 finalColor = mix(vec3(1.0, 1.0, 1.0), baseYellow, whiteFactor);
   
   // Appliquer la couleur à la lumière sortante
   outgoingLight *= finalColor;
