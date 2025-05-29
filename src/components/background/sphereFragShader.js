@@ -38,17 +38,18 @@ varying float noise;
 void main() {
   #include <clipping_planes_fragment>
 
-  vec3 baseYellow = vec3(1.0, 0.843, 0.0);
+  vec3 baseYellow = vec3(1.0, 0.843, 0.0); // #FFD700 exact
   vec3 animColor = vec3(vUv * (0.2 - 2.0 * noise), 1.0);
-  vec3 dynamicYellow = baseYellow * cos(animColor * noise * 3.0);
 
-  float whiteFactor = smoothstep(0.95, 1.0, length(animColor));
-  // Plus de jaune (0.8) et moins de blanc (0.2) dans le mix final
-  vec3 finalColors = mix(dynamicYellow, vec3(1.0), whiteFactor * 0.2) * 0.8 + dynamicYellow * 0.2;
+  // Intensité variable avec bruit
+  vec3 yellowTint = baseYellow * (0.7 + 0.3 * noise);
 
-  finalColors = clamp(finalColors, 0.0, 1.0);
+  // Dégradé blanc sur les pointes (zones lumineuses)
+  float brightness = smoothstep(0.8, 1.0, length(animColor));
+  vec3 finalColor = mix(yellowTint, vec3(1.0), brightness);
 
-  vec4 diffuseColor = vec4(finalColors, 1.0);
+  finalColor = clamp(finalColor, 0.0, 1.0);
+  vec4 diffuseColor = vec4(finalColor, 1.0);
 
   ReflectedLight reflectedLight = ReflectedLight(vec3(0.0), vec3(0.0), vec3(0.0), vec3(0.0));
   vec3 totalEmissiveRadiance = emissive;
