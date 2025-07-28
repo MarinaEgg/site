@@ -38,13 +38,15 @@ const useStyles = makeStyles((theme) => ({
     },
     buttonContainer: {
         display: 'flex',
-        gap: '1rem',
+        gap: '2rem',
+        alignItems: 'center',
         flexWrap: 'wrap',
         justifyContent: 'center',
         marginTop: '2rem',
         "@media (max-width: 768px)": {
             flexDirection: 'column',
             alignItems: 'center',
+            gap: '1rem',
         },
     },
     primaryButton: {
@@ -79,6 +81,22 @@ const useStyles = makeStyles((theme) => ({
             boxShadow: '0 8px 25px rgba(255, 255, 255, 0.1)',
         },
     },
+    linkButton: {
+        background: 'none',
+        border: 'none',
+        color: 'rgba(250, 250, 250, 0.8)',
+        fontSize: '0.9rem',
+        fontWeight: '500',
+        cursor: 'pointer',
+        transition: 'all 0.3s ease',
+        textDecoration: 'none',
+        '&:hover': {
+            color: '#fafafa',
+        },
+        "@media (max-width: 768px)": {
+            fontSize: '0.85rem',
+        },
+    },
     '@keyframes shine': {
         '0%': {
             backgroundPosition: '-200% 0',
@@ -95,18 +113,18 @@ export const Content = () => {
     return (
         <Container component="main" className={`${classes.main}`} maxWidth="sm">
             <Typography variant="h2" component="h1" gutterBottom className={classes.shinyTitle}>
-                Make legal AI agents your competitive advantage
+                Make AI agents your competitive advantage
             </Typography>
             <Typography variant="h5" component="h2" className={classes.subtitle}>
-                With N.O.G., you can build and orchestrate AI agents that plan, act, and collaborate securely — all with full traceability.
+                With N.O.G., you can build and orchestrate AI legal agents that plan, act, and collaborate securely — all with full traceability.
             </Typography>
             <div className={classes.buttonContainer}>
                 <Button className={classes.primaryButton}>
-                    Start Building
+                    Start building
                 </Button>
-                <Button className={classes.secondaryButton}>
-                    More info about the Nested Orchestrator and Governance project
-                </Button>
+                <button className={classes.linkButton}>
+                    → More info about the Nested Orchestrator and Governance project
+                </button>
             </div>
         </Container>
     );
