@@ -1,19 +1,22 @@
 import React from "react";
-import { Link, Tooltip, Zoom } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import Resume from "../../settings/resume.json";
-import { Logo } from "./Logo";
 
 const useStyles = makeStyles((theme) => ({
-    svg: {
-        width: "40px",
-        height: "40px",
+    logoText: {
         position: "absolute",
         top: theme.spacing(6),
         left: theme.spacing(6),
-        boxShadow:
-            "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
-        borderRadius: "50%",
+        fontSize: "1rem",
+        fontWeight: "500",
+        color: theme.palette.foreground.default,
+        fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, sans-serif',
+        opacity: 0.8,
+        transition: "all 0.3s ease",
+        "&:hover": {
+            opacity: 1,
+            color: theme.palette.primary.main,
+        },
     },
 }));
 
@@ -21,21 +24,11 @@ export const LogoLink = () => {
     const classes = useStyles();
 
     return (
-        <Tooltip
-            title={Resume.basics.name}
-            placement="right"
-            TransitionComponent={Zoom}
+        <Typography
+            variant="body1"
+            className={classes.logoText}
         >
-            <Link
-                variant="h6"
-                href={Resume.basics.url}
-                underline="none"
-                color="inherit"
-                noWrap
-                className={classes.svg}
-            >
-                <Logo />
-            </Link>
-        </Tooltip>
+            EggOn Technology
+        </Typography>
     );
 };

@@ -71,7 +71,6 @@ export const Home = () => {
         <Hidden mdUp>
           <SpeedDials />
         </Hidden>
-        <FooterText />
       </div>
 
       <ThemeToggle />
