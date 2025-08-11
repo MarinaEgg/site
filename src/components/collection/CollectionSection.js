@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './CollectionSection.css';
+import { useTranslation } from 'react-i18next';
 
 const legalPrompts = [
   // LEGAL
@@ -85,6 +86,7 @@ const CollectionSection = () => {
   const [selectedPrompt, setSelectedPrompt] = useState(null);
   const [editedPrompt, setEditedPrompt] = useState('');
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const { t } = useTranslation();
 
   const handleCardClick = (prompt) => {
     setSelectedPrompt(prompt);
@@ -132,20 +134,18 @@ const CollectionSection = () => {
             <h3 className="section-label">COLLECTION</h3>
             
             <h2 className="collection-title">
-              CASE STUDIES
+              {t('collection.title')}
             </h2>
 
             <p className="collection-intro">
-              Firms are choosing to build with EggOn for unfair competitive advantage.
-                Our agents are trusted by forward-thinking companies across legal, aerospace & Finance. Stay updated — ask for 
-                a pricing.
+              {t('collection.subtitle')}
             </p>
 
             <button className="early-access-button">
               <div className="button-content">
                 <span className="arrow-left">→</span>
                 <span className="button-text">
-                  Get Pricing
+                  {t('collection.cta')}
                   <span className="arrow-right">→</span>
                 </span>
               </div>

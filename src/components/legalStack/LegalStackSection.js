@@ -2,11 +2,13 @@ import React, { useRef } from 'react';
 import { motion, useViewportScroll, useTransform } from 'framer-motion';
 import { useInViewport } from '../../hooks/useInViewport';
 import './LegalStackSection.css';
+import { useTranslation } from 'react-i18next';
 
 const LegalStackSection = () => {
   const sectionRef = useRef(null);
   const isVisible = useInViewport(sectionRef, false, { threshold: 0.2 });
   const { scrollY } = useViewportScroll();
+  const { t } = useTranslation();
   
   // Effets parallax pour différents éléments
   const headerY = useTransform(scrollY, [0, 1000], [0, -25]);
@@ -191,7 +193,7 @@ const stackComponents = [
               background: 'transparent'
             }}
           >
-            WHY EGGON
+            {t('legalStack.subtitle')}
           </h3>
           
           <h2 
@@ -205,7 +207,7 @@ const stackComponents = [
               background: 'transparent'
             }}
           >
-            Trust a team with expertise in your field
+            {t('legalStack.title')}
           </h2>
 
           <p 
@@ -218,7 +220,7 @@ const stackComponents = [
               background: 'transparent'
             }}
           >
-            Eggon combines deep legal expertise with real AI engineering to deliver trusted, integrated solutions tailored to your operational challenges.
+            {t('legalStack.description')}
           </p>
         </motion.div>
 
@@ -355,7 +357,7 @@ const stackComponents = [
               background: 'transparent'
             }}
           >
-            THE LEGAL AGENT STACK
+            {t('legalStack.stackTitle')}
           </h3>
 
           <div 

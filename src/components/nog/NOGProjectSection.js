@@ -1,15 +1,17 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const NOGProjectSection = () => {
+  const { t } = useTranslation();
   const [currentLineIndex, setCurrentLineIndex] = React.useState(0);
   
   const lines = [
-    "Build AI agents",
-    "Prompt engineering", 
-    "Advise on AI security",
-    "Connect AI to data",
-    "Deliver AI training"
+    t('nog.lineBuildAgents'),
+    t('nog.linePromptEngineering'), 
+    t('nog.lineAdviseSecurity'),
+    t('nog.lineConnectData'),
+    t('nog.lineDeliverTraining')
   ];
 
   React.useEffect(() => {
@@ -124,7 +126,7 @@ const NOGProjectSection = () => {
               backgroundColor: 'transparent',
               backgroundImage: 'none'
             }}>
-              Right now, clients are asking the eggon team to
+              {t('nog.lead')}
             </span>
             <div style={{ 
               minWidth: 'clamp(200px, 40vw, 300px)',
@@ -227,7 +229,7 @@ const NOGProjectSection = () => {
                 backgroundImage: 'none'
               }}
             >
-              Get Examples
+              {t('nog.getExamples')}
             </div>
             
             <button
@@ -254,7 +256,7 @@ const NOGProjectSection = () => {
               onMouseEnter={handleButtonMouseEnter}
               onMouseLeave={handleButtonMouseLeave}
             >
-              Use Cases Agent
+              {t('nog.useCasesButton')}
             </button>
 
             <button
@@ -281,7 +283,7 @@ const NOGProjectSection = () => {
               onMouseEnter={handleButtonMouseEnter}
               onMouseLeave={handleButtonMouseLeave}
             >
-              IA Academy Program
+              {t('nog.academyButton')}
             </button>
           </div>
 
@@ -312,7 +314,7 @@ const NOGProjectSection = () => {
                 backgroundImage: 'none'
               }}
             >
-              Get Examples
+              {t('nog.getExamples')}
             </div>
             
             <div style={{ 
@@ -347,7 +349,7 @@ const NOGProjectSection = () => {
                 onMouseEnter={handleButtonMouseEnter}
                 onMouseLeave={handleButtonMouseLeave}
               >
-                Use Cases Agent
+                {t('nog.useCasesButton')}
               </button>
 
               <button
@@ -372,7 +374,7 @@ const NOGProjectSection = () => {
                 onMouseEnter={handleButtonMouseEnter}
                 onMouseLeave={handleButtonMouseLeave}
               >
-                IA Academy Program
+                {t('nog.academyButton')}
               </button>
             </div>
           </div>
