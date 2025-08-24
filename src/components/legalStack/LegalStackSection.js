@@ -601,7 +601,7 @@ const RAGArchitectureDiagram = () => {
     >
       <motion.div
         ref={bentoRef}
-        className="bento-container rag-content-container"
+        className="bento-container rag-content-container visible"
         style={{
           background: 'var(--rag-container-bg, #faf2d7)',
           borderRadius: '3rem',
