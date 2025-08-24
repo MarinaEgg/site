@@ -252,28 +252,7 @@ const RAGArchitectureDiagram = () => {
             </div>
           </div>
 
-          <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            height: '80px',
-            flexShrink: 0
-          }}>
-            <svg
-              width="12"
-              height="80"
-              viewBox="0 0 12 80"
-              fill="none"
-              style={{ color: 'rgba(47, 47, 46, 0.4)' }}
-            >
-              <path
-                d="M2 8 C2 4 4 2 8 2 C10 2 10 4 10 8 L10 36 C10 38 8 40 6 40 C8 40 10 42 10 44 L10 72 C10 76 10 78 8 78 C4 78 2 76 2 72"
-                stroke="currentColor"
-                strokeWidth="1"
-                fill="none"
-                strokeLinecap="round"
-              />
-            </svg>
-          </div>
+
 
           <div style={{
             width: '32px',
@@ -630,7 +609,7 @@ const RAGArchitectureDiagram = () => {
           <motion.div
             style={{
               textAlign: 'center',
-              marginBottom: 'clamp(2rem, 4vh, 3rem)'
+              marginBottom: 'clamp(1rem, 2vh, 1.5rem)'
             }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
