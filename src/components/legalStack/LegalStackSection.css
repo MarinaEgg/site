@@ -353,13 +353,29 @@
   background: revert !important;
   background-color: revert !important;
   border: revert !important;
-  color: revert !important;
-  fill: revert !important;
-  stroke: revert !important;
+  color: #2f2f2e !important;
+  fill: #2f2f2e !important;
+  stroke: #2f2f2e !important;
 }
 
 /* Forcer le style du conteneur principal */
 .legal-stack-section .rag-platform-container {
   background: #faf2d7 !important;
   background-color: #faf2d7 !important;
+}
+
+/* Forcer les couleurs de texte dans le rectangle clair */
+.legal-stack-section .rag-platform-container h2,
+.legal-stack-section .rag-platform-container h3,
+.legal-stack-section .rag-platform-container p,
+.legal-stack-section .rag-platform-container span,
+.legal-stack-section .rag-platform-container div {
+  color: #2f2f2e !important;
+}
+
+/* Forcer les couleurs des SVG dans le rectangle clair */
+.legal-stack-section .rag-platform-container svg {
+  color: #2f2f2e !important;
+  fill: #2f2f2e !important;
+  stroke: #2f2f2e !important;
 }
