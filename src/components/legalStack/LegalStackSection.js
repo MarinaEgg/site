@@ -148,6 +148,7 @@ const RAGArchitectureDiagram = () => {
           </motion.div>
 
           <motion.div
+            className="rag-platform-container"
             style={{
               background: '#faf2d7',
               border: '4px solid #2f2f2e',
