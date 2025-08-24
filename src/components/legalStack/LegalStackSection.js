@@ -710,7 +710,8 @@ const RAGArchitectureDiagram = () => {
               gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
               gap: 'clamp(1.5rem, 3vw, 2.5rem)',
               width: '100%',
-              marginTop: '2rem'
+              marginTop: '2rem',
+              alignItems: 'center'
             }}
           >
             {ragCards.map((card, index) => {
@@ -726,7 +727,7 @@ const RAGArchitectureDiagram = () => {
                     border: '1px solid var(--rag-card-border, rgba(47, 47, 46, 0.15))',
                     backdropFilter: 'blur(20px)',
                     borderRadius: '1rem',
-                    padding: isReducedCard ? 'clamp(1.2rem, 2vw, 1.5rem)' : 'clamp(1.5rem, 2.5vw, 2rem)',
+                    padding: isReducedCard ? 'clamp(1.2rem, 2vw, 1.5rem) clamp(1.2rem, 2vw, 1.5rem) clamp(2rem, 3vw, 2.5rem) clamp(1.2rem, 2vw, 1.5rem)' : 'clamp(1.5rem, 2.5vw, 2rem)',
                     boxShadow: 'var(--rag-card-shadow, 0 8px 32px rgba(47, 47, 46, 0.2))',
                     transition: 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
                     cursor: 'pointer',
@@ -772,32 +773,35 @@ const RAGArchitectureDiagram = () => {
               );
             })}
 
-            {/* Flèches entre cartes - bien positionnées */}
+            {/* Flèches au milieu des cartes */}
             <div style={{
               position: 'absolute',
-              top: '60%',
+              top: '50%',
               left: '23%',
               fontSize: '1.5rem',
               color: 'rgba(47, 47, 46, 0.5)',
-              zIndex: 10
+              zIndex: 10,
+              transform: 'translateY(-50%)'
             }}>→</div>
 
             <div style={{
               position: 'absolute',
-              top: '60%',
+              top: '50%',
               left: '48%',
               fontSize: '1.5rem',
               color: 'rgba(47, 47, 46, 0.5)',
-              zIndex: 10
+              zIndex: 10,
+              transform: 'translateY(-50%)'
             }}>→</div>
 
             <div style={{
               position: 'absolute',
-              top: '60%',
+              top: '50%',
               left: '73%',
               fontSize: '1.5rem',
               color: 'rgba(47, 47, 46, 0.5)',
-              zIndex: 10
+              zIndex: 10,
+              transform: 'translateY(-50%)'
             }}>→</div>
           </div>
         </div>
