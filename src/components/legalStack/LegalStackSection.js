@@ -268,7 +268,7 @@ const RAGArchitectureDiagram = () => {
               <path
                 d="M2 8 Q2 2 6 2 Q12 2 12 8 L12 36 Q12 40 10 40 Q12 40 12 44 L12 72 Q12 78 6 78 Q2 78 2 72"
                 stroke="currentColor"
-                strokeWidth="0.4"
+                strokeWidth="0.2"
                 fill="none"
               />
             </svg>
@@ -682,37 +682,24 @@ const RAGArchitectureDiagram = () => {
             </p>
           </motion.div>
 
-          {/* Label PLATFORM repositionné après l'introduction */}
+          {/* Label PLATFORM simplifié */}
           <div style={{
-            position: 'relative',
             width: '100%',
             margin: '2rem 0 3rem 0',
             display: 'flex',
             justifyContent: 'center'
           }}>
             <div style={{
-              background: '#c4940a',
-              border: '2px solid #2f2f2e',
-              borderRadius: '12px',
+              background: 'transparent',
               padding: '0.5rem 1.5rem',
               fontSize: 'clamp(0.8rem, 1.4vw, 1rem)',
               fontWeight: '700',
-              color: '#faf2d7',
+              color: '#2f2f2e',
               textTransform: 'uppercase',
-              letterSpacing: '0.1em',
-              zIndex: 2
+              letterSpacing: '0.1em'
             }}>
               PLATFORM
             </div>
-            <div style={{
-              position: 'absolute',
-              top: '50%',
-              left: '0',
-              right: '0',
-              height: '2px',
-              backgroundColor: 'rgba(47, 47, 46, 0.2)',
-              zIndex: 1
-            }}></div>
           </div>
 
           {/* Grille de cartes RAG */}
@@ -726,76 +713,63 @@ const RAGArchitectureDiagram = () => {
               marginTop: '2rem'
             }}
           >
-            {ragCards.map((card, index) => (
-              <motion.div
-                key={index}
-                ref={el => cardsRef.current[index] = el}
-                className="rag-card-enhanced"
-                style={{
-                  background: 'var(--rag-card-bg, rgba(47, 47, 46, 0.08))',
-                  border: '1px solid var(--rag-card-border, rgba(47, 47, 46, 0.15))',
-                  backdropFilter: 'blur(20px)',
-                  borderRadius: '1rem',
-                  padding: 'clamp(1.5rem, 2.5vw, 2rem)',
-                  boxShadow: 'var(--rag-card-shadow, 0 8px 32px rgba(47, 47, 46, 0.2))',
-                  transition: 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-                  cursor: 'pointer',
-                  opacity: 0,
-                  transform: 'translateY(30px)',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center'
-                }}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{
-                  y: -8,
-                  scale: 1.02,
-                  borderColor: 'var(--rag-card-border-hover, rgba(47, 47, 46, 0.25))',
-                  background: 'var(--rag-card-bg-hover, rgba(47, 47, 46, 0.12))',
-                  boxShadow: 'var(--rag-card-shadow-hover, 0 12px 40px rgba(47, 47, 46, 0.3))'
-                }}
-              >
-                <div
-                  className="rag-icon-enhanced"
+            {ragCards.map((card, index) => {
+              const isReducedCard = card.title.includes('CONTEXTUAL DOCUMENT') || card.title.includes('CONTEXTUAL RAG AGENT');
+
+              return (
+                <motion.div
+                  key={index}
+                  ref={el => cardsRef.current[index] = el}
+                  className="rag-card-enhanced"
                   style={{
-                    width: '60px',
-                    height: '60px',
-                    borderRadius: '50%',
-                    background: 'rgba(47, 47, 46, 0.12)',
-                    border: '2px solid rgba(47, 47, 46, 0.2)',
+                    background: 'var(--rag-card-bg, rgba(47, 47, 46, 0.08))',
+                    border: '1px solid var(--rag-card-border, rgba(47, 47, 46, 0.15))',
+                    backdropFilter: 'blur(20px)',
+                    borderRadius: '1rem',
+                    padding: isReducedCard ? 'clamp(1.2rem, 2vw, 1.5rem)' : 'clamp(1.5rem, 2.5vw, 2rem)',
+                    boxShadow: 'var(--rag-card-shadow, 0 8px 32px rgba(47, 47, 46, 0.2))',
+                    transition: 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+                    cursor: 'pointer',
+                    opacity: 0,
+                    transform: 'translateY(30px)',
                     display: 'flex',
+                    flexDirection: 'column',
                     alignItems: 'center',
-                    justifyContent: 'center',
-                    marginBottom: '1.5rem',
-                    transition: 'all 0.3s ease'
+                    justifyContent: isReducedCard ? 'center' : 'flex-start',
+                    minHeight: isReducedCard ? 'auto' : 'initial'
+                  }}
+                  whileHover={{
+                    y: -8,
+                    scale: 1.02,
+                    borderColor: 'var(--rag-card-border-hover, rgba(47, 47, 46, 0.25))',
+                    background: 'var(--rag-card-bg-hover, rgba(47, 47, 46, 0.12))',
+                    boxShadow: 'var(--rag-card-shadow-hover, 0 12px 40px rgba(47, 47, 46, 0.3))'
                   }}
                 >
-                  {card.icon}
-                </div>
+                  {/* Icône supprimée */}
 
-                <h3
-                  className="rag-card-title-enhanced"
-                  style={{
-                    fontSize: 'clamp(0.9rem, 1.4vw, 1.1rem)',
-                    fontWeight: '700',
-                    color: '#2f2f2e',
-                    marginBottom: '1.5rem',
-                    textAlign: 'center',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.05em',
-                    lineHeight: '1.3'
-                  }}
-                >
-                  {card.title}
-                </h3>
+                  <h3
+                    className="rag-card-title-enhanced"
+                    style={{
+                      fontSize: 'clamp(0.9rem, 1.4vw, 1.1rem)',
+                      fontWeight: '700',
+                      color: '#2f2f2e',
+                      marginBottom: isReducedCard ? '1rem' : '1.5rem',
+                      textAlign: 'center',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.05em',
+                      lineHeight: '1.3'
+                    }}
+                  >
+                    {card.title}
+                  </h3>
 
-                <div className="rag-card-content">
-                  {card.content}
-                </div>
-              </motion.div>
-            ))}
+                  <div className="rag-card-content">
+                    {card.content}
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </motion.div>
