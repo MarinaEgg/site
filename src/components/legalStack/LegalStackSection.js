@@ -268,7 +268,7 @@ const RAGArchitectureDiagram = () => {
               <path
                 d="M2 8 Q2 2 6 2 Q12 2 12 8 L12 36 Q12 40 10 40 Q12 40 12 44 L12 72 Q12 78 6 78 Q2 78 2 72"
                 stroke="currentColor"
-                strokeWidth="1.5"
+                strokeWidth="1"
                 fill="none"
               />
             </svg>
@@ -736,7 +736,8 @@ const RAGArchitectureDiagram = () => {
                     flexDirection: 'column',
                     alignItems: 'center',
                     justifyContent: isReducedCard ? 'center' : 'flex-start',
-                    minHeight: isReducedCard ? '200px' : 'initial'
+                    minHeight: isReducedCard ? '150px' : 'initial',
+                    maxHeight: isReducedCard ? '200px' : 'auto'
                   }}
                   whileHover={{
                     y: -8,
@@ -771,32 +772,32 @@ const RAGArchitectureDiagram = () => {
               );
             })}
 
-            {/* Flèches entre cartes */}
+            {/* Flèches entre cartes - bien positionnées */}
             <div style={{
               position: 'absolute',
-              top: '50%',
-              left: '24%',
-              transform: 'translateY(-50%)',
-              fontSize: '2rem',
-              color: 'rgba(47, 47, 46, 0.4)'
+              top: '60%',
+              left: '23%',
+              fontSize: '1.5rem',
+              color: 'rgba(47, 47, 46, 0.5)',
+              zIndex: 10
             }}>→</div>
 
             <div style={{
               position: 'absolute',
-              top: '50%',
-              left: '49%',
-              transform: 'translateY(-50%)',
-              fontSize: '2rem',
-              color: 'rgba(47, 47, 46, 0.4)'
+              top: '60%',
+              left: '48%',
+              fontSize: '1.5rem',
+              color: 'rgba(47, 47, 46, 0.5)',
+              zIndex: 10
             }}>→</div>
 
             <div style={{
               position: 'absolute',
-              top: '50%',
-              left: '74%',
-              transform: 'translateY(-50%)',
-              fontSize: '2rem',
-              color: 'rgba(47, 47, 46, 0.4)'
+              top: '60%',
+              left: '73%',
+              fontSize: '1.5rem',
+              color: 'rgba(47, 47, 46, 0.5)',
+              zIndex: 10
             }}>→</div>
           </div>
         </div>
