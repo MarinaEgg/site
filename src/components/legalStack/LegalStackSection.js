@@ -259,17 +259,18 @@ const RAGArchitectureDiagram = () => {
             flexShrink: 0
           }}>
             <svg
-              width="16"
+              width="12"
               height="80"
-              viewBox="0 0 16 80"
+              viewBox="0 0 12 80"
               fill="none"
-              style={{ color: 'rgba(47, 47, 46, 0.3)' }}
+              style={{ color: 'rgba(47, 47, 46, 0.4)' }}
             >
               <path
-                d="M2 8 Q2 2 6 2 Q12 2 12 8 L12 36 Q12 40 10 40 Q12 40 12 44 L12 72 Q12 78 6 78 Q2 78 2 72"
+                d="M2 8 C2 4 4 2 8 2 C10 2 10 4 10 8 L10 36 C10 38 8 40 6 40 C8 40 10 42 10 44 L10 72 C10 76 10 78 8 78 C4 78 2 76 2 72"
                 stroke="currentColor"
-                strokeWidth="0.3"
+                strokeWidth="1"
                 fill="none"
+                strokeLinecap="round"
               />
             </svg>
           </div>
@@ -702,108 +703,124 @@ const RAGArchitectureDiagram = () => {
             </div>
           </div>
 
-          {/* Grille de cartes RAG */}
+          {/* Grille de cartes RAG avec flèches intégrées */}
           <div
             className="rag-cards-grid"
             style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-              gap: 'clamp(1.5rem, 3vw, 2.5rem)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: 'clamp(1rem, 2vw, 1.5rem)',
               width: '100%',
               marginTop: '2rem',
-              alignItems: 'center'
+              flexWrap: 'wrap'
             }}
           >
             {ragCards.map((card, index) => {
               const isReducedCard = card.title.includes('CONTEXTUAL DOCUMENT') || card.title.includes('CONTEXTUAL RAG AGENT');
 
               return (
-                <motion.div
-                  key={index}
-                  ref={el => cardsRef.current[index] = el}
-                  className="rag-card-enhanced"
-                  style={{
-                    background: 'var(--rag-card-bg, rgba(47, 47, 46, 0.08))',
-                    border: '1px solid var(--rag-card-border, rgba(47, 47, 46, 0.15))',
-                    backdropFilter: 'blur(20px)',
-                    borderRadius: '1rem',
-                    padding: isReducedCard ? 'clamp(1.2rem, 2vw, 1.5rem) clamp(1.2rem, 2vw, 1.5rem) clamp(2rem, 3vw, 2.5rem) clamp(1.2rem, 2vw, 1.5rem)' : 'clamp(1.5rem, 2.5vw, 2rem)',
-                    boxShadow: 'var(--rag-card-shadow, 0 8px 32px rgba(47, 47, 46, 0.2))',
-                    transition: 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-                    cursor: 'pointer',
-                    opacity: 1,
-                    transform: 'translateY(0px)',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    justifyContent: isReducedCard ? 'center' : 'flex-start',
-                    minHeight: isReducedCard ? '150px' : 'initial',
-                    maxHeight: isReducedCard ? '200px' : 'auto'
-                  }}
-                  whileHover={{
-                    y: -8,
-                    scale: 1.02,
-                    borderColor: 'var(--rag-card-border-hover, rgba(47, 47, 46, 0.25))',
-                    background: 'var(--rag-card-bg-hover, rgba(47, 47, 46, 0.12))',
-                    boxShadow: 'var(--rag-card-shadow-hover, 0 12px 40px rgba(47, 47, 46, 0.3))'
-                  }}
-                >
-                  {/* Icône supprimée */}
-
-                  <h3
-                    className="rag-card-title-enhanced"
+                <React.Fragment key={index}>
+                  <motion.div
+                    ref={el => cardsRef.current[index] = el}
+                    className="rag-card-enhanced"
                     style={{
-                      fontSize: 'clamp(0.9rem, 1.4vw, 1.1rem)',
-                      fontWeight: '700',
-                      color: '#2f2f2e',
-                      marginBottom: isReducedCard ? '1rem' : '1.5rem',
-                      textAlign: 'center',
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.05em',
-                      lineHeight: '1.3'
+                      background: 'var(--rag-card-bg, rgba(47, 47, 46, 0.08))',
+                      border: '1px solid var(--rag-card-border, rgba(47, 47, 46, 0.15))',
+                      backdropFilter: 'blur(20px)',
+                      borderRadius: '1rem',
+                      padding: isReducedCard ? 'clamp(1.2rem, 2vw, 1.5rem) clamp(1.2rem, 2vw, 1.5rem) clamp(2rem, 3vw, 2.5rem) clamp(1.2rem, 2vw, 1.5rem)' : 'clamp(1.5rem, 2.5vw, 2rem)',
+                      boxShadow: 'var(--rag-card-shadow, 0 8px 32px rgba(47, 47, 46, 0.2))',
+                      transition: 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+                      cursor: 'pointer',
+                      opacity: 1,
+                      transform: 'translateY(0px)',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      justifyContent: isReducedCard ? 'center' : 'flex-start',
+                      minHeight: isReducedCard ? '150px' : 'initial',
+                      maxHeight: isReducedCard ? '200px' : 'auto',
+                      flex: '1',
+                      minWidth: '250px'
+                    }}
+                    whileHover={{
+                      y: -8,
+                      scale: 1.02,
+                      borderColor: 'var(--rag-card-border-hover, rgba(47, 47, 46, 0.25))',
+                      background: 'var(--rag-card-bg-hover, rgba(47, 47, 46, 0.12))',
+                      boxShadow: 'var(--rag-card-shadow-hover, 0 12px 40px rgba(47, 47, 46, 0.3))'
                     }}
                   >
-                    {card.title}
-                  </h3>
+                    <h3
+                      className="rag-card-title-enhanced"
+                      style={{
+                        fontSize: 'clamp(0.9rem, 1.4vw, 1.1rem)',
+                        fontWeight: '700',
+                        color: '#2f2f2e',
+                        marginBottom: isReducedCard ? '1rem' : '1.5rem',
+                        textAlign: 'center',
+                        textTransform: 'uppercase',
+                        letterSpacing: '0.05em',
+                        lineHeight: '1.3'
+                      }}
+                    >
+                      {card.title}
+                    </h3>
 
-                  <div className="rag-card-content">
-                    {card.content}
-                  </div>
-                </motion.div>
+                    <div className="rag-card-content">
+                      {card.content}
+                    </div>
+                  </motion.div>
+
+                  {/* Flèche entre les conteneurs (sauf après le dernier) */}
+                  {index < ragCards.length - 1 && (
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      minWidth: '40px',
+                      height: '100%'
+                    }}>
+                      <svg
+                        width="24"
+                        height="16"
+                        viewBox="0 0 24 16"
+                        fill="none"
+                        style={{
+                          color: 'rgba(47, 47, 46, 0.6)',
+                          flexShrink: 0
+                        }}
+                      >
+                        <path
+                          d="M2 8H22M22 8L16 2M22 8L16 14"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  )}
+                </React.Fragment>
               );
             })}
-
-            {/* Flèches au milieu des cartes */}
-            <div style={{
-              position: 'absolute',
-              top: '55%',
-              left: '25%',
-              fontSize: '1.5rem',
-              color: 'rgba(47, 47, 46, 0.5)',
-              zIndex: 10,
-              transform: 'translateY(-50%)'
-            }}>→</div>
-
-            <div style={{
-              position: 'absolute',
-              top: '55%',
-              left: '50%',
-              fontSize: '1.5rem',
-              color: 'rgba(47, 47, 46, 0.5)',
-              zIndex: 10,
-              transform: 'translateY(-50%)'
-            }}>→</div>
-
-            <div style={{
-              position: 'absolute',
-              top: '55%',
-              left: '75%',
-              fontSize: '1.5rem',
-              color: 'rgba(47, 47, 46, 0.5)',
-              zIndex: 10,
-              transform: 'translateY(-50%)'
-            }}>→</div>
           </div>
+
+          {/* Version mobile en colonne */}
+          <style jsx>{`
+            @media (max-width: 768px) {
+              .rag-cards-grid {
+                flex-direction: column !important;
+                align-items: stretch !important;
+              }
+
+              .rag-cards-grid > div:nth-child(2n) {
+                transform: rotate(90deg) !important;
+                margin: 1rem 0 !important;
+              }
+            }
+          `}</style>
         </div>
       </motion.div>
 
