@@ -379,3 +379,159 @@
   fill: #2f2f2e !important;
   stroke: #2f2f2e !important;
 }
+
+/* NOUVELLE SECTION RAG avec transitions identiques à deployment */
+.rag-section-enhanced {
+  position: relative;
+  overflow: hidden;
+  padding: 8rem 2rem;
+  min-height: 100vh;
+  width: 100%;
+  background: var(--rag-bg-color, transparent);
+  transition: background-color 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rag-content-container {
+  background: var(--rag-container-bg, #faf2d7);
+  border-radius: 3rem;
+  border: var(--rag-container-border, 4px solid #2f2f2e);
+  box-shadow: var(--rag-container-shadow, 0 20px 60px rgba(47, 47, 46, 0.3));
+  width: 95%;
+  max-width: 1600px;
+  position: relative;
+  padding: clamp(3rem, 5vh, 4rem) clamp(2rem, 4vw, 3rem);
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.rag-content-container.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.rag-content-container:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--rag-container-shadow-hover, 0 30px 80px rgba(47, 47, 46, 0.4));
+}
+
+/* Cartes RAG identiques aux cartes deployment */
+.rag-card-enhanced {
+  background: var(--rag-card-bg, rgba(47, 47, 46, 0.08));
+  border: 1px solid var(--rag-card-border, rgba(47, 47, 46, 0.15));
+  backdrop-filter: blur(20px);
+  border-radius: 1rem;
+  padding: clamp(1.5rem, 2.5vw, 2rem);
+  box-shadow: var(--rag-card-shadow, 0 8px 32px rgba(47, 47, 46, 0.2));
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.rag-card-enhanced.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.rag-card-enhanced:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: var(--rag-card-border-hover, rgba(47, 47, 46, 0.25));
+  background: var(--rag-card-bg-hover, rgba(47, 47, 46, 0.12));
+  box-shadow: var(--rag-card-shadow-hover, 0 12px 40px rgba(47, 47, 46, 0.3));
+}
+
+/* Variables CSS pour transitions - IDENTIQUES à deployment */
+.rag-bg-enhanced-start {
+  --rag-bg-color: #2f2f2e;
+  --rag-container-bg: rgba(255, 255, 255, 0.08);
+  --rag-container-border: 4px solid rgba(255, 255, 255, 0.15);
+  --rag-container-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  --rag-container-shadow-hover: 0 30px 80px rgba(0, 0, 0, 0.4);
+  --rag-card-bg: rgba(255, 255, 255, 0.08);
+  --rag-card-border: rgba(255, 255, 255, 0.15);
+  --rag-card-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --rag-card-bg-hover: rgba(255, 255, 255, 0.12);
+  --rag-card-border-hover: rgba(255, 255, 255, 0.25);
+  --rag-card-shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.rag-bg-enhanced-middle {
+  --rag-bg-color: #2f2f2e;
+  --rag-container-bg: #faf2d7;
+  --rag-container-border: 4px solid #2f2f2e;
+  --rag-container-shadow: 0 20px 60px rgba(47, 47, 46, 0.3);
+  --rag-container-shadow-hover: 0 30px 80px rgba(47, 47, 46, 0.4);
+  --rag-card-bg: rgba(47, 47, 46, 0.12);
+  --rag-card-border: rgba(47, 47, 46, 0.2);
+  --rag-card-shadow: 0 10px 36px rgba(47, 47, 46, 0.15);
+  --rag-card-bg-hover: rgba(47, 47, 46, 0.18);
+  --rag-card-border-hover: rgba(47, 47, 46, 0.3);
+  --rag-card-shadow-hover: 0 15px 45px rgba(47, 47, 46, 0.25);
+}
+
+.rag-bg-enhanced-end {
+  --rag-bg-color: transparent;
+  --rag-container-bg: #faf2d7;
+  --rag-container-border: 4px solid #2f2f2e;
+  --rag-container-shadow: 0 20px 60px rgba(47, 47, 46, 0.3);
+  --rag-container-shadow-hover: 0 30px 80px rgba(47, 47, 46, 0.4);
+  --rag-card-bg: rgba(47, 47, 46, 0.08);
+  --rag-card-border: rgba(47, 47, 46, 0.15);
+  --rag-card-shadow: 0 8px 32px rgba(47, 47, 46, 0.2);
+  --rag-card-bg-hover: rgba(47, 47, 46, 0.12);
+  --rag-card-border-hover: rgba(47, 47, 46, 0.25);
+  --rag-card-shadow-hover: 0 12px 40px rgba(47, 47, 46, 0.3);
+}
+
+/* Forcer les couleurs de texte dans toutes les transitions */
+.rag-content-container,
+.rag-content-container *,
+.rag-content-container h2,
+.rag-content-container h3,
+.rag-content-container p,
+.rag-content-container svg {
+  color: var(--rag-text-color, #2f2f2e) !important;
+  fill: var(--rag-text-color, #2f2f2e) !important;
+  stroke: var(--rag-text-color, #2f2f2e) !important;
+}
+
+/* Grille de cartes RAG */
+.rag-cards-grid {
+  --rag-card-bg: rgba(47, 47, 46, 0.08);
+  --rag-card-border: rgba(47, 47, 46, 0.15);
+  --rag-card-shadow: 0 8px 32px rgba(47, 47, 46, 0.2);
+  --rag-card-bg-hover: rgba(47, 47, 46, 0.12);
+  --rag-card-border-hover: rgba(47, 47, 46, 0.25);
+  --rag-card-shadow-hover: 0 12px 40px rgba(47, 47, 46, 0.3);
+}
+
+@media (max-width: 1200px) {
+  .rag-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .rag-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .rag-content-container {
+    width: 98%;
+    padding: clamp(2rem, 4vh, 3rem) clamp(1rem, 3vw, 2rem);
+    border-radius: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .rag-content-container {
+    border-radius: 1.5rem;
+    border-width: 3px;
+  }
+}
