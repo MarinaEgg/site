@@ -27,15 +27,7 @@ const RAGArchitectureDiagram = () => {
     return () => observer.disconnect();
   }, []);
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
-  };
-
-  const arrowVariants = {
-    hidden: { opacity: 0, scale: 0.8 },
-    visible: { opacity: 1, scale: 1 }
-  };
+  // Variants supprimés - utilisation directe des propriétés pour compatibilité Framer Motion v4
 
   const ArrowIcon = () => (
     <svg
@@ -81,14 +73,14 @@ const RAGArchitectureDiagram = () => {
           maxWidth: '1600px',
           position: 'relative',
           padding: 'clamp(3rem, 5vh, 4rem) clamp(2rem, 4vw, 3rem)',
-          transition: 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
           cursor: 'pointer'
         }}
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        whileHover={{
-          transform: 'translateY(-8px) scale(1.02)',
+        whileHover={{ 
+          y: -8, 
+          scale: 1.02,
           boxShadow: '0 30px 80px rgba(47, 47, 46, 0.4)'
         }}
       >
@@ -101,7 +93,7 @@ const RAGArchitectureDiagram = () => {
         >
           initial="hidden"
           animate="visible"
-          variants={cardVariants}
+          initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           whileHover={{
             transform: 'translateY(-8px) scale(1.02)',
@@ -135,7 +127,7 @@ const RAGArchitectureDiagram = () => {
             }}
             initial="hidden"
             animate="visible"
-            variants={cardVariants}
+            initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
             <h3
@@ -210,7 +202,7 @@ const RAGArchitectureDiagram = () => {
                 transition: 'all 0.3s ease',
                 cursor: 'pointer'
               }}
-              variants={cardVariants}
+              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               whileHover={{
                 transform: 'translateY(-4px) scale(1.01)',
@@ -321,7 +313,7 @@ const RAGArchitectureDiagram = () => {
             </motion.div>
 
             <motion.div
-              variants={arrowVariants}
+              initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: 0.4 }}
               style={{ flexShrink: 0 }}
             >
@@ -340,7 +332,7 @@ const RAGArchitectureDiagram = () => {
                 transition: 'all 0.3s ease',
                 cursor: 'pointer'
               }}
-              variants={cardVariants}
+              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               whileHover={{
                 transform: 'translateY(-4px) scale(1.01)',
@@ -470,7 +462,7 @@ const RAGArchitectureDiagram = () => {
             </motion.div>
 
             <motion.div
-              variants={arrowVariants}
+              initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: 0.6 }}
               style={{ flexShrink: 0 }}
             >
@@ -489,7 +481,7 @@ const RAGArchitectureDiagram = () => {
                 transition: 'all 0.3s ease',
                 cursor: 'pointer'
               }}
-              variants={cardVariants}
+              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               whileHover={{
                 transform: 'translateY(-4px) scale(1.01)',
@@ -647,7 +639,7 @@ const RAGArchitectureDiagram = () => {
             </motion.div>
 
             <motion.div
-              variants={arrowVariants}
+              initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: 0.8 }}
               style={{ flexShrink: 0 }}
             >
@@ -666,7 +658,7 @@ const RAGArchitectureDiagram = () => {
                 transition: 'all 0.3s ease',
                 cursor: 'pointer'
               }}
-              variants={cardVariants}
+              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.8 }}
               whileHover={{
                 transform: 'translateY(-4px) scale(1.01)',
