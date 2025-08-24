@@ -84,9 +84,8 @@ const RAGArchitectureDiagram = () => {
           transition: 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
           cursor: 'pointer'
         }}
-        initial="hidden"
-        animate="visible"
-        variants={cardVariants}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         whileHover={{
           transform: 'translateY(-8px) scale(1.02)',
