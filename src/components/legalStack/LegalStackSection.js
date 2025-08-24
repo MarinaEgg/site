@@ -268,7 +268,7 @@ const RAGArchitectureDiagram = () => {
               <path
                 d="M2 8 Q2 2 6 2 Q12 2 12 8 L12 36 Q12 40 10 40 Q12 40 12 44 L12 72 Q12 78 6 78 Q2 78 2 72"
                 stroke="currentColor"
-                strokeWidth="0.2"
+                strokeWidth="1.5"
                 fill="none"
               />
             </svg>
@@ -736,7 +736,7 @@ const RAGArchitectureDiagram = () => {
                     flexDirection: 'column',
                     alignItems: 'center',
                     justifyContent: isReducedCard ? 'center' : 'flex-start',
-                    minHeight: isReducedCard ? 'auto' : 'initial'
+                    minHeight: isReducedCard ? '200px' : 'initial'
                   }}
                   whileHover={{
                     y: -8,
@@ -770,6 +770,34 @@ const RAGArchitectureDiagram = () => {
                 </motion.div>
               );
             })}
+
+            {/* Flèches entre cartes */}
+            <div style={{
+              position: 'absolute',
+              top: '50%',
+              left: '24%',
+              transform: 'translateY(-50%)',
+              fontSize: '2rem',
+              color: 'rgba(47, 47, 46, 0.4)'
+            }}>→</div>
+
+            <div style={{
+              position: 'absolute',
+              top: '50%',
+              left: '49%',
+              transform: 'translateY(-50%)',
+              fontSize: '2rem',
+              color: 'rgba(47, 47, 46, 0.4)'
+            }}>→</div>
+
+            <div style={{
+              position: 'absolute',
+              top: '50%',
+              left: '74%',
+              transform: 'translateY(-50%)',
+              fontSize: '2rem',
+              color: 'rgba(47, 47, 46, 0.4)'
+            }}>→</div>
           </div>
         </div>
       </motion.div>
