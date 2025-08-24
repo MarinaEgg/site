@@ -611,10 +611,11 @@ const RAGArchitectureDiagram = () => {
           maxWidth: '1600px',
           position: 'relative',
           padding: 'clamp(3rem, 5vh, 4rem) clamp(2rem, 4vw, 3rem)',
-          cursor: 'pointer',
-          transform: 'translateY(50px)',
-          opacity: 0,
-          transition: 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+          cursor: 'pointer'
+        }}
+        whileHover={{
+          y: -8,
+          scale: 1.02
         }}
       >
         <div
