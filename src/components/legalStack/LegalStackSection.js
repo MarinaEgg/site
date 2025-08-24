@@ -73,10 +73,10 @@ const RAGArchitectureDiagram = () => {
         ref={bentoRef}
         className="bento-container"
         style={{
-          background: '#1a1a1a',
-          borderRadius: '3rem',
-          border: '4px solid #333',
-          boxShadow: '0 20px 60px rgba(0, 0, 0, 0.5)',
+          background: 'transparent',
+          borderRadius: '0',
+          border: 'none',
+          boxShadow: 'none',
           width: '95%',
           maxWidth: '1600px',
           position: 'relative',
@@ -104,7 +104,7 @@ const RAGArchitectureDiagram = () => {
               style={{
                 fontSize: 'clamp(0.9rem, 1.5vw, 1.2rem)',
                 fontWeight: '600',
-                color: '#ffffff',
+                color: '#2f2f2e',
                 letterSpacing: '0.2em',
                 textTransform: 'uppercase',
                 marginBottom: '1.5rem',
@@ -119,7 +119,7 @@ const RAGArchitectureDiagram = () => {
               style={{
                 fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
                 fontWeight: '900',
-                color: '#ffffff',
+                color: '#2f2f2e',
                 lineHeight: '1.1',
                 marginBottom: '1.5rem',
                 textShadow: 'none',
@@ -133,7 +133,7 @@ const RAGArchitectureDiagram = () => {
               style={{
                 fontSize: 'clamp(1rem, 2vw, 1.3rem)',
                 fontWeight: '400',
-                color: '#e0e0e0',
+                color: '#2f2f2e',
                 lineHeight: '1.6',
                 marginBottom: '2rem',
                 maxWidth: '900px',
