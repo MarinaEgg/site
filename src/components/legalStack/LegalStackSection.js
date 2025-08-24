@@ -268,7 +268,7 @@ const RAGArchitectureDiagram = () => {
               <path
                 d="M2 8 Q2 2 6 2 Q12 2 12 8 L12 36 Q12 40 10 40 Q12 40 12 44 L12 72 Q12 78 6 78 Q2 78 2 72"
                 stroke="currentColor"
-                strokeWidth="0.5"
+                strokeWidth="0.3"
                 fill="none"
               />
             </svg>
@@ -776,8 +776,8 @@ const RAGArchitectureDiagram = () => {
             {/* Flèches au milieu des cartes */}
             <div style={{
               position: 'absolute',
-              top: '65%',
-              left: '23%',
+              top: '55%',
+              left: '25%',
               fontSize: '1.5rem',
               color: 'rgba(47, 47, 46, 0.5)',
               zIndex: 10,
@@ -786,8 +786,8 @@ const RAGArchitectureDiagram = () => {
 
             <div style={{
               position: 'absolute',
-              top: '65%',
-              left: '48%',
+              top: '55%',
+              left: '50%',
               fontSize: '1.5rem',
               color: 'rgba(47, 47, 46, 0.5)',
               zIndex: 10,
@@ -796,8 +796,8 @@ const RAGArchitectureDiagram = () => {
 
             <div style={{
               position: 'absolute',
-              top: '65%',
-              left: '73%',
+              top: '55%',
+              left: '75%',
               fontSize: '1.5rem',
               color: 'rgba(47, 47, 46, 0.5)',
               zIndex: 10,
