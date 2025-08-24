@@ -790,6 +790,7 @@ const RAGArchitectureDiagram = () => {
               </div>
             </motion.div>
           </div>
+        </div>
       </motion.div>
 
       <style jsx>{`
@@ -845,7 +846,6 @@ const RAGArchitectureDiagram = () => {
             }
           }
         `}</style>
-    </div>
     </section >
   );
 };
