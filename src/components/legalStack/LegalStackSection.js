@@ -73,10 +73,10 @@ const RAGArchitectureDiagram = () => {
         ref={bentoRef}
         className="bento-container"
         style={{
-          background: 'transparent',
-          borderRadius: '0',
-          border: 'none',
-          boxShadow: 'none',
+          background: '#1a1a1a',
+          borderRadius: '3rem',
+          border: '4px solid #333',
+          boxShadow: '0 20px 60px rgba(0, 0, 0, 0.5)',
           width: '95%',
           maxWidth: '1600px',
           position: 'relative',
@@ -90,63 +90,6 @@ const RAGArchitectureDiagram = () => {
             margin: '0 auto'
           }}
         >
-          <motion.div
-            style={{
-              textAlign: 'center',
-              marginBottom: 'clamp(4rem, 8vh, 6rem)'
-            }}
-            initial="hidden"
-            animate="visible"
-            variants={cardVariants}
-            transition={{ duration: 0.6 }}
-          >
-            <h3
-              style={{
-                fontSize: 'clamp(0.9rem, 1.5vw, 1.2rem)',
-                fontWeight: '600',
-                color: '#2f2f2e',
-                letterSpacing: '0.2em',
-                textTransform: 'uppercase',
-                marginBottom: '1.5rem',
-                textDecoration: 'underline',
-                background: 'transparent'
-              }}
-            >
-              {t('ragArchitecture.subtitle', 'THE CONTEXTUAL RAG PLATFORM')}
-            </h3>
-
-            <h2
-              style={{
-                fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
-                fontWeight: '900',
-                color: '#2f2f2e',
-                lineHeight: '1.1',
-                marginBottom: '1.5rem',
-                textShadow: 'none',
-                background: 'transparent'
-              }}
-            >
-              {t('ragArchitecture.title', 'NEXT-GEN ARCHITECTURE FOR AGENTS')}
-            </h2>
-
-            <p
-              style={{
-                fontSize: 'clamp(1rem, 2vw, 1.3rem)',
-                fontWeight: '400',
-                color: '#2f2f2e',
-                lineHeight: '1.6',
-                marginBottom: '2rem',
-                maxWidth: '900px',
-                margin: '0 auto 2rem auto',
-                textAlign: 'center',
-                background: 'transparent',
-                opacity: 0.9
-              }}
-            >
-              {t('ragArchitecture.introduction', 'Built by pioneers in RAG, our platform empowers you to seamlessly integrate AI agents with your enterprise knowledge, providing a complete solution for designing cutting-edge RAG systems.')}
-            </p>
-          </motion.div>
-
           <motion.div
             className="rag-platform-container"
             style={{
@@ -187,6 +130,65 @@ const RAGArchitectureDiagram = () => {
             }}>
               PLATFORM
             </div>
+
+            {/* Header du contenu à l'intérieur du rectangle */}
+            <motion.div
+              style={{
+                textAlign: 'center',
+                marginBottom: 'clamp(2rem, 4vh, 3rem)',
+                marginTop: '1rem'
+              }}
+              initial="hidden"
+              animate="visible"
+              variants={cardVariants}
+              transition={{ duration: 0.6 }}
+            >
+              <h3
+                style={{
+                  fontSize: 'clamp(0.9rem, 1.5vw, 1.2rem)',
+                  fontWeight: '600',
+                  color: '#2f2f2e',
+                  letterSpacing: '0.2em',
+                  textTransform: 'uppercase',
+                  marginBottom: '1.5rem',
+                  textDecoration: 'underline',
+                  background: 'transparent'
+                }}
+              >
+                {t('ragArchitecture.subtitle', 'THE CONTEXTUAL RAG PLATFORM')}
+              </h3>
+
+              <h2
+                style={{
+                  fontSize: 'clamp(2.5rem, 6vw, 4.5rem)',
+                  fontWeight: '900',
+                  color: '#2f2f2e',
+                  lineHeight: '1.1',
+                  marginBottom: '1.5rem',
+                  textShadow: 'none',
+                  background: 'transparent'
+                }}
+              >
+                {t('ragArchitecture.title', 'NEXT-GEN ARCHITECTURE FOR AGENTS')}
+              </h2>
+
+              <p
+                style={{
+                  fontSize: 'clamp(1rem, 2vw, 1.3rem)',
+                  fontWeight: '400',
+                  color: '#2f2f2e',
+                  lineHeight: '1.6',
+                  marginBottom: '2rem',
+                  maxWidth: '900px',
+                  margin: '0 auto 2rem auto',
+                  textAlign: 'center',
+                  background: 'transparent',
+                  opacity: 0.9
+                }}
+              >
+                {t('ragArchitecture.introduction', 'Built by pioneers in RAG, our platform empowers you to seamlessly integrate AI agents with your enterprise knowledge, providing a complete solution for designing cutting-edge RAG systems.')}
+              </p>
+            </motion.div>
 
             <div
               className="horizontal-flow"
