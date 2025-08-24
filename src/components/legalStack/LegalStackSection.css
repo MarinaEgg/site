@@ -9,10 +9,6 @@
 
 /* Container bento avec effet scroll */
 .bento-container {
-  background: #1a1a1a;
-  border-radius: 3rem;
-  border: 4px solid #333;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   width: 95%;
   max-width: 1600px;
   position: relative;
@@ -26,11 +22,7 @@
   opacity: 1;
 }
 
-/* Effet de survol pour le container */
-.bento-container:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
-}
+/* Effet de survol pour le container - désactivé pour permettre les styles inline */
 
 /* Effets hover pour les rectangles dans le bento */
 .legal-stack-section div[style*="background: rgba(255, 255, 255, 0.12)"] {
@@ -62,38 +54,9 @@
   transition: all 0.3s ease !important;
 }
 
-/* Correction globale RENFORCÉE pour les couleurs bento */
-.bento-container,
-.bento-container *,
-.bento-container *::before,
-.bento-container *::after,
-.bento-container div,
-.bento-container span,
-.bento-container h3,
-.bento-container h2,
-.bento-container p,
-.bento-container svg {
-  color: #ffffff !important;
-  fill: #ffffff !important;
-  stroke: #ffffff !important;
-}
+/* Correction globale RENFORCÉE pour les couleurs bento - désactivé pour permettre les styles inline */
 
-/* Forcer tous les backgrounds transparents dans le bento */
-.bento-container .benefit-card,
-.bento-container .benefit-card *,
-.bento-container .benefit-card *::before,
-.bento-container .benefit-card *::after,
-.bento-container .benefit-card div,
-.bento-container .benefit-card span,
-.bento-container .benefit-card h3,
-.bento-container .benefit-card p,
-.bento-container .benefit-card svg,
-.bento-container .benefit-card button {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  box-shadow: none !important;
-}
+/* Forcer tous les backgrounds transparents dans le bento - désactivé pour permettre les styles inline */
 
 /* États hover - couleurs bento */
 .bento-container .benefit-card:hover,
@@ -144,18 +107,7 @@
   color: #ffffff !important;
 }
 
-/* Style spéciaux pour les composants dans le bento */
-.bento-container div[style*="background"] {
-  background: rgba(255, 255, 255, 0.08) !important;
-  background-color: rgba(255, 255, 255, 0.08) !important;
-  border: 2px solid rgba(255, 255, 255, 0.15) !important;
-}
-
-.bento-container div[style*="background"]:hover {
-  background: rgba(255, 255, 255, 0.12) !important;
-  background-color: rgba(255, 255, 255, 0.12) !important;
-  border: 2px solid rgba(255, 255, 255, 0.25) !important;
-}
+/* Style spéciaux pour les composants dans le bento - désactivé pour permettre les styles inline */
 
 /* Correction spéciale pour les cercles d'icônes dans le bento */
 .bento-container div[style*="border-radius: 50%"],
@@ -240,21 +192,9 @@
   box-shadow: none !important;
 }
 
-/* Forcer TOUS les divs à être transparents */
-.benefit-card div[style],
-.benefit-card div,
-.legal-stack-section div[style*="background"],
-.legal-stack-section div {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-}
+/* Forcer TOUS les divs à être transparents - désactivé */
 
-/* Correction spéciale pour les composants stack */
-.legal-stack-section div[style*="background"]:hover {
-  background: rgba(255, 255, 255, 0.08) !important;
-  background-color: rgba(255, 255, 255, 0.08) !important;
-}
+/* Correction spéciale pour les composants stack - désactivé */
 
 /* Empêcher TOUTE sélection de créer des backgrounds */
 .benefit-card ::selection,
@@ -305,13 +245,7 @@
   content: none !important;
 }
 
-/* Correction pour les éléments inline avec styles */
-.benefit-card [style*="background"],
-.legal-stack-section [style*="background"] {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-}
+/* Correction pour les éléments inline avec styles - désactivé */
 
 /* Correction pour les gradients et linear-gradient */
 .benefit-card [style*="linear-gradient"],
@@ -393,4 +327,39 @@
 
 .rag-grounded-term {
   min-width: 90px !important;
+}
+
+/* Styles spécifiques pour le conteneur RAG Platform - FORCE ABSOLUE */
+.legal-stack-section .rag-platform-container {
+  background: #faf2d7 !important;
+  background-color: #faf2d7 !important;
+  border: 4px solid #2f2f2e !important;
+  border-radius: 24px !important;
+  box-shadow: 0 20px 60px rgba(47, 47, 46, 0.3) !important;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  cursor: pointer !important;
+}
+
+.legal-stack-section .rag-platform-container:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  box-shadow: 0 30px 80px rgba(47, 47, 46, 0.4) !important;
+}
+
+/* Reset complet pour permettre les styles inline dans le conteneur RAG */
+.legal-stack-section .rag-platform-container,
+.legal-stack-section .rag-platform-container *,
+.legal-stack-section .rag-platform-container *::before,
+.legal-stack-section .rag-platform-container *::after {
+  background: revert !important;
+  background-color: revert !important;
+  border: revert !important;
+  color: revert !important;
+  fill: revert !important;
+  stroke: revert !important;
+}
+
+/* Forcer le style du conteneur principal */
+.legal-stack-section .rag-platform-container {
+  background: #faf2d7 !important;
+  background-color: #faf2d7 !important;
 }
