@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import './LegalStackSection.css';
@@ -8,28 +8,76 @@ const RAGArchitectureDiagram = () => {
   const bentoRef = useRef(null);
   const cardsRef = useRef([]);
 
+  // États pour gérer les transitions de scroll
+  const ragSectionRef = useRef(null);
+  const [ragScrollProgress, setRagScrollProgress] = useState(0);
+
+  // useEffect pour gérer les transitions de couleur au scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!ragSectionRef.current) return;
+
+      const element = ragSectionRef.current;
+      const rect = element.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      const elementHeight = rect.height;
+
+      // Calcul accéléré comme dans deployment
+      const startPoint = windowHeight * 0.8;
+      const endPoint = -elementHeight * 0.2;
+
+      let progress;
+      if (rect.top > startPoint) {
+        progress = 0;
+      } else if (rect.top < endPoint) {
+        progress = 1;
+      } else {
+        progress = (startPoint - rect.top) / (startPoint - endPoint);
+      }
+
+      progress = Math.pow(progress, 0.7);
+      setRagScrollProgress(progress);
+
+      // Appliquer les classes de transition
+      if (progress < 0.15) {
+        element.className = element.className.replace(/rag-bg-enhanced-\w+/g, '') + ' rag-bg-enhanced-start';
+      } else if (progress < 0.45) {
+        element.className = element.className.replace(/rag-bg-enhanced-\w+/g, '') + ' rag-bg-enhanced-middle';
+      } else {
+        element.className = element.className.replace(/rag-bg-enhanced-\w+/g, '') + ' rag-bg-enhanced-end';
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+
+          // Animer les cartes individuellement
+          const cards = entry.target.querySelectorAll('.rag-card-enhanced');
+          cards.forEach((card, index) => {
+            setTimeout(() => {
+              card.classList.add('visible');
+            }, index * 100);
+          });
+        }
       },
       {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.05,
+        rootMargin: '0px 0px -30px 0px'
       }
     );
 
     if (bentoRef.current) {
       observer.observe(bentoRef.current);
     }
-
-    cardsRef.current.forEach((card) => {
-      if (card) observer.observe(card);
-    });
 
     return () => observer.disconnect();
   }, []);
@@ -537,41 +585,36 @@ const RAGArchitectureDiagram = () => {
 
   return (
     <section
+      ref={ragSectionRef}
+      className="legal-stack-section rag-section-enhanced rag-bg-enhanced-start"
       style={{
         minHeight: '100vh',
         width: '100%',
         padding: 'clamp(4rem, 8vh, 6rem) 0',
-        backgroundColor: 'transparent',
+        background: 'var(--rag-bg-color, transparent)',
+        transition: 'background-color 2s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
         position: 'relative',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center'
       }}
-      className="legal-stack-section"
     >
       <motion.div
         ref={bentoRef}
-        className="bento-container rag-platform-container"
+        className="bento-container rag-content-container"
         style={{
-          background: '#faf2d7',
+          background: 'var(--rag-container-bg, #faf2d7)',
           borderRadius: '3rem',
-          border: '4px solid #2f2f2e',
-          boxShadow: '0 20px 60px rgba(47, 47, 46, 0.3)',
+          border: 'var(--rag-container-border, 4px solid #2f2f2e)',
+          boxShadow: 'var(--rag-container-shadow, 0 20px 60px rgba(47, 47, 46, 0.3))',
           width: '95%',
           maxWidth: '1600px',
           position: 'relative',
           padding: 'clamp(3rem, 5vh, 4rem) clamp(2rem, 4vw, 3rem)',
           cursor: 'pointer',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center'
-        }}
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        whileHover={{
-          y: -8,
-          scale: 1.02
+          transform: 'translateY(50px)',
+          opacity: 0,
+          transition: 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
         }}
       >
         <div
@@ -713,7 +756,7 @@ const RAGArchitectureDiagram = () => {
                   boxShadow: 'var(--rag-card-shadow-hover, 0 12px 40px rgba(47, 47, 46, 0.3))'
                 }}
               >
-                <div 
+                <div
                   className="rag-icon-enhanced"
                   style={{
                     width: '60px',
@@ -731,7 +774,7 @@ const RAGArchitectureDiagram = () => {
                   {card.icon}
                 </div>
 
-                <h3 
+                <h3
                   className="rag-card-title-enhanced"
                   style={{
                     fontSize: 'clamp(0.9rem, 1.4vw, 1.1rem)',
@@ -756,52 +799,7 @@ const RAGArchitectureDiagram = () => {
         </div>
       </motion.div>
 
-      <style jsx>{`
-        .rag-cards-grid {
-          --rag-card-bg: rgba(47, 47, 46, 0.08);
-          --rag-card-border: rgba(47, 47, 46, 0.15);
-          --rag-card-shadow: 0 8px 32px rgba(47, 47, 46, 0.2);
-          --rag-card-bg-hover: rgba(47, 47, 46, 0.12);
-          --rag-card-border-hover: rgba(47, 47, 46, 0.25);
-          --rag-card-shadow-hover: 0 12px 40px rgba(47, 47, 46, 0.3);
-        }
-        
-        .rag-card-enhanced {
-          opacity: 0;
-          transform: translateY(30px);
-          transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        }
-        
-        .rag-card-enhanced.visible {
-          opacity: 1;
-          transform: translateY(0);
-        }
-        
-        @media (max-width: 1200px) {
-          .rag-cards-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
-        }
-        
-        @media (max-width: 768px) {
-          .rag-cards-grid {
-            grid-template-columns: 1fr;
-          }
-          
-          .bento-container {
-            width: 98%;
-            padding: clamp(2rem, 4vh, 3rem) clamp(1rem, 3vw, 2rem);
-            border-radius: 2rem;
-          }
-        }
-        
-        @media (max-width: 480px) {
-          .bento-container {
-            border-radius: 1.5rem;
-            border-width: 3px;
-          }
-        }
-      `}</style>
+
     </section>
   );
 };
