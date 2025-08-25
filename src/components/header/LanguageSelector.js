@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const LanguageSelector = ({ variant = 'header' }) => {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
+  const [currentLang, setCurrentLang] = useState(i18n.language);
 
   const languages = [
     { code: 'en', label: 'EN', name: 'English' },
@@ -12,11 +13,52 @@ const LanguageSelector = ({ variant = 'header' }) => {
     { code: 'es', label: 'ES', name: 'Español' }
   ];
 
-  const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0];
+  // Écouter les changements de langue pour mettre à jour l'affichage
+  useEffect(() => {
+    const handleLanguageChange = (lng) => {
+      setCurrentLang(lng);
+    };
+
+    // S'abonner aux changements de langue
+    i18n.on('languageChanged', handleLanguageChange);
+
+    // Mettre à jour la langue actuelle au montage
+    setCurrentLang(i18n.language);
+
+    // Nettoyer l'écouteur au démontage
+    return () => {
+      i18n.off('languageChanged', handleLanguageChange);
+    };
+  }, [i18n]);
+
+  // Fermer le dropdown quand on clique ailleurs
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isOpen) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('click', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [isOpen]);
+
+  const currentLanguage = languages.find(lang => lang.code === currentLang) || languages[0];
 
   const handleLanguageChange = (languageCode) => {
+    // Changer la langue via i18n (cela déclenchera automatiquement l'événement 'languageChanged')
     i18n.changeLanguage(languageCode);
+    
+    // Fermer le dropdown
     setIsOpen(false);
+    
+    // Optionnel : forcer la mise à jour immédiate de l'état local
+    setCurrentLang(languageCode);
   };
 
   const toggleDropdown = () => {
