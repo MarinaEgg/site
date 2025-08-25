@@ -93,6 +93,38 @@ export const Contact = () => {
             justifyContent: 'center'
           }}
         >
+          {/* Croix de fermeture */}
+          <button
+            onClick={() => window.history.back()}
+            style={{
+              position: 'absolute',
+              top: 'clamp(1rem, 3vh, 2rem)',
+              right: 'clamp(1rem, 3vw, 2rem)',
+              background: 'rgba(255, 255, 255, 0.1)',
+              border: '1px solid rgba(255, 255, 255, 0.2)',
+              borderRadius: '50%',
+              width: '40px',
+              height: '40px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              cursor: 'pointer',
+              color: '#fafafa',
+              fontSize: '1.2rem',
+              transition: 'all 0.3s ease',
+              zIndex: 10
+            }}
+            onMouseEnter={(e) => {
+              e.target.style.background = 'rgba(255, 255, 255, 0.2)';
+              e.target.style.borderColor = 'rgba(255, 255, 255, 0.4)';
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.background = 'rgba(255, 255, 255, 0.1)';
+              e.target.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+            }}
+          >
+            ✕
+          </button>
           <div
             style={{
               width: '100%',
@@ -419,7 +451,7 @@ export const Contact = () => {
                       padding: '0.6rem 1.5rem',
                       fontSize: '0.85rem',
                       fontWeight: '700',
-                      color: isSubmitting ? 'rgba(47, 47, 46, 0.7)' : '#2f2f2e',
+                      color: isSubmitting ? 'rgba(47, 47, 46, 0.7)' : '#fce96b',
                       background: isSubmitting ? 'rgba(252, 233, 107, 0.6)' : 'transparent',
                       border: `1px solid ${isSubmitting ? 'rgba(252, 233, 107, 0.6)' : '#fce96b'}`,
                       borderRadius: '50px',
@@ -440,28 +472,54 @@ export const Contact = () => {
                       if (!isSubmitting) {
                         e.target.style.background = '#fce96b';
                         e.target.style.color = '#2f2f2e';
+                        // Animation de la translation du conteneur
+                        const buttonContent = e.target.querySelector('.button-content');
+                        if (buttonContent) {
+                          buttonContent.style.transform = 'translateX(12px)';
+                        }
+                        // Animation des flèches
+                        const arrowLeft = e.target.querySelector('.arrow-left');
+                        const arrowRight = e.target.querySelector('.arrow-right');
+                        if (arrowLeft) arrowLeft.style.opacity = '1';
+                        if (arrowRight) arrowRight.style.opacity = '0';
                       }
                     }}
                     onMouseLeave={(e) => {
                       if (!isSubmitting) {
                         e.target.style.background = 'transparent';
                         e.target.style.color = '#fce96b';
+                        // Reset de la translation du conteneur
+                        const buttonContent = e.target.querySelector('.button-content');
+                        if (buttonContent) {
+                          buttonContent.style.transform = 'translateX(0)';
+                        }
+                        // Reset des flèches
+                        const arrowLeft = e.target.querySelector('.arrow-left');
+                        const arrowRight = e.target.querySelector('.arrow-right');
+                        if (arrowLeft) arrowLeft.style.opacity = '0';
+                        if (arrowRight) arrowRight.style.opacity = '1';
                       }
                     }}
                   >
-                    <div style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      position: 'relative',
-                      transition: 'all 0.4s ease-out',
-                      transform: 'translateX(0)'
-                    }}>
-                      <span style={{
-                        marginRight: '8px',
-                        opacity: 0,
-                        transition: 'all 0.4s ease-out'
-                      }}>→</span>
+                    <div
+                      className="button-content"
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        position: 'relative',
+                        transition: 'all 0.4s ease-out',
+                        transform: 'translateX(0)'
+                      }}
+                    >
+                      <span
+                        className="arrow-left"
+                        style={{
+                          marginRight: '8px',
+                          opacity: 0,
+                          transition: 'all 0.4s ease-out'
+                        }}
+                      >→</span>
                       <span style={{
                         display: 'flex',
                         alignItems: 'center',
@@ -484,11 +542,14 @@ export const Contact = () => {
                         ) : (
                           <>
                             Send Message
-                            <span style={{
-                              marginLeft: '8px',
-                              opacity: 1,
-                              transition: 'all 0.4s ease-out'
-                            }}>→</span>
+                            <span
+                              className="arrow-right"
+                              style={{
+                                marginLeft: '8px',
+                                opacity: 1,
+                                transition: 'all 0.4s ease-out'
+                              }}
+                            >→</span>
                           </>
                         )}
                       </span>
