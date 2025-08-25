@@ -211,58 +211,43 @@ const useStyles = makeStyles((theme) => ({
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            width: '100%',
-            height: '100%',
-            position: 'relative',
-            zIndex: 2,
-        },
-        
-        '& .button-text': {
             position: 'relative',
             transition: 'all 0.4s ease-out',
             transform: 'translateX(0)',
+        },
+        
+        '& .button-text': {
             display: 'flex',
             alignItems: 'center',
+            whiteSpace: 'nowrap',
         },
         
         '& .arrow-right': {
             marginLeft: '8px',
-            transition: 'all 0.4s ease-out',
             opacity: 1,
-            transform: 'translateX(0)',
-            flexShrink: 0,
-            display: 'flex',
-            alignItems: 'center',
+            transition: 'all 0.4s ease-out',
         },
         
         '& .arrow-left': {
-            position: 'absolute',
-            left: '50%',
-            top: '50%',
-            transform: 'translate(-50%, -50%)',
-            transition: 'all 0.4s ease-out',
+            marginRight: '8px',
             opacity: 0,
-            flexShrink: 0,
-            display: 'flex',
-            alignItems: 'center',
+            transition: 'all 0.4s ease-out',
         },
         
         '&:hover': {
             background: '#fce96b',
             color: '#2f2f2e',
             
-            '& .button-text': {
-                transform: 'translateX(22px)',
+            '& .button-content': {
+                transform: 'translateX(12px)',
             },
             
             '& .arrow-right': {
                 opacity: 0,
-                transform: 'translateX(8px)',
             },
             
             '& .arrow-left': {
                 opacity: 1,
-                transform: 'translate(-67px, -50%)',
             },
         },
         
@@ -274,10 +259,8 @@ const useStyles = makeStyles((theme) => ({
             minWidth: '160px',
             fontSize: '0.8rem',
             
-            '&:hover': {
-                '& .button-text': {
-                    transform: 'translateX(22px)',
-                },
+            '&:hover .button-content': {
+                transform: 'translateX(10px)',
             },
         },
     },
