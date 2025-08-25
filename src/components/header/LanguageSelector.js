@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const LanguageSelector = ({ variant = 'header' }) => {
-  const { i18n } = useTranslation();
+  const { i18n, ready } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
-  const [currentLang, setCurrentLang] = useState(i18n.language);
+  const [currentLang, setCurrentLang] = useState('en'); // Valeur par défaut temporaire
 
   const languages = [
     { code: 'en', label: 'EN', name: 'English' },
@@ -13,23 +13,48 @@ const LanguageSelector = ({ variant = 'header' }) => {
     { code: 'es', label: 'ES', name: 'Español' }
   ];
 
-  // Écouter les changements de langue pour mettre à jour l'affichage
+  // Écouter les changements de langue et l'initialisation d'i18n
   useEffect(() => {
+    const updateCurrentLanguage = () => {
+      const detectedLang = i18n.language || i18n.resolvedLanguage || 'en';
+      setCurrentLang(detectedLang);
+    };
+
     const handleLanguageChange = (lng) => {
       setCurrentLang(lng);
     };
 
+    // Mettre à jour immédiatement si i18n est prêt
+    if (ready && i18n.isInitialized) {
+      updateCurrentLanguage();
+    }
+
     // S'abonner aux changements de langue
     i18n.on('languageChanged', handleLanguageChange);
+    i18n.on('initialized', updateCurrentLanguage);
 
-    // Mettre à jour la langue actuelle au montage
-    setCurrentLang(i18n.language);
-
-    // Nettoyer l'écouteur au démontage
-    return () => {
-      i18n.off('languageChanged', handleLanguageChange);
+    // Vérification périodique pour s'assurer que la langue est bien détectée
+    const checkLanguage = () => {
+      if (i18n.isInitialized && i18n.language && i18n.language !== currentLang) {
+        updateCurrentLanguage();
+      }
     };
-  }, [i18n]);
+
+    const intervalId = setInterval(checkLanguage, 100);
+
+    // Nettoyer après 2 secondes (le temps que la détection se fasse)
+    const timeoutId = setTimeout(() => {
+      clearInterval(intervalId);
+    }, 2000);
+
+    // Nettoyer les écouteurs au démontage
+    return () => {
+      clearInterval(intervalId);
+      clearTimeout(timeoutId);
+      i18n.off('languageChanged', handleLanguageChange);
+      i18n.off('initialized', updateCurrentLanguage);
+    };
+  }, [i18n, ready, currentLang]);
 
   // Fermer le dropdown quand on clique ailleurs
   useEffect(() => {
@@ -49,6 +74,20 @@ const LanguageSelector = ({ variant = 'header' }) => {
   }, [isOpen]);
 
   const currentLanguage = languages.find(lang => lang.code === currentLang) || languages[0];
+
+  // Debug temporaire - à supprimer plus tard
+  useEffect(() => {
+    if (process.env.NODE_ENV === 'development') {
+      console.log('LanguageSelector Debug:', {
+        'i18n.language': i18n.language,
+        'i18n.resolvedLanguage': i18n.resolvedLanguage,
+        'currentLang': currentLang,
+        'ready': ready,
+        'isInitialized': i18n.isInitialized,
+        'currentLanguage.label': currentLanguage.label
+      });
+    }
+  }, [currentLang, i18n.language, ready]);
 
   const handleLanguageChange = (languageCode) => {
     // Changer la langue via i18n (cela déclenchera automatiquement l'événement 'languageChanged')
