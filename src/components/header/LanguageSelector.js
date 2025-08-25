@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const LanguageSelector = ({ variant = 'header' }) => {
   const { i18n, ready } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
-  const [currentLang, setCurrentLang] = useState('en'); // Valeur par défaut temporaire
+  const [forceUpdate, setForceUpdate] = useState(0);
 
   const languages = [
     { code: 'en', label: 'EN', name: 'English' },
@@ -13,48 +13,52 @@ const LanguageSelector = ({ variant = 'header' }) => {
     { code: 'es', label: 'ES', name: 'Español' }
   ];
 
-  // Écouter les changements de langue et l'initialisation d'i18n
+  // Utiliser directement i18n.language avec fallback
+  const getCurrentLanguage = () => {
+    return i18n.language || i18n.resolvedLanguage || 'en';
+  };
+
+  // Forcer la mise à jour du composant quand la langue change
   useEffect(() => {
-    const updateCurrentLanguage = () => {
-      const detectedLang = i18n.language || i18n.resolvedLanguage || 'en';
-      setCurrentLang(detectedLang);
-    };
-
     const handleLanguageChange = (lng) => {
-      setCurrentLang(lng);
+      setForceUpdate(prev => prev + 1);
     };
 
-    // Mettre à jour immédiatement si i18n est prêt
-    if (ready && i18n.isInitialized) {
-      updateCurrentLanguage();
-    }
+    const handleInitialized = () => {
+      setForceUpdate(prev => prev + 1);
+    };
 
-    // S'abonner aux changements de langue
+    // S'abonner aux événements
     i18n.on('languageChanged', handleLanguageChange);
-    i18n.on('initialized', updateCurrentLanguage);
+    i18n.on('initialized', handleInitialized);
 
-    // Vérification périodique pour s'assurer que la langue est bien détectée
+    // Vérification agressive toutes les 50ms pendant 3 secondes
+    let attempts = 0;
+    const maxAttempts = 60; // 3 secondes / 50ms
+
     const checkLanguage = () => {
-      if (i18n.isInitialized && i18n.language && i18n.language !== currentLang) {
-        updateCurrentLanguage();
+      attempts++;
+      const currentLang = getCurrentLanguage();
+      
+      if (currentLang && currentLang !== 'en') {
+        setForceUpdate(prev => prev + 1);
+        return; // Arrêter la vérification si on a trouvé une langue différente
+      }
+      
+      if (attempts < maxAttempts) {
+        setTimeout(checkLanguage, 50);
       }
     };
 
-    const intervalId = setInterval(checkLanguage, 100);
-
-    // Nettoyer après 2 secondes (le temps que la détection se fasse)
-    const timeoutId = setTimeout(() => {
-      clearInterval(intervalId);
-    }, 2000);
+    // Démarrer la vérification après un petit délai
+    setTimeout(checkLanguage, 100);
 
     // Nettoyer les écouteurs au démontage
     return () => {
-      clearInterval(intervalId);
-      clearTimeout(timeoutId);
       i18n.off('languageChanged', handleLanguageChange);
-      i18n.off('initialized', updateCurrentLanguage);
+      i18n.off('initialized', handleInitialized);
     };
-  }, [i18n, ready, currentLang]);
+  }, [i18n]);
 
   // Fermer le dropdown quand on clique ailleurs
   useEffect(() => {
@@ -73,6 +77,7 @@ const LanguageSelector = ({ variant = 'header' }) => {
     };
   }, [isOpen]);
 
+  const currentLang = getCurrentLanguage();
   const currentLanguage = languages.find(lang => lang.code === currentLang) || languages[0];
 
   // Debug temporaire - à supprimer plus tard
@@ -84,10 +89,11 @@ const LanguageSelector = ({ variant = 'header' }) => {
         'currentLang': currentLang,
         'ready': ready,
         'isInitialized': i18n.isInitialized,
-        'currentLanguage.label': currentLanguage.label
+        'currentLanguage.label': currentLanguage.label,
+        'forceUpdate': forceUpdate
       });
     }
-  }, [currentLang, i18n.language, ready]);
+  }, [currentLang, i18n.language, ready, forceUpdate]);
 
   const handleLanguageChange = (languageCode) => {
     // Changer la langue via i18n (cela déclenchera automatiquement l'événement 'languageChanged')
@@ -96,8 +102,8 @@ const LanguageSelector = ({ variant = 'header' }) => {
     // Fermer le dropdown
     setIsOpen(false);
     
-    // Optionnel : forcer la mise à jour immédiate de l'état local
-    setCurrentLang(languageCode);
+    // Forcer la mise à jour du composant
+    setForceUpdate(prev => prev + 1);
   };
 
   const toggleDropdown = () => {
