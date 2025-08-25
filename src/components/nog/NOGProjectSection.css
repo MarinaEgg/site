@@ -1,311 +1,174 @@
-/* Section principale avec gestion responsive */
-.nog-project-section {
-  min-height: 100vh;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  padding: clamp(2rem, 5vh, 4rem) clamp(1rem, 3vw, 2rem);
+/* Style uniforme pour tous les boutons - VERSION CORRIGÉE */
+.nog-action-button {
+  padding: 0.6rem 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: none;
+  background: transparent;
+  color: #fce96b;
+  border: 1px solid #fce96b;
+  border-radius: 50px;
+  cursor: pointer;
   position: relative;
-  box-sizing: border-box;
   overflow: hidden;
-}
-
-/* Container principal centré */
-.nog-content {
-  text-align: center;
-  width: 100%;
-  max-width: 1400px;
-  display: flex;
-  flex-direction: column;
+  transition: all 0.4s ease-out;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  flex: 1;
+  min-width: 180px;
+  height: 40px;
+  margin: 0 0.5rem;
 }
 
-/* Container du titre avec motifs */
-.nog-title-container {
+.nog-action-button .button-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
   position: relative;
-  margin-bottom: clamp(2rem, 5vh, 4rem);
+  z-index: 2;
+}
+
+.nog-action-button .button-text {
+  position: relative;
+  transition: all 0.4s ease-out;
+  transform: translateX(0);
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  min-height: clamp(8rem, 20vh, 16rem);
 }
 
-/* Titre principal */
-.nog-title {
-  font-size: clamp(3rem, 12vw, 12rem);
-  font-weight: 900;
-  color: #fafafa;
-  line-height: 0.7;
-  letter-spacing: -0.12em;
-  margin: 0;
-  font-family: "Arial Black", "Helvetica", sans-serif;
-  text-transform: uppercase;
-  font-stretch: ultra-condensed;
-  width: 100%;
-  max-width: 90%;
-  transform: scaleY(0.8) scaleX(1.2);
-  transform-origin: center;
-  text-align: center;
+.nog-action-button .arrow-right {
+  margin-left: 8px;
+  transition: all 0.4s ease-out;
+  opacity: 1;
+  transform: translateX(0);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
 }
 
-/* Sous-titre PROJECT */
-.nog-subtitle {
-  margin-top: 0.15em;
-}
-
-/* Motifs graphiques */
-.nog-pattern {
+.nog-action-button .arrow-left {
   position: absolute;
+  left: 16px; /* Position fixe à gauche dans le bouton */
   top: 50%;
   transform: translateY(-50%);
+  transition: all 0.4s ease-out;
+  opacity: 0;
+  flex-shrink: 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: clamp(12rem, 30vh, 20rem);
-  overflow: hidden;
 }
 
-.nog-pattern-left {
-  left: clamp(0.5%, 2vw, 2%);
+.nog-action-button:hover {
+  background: #fce96b !important;
+  color: #2f2f2e !important;
+  border-color: #fce96b !important;
 }
 
-.nog-pattern-right {
-  right: clamp(0.5%, 2vw, 2%);
+.nog-action-button:hover .button-text {
+  transform: translateX(24px); /* Décalage plus important vers la droite */
 }
 
-.nog-pattern-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+.nog-action-button:hover .arrow-right {
+  opacity: 0;
+  transform: translateX(16px);
 }
 
-/* Rectangle des motifs */
-.nog-rectangle {
-  background-color: #fafafa;
-  width: clamp(8px, 2vw, 16px);
+.nog-action-button:hover .arrow-left {
+  opacity: 1;
+  transform: translateY(-50%); /* Reste en position fixe, pas de translateX */
 }
 
-/* Description */
-.nog-description {
-  font-size: clamp(0.9rem, 2.2vw, 1.25rem);
-  color: #fafafa;
-  line-height: clamp(1.4, 1.6, 1.8);
+.nog-action-button:active {
+  transform: translateY(-1px);
+}
+
+/* VERSION MOBILE CORRIGÉE */
+.nog-action-button-mobile {
+  padding: 0.6rem 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-  font-weight: 500;
-  margin: 0 auto;
-  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: none;
+  background: transparent;
+  color: #fce96b;
+  border: 1px solid #fce96b;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  max-width: min(95%, 80ch);
-  margin-top: clamp(1rem, 3vw, 2rem);
-  padding: 0 1rem;
-  box-sizing: border-box;
-  background: none;
-  backdrop-filter: blur(10px);
-  border-radius: 8px;
+  height: 38px;
 }
 
-/* Lignes de description */
-.nog-description-line {
-  word-wrap: break-word;
-  hyphens: auto;
-  margin-bottom: clamp(0.6rem, 1.5vw, 1rem);
+.nog-action-button-mobile .button-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
 }
 
-.nog-description-line:last-child {
-  margin-bottom: 0;
+.nog-action-button-mobile .button-text {
+  position: relative;
+  transition: all 0.4s ease-out;
+  transform: translateX(0);
+  display: flex;
+  align-items: center;
 }
 
-/* ===== CORRECTIONS POUR LES RECTANGLES INDÉSIRABLES ===== */
-
-/* Forcer TOUS les éléments à être transparents dans NOGProjectSection */
-.nog-project-section,
-.nog-project-section *,
-.nog-project-section *::before,
-.nog-project-section *::after,
-.nog-project-section div,
-.nog-project-section span,
-.nog-project-section button,
-.nog-project-section p {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  box-shadow: none !important;
+.nog-action-button-mobile .arrow-right {
+  margin-left: 8px;
+  transition: all 0.4s ease-out;
+  opacity: 1;
+  transform: translateX(0);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
 }
 
-/* États hover - FORCER la transparence pour tout sauf les boutons */
-.nog-project-section:hover,
-.nog-project-section:hover *:not(button),
-.nog-project-section:hover *:not(button)::before,
-.nog-project-section:hover *:not(button)::after,
-.nog-project-section:hover div:not(button),
-.nog-project-section:hover span:not(button) {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  box-shadow: none !important;
+.nog-action-button-mobile .arrow-left {
+  position: absolute;
+  left: 16px; /* Position fixe à gauche dans le bouton mobile */
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.4s ease-out;
+  opacity: 0;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
 }
 
-/* États focus - FORCER la transparence */
-.nog-project-section:focus,
-.nog-project-section:focus *,
-.nog-project-section *:focus,
-.nog-project-section *:focus *,
-.nog-project-section *:focus::before,
-.nog-project-section *:focus::after {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  outline: none !important;
-  box-shadow: none !important;
+.nog-action-button-mobile:hover {
+  background: #fce96b !important;
+  color: #2f2f2e !important;
+  border-color: #fce96b !important;
 }
 
-/* États active - FORCER la transparence */
-.nog-project-section:active,
-.nog-project-section:active *:not(button),
-.nog-project-section *:active:not(button),
-.nog-project-section *:active:not(button) * {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  box-shadow: none !important;
+.nog-action-button-mobile:hover .button-text {
+  transform: translateX(20px); /* Décalage adapté pour mobile */
 }
 
-/* Correction pour Material-UI et autres frameworks */
-.nog-project-section .MuiPaper-root,
-.nog-project-section .MuiCard-root,
-.nog-project-section .MuiBox-root,
-.nog-project-section [class*="makeStyles"],
-.nog-project-section [class*="jss"] {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-  box-shadow: none !important;
+.nog-action-button-mobile:hover .arrow-right {
+  opacity: 0;
+  transform: translateX(12px);
 }
 
-/* Forcer TOUS les divs à être transparents SAUF les conteneurs spécifiques */
-.nog-project-section div[style]:not([style*="border-radius"]),
-.nog-project-section div {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
+.nog-action-button-mobile:hover .arrow-left {
+  opacity: 1;
+  transform: translateY(-50%); /* Reste en position fixe */
 }
 
-/* Exception UNIQUEMENT pour les éléments qui DOIVENT avoir un background */
-.nog-project-section div[style*="background: rgba(255, 255, 255, 0.08)"],
-.nog-project-section div[style*="backgroundColor: rgba(255, 255, 255, 0.08)"],
-.nog-project-section div[style*="background: rgba(252, 233, 107"] {
-  /* Ces éléments gardent leur background car c'est voulu */
-}
-
-/* Correction pour les éléments avec styles inline indésirables */
-.nog-project-section [style*="background"]:not([style*="rgba(255, 255, 255, 0.08)"]):not([style*="rgba(252, 233, 107"]) {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-}
-
-/* Correction pour les gradients */
-.nog-project-section [style*="linear-gradient"],
-.nog-project-section [style*="radial-gradient"] {
-  background: transparent !important;
-  background-image: none !important;
-}
-
-/* Empêcher la sélection de créer des backgrounds */
-.nog-project-section ::selection {
-  background: rgba(252, 233, 107, 0.3) !important;
-  color: #fafafa !important;
-}
-
-.nog-project-section ::-moz-selection {
-  background: rgba(252, 233, 107, 0.3) !important;
-  color: #fafafa !important;
-}
-
-/* Correction pour les pseudo-éléments */
-.nog-project-section *::before,
-.nog-project-section *::after {
-  background: transparent !important;
-  background-color: transparent !important;
-  background-image: none !important;
-}
-
-/* Styles spécifiques pour les boutons (ils peuvent garder leurs effets hover) */
-.nog-project-section button {
-  /* Les boutons gardent leurs styles d'origine */
-}
-
-.nog-project-section button:hover {
-  /* Les effets hover des boutons sont préservés */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .nog-project-section {
-    padding: clamp(1.5rem, 4vh, 3rem) clamp(0.5rem, 2vw, 1.5rem);
-  }
-  
-  .nog-title {
-    font-size: clamp(2.5rem, 10vw, 5rem);
-    max-width: 95%;
-  }
-  
-  .nog-pattern {
-    display: none;
-  }
-  
-  .nog-description {
-    font-size: clamp(0.8rem, 2vw, 1.1rem);
-    max-width: 95%;
-  }
-}
-
-@media (max-width: 480px) {
-  .nog-project-section {
-    padding: clamp(1rem, 3vh, 2rem) 0.5rem;
-  }
-  
-  .nog-title {
-    font-size: clamp(2rem, 8vw, 4rem);
-  }
-  
-  .nog-description {
-    font-size: 0.9rem;
-    padding: 0 0.5rem;
-  }
-  
-  .nog-title-container {
-    margin-bottom: clamp(1.5rem, 4vh, 3rem);
-  }
-}
-
-/* Optimisations de performance */
-@media (prefers-reduced-motion: no-preference) {
-  .nog-project-section {
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    perspective: 1000px;
-  }
-}
-
-/* Gestion des très petits écrans */
-@media (max-width: 320px) {
-  .nog-title {
-    font-size: clamp(1.8rem, 7vw, 3.5rem);
-    letter-spacing: -0.08em;
-  }
-  
-  .nog-description {
-    font-size: 0.85rem;
-    line-height: 1.5;
-  }
+.nog-action-button-mobile:active {
+  transform: translateY(-1px);
 }
