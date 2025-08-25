@@ -84,40 +84,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  z-index: 2;
-}
-
-.early-access-button .button-text {
   position: relative;
   transition: all 0.4s ease-out;
   transform: translateX(0);
+}
+
+.early-access-button .button-text {
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 
 .early-access-button .arrow-right {
   margin-left: 8px;
-  transition: all 0.4s ease-out;
   opacity: 1;
-  transform: translateX(0);
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
+  transition: all 0.4s ease-out;
 }
 
 .early-access-button .arrow-left {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.4s ease-out;
+  margin-right: 8px;
   opacity: 0;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
+  transition: all 0.4s ease-out;
 }
 
 .early-access-button:hover {
@@ -125,18 +112,16 @@
   color: #2f2f2e;
 }
 
-.early-access-button:hover .button-text {
-  transform: translateX(16px);
+.early-access-button:hover .button-content {
+  transform: translateX(12px);
 }
 
 .early-access-button:hover .arrow-right {
   opacity: 0;
-  transform: translateX(8px);
 }
 
 .early-access-button:hover .arrow-left {
   opacity: 1;
-  transform: translate(-56px, -50%);
 }
 
 .early-access-button:active {
