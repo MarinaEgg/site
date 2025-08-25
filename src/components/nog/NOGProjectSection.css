@@ -315,7 +315,7 @@
 
 /* ===== STYLES BOUTONS - VERSION CORRIGÉE ===== */
 
-/* Style uniforme pour tous les boutons Desktop */
+/* Style uniforme pour tous les boutons Desktop - NOUVELLE MÉTHODE */
 .nog-action-button {
   padding: 0.6rem 1.5rem;
   font-size: 0.85rem;
@@ -343,60 +343,47 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  z-index: 2;
-}
-
-.nog-action-button .button-text {
   position: relative;
   transition: all 0.4s ease-out;
   transform: translateX(0);
+}
+
+/* État normal : texte + flèche droite */
+.nog-action-button .button-text {
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 
 .nog-action-button .arrow-right {
   margin-left: 8px;
-  transition: all 0.4s ease-out;
   opacity: 1;
-  transform: translateX(0);
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
+  transition: all 0.4s ease-out;
 }
 
 .nog-action-button .arrow-left {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: all 0.4s ease-out;
+  margin-right: 8px;
   opacity: 0;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
+  transition: all 0.4s ease-out;
 }
 
+/* État hover : translation du conteneur + switch des flèches */
 .nog-action-button:hover {
   background: #fce96b !important;
   color: #2f2f2e !important;
   border-color: #fce96b !important;
 }
 
-.nog-action-button:hover .button-text {
-  transform: translateX(24px);
+.nog-action-button:hover .button-content {
+  transform: translateX(12px);
 }
 
 .nog-action-button:hover .arrow-right {
   opacity: 0;
-  transform: translateX(16px);
 }
 
 .nog-action-button:hover .arrow-left {
   opacity: 1;
-  transform: translateY(-50%);
 }
 
 .nog-action-button:active {
@@ -424,7 +411,7 @@
   margin-top: clamp(1rem, 2vw, 1.5rem);
 }
 
-/* Style uniforme pour tous les boutons Mobile */
+/* Style uniforme pour tous les boutons Mobile - NOUVELLE MÉTHODE */
 .nog-action-button-mobile {
   padding: 0.6rem 1.5rem;
   font-size: 0.8rem;
@@ -444,6 +431,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  max-width: 280px;
   height: 38px;
 }
 
@@ -451,40 +439,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
-  position: relative;
-  z-index: 2;
-}
-
-.nog-action-button-mobile .button-text {
   position: relative;
   transition: all 0.4s ease-out;
   transform: translateX(0);
+}
+
+.nog-action-button-mobile .button-text {
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 
 .nog-action-button-mobile .arrow-right {
   margin-left: 8px;
-  transition: all 0.4s ease-out;
   opacity: 1;
-  transform: translateX(0);
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
+  transition: all 0.4s ease-out;
 }
 
 .nog-action-button-mobile .arrow-left {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: all 0.4s ease-out;
+  margin-right: 8px;
   opacity: 0;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
+  transition: all 0.4s ease-out;
 }
 
 .nog-action-button-mobile:hover {
@@ -493,18 +468,16 @@
   border-color: #fce96b !important;
 }
 
-.nog-action-button-mobile:hover .button-text {
-  transform: translateX(20px);
+.nog-action-button-mobile:hover .button-content {
+  transform: translateX(10px);
 }
 
 .nog-action-button-mobile:hover .arrow-right {
   opacity: 0;
-  transform: translateX(12px);
 }
 
 .nog-action-button-mobile:hover .arrow-left {
   opacity: 1;
-  transform: translateY(-50%);
 }
 
 .nog-action-button-mobile:active {
