@@ -123,6 +123,175 @@ const NOGProjectSection = () => {
             border-color: rgba(252, 233, 107, 0.2) !important;
           }
 
+          /* ===== STYLES BOUTONS - NOUVELLE MÉTHODE ===== */
+
+          /* Style uniforme pour tous les boutons Desktop */
+          .nog-action-button {
+            padding: 0.6rem 1.5rem;
+            font-size: 0.85rem;
+            font-weight: 700;
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+            letter-spacing: 0.1em;
+            text-transform: none;
+            background: transparent;
+            color: #fce96b;
+            border: 1px solid #fce96b;
+            border-radius: 50px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease-out;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 180px;
+            height: 40px;
+            margin: 0 0.5rem;
+          }
+
+          .nog-action-button .button-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: all 0.4s ease-out;
+            transform: translateX(0);
+          }
+
+          .nog-action-button .button-text {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+          }
+
+          .nog-action-button .arrow-right {
+            margin-left: 8px;
+            opacity: 1;
+            transition: all 0.4s ease-out;
+          }
+
+          .nog-action-button .arrow-left {
+            margin-right: 8px;
+            opacity: 0;
+            transition: all 0.4s ease-out;
+          }
+
+          .nog-action-button:hover {
+            background: #fce96b !important;
+            color: #2f2f2e !important;
+            border-color: #fce96b !important;
+          }
+
+          .nog-action-button:hover .button-content {
+            transform: translateX(12px);
+          }
+
+          .nog-action-button:hover .arrow-right {
+            opacity: 0;
+          }
+
+          .nog-action-button:hover .arrow-left {
+            opacity: 1;
+          }
+
+          .nog-action-button:active {
+            transform: translateY(-1px);
+          }
+
+          /* Layout responsive pour les boutons */
+          .button-container-desktop {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+            flex-wrap: wrap;
+            margin-top: clamp(1rem, 2vw, 1.5rem);
+          }
+
+          .button-container-mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.8rem;
+            width: 100%;
+            max-width: 280px;
+            margin-top: clamp(1rem, 2vw, 1.5rem);
+          }
+
+          /* Style uniforme pour tous les boutons Mobile */
+          .nog-action-button-mobile {
+            padding: 0.6rem 1.5rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+            letter-spacing: 0.1em;
+            text-transform: none;
+            background: transparent;
+            color: #fce96b;
+            border: 1px solid #fce96b;
+            border-radius: 50px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease-out;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 280px;
+            height: 38px;
+          }
+
+          .nog-action-button-mobile .button-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            transition: all 0.4s ease-out;
+            transform: translateX(0);
+          }
+
+          .nog-action-button-mobile .button-text {
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+          }
+
+          .nog-action-button-mobile .arrow-right {
+            margin-left: 8px;
+            opacity: 1;
+            transition: all 0.4s ease-out;
+          }
+
+          .nog-action-button-mobile .arrow-left {
+            margin-right: 8px;
+            opacity: 0;
+            transition: all 0.4s ease-out;
+          }
+
+          .nog-action-button-mobile:hover {
+            background: #fce96b !important;
+            color: #2f2f2e !important;
+            border-color: #fce96b !important;
+          }
+
+          .nog-action-button-mobile:hover .button-content {
+            transform: translateX(10px);
+          }
+
+          .nog-action-button-mobile:hover .arrow-right {
+            opacity: 0;
+          }
+
+          .nog-action-button-mobile:hover .arrow-left {
+            opacity: 1;
+          }
+
+          .nog-action-button-mobile:active {
+            transform: translateY(-1px);
+          }
+
           /* Responsive breakpoints */
           @media (max-width: 768px) {
             .desktop-layout { 
