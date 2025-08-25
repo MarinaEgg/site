@@ -52,14 +52,14 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       // TODO: Remplacer par votre endpointt d'email
       console.log('Form data to send:', formData);
-      
+
       // Simulation d'envoi
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
+
       setSubmitStatus('success');
       setFormData({
         name: '',
@@ -78,7 +78,7 @@ export const Contact = () => {
   return (
     <div className={classes.root}>
       <Header />
-      
+
       <div className={classes.contentSection}>
         <section
           style={{
@@ -123,7 +123,7 @@ export const Contact = () => {
               >
                 {t('navigation.contact').toUpperCase()}
               </h3>
-              
+
               <h1
                 style={{
                   fontSize: 'clamp(2.5rem, 6vw, 4rem)',
@@ -416,40 +416,83 @@ export const Contact = () => {
                     whileHover={{ scale: 1.02, y: -2 }}
                     whileTap={{ scale: 0.98 }}
                     style={{
-                      padding: '1rem 3rem',
-                      fontSize: '1rem',
-                      fontWeight: '600',
+                      padding: '0.6rem 1.5rem',
+                      fontSize: '0.85rem',
+                      fontWeight: '700',
                       color: isSubmitting ? 'rgba(47, 47, 46, 0.7)' : '#2f2f2e',
-                      background: isSubmitting ? 'rgba(252, 233, 107, 0.6)' : '#fce96b',
-                      border: 'none',
+                      background: isSubmitting ? 'rgba(252, 233, 107, 0.6)' : 'transparent',
+                      border: `1px solid ${isSubmitting ? 'rgba(252, 233, 107, 0.6)' : '#fce96b'}`,
                       borderRadius: '50px',
                       cursor: isSubmitting ? 'not-allowed' : 'pointer',
-                      transition: 'all 0.3s ease',
+                      transition: 'all 0.4s ease-out',
                       fontFamily: '"Inter", -apple-system, BlinkMacSystemFont, sans-serif',
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.05em',
-                      minWidth: '200px',
+                      textTransform: 'none',
+                      letterSpacing: '0.1em',
+                      minWidth: '180px',
+                      height: '40px',
                       position: 'relative',
-                      overflow: 'hidden'
+                      overflow: 'hidden',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      justifyContent: 'center'
+                    }}
+                    onMouseEnter={(e) => {
+                      if (!isSubmitting) {
+                        e.target.style.background = '#fce96b';
+                        e.target.style.color = '#2f2f2e';
+                      }
+                    }}
+                    onMouseLeave={(e) => {
+                      if (!isSubmitting) {
+                        e.target.style.background = 'transparent';
+                        e.target.style.color = '#fce96b';
+                      }
                     }}
                   >
-                    {isSubmitting ? (
-                      <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
-                        <div
-                          style={{
-                            width: '16px',
-                            height: '16px',
-                            border: '2px solid rgba(47, 47, 46, 0.3)',
-                            borderTop: '2px solid #2f2f2e',
-                            borderRadius: '50%',
-                            animation: 'spin 1s linear infinite'
-                          }}
-                        />
-                        Sending...
+                    <div style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      position: 'relative',
+                      transition: 'all 0.4s ease-out',
+                      transform: 'translateX(0)'
+                    }}>
+                      <span style={{
+                        marginRight: '8px',
+                        opacity: 0,
+                        transition: 'all 0.4s ease-out'
+                      }}>→</span>
+                      <span style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        whiteSpace: 'nowrap'
+                      }}>
+                        {isSubmitting ? (
+                          <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}>
+                            <div
+                              style={{
+                                width: '16px',
+                                height: '16px',
+                                border: '2px solid rgba(47, 47, 46, 0.3)',
+                                borderTop: '2px solid #2f2f2e',
+                                borderRadius: '50%',
+                                animation: 'spin 1s linear infinite'
+                              }}
+                            />
+                            Sending...
+                          </span>
+                        ) : (
+                          <>
+                            Send Message
+                            <span style={{
+                              marginLeft: '8px',
+                              opacity: 1,
+                              transition: 'all 0.4s ease-out'
+                            }}>→</span>
+                          </>
+                        )}
                       </span>
-                    ) : (
-                      'Send Message'
-                    )}
+                    </div>
                   </motion.button>
                 </div>
               </form>
@@ -466,17 +509,17 @@ export const Contact = () => {
                       padding: '1rem',
                       borderRadius: '8px',
                       textAlign: 'center',
-                      background: submitStatus === 'success' 
-                        ? 'rgba(34, 197, 94, 0.1)' 
+                      background: submitStatus === 'success'
+                        ? 'rgba(34, 197, 94, 0.1)'
                         : 'rgba(239, 68, 68, 0.1)',
-                      border: `1px solid ${submitStatus === 'success' 
-                        ? 'rgba(34, 197, 94, 0.3)' 
+                      border: `1px solid ${submitStatus === 'success'
+                        ? 'rgba(34, 197, 94, 0.3)'
                         : 'rgba(239, 68, 68, 0.3)'}`,
                       color: submitStatus === 'success' ? '#22c55e' : '#ef4444'
                     }}
                   >
-                    {submitStatus === 'success' 
-                      ? '✓ Message sent successfully! We\'ll get back to you soon.' 
+                    {submitStatus === 'success'
+                      ? '✓ Message sent successfully! We\'ll get back to you soon.'
                       : '✗ Failed to send message. Please try again.'}
                   </motion.div>
                 )}
