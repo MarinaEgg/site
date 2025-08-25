@@ -1,4 +1,321 @@
-/* Style uniforme pour tous les boutons - VERSION CORRIGÉE */
+/* Section principale avec gestion responsive */
+.nog-project-section {
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  padding: clamp(2rem, 5vh, 4rem) clamp(1rem, 3vw, 2rem);
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Container principal centré */
+.nog-content {
+  text-align: center;
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+/* Container du titre avec motifs */
+.nog-title-container {
+  position: relative;
+  margin-bottom: clamp(2rem, 5vh, 4rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: clamp(8rem, 20vh, 16rem);
+}
+
+/* Titre principal */
+.nog-title {
+  font-size: clamp(3rem, 12vw, 12rem);
+  font-weight: 900;
+  color: #fafafa;
+  line-height: 0.7;
+  letter-spacing: -0.12em;
+  margin: 0;
+  font-family: "Arial Black", "Helvetica", sans-serif;
+  text-transform: uppercase;
+  font-stretch: ultra-condensed;
+  width: 100%;
+  max-width: 90%;
+  transform: scaleY(0.8) scaleX(1.2);
+  transform-origin: center;
+  text-align: center;
+}
+
+/* Sous-titre PROJECT */
+.nog-subtitle {
+  margin-top: 0.15em;
+}
+
+/* Motifs graphiques */
+.nog-pattern {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: clamp(12rem, 30vh, 20rem);
+  overflow: hidden;
+}
+
+.nog-pattern-left {
+  left: clamp(0.5%, 2vw, 2%);
+}
+
+.nog-pattern-right {
+  right: clamp(0.5%, 2vw, 2%);
+}
+
+.nog-pattern-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Rectangle des motifs */
+.nog-rectangle {
+  background-color: #fafafa;
+  width: clamp(8px, 2vw, 16px);
+}
+
+/* Description */
+.nog-description {
+  font-size: clamp(0.9rem, 2.2vw, 1.25rem);
+  color: #fafafa;
+  line-height: clamp(1.4, 1.6, 1.8);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 500;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  max-width: min(95%, 80ch);
+  margin-top: clamp(1rem, 3vw, 2rem);
+  padding: 0 1rem;
+  box-sizing: border-box;
+  background: none;
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+}
+
+/* Lignes de description */
+.nog-description-line {
+  word-wrap: break-word;
+  hyphens: auto;
+  margin-bottom: clamp(0.6rem, 1.5vw, 1rem);
+}
+
+.nog-description-line:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== CORRECTIONS POUR LES RECTANGLES INDÉSIRABLES ===== */
+
+/* Forcer TOUS les éléments à être transparents dans NOGProjectSection */
+.nog-project-section,
+.nog-project-section *,
+.nog-project-section *::before,
+.nog-project-section *::after,
+.nog-project-section div,
+.nog-project-section span,
+.nog-project-section button,
+.nog-project-section p {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* États hover - FORCER la transparence pour tout sauf les boutons */
+.nog-project-section:hover,
+.nog-project-section:hover *:not(button),
+.nog-project-section:hover *:not(button)::before,
+.nog-project-section:hover *:not(button)::after,
+.nog-project-section:hover div:not(button),
+.nog-project-section:hover span:not(button) {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* États focus - FORCER la transparence */
+.nog-project-section:focus,
+.nog-project-section:focus *,
+.nog-project-section *:focus,
+.nog-project-section *:focus *,
+.nog-project-section *:focus::before,
+.nog-project-section *:focus::after {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* États active - FORCER la transparence */
+.nog-project-section:active,
+.nog-project-section:active *:not(button),
+.nog-project-section *:active:not(button),
+.nog-project-section *:active:not(button) * {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* Correction pour Material-UI et autres frameworks */
+.nog-project-section .MuiPaper-root,
+.nog-project-section .MuiCard-root,
+.nog-project-section .MuiBox-root,
+.nog-project-section [class*="makeStyles"],
+.nog-project-section [class*="jss"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* Forcer TOUS les divs à être transparents SAUF les conteneurs spécifiques */
+.nog-project-section div[style]:not([style*="border-radius"]),
+.nog-project-section div {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Exception UNIQUEMENT pour les éléments qui DOIVENT avoir un background */
+.nog-project-section div[style*="background: rgba(255, 255, 255, 0.08)"],
+.nog-project-section div[style*="backgroundColor: rgba(255, 255, 255, 0.08)"],
+.nog-project-section div[style*="background: rgba(252, 233, 107"] {
+  /* Ces éléments gardent leur background car c'est voulu */
+}
+
+/* Correction pour les éléments avec styles inline indésirables */
+.nog-project-section [style*="background"]:not([style*="rgba(255, 255, 255, 0.08)"]):not([style*="rgba(252, 233, 107"]) {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* Correction pour les gradients */
+.nog-project-section [style*="linear-gradient"],
+.nog-project-section [style*="radial-gradient"] {
+  background: transparent !important;
+  background-image: none !important;
+}
+
+/* Empêcher la sélection de créer des backgrounds */
+.nog-project-section ::selection {
+  background: rgba(252, 233, 107, 0.3) !important;
+  color: #fafafa !important;
+}
+
+.nog-project-section ::-moz-selection {
+  background: rgba(252, 233, 107, 0.3) !important;
+  color: #fafafa !important;
+}
+
+/* Correction pour les pseudo-éléments */
+.nog-project-section *::before,
+.nog-project-section *::after {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* ===== STYLES POUR LES ÉLÉMENTS JS INTÉGRÉS ===== */
+
+/* Section principale pour les éléments JS */
+.nog-main-section {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+.nog-main-section *,
+.nog-main-section *::before,
+.nog-main-section *::after {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+/* Texte dynamique avec animation */
+.dynamic-text {
+  color: #fce96b;
+  font-weight: 600;
+  transition: opacity 0.3s ease;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+}
+
+.dynamic-text::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #fce96b, #f5d917);
+  animation: underlineProgress 2.5s ease-in-out infinite;
+  border-radius: 1px;
+  box-shadow: 0 0 4px rgba(252, 233, 107, 0.4);
+}
+
+@keyframes underlineProgress {
+  0% { 
+    width: 0%; 
+    opacity: 0.8;
+  }
+  20% {
+    opacity: 1;
+  }
+  50% { 
+    width: 100%; 
+    opacity: 1;
+  }
+  70% {
+    width: 100%;
+    opacity: 0.8;
+  }
+  100% { 
+    width: 100%; 
+    opacity: 0.6;
+  }
+}
+
+/* Carte premium */
+.premium-card {
+  background: rgba(255, 255, 255, 0.02) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(252, 233, 107, 0.1) !important;
+  transition: all 0.3s ease !important;
+}
+
+.premium-card:hover {
+  border-color: rgba(252, 233, 107, 0.2) !important;
+}
+
+/* ===== STYLES BOUTONS - VERSION CORRIGÉE ===== */
+
+/* Style uniforme pour tous les boutons Desktop */
 .nog-action-button {
   padding: 0.6rem 1.5rem;
   font-size: 0.85rem;
@@ -52,7 +369,7 @@
 
 .nog-action-button .arrow-left {
   position: absolute;
-  left: 16px; /* Position fixe à gauche dans le bouton */
+  left: 16px;
   top: 50%;
   transform: translateY(-50%);
   transition: all 0.4s ease-out;
@@ -69,7 +386,7 @@
 }
 
 .nog-action-button:hover .button-text {
-  transform: translateX(24px); /* Décalage plus important vers la droite */
+  transform: translateX(24px);
 }
 
 .nog-action-button:hover .arrow-right {
@@ -79,14 +396,35 @@
 
 .nog-action-button:hover .arrow-left {
   opacity: 1;
-  transform: translateY(-50%); /* Reste en position fixe, pas de translateX */
+  transform: translateY(-50%);
 }
 
 .nog-action-button:active {
   transform: translateY(-1px);
 }
 
-/* VERSION MOBILE CORRIGÉE */
+/* Layout responsive pour les boutons */
+.button-container-desktop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: clamp(1rem, 2vw, 1.5rem);
+}
+
+.button-container-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+  max-width: 280px;
+  margin-top: clamp(1rem, 2vw, 1.5rem);
+}
+
+/* Style uniforme pour tous les boutons Mobile */
 .nog-action-button-mobile {
   padding: 0.6rem 1.5rem;
   font-size: 0.8rem;
@@ -139,7 +477,7 @@
 
 .nog-action-button-mobile .arrow-left {
   position: absolute;
-  left: 16px; /* Position fixe à gauche dans le bouton mobile */
+  left: 16px;
   top: 50%;
   transform: translateY(-50%);
   transition: all 0.4s ease-out;
@@ -156,7 +494,7 @@
 }
 
 .nog-action-button-mobile:hover .button-text {
-  transform: translateX(20px); /* Décalage adapté pour mobile */
+  transform: translateX(20px);
 }
 
 .nog-action-button-mobile:hover .arrow-right {
@@ -166,9 +504,179 @@
 
 .nog-action-button-mobile:hover .arrow-left {
   opacity: 1;
-  transform: translateY(-50%); /* Reste en position fixe */
+  transform: translateY(-50%);
 }
 
 .nog-action-button-mobile:active {
   transform: translateY(-1px);
+}
+
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+  .desktop-layout { 
+    display: none !important; 
+  }
+  .mobile-layout { 
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-layout { 
+    display: none !important; 
+  }
+  .desktop-layout { 
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+/* Animation d'apparition pour les boutons */
+.nog-action-button, .nog-action-button-mobile {
+  animation: buttonFadeIn 0.6s ease-out forwards;
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.nog-action-button:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.nog-action-button:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+@keyframes buttonFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* FIX: Assurer que le texte reste sur une ligne - CARD ADAPTATIVE */
+.text-content-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: baseline;
+  justify-content: center;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: keep-all;
+  width: auto;
+  min-width: max-content;
+}
+
+.intro-text {
+  white-space: nowrap;
+  margin-right: 0;
+}
+
+.dynamic-text {
+  white-space: nowrap;
+}
+
+/* Styles spécifiques pour les boutons (ils peuvent garder leurs effets hover) */
+.nog-project-section button {
+  /* Les boutons gardent leurs styles d'origine */
+}
+
+.nog-project-section button:hover {
+  /* Les effets hover des boutons sont préservés */
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 768px) {
+  .nog-project-section {
+    padding: clamp(1.5rem, 4vh, 3rem) clamp(0.5rem, 2vw, 1.5rem);
+  }
+  
+  .nog-title {
+    font-size: clamp(2.5rem, 10vw, 5rem);
+    max-width: 95%;
+  }
+  
+  .nog-pattern {
+    display: none;
+  }
+  
+  .nog-description {
+    font-size: clamp(0.8rem, 2vw, 1.1rem);
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .nog-project-section {
+    padding: clamp(1rem, 3vh, 2rem) 0.5rem;
+  }
+  
+  .nog-title {
+    font-size: clamp(2rem, 8vw, 4rem);
+  }
+  
+  .nog-description {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+  
+  .nog-title-container {
+    margin-bottom: clamp(1.5rem, 4vh, 3rem);
+  }
+
+  .premium-card {
+    width: 98% !important;
+    max-width: 98% !important;
+    padding: clamp(1rem, 3vw, 1.5rem) clamp(1rem, 3vw, 1.5rem) !important;
+    margin: 0 1% !important;
+  }
+  
+  .text-content-wrapper {
+    white-space: normal;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .intro-text {
+    white-space: normal;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .dynamic-text {
+    white-space: normal;
+    word-break: break-word;
+  }
+  
+  .nog-action-button-mobile {
+    min-width: 160px !important;
+  }
+}
+
+/* Optimisations de performance */
+@media (prefers-reduced-motion: no-preference) {
+  .nog-project-section {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+}
+
+/* Gestion des très petits écrans */
+@media (max-width: 320px) {
+  .nog-title {
+    font-size: clamp(1.8rem, 7vw, 3.5rem);
+    letter-spacing: -0.08em;
+  }
+  
+  .nog-description {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
 }
