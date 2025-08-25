@@ -207,69 +207,47 @@ const useStyles = makeStyles((theme) => ({
         minWidth: '180px',
         height: '40px',
         
-        // Conteneur pour le contenu du bouton
         '& .button-content': {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            width: '100%',
-            height: '100%',
-            position: 'relative',
-            zIndex: 2,
-        },
-        
-        // Texte du bouton
-        '& .button-text': {
             position: 'relative',
             transition: 'all 0.4s ease-out',
             transform: 'translateX(0)',
-            display: 'flex',
-            alignItems: 'center',
         },
         
-        // Flèche par défaut (à droite)
+        '& .button-text': {
+            display: 'flex',
+            alignItems: 'center',
+            whiteSpace: 'nowrap',
+        },
+        
         '& .arrow-right': {
             marginLeft: '8px',
-            transition: 'all 0.4s ease-out',
             opacity: 1,
-            transform: 'translateX(0)',
-            flexShrink: 0,
-            display: 'flex',
-            alignItems: 'center',
+            transition: 'all 0.4s ease-out',
         },
         
-        // Flèche pour le hover (cachée à gauche du texte)
         '& .arrow-left': {
-            position: 'absolute',
-            left: '50%',
-            top: '50%',
-            transform: 'translate(-50%, -50%)',
-            transition: 'all 0.4s ease-out',
+            marginRight: '8px',
             opacity: 0,
-            flexShrink: 0,
-            display: 'flex',
-            alignItems: 'center',
+            transition: 'all 0.4s ease-out',
         },
         
         '&:hover': {
             background: '#fce96b',
             color: '#2f2f2e',
             
-            // Le texte se repositionne plus à droite pour centrer l'ensemble
-            '& .button-text': {
-                transform: 'translateX(22px)',
+            '& .button-content': {
+                transform: 'translateX(12px)',
             },
             
-            // La flèche de droite disparaît
             '& .arrow-right': {
                 opacity: 0,
-                transform: 'translateX(8px)',
             },
             
-            // La flèche de gauche apparaît avec position ajustée pour le centrage
             '& .arrow-left': {
                 opacity: 1,
-                transform: 'translate(-67px, -50%)',
             },
         },
         
@@ -281,10 +259,8 @@ const useStyles = makeStyles((theme) => ({
             minWidth: '160px',
             fontSize: '0.8rem',
             
-            '&:hover': {
-                '& .button-text': {
-                    transform: 'translateX(22px)',
-                },
+            '&:hover .button-content': {
+                transform: 'translateX(10px)',
             },
         },
     },
