@@ -123,7 +123,6 @@ const NOGProjectSection = () => {
             border-color: rgba(252, 233, 107, 0.2) !important;
           }
 
-         
           /* Responsive breakpoints */
           @media (max-width: 768px) {
             .desktop-layout { 
@@ -149,8 +148,6 @@ const NOGProjectSection = () => {
             }
           }
 
-       
-
           /* FIX: Assurer que le texte reste sur une ligne - CARD ADAPTATIVE */
           .text-content-wrapper {
             display: flex;
@@ -173,6 +170,39 @@ const NOGProjectSection = () => {
             white-space: nowrap;
           }
 
+          /* Responsive : ajustement pour texte long */
+          @media (max-width: 480px) {
+            .premium-card {
+              width: 98% !important;
+              max-width: 98% !important;
+              padding: clamp(1rem, 3vw, 1.5rem) clamp(1rem, 3vw, 1.5rem) !important;
+              margin: 0 1% !important;
+            }
+            
+            .text-content-wrapper {
+              white-space: normal;
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+            }
+            
+            .intro-text {
+              white-space: normal;
+              margin-right: 0;
+              margin-bottom: 0.5rem;
+            }
+            
+            .dynamic-text {
+              white-space: normal;
+              word-break: break-word;
+            }
+            
+            .nog-action-button-mobile {
+              min-width: 160px !important;
+            }
+          }
+        `}
+      </style>
       
       <section 
         className="nog-main-section"
