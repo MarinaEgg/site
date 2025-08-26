@@ -34,9 +34,9 @@
         "body": "Listen to or analyze meeting notes, extract key points, and automatically convert decisions and discussions into actionable tasks with assigned owners and deadlines."
       },
       "wikiBuilder": {
-        "title": "Internal Wiki Builder Agent",
-        "context": "Knowledge Management / Documentation",
-        "body": "Create and update a private internal Wiki by scanning documents and internal conversations. Automatically tag and categorize entries."
+        "title": "Internal Knowledge Builder Agent",
+        "context": "Enterprise / Knowledge Management",
+        "body": "Creates and maintains a private internal wiki by analyzing internal documents and authorized public conversations. Automatically tags and categorizes entries."
       },
       "auditTrail": {
         "title": "Prompt Improvement Agent",
@@ -64,9 +64,9 @@
         "body": "Weekly summaries of key news and trends in a selected technology sector, including key sources, highlights, and regulatory updates."
       },
       "rfpDrafting": {
-        "title": "Billing and Payment Tracking Agent",
-        "context": "Finance / Legal Accounting",
-        "body": "Automatically generate invoices from time entries or flat fees, send personalized payment reminders, track payment status, and manage trust retainer balances. Integrates with Clio, Xero, or QuickBooks."
+        "title": "Legal Spend Management Agent",
+        "context": "Legal Department / Finance",
+        "body": "Analyzes and reviews invoices, checks compliance with Outside Counsel Guidelines and agreed hourly rates, detects billing anomalies, tracks budgets, and forecasts accruals. Provides adjustment recommendations and compliance reports."
       },
       "esgCompliance": {
         "title": "Interactive Financial Reporting Agent",
@@ -74,9 +74,9 @@
         "body": "Produce a dynamic dashboard showing profitability by case, lawyer, or client, with natural language query capability (e.g., 'Show margin on litigation cases since January'). Integrates with Power BI or Tableau, conversational LLM interface."
       },
       "dataPrivacyAudit": {
-        "title": "Data Privacy Audit Agent",
-        "context": "Compliance / Data Protection",
-        "body": "Audit GDPR compliance and analyze personal data flows in your organization to identify risks and recommend improvements."
+        "title": "Tax Compliance Agent",
+        "context": "Compliance / Tax",
+        "body": "Helps tax professionals navigate complex and changing tax regulations across multiple jurisdictions, ensuring compliance while identifying optimization opportunities."
       }
     },
     "deployment": {
