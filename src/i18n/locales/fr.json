@@ -29,19 +29,19 @@
         "body": "Améliore la recherche juridique en identifiant et récupérant dynamiquement des précédents pertinents, des textes de loi et des doctrines, pour fournir aux avocats des recommandations stratégiques fondées sur l’analyse jurisprudentielle et le contexte juridictionnel."
       },
       "meetingPrep": {
-        "title": "Agent Mémoire de Réunion",
-        "context": "Productivité / Gestion de Projets",
-        "body": "Écouter ou analyser les notes d'une réunion, extraire les points clés et transformer automatiquement les décisions et discussions en tâches actionnables avec responsables et échéances."
+        "title": "Agent de Réunion",
+        "context": "Entreprise / Gestion courante",
+        "body": "Analyser les notes d'une réunion, extraire les points clés et transformer automatiquement les décisions et discussions en tâches actionnables avec responsables et échéances."
       },
       "wikiBuilder": {
-        "title": "Agent Créateur de Wiki Interne",
-        "context": "Gestion des Connaissances / Documentation",
-        "body": "Construire et mettre à jour un Wiki interne privé en scannant documents et conversations internes. Étiqueter et classer automatiquement les entrées."
+        "title": "Agent de Gestion des Connaissances Internes",
+        "context": "Entreprise / Gestion des Connaissances",
+        "body": "Crée et met à jour un Wiki interne privé en analysant les documents internes et les échanges publics autorisés. Attribue automatiquement des étiquettes et des catégories aux contenus."
       },
       "auditTrail": {
-        "title": "Agent d'Amélioration des Consignes IA",
+        "title": "Agent d'Amélioration de prompts IA",
         "context": "IA / Amélioration Continue",
-        "body": "Analyser les consignes utilisées, identifier les points faibles et générer des versions optimisées pour améliorer la précision, la clarté et la cohérence des réponses des modèles IA."
+        "body": "Analyser les prompts utilisés, identifier les points faibles et générer des versions optimisées pour améliorer la précision, la clarté et la cohérence des réponses des modèles IA."
       },
       "supplierCompliance": {
         "title": "Agent Conformité et politiques",
@@ -64,9 +64,9 @@
         "body": "Fournir chaque semaine un résumé des nouvelles et tendances clés dans un secteur technologique choisi, incluant sources clés, points saillants et mises à jour réglementaires."
       },
       "rfpDrafting": {
-        "title": "Agent de Facturation et Suivi des Paiements",
-        "context": "Finance / Comptabilité Juridique",
-        "body": "Générer automatiquement les factures à partir des entrées de temps ou forfaits, envoyer des rappels personnalisés, suivre l'état des paiements et gérer les fonds en dépôt. Intégration avec Clio, Xero ou QuickBooks."
+        "title": "Agent de Gestion des Dépenses Juridiques",
+        "context": "Direction Juridique / Finance",
+        "body": "Analyse et contrôle des factures, vérification des règles OCG et des taux horaires, détection d’anomalies, suivi budgétaire et prévision des accruals. Génère des recommandations d’ajustement et des rapports de conformité."
       },
       "esgCompliance": {
         "title": "Agent de Reporting Financier Interactif",
@@ -74,9 +74,9 @@
         "body": "Produire un tableau de bord dynamique affichant la rentabilité par dossier, avocat ou client, avec possibilité de requêtes en langage naturel (ex. « Montre-moi la marge sur nos dossiers de contentieux depuis janvier »). Intégration avec Power BI ou Tableau, interface conversationnelle LLM."
       },
       "dataPrivacyAudit": {
-        "title": "Agent d'Audit de Confidentialité des Données",
-        "context": "Conformité / Protection des Données",
-        "body": "Auditer la conformité RGPD et analyser les flux de données personnelles dans votre organisation pour identifier les risques et recommander des améliorations."
+        "title": "Agent de Conformité Fiscale",
+        "context": "Conformité / Fiscalité",
+        "body": "Aide les professionnels de la fiscalité à naviguer dans des réglementations fiscales complexes et évolutives à travers plusieurs juridictions, en assurant la conformité tout en identifiant des opportunités d’optimisation."
       }
     },
     "deployment": {
