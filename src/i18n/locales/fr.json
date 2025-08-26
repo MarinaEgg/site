@@ -26,7 +26,7 @@
       "caseLawResearch": {
         "title": "Agent de Stratégie Basé sur les Précédents",
         "context": "Juridique / Recherche",
-        "body": "Améliore la recherche juridique en identifiant et récupérant dynamiquement des précédents pertinents, des textes de loi et des doctrines, pour provide aux avocats des recommandations stratégiques fondées sur l'analyse jurisprudentielle et le contexte juridictionnel."
+        "body": "Améliore la recherche juridique en identifiant et récupérant dynamiquement des précédents pertinents, des textes de loi et des doctrines, pour fournir aux avocats des recommandations stratégiques fondées sur l'analyse jurisprudentielle et le contexte juridictionnel."
       },
       "meetingPrep": {
         "title": "Agent de Réunion",
@@ -255,7 +255,7 @@
     },
     "science": {
       "title": "La science est meilleure lorsqu'elle est partagée",
-      "paragraph1": "Le progrès scientifique et technique nécessite un effort collectiv. La légitimité de l'IA ne peut provenir de systèmes fermés mais d'une collaboration ouverte avec praticiens, régulateurs et assureurs.",
+      "paragraph1": "Le progrès scientifique et technique nécessite un effort collectif. La légitimité de l'IA ne peut provenir de systèmes fermés mais d'une collaboration ouverte avec praticiens, régulateurs et assureurs.",
       "paragraph2": "Nous partageons nos cadres, guides de conformité et spécifications techniques afin de renforcer l'écosystème et améliorer la qualité de notre travail."
     },
     "learning": {
@@ -267,7 +267,7 @@
     "machineLearning": {
       "title": "Apprentissage automatique",
       "paragraph1": "Nous développons des modèles explicables et des cadres adaptés aux contextes juridiques et de conformité.",
-      "paragraph2": "Que ce soit via des embeddings sensibles au risque, des pipelines RAG traçables ou des chaînes d'agents certifiables, notre objectif est d'améliorer performance et légitimité."
+      "paragraph2": "Que ce soit via des embeddings sensibles au risque, des pipelines RAG traçables ou des chaînes d'agents certifiables, notre objectis est d'améliorer performance et légitimité."
     },
     "assurance": {
       "title": "Assurance par conception",
@@ -279,7 +279,7 @@
     },
     "measure": {
       "title": "Mesurer ce qui compte vraiment",
-      "description": "Notre objectif n'est pas d'optimiser des benchmarks abstraits mais de provide une assurance réelle dans des contextes concrets. La confiance est une condition pour l'adoption."
+      "description": "Notre objectif n'est pas d'optimiser des benchmarks abstraits mais de fournir une assurance réelle dans des contextes concrets. La confiance est une condition pour l'adoption."
     },
     "partners": {
       "title": "Devenez partenaires de conception",
