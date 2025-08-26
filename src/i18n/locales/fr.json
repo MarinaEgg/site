@@ -110,9 +110,9 @@
       "item5": "Support expert et accompagnement personnalisé tout au long de votre transformation IA, assurés par des équipes expérimentées dans votre domaine (legaltech, fintech...)."
     },
     "modal": {
-      "placeholder": "Modifiez cette instruction selon vos besoins...",
+      "placeholder": "Complétez selon vos besoins...",
       "cancel": "Annuler",
-      "submit": "Utiliser cette consigne"
+      "submit": "Je veux cet agent IA"
     }
   },
   "legalStack": {
