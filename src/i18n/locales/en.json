@@ -7,26 +7,26 @@
   },
   "hero": {
     "title": "Make AI agents your competitive advantage",
-    "subtitle": "Securely connect AI to your company's knowledge with agents that plan, act, and empower every team with trusted.",
+    "subtitle": "Securely connect AI to your company's knowledge with full confidence.",
     "cta": "Start building",
-    "labLink": "EggOn Lab — The team dedicated to making AI agents fully insurable."
+    "labLink": "EggOn Lab — Meet the team dedicated to making AI agents explainable."
   },
   "collection": {
-    "sectionLabel": "CASE STUDIES",
-    "title": "AI Agent Prompts Collection",
-    "subtitle": "Discover our curated collection of AI agent prompts designed for legal and business professionals.",
-    "cta": "Get Early Access",
+    "sectionLabel": "USE CASES",
+    "title": "AI Agent Collection",
+    "subtitle": "Discover our curated collection of AI agents designed for legal, financial and business professionals.",
+    "cta": "Book a meeting",
     "lastUpdate": "Last Update",
     "prompts": {
       "contractAnalysis": {
-        "title": "Contract Risk Analysis Agent",
+        "title": "Contract Analysis Agent",
         "context": "Legal / Risk Review",
-        "body": "Analyze a commercial contract and highlight clauses that pose legal risks (e.g., indemnities, termination, governing law). Provide a summary with explanations and recommendations."
+        "body": "Analyze legal contracts and agreements to identify key clauses, potential risks, and inconsistencies across multiple documents for mergers, acquisitions, and other transactions. Provide a concise summary with explanations and actionable recommendations."
       },
       "caseLawResearch": {
-        "title": "Case Law Research Agent", 
-        "context": "Legal / Case Research",
-        "body": "Search and summarize relevant case law related to a specific legal question, including links and jurisdiction-specific reasoning."
+        "title": "Precedent-Based Strategy Agent", 
+        "context": "Legal / Search",
+        "body": "Enhance legal research by smartly identifying and retrieving relevant case law, statutes, and doctrines, delivering attorneys actionable recommendations based on precedent analysis and local legal nuances."
       },
       "meetingPrep": {
         "title": "Meeting Summary Agent",
@@ -44,9 +44,9 @@
         "body": "Analyze prompts used, identify weaknesses, and generate optimized versions to improve the accuracy, clarity, and consistency of AI model responses."
       },
       "supplierCompliance": {
-        "title": "Contract Review Agent",
-        "context": "Legal / Quality Control",
-        "body": "Check consistency, compliance, and key terms in contract documents, generating annotations and improvement suggestions."
+        "title": "Compliance & policy Agent",
+        "context": "Legal / Search",
+        "body": "Teams can navigate internal and external policy documents to ensure adherence to requirements and reduce dependency on manual reviews from compliance teams."
       },
       "quotationAgent": {
         "title": "Quotation Generator Agent",
