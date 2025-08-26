@@ -117,25 +117,25 @@
   },
   "legalStack": {
     "subtitle": "POURQUOI EGGON",
-    "title": "Faites confiance à une équipe experte dans votre domaine",
-    "description": "Eggon combine une expertise juridique approfondie avec une véritable ingénierie IA pour fournir des solutions intégrées et reliables adaptées à vos défis opérationnels.",
-    "stackTitle": "LA PILE D'AGENTS JURIDIQUES",
+    "title": "Libérez la puissance de l'IA contextuelle",
+    "description": "Exploitez une plateforme d'IA de pointe avec une expertise en droit et finance pour générer des performances mesurables et des gains opérationnels.",
+    "stackTitle": "LA PLATEFORME D'IA CONTEXTUELLE",
     "benefits": [
       {
-        "title": "Connecté à votre univers",
-        "description": "Nous construisons des agents IA et des systèmes focalisés sur le domaine juridique et certaines parties de l'industrie de défense. Certains membres de notre équipe viennent d'entreprises legaltech de premier plan ou sont des experts de l'industrie qui connaissent votre environnement."
+        "title": "Expertise intégrée au domaine",
+        "description": "IA, agents IA et workflows conçus par des experts issus de la legaltech et de la fintech, connaissant déjà votre environnement technologique et vos obligations de sécurité."
       },
       {
-        "title": "Résout vos défis les plus complexes",
-        "description": "Des tâches simples au raisonnement complexe, nous connectons vos documents, outils et IA en gardant le ROI à l'esprit — et nous restons alignés avec votre mission."
+        "title": "Contextualisation de votre IA",
+        "description": "Architecture RAG spécialisée par domaine réduisant les hallucinations, améliorant la pertinence du modèle IA grâce à vos données et notre ingénierie de contexte et de prompt."
       },
       {
-        "title": "De la complexité à la clarté",
-        "description": "Nous transformons la complexité juridique et technique en résultats clairs et actionnables — avec une équipe expérimentée qui gère le projet et reste à vos côtés."
+        "title": "Du pilote à la production",
+        "description": "Accompagnement opérationnel et mise en production à vos côtés en plus de develloper, configurer et tester"
       },
       {
-        "title": "Véritable ingénierie IA",
-        "description": "Nous construisons, développons et déployons de vrais systèmes IA. D'un simple agent dans votre Copilot Studio à un système IA personnalisé plus avancé utilisant notre interface de chat, notre API privée, et une base de données vectorielle construite pour vous."
+        "title": "Sécurité et gouvernance de niveau entreprise",
+        "description": "Conformité et traçabilité intégrées — SOC 2, contrôle d'accès par rôle, chiffrement de bout en bout et journaux auditable pour chaque sortie IA."
       }
     ],
     "stackComponents": [
