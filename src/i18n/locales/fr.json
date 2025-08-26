@@ -103,11 +103,11 @@
     },
     "benefits": {
       "title": "Nos Avantages",
-      "item1": "Agents IA spécialisés dans les domaines juridiques et de défense, conçus par des experts qui connaissent votre environnement.",
-      "item2": "Solutions intégrées connectées à vos outils existants et respectant vos contraintes de sécurité.",
-      "item3": "Confidentialité garantée : vos données restent dans votre infrastructure, jamais exposées à des tiers.",
-      "item4": "Performance optimisée pour les tâches juridiques complexes, de l'analyse contractuelle à la recherche jurisprudentielle.",
-      "item5": "Support expert et accompagnement personnalisé tout au long de votre transformation numérique."
+      "item1": "Contextualiser un grand modèle de langage (GPT...) avec vos données d'entreprise (RAG / Ingénierie du contexte)",
+      "item2": "Agents IA spécialisés pour des tâches ciblées, avec pour objectif un retour sur investissement rapide (Agentique IA)",
+      "item3": "Intégrations pour connecter vos systèmes d'information et éliminer les silos, tout en respectant les droits et règles en place.",
+      "item4": "Confidentialité et conformité : vos données demeurent dans votre environnement sécurisé.",
+      "item5": "Support expert et accompagnement personnalisé tout au long de votre transformation IA, assurés par des équipes expérimentées dans votre domaine (legaltech, fintech...)."
     },
     "modal": {
       "placeholder": "Modifiez cette instruction selon vos besoins...",
