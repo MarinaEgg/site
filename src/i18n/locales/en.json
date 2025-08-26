@@ -110,9 +110,9 @@
       "item5": "Expert support and personalized guidance throughout your AI transformation, delivered by teams experienced in your sector (legaltech, fintech, etc.)."
     },
     "modal": {
-      "placeholder": "Modify this instruction according to your needs...",
+      "placeholder": "Modify this according to your needs...",
       "cancel": "Cancel", 
-      "submit": "Use this prompt"
+      "submit": "Get this AI Agent"
     }
   },
   "learn": {
