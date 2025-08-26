@@ -34,14 +34,14 @@
         "body": "Procesa transcripciones y notas de reuniones para extraer puntos clave, decisiones y acciones pendientes. Genera automáticamente tareas asignadas con responsables, plazos y seguimiento integrado en sistemas de gestión."
       },
       "wikiBuilder": {
-        "title": "Agente Constructor de Wiki Corporativo",
-        "context": "Gestión del Conocimiento / Documentación",
-        "body": "Desarrolla y mantiene wikis internos mediante escaneo inteligente de documentos y comunicaciones. Clasifica automáticamente contenido mediante taxonomía personalizable y mantiene historial de versiones con control de cambios."
+        "title": "Agente de Gestión del Conocimiento Interno",
+        "context": "Empresa / Gestión del Conocimiento",
+        "body": "Crea y actualiza una wiki interna privada analizando documentos internos y conversaciones públicas autorizadas. Etiqueta y categoriza automáticamente las entradas."
       },
       "auditTrail": {
-        "title": "Agente de Optimización de Instrucciones",
+        "title": "Agente de Optimización de Prompts",
         "context": "IA / Mejora Continua",
-        "body": "Evalúa instrucciones existentes identificando áreas de mejora en precisión y coherencia. Genera versiones optimizadas mediante técnicas avanzadas de ingeniería de prompts para maximizar la calidad de respuestas de modelos de IA."
+        "body": "Evalúa prompts existentes identificando áreas de mejora en precisión y coherencia. Genera versiones optimizadas mediante técnicas avanzadas de ingeniería de prompts para maximizar la calidad de respuestas de modelos de IA."
       },
       "supplierCompliance": {
         "title": "Agente de compliance y políticas",
@@ -64,9 +64,9 @@
         "body": "Produce informes semanales de inteligencia tecnológica con análisis de tendencias, innovaciones disruptivas y actualizaciones regulatorias en sectores específicos. Incluye evaluación de impacto y recomendaciones estratégicas."
       },
       "rfpDrafting": {
-        "title": "Agente de Gestión Facturación",
-        "context": "Finanzas / Contabilidad Legal",
-        "body": "Automatiza ciclo completo de facturación: generación desde registros temporales o tarifas fijas, recordatorios personalizados, seguimiento de pagos y reconciliación de anticipos. Integración nativa con Clio, Xero y QuickBooks."
+        "title": "Agente de Gestión de Gastos Jurídicos",
+        "context": "Departamento Jurídico / Finanzas",
+        "body": "Analiza y revisa facturas, verifica el cumplimiento de las normas de honorarios y tarifas acordadas, detecta anomalías de facturación, realiza seguimiento presupuestario y prevé provisiones por servicios jurídicos pendientes de facturar. Genera recomendaciones de ajuste e informes de conformidad."
       },
       "esgCompliance": {
         "title": "Agente de Reportes Financieros Interactivos",
@@ -74,9 +74,9 @@
         "body": "Despliega dashboards dinámicos con análisis de rentabilidad por caso, profesional o cliente. Permite consultas en lenguaje natural (ej: 'Muestra margen en casos litigiosos desde enero') con integración PowerBI/Tableau."
       },
       "dataPrivacyAudit": {
-        "title": "Agente de Auditoría de Privacidad",
-        "context": "Cumplimiento / Protección de Datos",
-        "body": "Audita el cumplimiento RGPD/CCPA mediante mapeo de flujos de datos personales. Identifica vulnerabilidades y recomienda medidas correctivas con informes ejecutivos listos para autoridades reguladoras."
+        "title": "Agente de Cumplimiento Fiscal",
+        "context": "Cumplimiento / Fiscalidad",
+        "body": "Ayuda a los profesionales fiscales a gestionar regulaciones fiscales complejas y cambiantes en múltiples jurisdicciones, asegurando el cumplimiento y detectando oportunidades de optimización."
       }
     },
     "deployment": {
