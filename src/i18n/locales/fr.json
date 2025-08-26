@@ -7,26 +7,26 @@
   },
   "hero": {
     "title": "Faites des agents IA votre avantage concurrentiel",
-    "subtitle": "Connectez l'IA en toute sécurité aux connaissances de votre entreprise avec des agents qui planifient, agissent et renforcent chaque équipe avec confiance.",
-    "cta": "Commencer à construire",
-    "labLink": "EggOn Lab — L'équipe dédiée à rendre les agents IA entièrement assurables."
+    "subtitle": "Connectez l'IA aux connaissances de votre entreprise en toute sécurité.",
+    "cta": "Commencer",
+    "labLink": "EggOn Lab — L'équipe dédiée à l'explicabilité des agents IA."
   },
   "collection": {
-    "sectionLabel": "ÉTUDES DE CAS",
-    "title": "Collection de Prompts d'Agents IA",
-    "subtitle": "Découvrez notre collection de prompts d'agents IA conçus pour les professionnels juridiques et d'affaires.",
-    "cta": "Accès Anticipé",
+    "sectionLabel": "CAS D'USAGES",
+    "title": "Collection d'Agents IA",
+    "subtitle": "Découvrez notre collection d'agents IA conçus pour les professionnels du juridique, de la finance et des entreprises.",
+    "cta": "Prendre RDV",
     "lastUpdate": "Dernière mise à jour",
     "prompts": {
       "contractAnalysis": {
         "title": "Agent d'Analyse de Risques Contractuels",
         "context": "Juridique / Révision des Risques",
-        "body": "Analyser un contrat commercial et signaler les clauses présentant un risque juridique (ex. indemnités, résiliation, droit applicable). Fournir un résumé avec explications et recommandations."
+        "body": "Analysez les contrats et accords juridiques pour identifier les clauses clés, les risques potentiels et les incohérences dans plusieurs documents, dans le cadre de fusions, d'acquisitions et d'autres transactions. Fournissez un résumé clair avec des explications et des recommandations exploitables."
       },
       "caseLawResearch": {
-        "title": "Agent de Recherche Jurisprudentielle",
-        "context": "Juridique / Recherche de Cas",
-        "body": "Rechercher et résumer la jurisprudence pertinente à une question juridique donnée, avec liens et raisonnement spécifique à la juridiction."
+        "title": "Agent de Stratégie Basé sur les Précédents",
+        "context": "Juridique / Recherche",
+        "body": "Améliore la recherche juridique en identifiant et récupérant dynamiquement des précédents pertinents, des textes de loi et des doctrines, pour fournir aux avocats des recommandations stratégiques fondées sur l’analyse jurisprudentielle et le contexte juridictionnel."
       },
       "meetingPrep": {
         "title": "Agent Mémoire de Réunion",
@@ -44,9 +44,9 @@
         "body": "Analyser les consignes utilisées, identifier les points faibles et générer des versions optimisées pour améliorer la précision, la clarté et la cohérence des réponses des modèles IA."
       },
       "supplierCompliance": {
-        "title": "Agent de Contrôle Qualité Contractuel",
-        "context": "Juridique / Contrôle Qualité",
-        "body": "Vérifier la cohérence, la conformité et les termes clés dans des documentos contractuels, avec annotations et suggestions d'amélioration."
+        "title": "Agent Conformité et politiques",
+        "context": "Juridique / Recherche",
+        "body": "Les équipes peuvent consulter les documents internes et externes pour respecter les obligations et réduire leur dépendance aux relectures manuelles des équipes de conformité."
       },
       "quotationAgent": {
         "title": "Agent de Génération de Devis",
