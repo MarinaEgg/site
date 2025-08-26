@@ -26,7 +26,7 @@
       "caseLawResearch": {
         "title": "Agent de Stratégie Basé sur les Précédents",
         "context": "Juridique / Recherche",
-        "body": "Améliore la recherche juridique en identifiant et récupérant dynamiquement des précédents pertinents, des textes de loi et des doctrines, pour fournir aux avocats des recommandations stratégiques fondées sur l’analyse jurisprudentielle et le contexte juridictionnel."
+        "body": "Améliore la recherche juridique en identifiant et récupérant dynamiquement des précédents pertinents, des textes de loi et des doctrines, pour provide aux avocats des recommandations stratégiques fondées sur l'analyse jurisprudentielle et le contexte juridictionnel."
       },
       "meetingPrep": {
         "title": "Agent de Réunion",
@@ -66,7 +66,7 @@
       "rfpDrafting": {
         "title": "Agent de Gestion des Dépenses Juridiques",
         "context": "Direction Juridique / Finance",
-        "body": "Analyse et contrôle des factures, vérification des règles OCG et des taux horaires, détection d’anomalies, suivi budgétaire et prévision des accruals. Génère des recommandations d’ajustement et des rapports de conformité."
+        "body": "Analyse et contrôle des factures, vérification des règles OCG et des taux horaires, détection d'anomalies, suivi budgétaire et prévision des accruals. Génère des recommandations d'ajustement et des rapports de conformité."
       },
       "esgCompliance": {
         "title": "Agent de Reporting Financier Interactif",
@@ -76,7 +76,7 @@
       "dataPrivacyAudit": {
         "title": "Agent de Conformité Fiscale",
         "context": "Conformité / Fiscalité",
-        "body": "Aide les professionnels de la fiscalité à naviguer dans des réglementations fiscales complexes et évolutives à travers plusieurs juridictions, en assurant la conformité tout en identifiant des opportunités d’optimisation."
+        "body": "Aide les professionnels de la fiscalité à naviguer dans des réglementations fiscales complexes et évolutives à travers plusieurs juridictions, en assurant la conformité tout en identifiant des opportunités d'optimisation."
       }
     },
     "deployment": {
@@ -206,6 +206,7 @@
       "catchUp": "Rattrapage",
       "ongoing": "En cours",
       "enroll": "S'inscrire"
+    }
   },
   "noglab": {
     "heroPhrase": "→ EggOn Rendez vos",
@@ -225,48 +226,48 @@
       "paragraph2": "Cette opacité est particulièrement critique dans les secteurs à haute responsabilité comme le droit et la santé, fondements d'une société libre et équitable.",
       "paragraph3": "Chaque jour, des décisions influencent des vies humaines. Elles nécessitent empathie, expérience et contexte — et un processus perçu comme légitime.",
       "paragraph4": "Aucune famille ne devrait douter d'une décision judiciaire ni aucun patient remettre en question la validité de son traitement.",
-      "paragraph5": "Le problème réel n’est pas seulement de savoir si l’IA fournit la bonne réponse, mais de savoir si elle est digne de confiance. Le doute érode la confiance et la légitimité."
+      "paragraph5": "Le problème réel n'est pas seulement de savoir si l'IA fournit la bonne réponse, mais de savoir si elle est digne de confiance. Le doute érode la confiance et la légitimité."
     },
     "aiForEveryone": {
       "title": "Une IA qui fonctionne pour tous",
       "paragraph1": "Nous ne visons pas à créer des IA entièrement autonomes, mais à permettre aux professionnels de déployer des agents IA gouvernés en lesquels ils peuvent avoir confiance.",
       "paragraph2": "Au lieu de modèles boîte noire, nous concevons des systèmes explicables, auditables et assurables, alignés sur les standards professionnels du droit, de la finance et de la santé.",
-      "paragraph3": "Nous voyons l’IA comme un collaborateur — pas un remplaçant — et nous la rendons adaptable, personnalisable et vérifiable pour chaque domaine d’expertise."
+      "paragraph3": "Nous voyons l'IA comme un collaborateur — pas un remplaçant — et nous la rendons adaptable, personnalisable et vérifiable pour chaque domaine d'expertise."
     },
     "principles": {
       "title": "Une légitimité solide compte",
       "explicability": {
         "title": "Explicabilité",
-        "description": "Chaque action exécutée par un agent IA doit être compréhensible et explicable, permettant aux utilisateurs de retracer le raisonnement complet et d’en vérifier la légitimité."
+        "description": "Chaque action exécutée par un agent IA doit être compréhensible et explicable, permettant aux utilisateurs de retracer le raisonnement complet et d'en vérifier la légitimité."
       },
       "accessibility": {
         "title": "Accessibilité",
-        "description": "L’explicabilité n’a d’impact que si elle est partagée. Les résultats et preuves doivent être accessibles à toutes les parties prenantes concernées."
+        "description": "L'explicabilité n'a d'impact que si elle est partagée. Les résultats et preuves doivent être accessibles à toutes les parties prenantes concernées."
       },
       "recall": {
         "title": "Rappel",
-        "description": "Si un biais, une erreur ou une défaillance est détecté, le système doit permettre un rappel immédiat, comme dans les industries critiques. L’IA gouvernée ne doit jamais être irréversible."
+        "description": "Si un biais, une erreur ou une défaillance est détecté, le système doit permettre un rappel immédiat, comme dans les industries critiques. L'IA gouvernée ne doit jamais être irréversible."
       },
       "speed": {
         "title": "Vitesse",
-        "description": "La conformité ne doit pas freiner l’innovation. L’IA explicable doit être rapide tout en garantissant confiance et adoption."
+        "description": "La conformité ne doit pas freiner l'innovation. L'IA explicable doit être rapide tout en garantissant confiance et adoption."
       }
     },
     "science": {
-      "title": "La science est meilleure lorsqu’elle est partagée",
-      "paragraph1": "Le progrès scientifique et technique nécessite un effort collectif. La légitimité de l’IA ne peut provenir de systèmes fermés mais d’une collaboration ouverte avec praticiens, régulateurs et assureurs.",
-      "paragraph2": "Nous partageons nos cadres, guides de conformité et spécifications techniques afin de renforcer l’écosystème et améliorer la qualité de notre travail."
+      "title": "La science est meilleure lorsqu'elle est partagée",
+      "paragraph1": "Le progrès scientifique et technique nécessite un effort collectiv. La légitimité de l'IA ne peut provenir de systèmes fermés mais d'une collaboration ouverte avec praticiens, régulateurs et assureurs.",
+      "paragraph2": "Nous partageons nos cadres, guides de conformité et spécifications techniques afin de renforcer l'écosystème et améliorer la qualité de notre travail."
     },
     "learning": {
       "title": "Apprendre en faisant",
-      "paragraph1": "Nous combinons recherche et co-conception de produits, en travaillant directement avec des cabinets d’avocats, équipes de conformité et assureurs.",
-      "paragraph2": "Le déploiement réel et les retours d’expérience nourrissent notre approche itérative, garantissant que nos cadres répondent aux problèmes les plus impactants.",
-      "paragraph3": "Notre méthodologie empirique inclut : maintenir un haut niveau de sécurité, publier les meilleures pratiques, permettre de nouvelles certifications, et appliquer une surveillance proactive et des tests d’intrusion."
+      "paragraph1": "Nous combinons recherche et co-conception de produits, en travaillant directement avec des cabinets d'avocats, équipes de conformité et assureurs.",
+      "paragraph2": "Le déploiement réel et les retours d'expérience nourrissent notre approche itérative, garantissant que nos cadres répondent aux problèmes les plus impactants.",
+      "paragraph3": "Notre méthodologie empirique inclut : maintenir un haut niveau de sécurité, publier les meilleures pratiques, permettre de nouvelles certifications, et appliquer une surveillance proactive et des tests d'intrusion."
     },
     "machineLearning": {
       "title": "Apprentissage automatique",
       "paragraph1": "Nous développons des modèles explicables et des cadres adaptés aux contextes juridiques et de conformité.",
-      "paragraph2": "Que ce soit via des embeddings sensibles au risque, des pipelines RAG traçables ou des chaînes d’agents certifiables, notre objectif est d’améliorer performance et légitimité."
+      "paragraph2": "Que ce soit via des embeddings sensibles au risque, des pipelines RAG traçables ou des chaînes d'agents certifiables, notre objectif est d'améliorer performance et légitimité."
     },
     "assurance": {
       "title": "Assurance par conception",
@@ -274,19 +275,17 @@
       "dataPrivacy": "Données & Confidentialité : garantir que les informations sensibles sont protégées et jamais mal utilisées.",
       "security": "Sécurité & Robustesse : valider la résistance aux intrusions et défaillances système.",
       "reliability": "Fiabilité & Exactitude : vérifier que les résultats sont valides dans des contextes réels.",
-      "accountability": "Responsabilité & Supervision : confirmer que l’humain reste aux commandes."
+      "accountability": "Responsabilité & Supervision : confirmer que l'humain reste aux commandes."
     },
     "measure": {
       "title": "Mesurer ce qui compte vraiment",
-      "description": "Notre objectif n’est pas d’optimiser des benchmarks abstraits mais de fournir une assurance réelle dans des contextes concrets. La confiance est une condition pour l’adoption."
+      "description": "Notre objectif n'est pas d'optimiser des benchmarks abstraits mais de provide une assurance réelle dans des contextes concrets. La confiance est une condition pour l'adoption."
     },
     "partners": {
       "title": "Devenez partenaires de conception",
-      "description": "Nous construisons des systèmes IA qui repoussent les limites de la conformité et de la gouvernance tout en apportant une valeur mesurable. Si vous êtes un cabinet d’avocats, un professionnel de la conformité ou un assureur intéressé, rejoignez-nous dès aujourd’hui.",
+      "description": "Nous construisons des systèmes IA qui repoussent les limites de la conformité et de la gouvernance tout en apportant une valeur mesurable. Si vous êtes un cabinet d'avocats, un professionnel de la conformité ou un assureur intéressé, rejoignez-nous dès aujourd'hui.",
       "link": "Devenez partenaires de conception"
     }
-  }
-
   },
   "nog": {
     "intro": "Actuellement, les clients demandent à eggon de:",
