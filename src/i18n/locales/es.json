@@ -102,12 +102,12 @@
       ]
     },
     "benefits": {
-      "title": "Ventajas Competitivas",
-      "item1": "Agentes especializados en dominios legales y de defensa, diseñados por expertos con experiencia sectorial práctica.",
-      "item2": "Soluciones integradas que interoperan con tu ecosistema tecnológico actual garantizando máximos estándares de seguridad.",
-      "item3": "Privacidad certificada: tus datos permanecen en tu infraestructura bajo tu control absoluto, sin exposición a terceros.",
-      "item4": "Alto rendimiento en tareas jurídicas complejas: desde minería contractual hasta investigación jurisprudencial avanzada.",
-      "item5": "Soporte experto continuo y acompañamiento personalizado durante tu transformación digital estratégica."
+      "title": "Nuestros Beneficios",
+      "item1": "Contextualizar un modelo de lenguaje avanzado (GPT, etc.) con los datos de su empresa (RAG / Ingeniería de contexto).",
+      "item2": "Agentes de IA especializados para tareas específicas, diseñados para lograr un retorno de inversión rápido (IA Agentica).",
+      "item3": "Integraciones para conectar sus sistemas de información y eliminar los silos, respetando los derechos y normativas vigentes.",
+      "item4": "Confidencialidad y cumplimiento: sus datos permanecen en su entorno seguro.",
+      "item5": "Soporte experto y acompañamiento personalizado durante toda su transformación hacia la IA, proporcionados por equipos con experiencia en su sector (legaltech, fintech, etc.)."
     },
     "modal": {
       "placeholder": "Personaliza esta instrucción según tus necesidades específicas...",
