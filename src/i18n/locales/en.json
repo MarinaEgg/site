@@ -102,12 +102,12 @@
       ]
     },
     "benefits": {
-      "title": "Our Advantages",
-      "item1": "AI agents specialized in legal and defense domains, designed by experts who know your environment.",
-      "item2": "Integrated solutions that connect to your existing tools and respect your security constraints.",
-      "item3": "Guaranteed privacy: your data stays in your infrastructure, never exposed to third parties.",
-      "item4": "Optimized performance for complex legal tasks, from contract analysis to case law research.",
-      "item5": "Expert support and personalized guidance throughout your digital transformation."
+      "title": "Our Benefits",
+      "item1": "Contextualize a large language model (GPT, etc.) with your company's data (RAG / Context Engineering).",
+      "item2": "Specialized AI agents for targeted tasks, designed to deliver a fast return on investment (Agentic AI).",
+      "item3": "Integrations to connect your information systems and remove silos while respecting existing rights and regulations.",
+      "item4": "Confidentiality and compliance: your data remains within your secure environment.",
+      "item5": "Expert support and personalized guidance throughout your AI transformation, delivered by teams experienced in your sector (legaltech, fintech, etc.)."
     },
     "modal": {
       "placeholder": "Modify this instruction according to your needs...",
