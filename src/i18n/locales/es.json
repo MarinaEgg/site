@@ -6,27 +6,27 @@
     "contact": "Contacto"
   },
   "hero": {
-    "title": "Convierte a los agentes de IA en tu ventaja competitiva",
-    "subtitle": "Conecta la IA de forma segura con el conocimiento corporativo mediante agentes que planifican, actúan y potencian cada equipo con soluciones confiables.",
-    "cta": "Comenzar ahora",
-    "labLink": "EggOn Lab - Equipo especializado en hacer agentes de IA totalmente asegurables"
+    "title": "Potencia tu negocio con agentes de IA",
+    "subtitle": "Conecta la IA al conocimiento de tu empresa de forma segura y confiable.",
+    "cta": "Comenzar",
+    "labLink": "EggOn Lab — Encuentra al equipo que hace agentes IA explicables."
   },
   "collection": {
-    "sectionLabel": "ESTUDIOS DE CASO",
-    "title": "Colección de Prompts de Agentes IA",
-    "subtitle": "Descubre nuestra colección de prompts de agentes IA diseñados para profesionales legales y empresariales.",
-    "cta": "Acceso Temprano",
+    "sectionLabel": "CASOS DE USO",
+    "title": "Colección de Agentes IA",
+    "subtitle": "Descubre nuestra colección de agentes de IA diseñados para profesionales del sector legal, financiero y empresarial.",
+    "cta": "Solicitar cita",
     "lastUpdate": "Última actualización",
     "prompts": {
       "contractAnalysis": {
         "title": "Agente de Análisis de Riesgos Contractuales",
         "context": "Legal / Revisión de Riesgos",
-        "body": "Analiza contratos comerciales identificando cláusulas de riesgo potencial (indemnizaciones, terminación, ley aplicable). Genera resúmenes ejecutivos con explicaciones claras và recomendaciones prácticas para mitigar vulnerabilidades legales."
+        "body": "Analiza contratos y acuerdos legales para identificar cláusulas clave, riesgos potenciales e inconsistencias en múltiples documentos, en el contexto de fusiones, adquisiciones y otras transacciones. Proporciona un resumen claro con explicaciones y recomendaciones prácticas."
       },
       "caseLawResearch": {
-        "title": "Agente de Investigación Jurisprudencial",
-        "context": "Legal / Investigación de Casos",
-        "body": "Busca, analiza y sintetiza jurisprudencia relevante para cuestiones legales específicas, incluyendo referencias cruzadas, análisis comparativo por jurisdicción y fundamentos legales detallados con fuentes verificables."
+        "title": "Agente de Estrategia Basada en Precedentes",
+        "context": "Legal / Búsqueda",
+        "body": "Mejora la investigación jurídica identificando y recuperando dinámicamente precedentes relevantes, normativas y doctrinas legales, para ofrecer a los abogados recomendaciones tácticas basadas en el análisis de jurisprudencia y el contexto jurisdiccional."
       },
       "meetingPrep": {
         "title": "Agente de Síntesis de Reuniones",
@@ -44,9 +44,9 @@
         "body": "Evalúa instrucciones existentes identificando áreas de mejora en precisión y coherencia. Genera versiones optimizadas mediante técnicas avanzadas de ingeniería de prompts para maximizar la calidad de respuestas de modelos de IA."
       },
       "supplierCompliance": {
-        "title": "Agente de Revisión Contractual",
-        "context": "Legal / Control de Calidad",
-        "body": "Verifica consistencia normativa, cumplimiento regulatorio y términos críticos en documentos contractuales. Genera informes de auditoría con anotaciones contextuales y sugerencias de mejora específicas para cada cláusula."
+        "title": "Agente de compliance y políticas",
+        "context": "Legal / Búsqueda",
+        "body": "Los equipos pueden consultar documentos internos y externos para cumplir los requisitos y reducir la dependencia de revisiones manuales por parte de los equipos de cumplimiento."
       },
       "quotationAgent": {
         "title": "Agente Generador de Cotizaciones",
