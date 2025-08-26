@@ -116,26 +116,26 @@
     }
   },
   "legalStack": {
-    "subtitle": "POR QUÉ ELEGIR EGGON",
-    "title": "Confía en expertos con conocimiento profundo de tu sector",
-    "description": "EggOn fusiona experiencia legal práctica con ingeniería de IA de vanguardia para ofrecer soluciones confiables que resuelven tus desafíos operativos críticos.",
-    "stackTitle": "PLATAFORMA DE AGENTES LEGALES",
+    "subtitle": "POR QUÉ EGGON",
+    "title": "Desbloquea el Poder de la IA Contextual",
+    "description": "Aprovecha una plataforma de IA de vanguardia con experiencia legal y financiera para generar resultados medibles y beneficios operativos.",
+    "stackTitle": "LA PLATAFORMA DE IA CONTEXTUAL",
     "benefits": [
       {
-        "title": "Conectados a Tu Realidad Operativa",
-        "description": "Desarrollamos agentes especializados para el sector legal y de defensa. Nuestro equipo incluye veteranos de legaltech líderes y expertos con experiencia práctica en tu entorno regulatorio específico."
+        "title": "Experiencia integrada al dominio",
+        "description": "IA, agentes de IA y flujos de trabajo diseñados por expertos en legaltech y fintech, ya familiarizados con tu entorno tecnológico y requisitos de seguridad."
       },
       {
-        "title": "Solución a Desafíos Complejos",
-        "description": "Desde automatización básica hasta razonamiento jurídico avanzado, integramos tus documentos, herramientas y datos con enfoque en ROI tangible y alineación estratégica con tus objetivos corporativos."
+        "title": "Contextualización de tu IA",
+        "description": "Arquitectura RAG especializada por dominio que reduce las alucinaciones y mejora la relevancia del modelo de IA usando tus datos y nuestra ingeniería de contexto y de prompts."
       },
       {
-        "title": "De Complejidad a Claridad Ejecutable",
-        "description": "Transformamos intrincados desafíos legales y técnicos en resultados accionables mediante metodologías probadas y equipos experimentados que gestionan proyectos de extremo a extremo."
+        "title": "De Piloto a Producción",
+        "description": "Soporte operativo y despliegue en producción a tu lado, además de desarrollar, configurar y probar."
       },
       {
-        "title": "Ingeniería de IA con Resultados Reales",
-        "description": "Construimos sistemas de IA robustos: desde agentes simples en Copilot Studio hasta sistemas personalizados con interfaces conversacionales, APIs privadas y bases de datos vectoriales dedicadas."
+        "title": "Seguridad y Gobernanza de Nivel Empresarial",
+        "description": "Cumplimiento y trazabilidad integrados — SOC 2, control de acceso por rol, cifrado de extremo a extremo y registros auditables para cada salida de IA."
       }
     ],
     "stackComponents": [
