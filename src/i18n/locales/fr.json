@@ -206,7 +206,6 @@
       "catchUp": "Rattrapage",
       "ongoing": "En cours",
       "enroll": "S'inscrire"
-    }
   },
   "noglab": {
     "heroPhrase": "→ EggOn Rendez vos",
@@ -217,58 +216,77 @@
     "heroSubtitle": "Nous construisons un avenir où les professionnels, en particulier du droit, de la finance et de la santé, peuvent déployer des agents IA certifiés conformes, auditables et assurables.",
     "heroCta": "Devenir partenaire de conception",
     "title": "Rendez vos Agents IA Assurables",
-    "intro1": "EggOn Lab se consacre à la gouvernance et à la traçabilité des agents d'intelligence artificielle grâce à un orchestrateur de nouvelle génération.",
+    "intro1": "EggOn Lab se consacre à la gouvernance, à la traçabilité et à la fiabilité des agents d'intelligence artificielle grâce à un orchestrateur de nouvelle génération.",
     "intro2": "Nous construisons un avenir où les professionnels — en particulier du droit, de la finance et de la santé — peuvent déployer des agents IA certifiés conformes, auditables et assurables.",
-    "intro3": "Nous sommes des ingénieurs et des constructeurs qui avons travaillé pour certaines des entreprises technologiques les plus sécurisées, notamment iManage, et pour des leaders de l'industrie en tant qu'experts en systèmes de traçabilité et ingénieurs qualité.",
+    "intro3": "Nous sommes des ingénieurs et des chercheurs ayant collaboré avec des entreprises technologiques de pointe et des leaders industriels en systèmes de traçabilité et qualité, pour créer des agents IA fiables et gouvernés.",
     "legitimacy": {
       "title": "La légitimité de l'IA va au-delà des bonnes ou mauvaises réponses",
-      "paragraph1": "Les capacités de l'IA progressent à un rythme sans précédent, mais un problème majeur demeure : l'opacité.",
-      "paragraph2": "Cette opacité est encore plus préoccupante lorsque l'IA entre dans des secteurs qui ne ressemblent à aucune autre industrie : la justice et la santé. Ce sont les fondements d'une société libre et équitable.",
-      "paragraph3": "Chaque jour, les tribunaux prennent des décisions qui changent le cours de vies humaines. De telles décisions exigent de l'empathie, de l'expérience et du contexte — mais aussi un processus qui semble légitime à ceux qui sont affectés.",
-      "paragraph4": "Aucun famille ne devrait jamais se demander si elle a perdu la garde à cause d'un algorithme mal calibré. Aucun patient ne devrait jamais douter que son traitement a été décidé après une véritable évaluation humaine.",
-      "paragraph5": "Le vrai problème n'est pas simplement de savoir si l'IA donne la bonne ou la mauvaise réponse — c'est le doute. Et une fois que le doute s'installe, il érode la confiance et mine la légitimité de nos systèmes."
+      "paragraph1": "Les capacités de l'IA progressent rapidement, mais l'opacité reste un problème majeur.",
+      "paragraph2": "Cette opacité est particulièrement critique dans les secteurs à haute responsabilité comme le droit et la santé, fondements d'une société libre et équitable.",
+      "paragraph3": "Chaque jour, des décisions influencent des vies humaines. Elles nécessitent empathie, expérience et contexte — et un processus perçu comme légitime.",
+      "paragraph4": "Aucune famille ne devrait douter d'une décision judiciaire ni aucun patient remettre en question la validité de son traitement.",
+      "paragraph5": "Le problème réel n’est pas seulement de savoir si l’IA fournit la bonne réponse, mais de savoir si elle est digne de confiance. Le doute érode la confiance et la légitimité."
     },
     "aiForEveryone": {
       "title": "Une IA qui fonctionne pour tous",
-      "paragraph1": "La connaissance du fonctionnement et de la prise de décision des agents IA ne doit pas rester concentrée dans quelques laboratoires.",
-      "paragraph2": "Ce manque de transparence ralentit l'adoption dans les professions à haute responsabilité, et l'absence d'explicabilité rend impossible l'assurance des processus pilotés par l'IA.",
-      "paragraph3": "Pour combler cette lacune, nous avons créé N.O.G (Nested Orchestration & Governance) — une plateforme conçue pour comprendre, auditer et certifier les agents IA."
+      "paragraph1": "Nous ne visons pas à créer des IA entièrement autonomes, mais à permettre aux professionnels de déployer des agents IA gouvernés en lesquels ils peuvent avoir confiance.",
+      "paragraph2": "Au lieu de modèles boîte noire, nous concevons des systèmes explicables, auditables et assurables, alignés sur les standards professionnels du droit, de la finance et de la santé.",
+      "paragraph3": "Nous voyons l’IA comme un collaborateur — pas un remplaçant — et nous la rendons adaptable, personnalisable et vérifiable pour chaque domaine d’expertise."
     },
     "principles": {
       "title": "Une légitimité solide compte",
       "explicability": {
         "title": "Explicabilité",
-        "description": "Chaque tâche exécutée par un agent IA doit être compréhensible et explicable. Les utilisateurs doivent être capables de retracer le raisonnement complet et de vérifier sa légitimité."
+        "description": "Chaque action exécutée par un agent IA doit être compréhensible et explicable, permettant aux utilisateurs de retracer le raisonnement complet et d’en vérifier la légitimité."
       },
       "accessibility": {
         "title": "Accessibilité",
-        "description": "L'explicabilité n'a d'importance que si elle est partagée. Les résultats et les preuves à l'appui doivent être faciles d'accès pour tous ceux qui sont impactés par une décision."
+        "description": "L’explicabilité n’a d’impact que si elle est partagée. Les résultats et preuves doivent être accessibles à toutes les parties prenantes concernées."
       },
       "recall": {
         "title": "Rappel",
-        "description": "Si un biais, une erreur ou une manipulation est détectée, le système doit permettre un rappel immédiat — tout comme les rappels de produits dans les industries critiques. L'IA gouvernée ne devrait jamais être irréversible."
+        "description": "Si un biais, une erreur ou une défaillance est détecté, le système doit permettre un rappel immédiat, comme dans les industries critiques. L’IA gouvernée ne doit jamais être irréversible."
       },
       "speed": {
         "title": "Vitesse",
-        "description": "La conformité ne doit pas ralentir l'innovation. L'IA explicable devrait être aussi rapide qu'elle est puissante, accélérant l'adoption tout en renforçant la confiance."
+        "description": "La conformité ne doit pas freiner l’innovation. L’IA explicable doit être rapide tout en garantissant confiance et adoption."
       }
     },
-    "growth": {
-      "title": "Croissance étape par étape",
-      "paragraph1": "La co-conception d'ingénierie et de produit permet une amélioration itérative grâce au déploiement, tandis que les excellents produits et les retours de partenaires se renforcent mutuellement. Les produits nous gardent ancrés dans la réalité et nous guident pour résoudre les problèmes les plus impactants avec nos partenaires de conception.",
-      "paragraph2": "Une approche empirique et itérative de l'IA explicable est la plus efficace et les mesures fiables proviennent d'une combinaison de développement proactif et de retours de tests soigneux dans le monde réel avec des professionnels expérimentés.",
-      "paragraph3": "Nous prévoyons de contribuer à la légitimité de l'IA en (1) maintenant un niveau de sécurité élevé — prévenant les attaques, (2) partageant les meilleures pratiques et cadres pour construire des systèmes IA sûrs avec nos clients, et (3) accélérant de nouveaux types de certifications sur l'alignement en partageant nos nouveaux standards de référence et spécifications d'agents.",
-      "paragraph4": "Nous croyons que les méthodes développées pour les systèmes d'aujourd'hui, comme le red-teaming efficace et la surveillance post-déploiement, fournissent des insights précieux qui s'étendront aux futurs systèmes plus explicables."
+    "science": {
+      "title": "La science est meilleure lorsqu’elle est partagée",
+      "paragraph1": "Le progrès scientifique et technique nécessite un effort collectif. La légitimité de l’IA ne peut provenir de systèmes fermés mais d’une collaboration ouverte avec praticiens, régulateurs et assureurs.",
+      "paragraph2": "Nous partageons nos cadres, guides de conformité et spécifications techniques afin de renforcer l’écosystème et améliorer la qualité de notre travail."
+    },
+    "learning": {
+      "title": "Apprendre en faisant",
+      "paragraph1": "Nous combinons recherche et co-conception de produits, en travaillant directement avec des cabinets d’avocats, équipes de conformité et assureurs.",
+      "paragraph2": "Le déploiement réel et les retours d’expérience nourrissent notre approche itérative, garantissant que nos cadres répondent aux problèmes les plus impactants.",
+      "paragraph3": "Notre méthodologie empirique inclut : maintenir un haut niveau de sécurité, publier les meilleures pratiques, permettre de nouvelles certifications, et appliquer une surveillance proactive et des tests d’intrusion."
+    },
+    "machineLearning": {
+      "title": "Apprentissage automatique",
+      "paragraph1": "Nous développons des modèles explicables et des cadres adaptés aux contextes juridiques et de conformité.",
+      "paragraph2": "Que ce soit via des embeddings sensibles au risque, des pipelines RAG traçables ou des chaînes d’agents certifiables, notre objectif est d’améliorer performance et légitimité."
+    },
+    "assurance": {
+      "title": "Assurance par conception",
+      "paragraph1": "Nos audits et contrôles rendent les systèmes multi-agents assurables. Nous appliquons les standards internationaux — EU AI Act, NIST AI RMF, ISO 42001 — et les traduisons en points de contrôle auditables sur quatre piliers :",
+      "dataPrivacy": "Données & Confidentialité : garantir que les informations sensibles sont protégées et jamais mal utilisées.",
+      "security": "Sécurité & Robustesse : valider la résistance aux intrusions et défaillances système.",
+      "reliability": "Fiabilité & Exactitude : vérifier que les résultats sont valides dans des contextes réels.",
+      "accountability": "Responsabilité & Supervision : confirmer que l’humain reste aux commandes."
     },
     "measure": {
       "title": "Mesurer ce qui compte vraiment",
-      "description": "Nous nous concentrerons sur la compréhension de la façon dont nos systèmes créent une valeur authentique dans le monde réel. Les percées les plus importantes proviennent souvent de la remise en question de nos objectifs, et non de l'optimisation des métriques existantes."
+      "description": "Notre objectif n’est pas d’optimiser des benchmarks abstraits mais de fournir une assurance réelle dans des contextes concrets. La confiance est une condition pour l’adoption."
     },
     "partners": {
       "title": "Devenez partenaires de conception",
-      "description": "Si vous êtes un cabinet d'avocats ou un professionnel de la conformité intéressé à devenir un partenaire de conception, cliquez ici : ",
+      "description": "Nous construisons des systèmes IA qui repoussent les limites de la conformité et de la gouvernance tout en apportant une valeur mesurable. Si vous êtes un cabinet d’avocats, un professionnel de la conformité ou un assureur intéressé, rejoignez-nous dès aujourd’hui.",
       "link": "Devenez partenaires de conception"
     }
+  }
+
   },
   "nog": {
     "intro": "Actuellement, les clients demandent à eggon de:",
