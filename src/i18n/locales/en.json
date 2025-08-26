@@ -122,27 +122,28 @@
     "heroCta": "Start learning",
     "heroAcademyLink": "EggOn Academy — The program that trains lawyers in AI, from the fundamentals to practical applications tailored to their practice."
   },
+  {
   "legalStack": {
     "subtitle": "WHY EGGON",
-    "title": "Trust a team with expertise in your field",
-    "description": "Eggon combines deep legal expertise with real AI engineering to deliver trusted, integrated solutions tailored to your operational challenges.",
-    "stackTitle": "THE LEGAL AGENT STACK",
+    "title": "Unlock the Power of Contextual AI",
+    "description": "Leverage a state-of-the-art AI platform with deep legal and financial expertise to deliver measurable performance and operational gains.",
+    "stackTitle": "THE CONTEXTUAL AI PLATFORM",
     "benefits": [
       {
-        "title": "Connected to Your World",
-        "description": "We build AI agents and systems focused on the legal domain and parts of the defense industry. Some of our team members come from leading legaltech companies or industry experts who know your environment."
+        "title": "Domain-embedded Expertise",
+        "description": "AI, AI agents, and workflows designed by experts from legaltech and fintech, already familiar with your technology environment and security requirements."
       },
       {
-        "title": "Solves Your Toughest Challenges",
-        "description": "From simple tasks to complex reasoning, we connect your documents, tools, and AI with ROI in mind — and we stay aligned with your mission."
+        "title": "Contextualization of Your AI",
+        "description": "Domain-specialized RAG architecture reducing hallucinations and improving AI model relevance using your data and our contextual and prompt engineering."
       },
       {
-        "title": "From Complexity to Clarity",
-        "description": "We transform legal and technical complexity into clear, actionable outputs — with an experienced team that manages the project and stays by your side."
+        "title": "From Pilot to Production",
+        "description": "Operational support and production deployment alongside you, in addition to developing, configuring, and testing."
       },
       {
-        "title": "Real AI Engineering",
-        "description": "We build, develop, and deploy real AI systems. From a simple agent in your Copilot Studio to a more advanced custom AI system using our chat interface, our private API, and a vector database built for you"
+        "title": "Enterprise-grade Security & Governance",
+        "description": "Built-in compliance and traceability — SOC 2, role-based access, end-to-end encryption, and auditable logs for every AI output."
       }
     ],
     "stackComponents": [
