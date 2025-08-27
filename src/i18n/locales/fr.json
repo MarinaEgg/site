@@ -214,23 +214,23 @@
     "heroDropdownOptionDefault": "IA",
     "heroDropdownLearnAI": "Découvrir l'IA",
     "heroTitle": "Construire une IA explicable, traçable et auditable",
-    "heroSubtitle": "Nous transformons l'IA perçue comme une boîte noire en un système clair, vérifiable et digne de confiance.",
+    "heroSubtitle": "Nous transformons la complexité technique de l'IA en raisonnement lisible et intelligible.",
     "heroCta": "Découvrir la technologie",
     "title": "N.O.G. : Nested Orchestration & Governance",
-    "intro1": "EggOn Technology développe N.O.G., une technologie permettant de rendre l’IA explicable, traçable et conforme aux standards et réglementations les plus stricts.",
-    "intro2": "Notre mission : donner aux professionnels le contrôle total sur les décisions de l’IA dans leurs métiers, en assurant transparence et auditabilité.",
-    "intro3": "Chaque tâche exécutée par un agent IA est documentée et rejouable, transformant l’IA en un partenaire fiable et compréhensible.",
+    "intro1": "EggOn Technology développe N.O.G., une technologie pensée pour l'utilisateur, qui facilite la compréhension du raisonnement de l'IA, rendant la traçabilité accessible et conforme aux standards et réglementations les plus stricts.",
+    "intro2": "Notre mission : donner aux professionnels le contrôle total sur les décisions de l’IA dans leurs métiers, en assurant explicabilité et auditabilité.",
+    "intro3": "Chaque tâche exécutée est documentée et rejouable, transformant l’IA en un partenaire compréhensible.",
     "legitimacy": {
       "title": "La légitimité de l'IA repose sur l'explicabilité",
-      "paragraph1": "Chaque tâche est enregistrée avec ses prompts, outils, résultats intermédiaires et validations de conformité.",
-      "paragraph2": "Cette approche garantît que l’IA est non seulement performante, mais **vérifiable et conforme** aux exigences réglementaires.",
-      "paragraph3": "Les secteurs sensibles comme le droit, la finance ou la santé bénéficient ainsi d’un contrôle total et d’une traçabilité complète."
+      "paragraph1": "Notre innovation nous permet d'encapsuler les processus de l'IA et les transforme en informations lisibles et rejouables.",
+      "paragraph2": "Cette approche garantît que l’IA est non seulement performante, mais vérifiable et conforme aux exigences réglementaires.",
+      "paragraph3": "Les secteurs sensibles comme le droit ou la finance doivent bénéficier d’un contrôle total de leurs systèmes dont l'IA."
     },
     "aiForEveryone": {
       "title": "Une IA compréhensible et adaptable",
-      "paragraph1": "Notre technologie rend l’IA explicable et utilisable par tous les professionnels, même sans expertise technique.",
-      "paragraph2": "Chaque décision de l’IA peut être examinée, vérifiée et ajustée selon les besoins spécifiques du métier.",
-      "paragraph3": "L’IA devient un partenaire transparent, rejouable et utile dans chaque contexte d'usage."
+      "paragraph1": "Notre technologie rend l’IA facilement explicable et donc utilisable, même sans expertise technique.",
+      "paragraph2": "Chaque décision de l’IA peut être examinée, vérifiée et ajustée selon les besoins.",
+      "paragraph3": "L’IA devient un partenaire transparent."
     },
     "principles": {
       "title": "Nos valeurs",
