@@ -224,80 +224,65 @@
     "academyProgram": "IA Academy Program"
   },
   "noglab": {
-    "heroPhrase": "→ EggOn Technology",
-    "heroDropdownOption": "Explainable AI",
-    "heroDropdownOptionDefault": "AI",
-    "heroDropdownLearnAI": "Discover AI",
-    "heroTitle": "Build Explainable, Traceable, and Auditable AI",
-    "heroSubtitle": "We transform the technical complexity of AI into readable and intelligible reasoning.",
-    "heroCta": "Discover the Technology",
-    "title": "N.O.G.: Nested Orchestration & Governance",
-    "intro1": "EggOn Technology develops N.O.G., a user-centric technology that facilitates understanding of AI reasoning, making traceability accessible and compliant with the strictest standards and regulations.",
-    "intro2": "Our mission: to give professionals full control over AI decisions in their fields, ensuring explainability and auditability.",
-    "intro3": "Every executed task is documented and replayable, turning AI into a comprehensible partner.",
+    "heroPhrase": "→ EggOn Make your",
+    "heroDropdownOption": "Future AI",
+    "heroDropdownOptionDefault": "AI Agents",
+    "heroDropdownLearnAI": "Learn AI",
+    "heroTitle": "Make your AI Agents Insurable",
+    "heroSubtitle": "Agentic AI is moving fast, but in law, finance, and insurance, speed without trust is a liability. We build explainable AI that professionals can actually understand and defend.",
+    "heroCta": "Be Design Partner",
+    "title": "We have a bit of a black box problem",
+    "intro1": "Every model can predict, few can explain. Fewer still can prove their decisions, be audited, or be recalled when they fail. That's where explainable AI steps in — not as a black box, but as an agent you can hold accountable.",
+    "intro2": "Organizations are eager to deploy AI, but without transparency, those same systems create hidden risks: opaque decisions, unverifiable outputs, automated actions with no clear reasoning.",
+    "intro3": "At EggOn Technology, we develop AI systems designed to make every decision traceable, every process auditable, and every agent recallable when needed — with explanations accessible to anyone, instantly.",
     "legitimacy": {
-      "title": "AI Legitimacy Relies on Explainability",
-      "paragraph1": "Our innovation allows us to encapsulate AI processes and transform them into readable and replayable information.",
-      "paragraph2": "This approach ensures that AI is not only performant but also verifiable and compliant with regulatory requirements.",
-      "paragraph3": "Sensitive sectors such as law or finance must benefit from full control of their systems, including AI."
+      "title": "Explainability is more than a feature — it's the foundation of trust",
+      "paragraph1": "Like a detective solving a case, explainable AI doesn't just give you the answer — it shows you the complete evidence trail.",
+      "paragraph2": "Our approach combines prediction accuracy, full traceability, and decision understanding to transform AI from a black box into a transparent partner.",
+      "paragraph3": "Every AI decision comes with its case file, accessible with a simple smartphone scan.",
+      "paragraph4": "No family should ever wonder if they lost custody because of a poorly calibrated algorithm. No patient should ever doubt that their treatment was decided after genuine human evaluation.",
+      "paragraph5": "The real issue isn't simply whether AI gives the right or wrong answer — it's doubt. And once doubt sets in, it erodes trust and undermines legitimacy."
     },
     "aiForEveryone": {
-      "title": "Understandable and Adaptable AI",
-      "paragraph1": "Our technology makes AI easily explainable and therefore usable, even without technical expertise.",
-      "paragraph2": "Every AI decision can be examined, verified, and adjusted as needed.",
-      "paragraph3": "AI becomes a transparent partner."
+      "title": "Real-world impact you can scan and verify",
+      "paragraph1": "In law, explainable AI means lawyers can see why a clause was suggested and verify its sources instantly. Scan a QR code, get the full reasoning.",
+      "paragraph2": "In finance, regulators can follow every step of a risk assessment. In insurance, underwriters get clear rationales behind automated decisions — before they act on them.",
+      "paragraph3": "No technical expertise needed. Just point your phone, scan, and understand exactly how the AI reached its conclusion."
     },
     "principles": {
-      "title": "Our Values",
+      "title": "The benefits are concrete",
       "explicability": {
-        "title": "Transparency and Explainability",
-        "description": "Every step of AI reasoning is understandable, verifiable, and auditable."
+        "title": "Operational Trust",
+        "description": "Models move to production with confidence from compliance teams. Clear explanations speed up review cycles and acceptance."
       },
       "accessibility": {
-        "title": "Universal Accessibility",
-        "description": "AI must be usable and understood by all professionals, not just experts."
+        "title": "Instant Access",
+        "description": "Every explanation is one scan away. No complex interfaces, no technical training — just point your phone and understand."
       },
       "recall": {
-        "title": "Reversibility",
-        "description": "Every error can be traced, understood, and corrected quickly, ensuring complete control."
+        "title": "Reduced Governance Cost",
+        "description": "Transparent AI lowers the burden of audits and regulatory reporting. When something goes wrong, you know exactly why and can fix it fast."
       },
-      "security": {
-        "title": "Security and Compliance",
-        "description": "Data and communications are protected, and every action complies with regulatory and industry standards."
+      "speed": {
+        "title": "Faster Deployment",
+        "description": "Explainable AI doesn't slow you down — it builds the trust that accelerates adoption across your organization."
       }
     },
-    "science": {
-      "title": "Rigor and Performance",
-      "paragraph1": "Our R&D protocols and methods ensure the robustness, reliability, and compliance of AI systems.",
-      "paragraph2": "Innovation focuses on transparency and security in sensitive professional environments."
-    },
-    "learning": {
-      "title": "Learn by Doing",
-      "paragraph1": "Our AI agents are tested and adjusted in interaction with professionals to maximize explainability and reliability.",
-      "paragraph2": "Each experience strengthens the trust and auditability of systems.",
-      "paragraph3": "This empirical approach addresses the human and societal challenges of explainable AI."
-    },
-    "machineLearning": {
-      "title": "Applied Innovation",
-      "paragraph1": "We leverage advanced techniques such as Reverse Prompt Engineering (RPE) and multi-agent traceability to make AI explainable and auditable.",
-      "paragraph2": "The goal: combine performance, transparency, and compliance for every user."
-    },
-    "assurance": {
-      "title": "Trust by Design",
-      "paragraph1": "Our AI rests on four pillars:",
-      "dataPrivacy": "Respect: data confidentiality is guaranteed at every step.",
-      "security": "Robustness: systems resistant to attacks and anomalies.",
-      "reliability": "Replayability: every result can be reproduced and verified, even if outputs are non-deterministic.",
-      "accountability": "Accountability: humans retain final control."
+    "growth": {
+      "title": "Challenges we embrace",
+      "paragraph1": "Scaling explainability across complex, multi-agent systems isn't trivial. It requires frameworks that non-technical teams can actually use, and infrastructures that allow recall, re-audit, and certification.",
+      "paragraph2": "Explainable AI is the first step. Governed AI makes it actionable. Our systems comply with EU AI Act, NIST AI RMF, and ISO 42001, turning principles into auditable checkpoints.",
+      "paragraph3": "We leverage advanced techniques like Reverse Prompt Engineering and nested orchestration to make AI decisions transparent and auditable. But the real innovation? Making all that complexity disappear behind a simple scan.",
+      "paragraph4": "The outcome isn't just transparency — it's insurability, accountability, and measurable reduction of uncertainty. Every decision is not only explainable but instantly verifiable by anyone with a smartphone."
     },
     "measure": {
-      "title": "Measure What Matters",
-      "description": "Success is measured by trust, understanding, and auditability, not just technical performance."
+      "title": "The future we build",
+      "description": "AI won't replace professionals in high-responsibility domains — but it can augment them if it's explainable, certifiable, and recallable. With instant access to reasoning via any smartphone, that's the only path to adoption at scale."
     },
     "partners": {
-      "title": "Join the Design",
-      "description": "Join our mission for explainable, traceable, and secure AI, and help define trust standards for professional AI.",
-      "link": "Join the Design"
+      "title": "Join the explainable AI revolution",
+      "description": "Imagine AI decisions that are not only smart, but instantly understandable to everyone who needs to trust them. That's an absolute mic drop moment — and it starts with a simple scan.",
+      "link": "Be Design Partners"
     }
   },
   "ragArchitecture": {
