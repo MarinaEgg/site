@@ -224,65 +224,80 @@
     "academyProgram": "IA Academy Program"
   },
   "noglab": {
-    "heroPhrase": "→ EggOn Make your",
-    "heroDropdownOption": "Future AI",
-    "heroDropdownOptionDefault": "AI Agents",
-    "heroDropdownLearnAI": "Learn AI",
-    "heroTitle": "Make your AI Agents Insurable",
-    "heroSubtitle": "We are building a future where professionals, particularly in law, finance, and healthcare, can deploy AI agents that are certified compliant, auditable, and insurable.",
-    "heroCta": "Be Design Partner",
-    "title": "Make your AI Agents Insurable",
-    "intro1": "EggOn Lab is dedicated to the governance and traceability of artificial intelligence agents through a next-generation orchestrator.",
-    "intro2": "We are building a future where professionals — especially in law, finance, and healthcare — can deploy AI agents that are certified compliant, auditable, and insurable.",
-    "intro3": "We are engineers and builders who have worked for some of the most secure tech companies, including iManage, and for industry leaders as Traceability System Experts and Quality Engineers.",
+    "heroPhrase": "→ EggOn Technology",
+    "heroDropdownOption": "Explainable AI",
+    "heroDropdownOptionDefault": "AI",
+    "heroDropdownLearnAI": "Discover AI",
+    "heroTitle": "Build Explainable, Traceable, and Auditable AI",
+    "heroSubtitle": "We transform the technical complexity of AI into readable and intelligible reasoning.",
+    "heroCta": "Discover the Technology",
+    "title": "N.O.G.: Nested Orchestration & Governance",
+    "intro1": "EggOn Technology develops N.O.G., a user-centric technology that facilitates understanding of AI reasoning, making traceability accessible and compliant with the strictest standards and regulations.",
+    "intro2": "Our mission: to give professionals full control over AI decisions in their fields, ensuring explainability and auditability.",
+    "intro3": "Every executed task is documented and replayable, turning AI into a comprehensible partner.",
     "legitimacy": {
-      "title": "Legitimacy in AI Is About More Than Right or Wrong Answers",
-      "paragraph1": "AI capabilities are advancing at an unprecedented pace, but one major problem remains: opacity.",
-      "paragraph2": "This opacity is even more concerning as AI enters sectors that are not like any other industries: justice and healthcare. These are the foundations of a free and fair society.",
-      "paragraph3": "Every day, courts make decisions that change the course of human lives. Such decisions demand empathy, experience, and context — but also a process that feels legitimate to those affected.",
-      "paragraph4": "No family should ever wonder if they lost custody because of a poorly calibrated algorithm. No patient should ever doubt that their treatment was decided after genuine human evaluation.",
-      "paragraph5": "The real issue isn't simply whether AI gives the right or wrong answer — it's doubt. And once doubt sets in, it erodes trust and undermines the legitimacy of our systems."
+      "title": "AI Legitimacy Relies on Explainability",
+      "paragraph1": "Our innovation allows us to encapsulate AI processes and transform them into readable and replayable information.",
+      "paragraph2": "This approach ensures that AI is not only performant but also verifiable and compliant with regulatory requirements.",
+      "paragraph3": "Sensitive sectors such as law or finance must benefit from full control of their systems, including AI."
     },
     "aiForEveryone": {
-      "title": "AI That Works for Everyone",
-      "paragraph1": "Knowledge of how AI agents operate and make decisions must not remain concentrated in a few labs.",
-      "paragraph2": "This lack of transparency slows adoption in high-responsibility professions, and the absence of explainability makes insuring AI-driven processes impossible.",
-      "paragraph3": "To bridge this gap, we created N.O.G (Nested Orchestration & Governance) — a platform designed to understand, audit, and certify AI agents."
+      "title": "Understandable and Adaptable AI",
+      "paragraph1": "Our technology makes AI easily explainable and therefore usable, even without technical expertise.",
+      "paragraph2": "Every AI decision can be examined, verified, and adjusted as needed.",
+      "paragraph3": "AI becomes a transparent partner."
     },
     "principles": {
-      "title": "Solid Legitimacy Matters",
+      "title": "Our Values",
       "explicability": {
-        "title": "Explicability",
-        "description": "Every task executed by an AI agent must be understandable and explainable. Users must be able to trace the full reasoning and verify its legitimacy."
+        "title": "Transparency and Explainability",
+        "description": "Every step of AI reasoning is understandable, verifiable, and auditable."
       },
       "accessibility": {
-        "title": "Accessibility",
-        "description": "Explainability only matters if it's shared. Results and supporting evidence must be easy to access for everyone impacted by a decision."
+        "title": "Universal Accessibility",
+        "description": "AI must be usable and understood by all professionals, not just experts."
       },
       "recall": {
-        "title": "Recall",
-        "description": "If bias, error, or manipulation is detected, the system must allow for immediate recall — just like product recalls in critical industries. Governed AI should never be irreversible."
+        "title": "Reversibility",
+        "description": "Every error can be traced, understood, and corrected quickly, ensuring complete control."
       },
-      "speed": {
-        "title": "Speed",
-        "description": "Compliance must not slow innovation. Explainable AI should be as fast as it is powerful, accelerating adoption while building trust."
+      "security": {
+        "title": "Security and Compliance",
+        "description": "Data and communications are protected, and every action complies with regulatory and industry standards."
       }
     },
-    "growth": {
-      "title": "Growth Step by Step",
-      "paragraph1": "Engineering and product co-design enable iterative improvement through deployment, while great products and partner feedback strengthen each other. Products keep us grounded in reality and guide us to solve the most impactful problems with our design partners.",
-      "paragraph2": "Empirical and iterative approach to explainable AI is the most effective and reliable measures come from a combination of proactive development and feedback from careful real-world testing with experienced professionals.",
-      "paragraph3": "We plan to contribute to AI legitimacy by (1) maintaining a high security bar — preventing attacks, (2) sharing best practices and frameworks for building safe AI systems with our clients, and (3) accelerating new types of certifications on alignment by sharing our new reference standards and agent specifications.",
-      "paragraph4": "We believe that methods developed for today's systems, such as effective red-teaming and post-deployment monitoring, provide valuable insights that will extend to future, more explainable systems."
+    "science": {
+      "title": "Rigor and Performance",
+      "paragraph1": "Our R&D protocols and methods ensure the robustness, reliability, and compliance of AI systems.",
+      "paragraph2": "Innovation focuses on transparency and security in sensitive professional environments."
+    },
+    "learning": {
+      "title": "Learn by Doing",
+      "paragraph1": "Our AI agents are tested and adjusted in interaction with professionals to maximize explainability and reliability.",
+      "paragraph2": "Each experience strengthens the trust and auditability of systems.",
+      "paragraph3": "This empirical approach addresses the human and societal challenges of explainable AI."
+    },
+    "machineLearning": {
+      "title": "Applied Innovation",
+      "paragraph1": "We leverage advanced techniques such as Reverse Prompt Engineering (RPE) and multi-agent traceability to make AI explainable and auditable.",
+      "paragraph2": "The goal: combine performance, transparency, and compliance for every user."
+    },
+    "assurance": {
+      "title": "Trust by Design",
+      "paragraph1": "Our AI rests on four pillars:",
+      "dataPrivacy": "Respect: data confidentiality is guaranteed at every step.",
+      "security": "Robustness: systems resistant to attacks and anomalies.",
+      "reliability": "Replayability: every result can be reproduced and verified, even if outputs are non-deterministic.",
+      "accountability": "Accountability: humans retain final control."
     },
     "measure": {
-      "title": "Measure what truly matters",
-      "description": "We will focus on understanding how our systems create genuine value in the real world. The most important breakthroughs often come from rethinking our objectives, not just optimizing existing metrics."
+      "title": "Measure What Matters",
+      "description": "Success is measured by trust, understanding, and auditability, not just technical performance."
     },
     "partners": {
-      "title": "Be Design Partners",
-      "description": "If you are a law firm or compliance professional interested in becoming a design partner, click here: ",
-      "link": "Be Design Partners"
+      "title": "Join the Design",
+      "description": "Join our mission for explainable, traceable, and secure AI, and help define trust standards for professional AI.",
+      "link": "Join the Design"
     }
   },
   "ragArchitecture": {
