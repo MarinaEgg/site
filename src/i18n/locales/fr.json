@@ -207,85 +207,85 @@
       "ongoing": "En cours",
       "enroll": "S'inscrire"
     }
-  },
+  {
   "noglab": {
-    "heroPhrase": "→ EggOn Rendez vos",
-    "heroDropdownOption": "IA Future",
-    "heroDropdownOptionDefault": "Agents IA",
-    "heroDropdownLearnAI": "Apprendre IA",
-    "heroTitle": "Rendez vos Agents IA Assurables",
-    "heroSubtitle": "Nous construisons un avenir où les professionnels, en particulier du droit, de la finance et de la santé, peuvent déployer des agents IA certifiés conformes, auditables et assurables.",
-    "heroCta": "Devenir partenaire de conception",
-    "title": "Rendez vos Agents IA Assurables",
-    "intro1": "EggOn Lab se consacre à la gouvernance, à la traçabilité et à la fiabilité des agents d'intelligence artificielle grâce à un orchestrateur de nouvelle génération.",
-    "intro2": "Nous construisons un avenir où les professionnels — en particulier du droit, de la finance et de la santé — peuvent déployer des agents IA certifiés conformes, auditables et assurables.",
-    "intro3": "Nous sommes des ingénieurs et des chercheurs ayant collaboré avec des entreprises technologiques de pointe et des leaders industriels en systèmes de traçabilité et qualité, pour créer des agents IA fiables et gouvernés.",
+    "heroPhrase": "→ EggOn Technology",
+    "heroDropdownOption": "IA Explicable",
+    "heroDropdownOptionDefault": "IA",
+    "heroDropdownLearnAI": "Découvrir l'IA",
+    "heroTitle": "Construire une IA explicable, traçable et auditable",
+    "heroSubtitle": "Nous transformons l'IA perçue comme une boîte noire en un système clair, vérifiable et digne de confiance.",
+    "heroCta": "Découvrir la technologie",
+    "title": "N.O.G. : Nested Orchestration & Governance",
+    "intro1": "EggOn Technology développe N.O.G., une technologie permettant de rendre l’IA explicable, traçable et conforme aux standards et réglementations les plus stricts.",
+    "intro2": "Notre mission : donner aux professionnels le contrôle total sur les décisions de l’IA dans leurs métiers, en assurant transparence et auditabilité.",
+    "intro3": "Chaque tâche exécutée par un agent IA est documentée et rejouable, transformant l’IA en un partenaire fiable et compréhensible.",
     "legitimacy": {
-      "title": "La légitimité de l'IA va au-delà des bonnes ou mauvaises réponses",
-      "paragraph1": "Les capacités de l'IA progressent rapidement, mais l'opacité reste un problème majeur.",
-      "paragraph2": "Cette opacité est particulièrement critique dans les secteurs à haute responsabilité comme le droit et la santé, fondements d'une société libre et équitable.",
-      "paragraph3": "Chaque jour, des décisions influencent des vies humaines. Elles nécessitent empathie, expérience et contexte — et un processus perçu comme légitime.",
-      "paragraph4": "Aucune famille ne devrait douter d'une décision judiciaire ni aucun patient remettre en question la validité de son traitement.",
-      "paragraph5": "Le problème réel n'est pas seulement de savoir si l'IA fournit la bonne réponse, mais de savoir si elle est digne de confiance. Le doute érode la confiance et la légitimité."
+      "title": "La légitimité de l'IA repose sur l'explicabilité",
+      "paragraph1": "Chaque tâche est enregistrée avec ses prompts, outils, résultats intermédiaires et validations de conformité.",
+      "paragraph2": "Cette approche garantit que l’IA est non seulement performante, mais **vérifiable et conforme** aux exigences réglementaires.",
+      "paragraph3": "Les secteurs sensibles comme le droit, la finance ou la santé bénéficient ainsi d’un contrôle total et d’une traçabilité complète."
     },
     "aiForEveryone": {
-      "title": "Une IA qui fonctionne pour tous",
-      "paragraph1": "Nous ne visons pas à créer des IA entièrement autonomes, mais à permettre aux professionnels de déployer des agents IA gouvernés en lesquels ils peuvent avoir confiance.",
-      "paragraph2": "Au lieu de modèles boîte noire, nous concevons des systèmes explicables, auditables et assurables, alignés sur les standards professionnels du droit, de la finance et de la santé.",
-      "paragraph3": "Nous voyons l'IA comme un collaborateur — pas un remplaçant — et nous la rendons adaptable, personnalisable et vérifiable pour chaque domaine d'expertise."
+      "title": "Une IA compréhensible et adaptable",
+      "paragraph1": "Notre technologie rend l’IA explicable et utilisable par tous les professionnels, même sans expertise technique.",
+      "paragraph2": "Chaque décision de l’IA peut être examinée, vérifiée et ajustée selon les besoins spécifiques du métier.",
+      "paragraph3": "L’IA devient un partenaire transparent, rejouable et utile dans chaque contexte d’usage."
     },
     "principles": {
-      "title": "Une légitimité solide compte",
+      "title": "Nos valeurs",
       "explicability": {
-        "title": "Explicabilité",
-        "description": "Chaque action exécutée par un agent IA doit être compréhensible et explicable, permettant aux utilisateurs de retracer le raisonnement complet et d'en vérifier la légitimité."
+        "title": "Transparence et explicabilité",
+        "description": "Chaque étape du raisonnement IA est compréhensible, vérifiable et auditable."
       },
       "accessibility": {
-        "title": "Accessibilité",
-        "description": "L'explicabilité n'a d'impact que si elle est partagée. Les résultats et preuves doivent être accessibles à toutes les parties prenantes concernées."
+        "title": "Accessibilité universelle",
+        "description": "L’IA doit être utilisable et comprise par tous les professionnels, pas seulement par les experts."
       },
       "recall": {
-        "title": "Rappel",
-        "description": "Si un biais, une erreur ou une défaillance est détecté, le système doit permettre un rappel immédiat, comme dans les industries critiques. L'IA gouvernée ne doit jamais être irréversible."
+        "title": "Réversibilité",
+        "description": "Chaque erreur peut être retracée, comprise et corrigée rapidement, garantissant un contrôle complet."
       },
-      "speed": {
-        "title": "Vitesse",
-        "description": "La conformité ne doit pas freiner l'innovation. L'IA explicable doit être rapide tout en garantissant confiance et adoption."
+      "security": {
+        "title": "Sécurité et conformité",
+        "description": "Les données et communications sont protégées, et chaque action respecte les standards réglementaires et industriels."
       }
     },
     "science": {
-      "title": "La science est meilleure lorsqu'elle est partagée",
-      "paragraph1": "Le progrès scientifique et technique nécessite un effort collectif. La légitimité de l'IA ne peut provenir de systèmes fermés mais d'une collaboration ouverte avec praticiens, régulateurs et assureurs.",
-      "paragraph2": "Nous partageons nos cadres, guides de conformité et spécifications techniques afin de renforcer l'écosystème et améliorer la qualité de notre travail."
+      "title": "Rigueur et performance",
+      "paragraph1": "Nos protocoles et méthodes de R&D garantissent la robustesse, la fiabilité et la conformité des systèmes IA.",
+      "paragraph2": "L’innovation se concentre sur la transparence et la sécurité dans des environnements professionnels sensibles."
     },
     "learning": {
-      "title": "Apprendre en faisant",
-      "paragraph1": "Nous combinons recherche et co-conception de produits, en travaillant directement avec des cabinets d'avocats, équipes de conformité et assureurs.",
-      "paragraph2": "Le déploiement réel et les retours d'expérience nourrissent notre approche itérative, garantissant que nos cadres répondent aux problèmes les plus impactants.",
-      "paragraph3": "Notre méthodologie empirique inclut : maintenir un haut niveau de sécurité, publier les meilleures pratiques, permettre de nouvelles certifications, et appliquer une surveillance proactive et des tests d'intrusion."
+      "title": "Apprendre en pratiquant",
+      "paragraph1": "Nos agents IA sont testés et ajustés en interaction avec des professionnels pour maximiser l’explicabilité et la fiabilité.",
+      "paragraph2": "Chaque expérience permet de renforcer la confiance et l’auditabilité des systèmes.",
+      "paragraph3": "Cette approche empirique adresse les défis humains et sociétaux de l’IA explicable."
     },
     "machineLearning": {
-      "title": "Apprentissage automatique",
-      "paragraph1": "Nous développons des modèles explicables et des cadres adaptés aux contextes juridiques et de conformité.",
-      "paragraph2": "Que ce soit via des embeddings sensibles au risque, des pipelines RAG traçables ou des chaînes d'agents certifiables, notre objectis est d'améliorer performance et légitimité."
+      "title": "Innovation appliquée",
+      "paragraph1": "Nous exploitons des techniques avancées comme le Reverse Prompt Engineering (RPE) et la traçabilité multi-agents pour rendre l’IA explicable et auditable.",
+      "paragraph2": "L’objectif : combiner performance, transparence et conformité pour chaque utilisateur."
     },
     "assurance": {
-      "title": "Assurance par conception",
-      "paragraph1": "Nos audits et contrôles rendent les systèmes multi-agents assurables. Nous appliquons les standards internationaux — EU AI Act, NIST AI RMF, ISO 42001 — et les traduisons en points de contrôle auditables sur quatre piliers :",
-      "dataPrivacy": "Données & Confidentialité : garantir que les informations sensibles sont protégées et jamais mal utilisées.",
-      "security": "Sécurité & Robustesse : valider la résistance aux intrusions et défaillances système.",
-      "reliability": "Fiabilité & Exactitude : vérifier que les résultats sont valides dans des contextes réels.",
-      "accountability": "Responsabilité & Supervision : confirmer que l'humain reste aux commandes."
+      "title": "Confiance par conception",
+      "paragraph1": "Notre IA repose sur quatre piliers :",
+      "dataPrivacy": "Respect : la confidentialité des données est garantie à chaque étape.",
+      "security": "Robustesse : des systèmes résistants aux attaques et aux anomalies.",
+      "reliability": "Rejouabilité : chaque résultat peut être reproduit et vérifié, même si les sorties ne sont pas déterministes.",
+      "accountability": "Responsabilité : l’humain conserve le contrôle final."
     },
     "measure": {
-      "title": "Mesurer ce qui compte vraiment",
-      "description": "Notre objectif n'est pas d'optimiser des benchmarks abstraits mais de fournir une assurance réelle dans des contextes concrets. La confiance est une condition pour l'adoption."
+      "title": "Mesurer ce qui compte",
+      "description": "Le succès se mesure à la confiance, à la compréhension et à l’auditabilité, pas seulement aux performances techniques."
     },
     "partners": {
-      "title": "Devenez partenaires de conception",
-      "description": "Nous construisons des systèmes IA qui repoussent les limites de la conformité et de la gouvernance tout en apportant une valeur mesurable. Si vous êtes un cabinet d'avocats, un professionnel de la conformité ou un assureur intéressé, rejoignez-nous dès aujourd'hui.",
-      "link": "Devenez partenaires de conception"
+      "title": "Rejoignez la conception",
+      "description": "Participez à notre mission pour une IA explicable, traçable et sécurisée, et contribuez à définir les standards de confiance pour l’IA professionnelle.",
+      "link": "Rejoignez la conception"
     }
+  }
+}
   },
   "nog": {
     "intro": "Actuellement, les clients demandent à eggon de:",
@@ -303,13 +303,13 @@
     "academyProgram": "Programme IA Academie"
   },
   "ragArchitecture": {
-    "subtitle": "LA PLATEFORME RAG CONTEXTUELLE",
-    "title": "ARCHITECTURE DE NOUVELLE GÉNÉRATION POUR LES AGENTS",
-    "introduction": "Conçue par des pionniers en RAG, notre plateforme vous permet d'intégrer de manière transparente des agents IA à vos connaissances d'entreprise, offrant une solution complète pour concevoir des systèmes RAG de pointe."
+    "subtitle": "LA PLATEFORME AI CONTEXTUELLE",
+    "title": "ARCHITECTURE DE NOUVELLE GÉNÉRATION",
+    "introduction": "La génération à enrichissement contextuel (RAG) optimise les réponses des modèles de langage en exploitant vos données internes ou externes, sans réentraînement."
   },
   "contact": {
-    "title": "Construisons l'avenir ensemble",
-    "subtitle": "Prêt à faire des agents IA votre avantage concurrentiel ? Contactez notre équipe.",
+    "title": "Prendre contact",
+    "subtitle": "Prêt à personaliser une IA pour vos besoins ? Contactez notre équipe.",
     "form": {
       "name": "Nom",
       "email": "Courriel",
