@@ -224,65 +224,80 @@
     "aiAcademy": "Academia de IA"
   },
   "noglab": {
-    "heroPhrase": "→ EggOn Haz tus",
-    "heroDropdownOption": "Agentes del Futuro",
-    "heroDropdownOptionDefault": "Agentes IA",
-    "heroDropdownLearnAI": "Aprender IA",
-    "heroTitle": "Haz tus Agentes de IA Asegurables",
-    "heroSubtitle": "Construimos un futuro donde profesionales de sectores regulados pueden implementar agentes de IA certificados, auditables y financieramente protegidos.",
-    "heroCta": "Unirse al Programa",
-    "title": "Certificación de Agentes de IA",
-    "intro1": "EggOn Lab lidera la gobernanza algorítmica mediante tecnologías de orquestación de próxima generación.",
-    "intro2": "Nuestra misión: permitir implementación masiva de IA confiable en sectores donde el error tiene consecuencias críticas.",
-    "intro3": "Contamos con ingenieros que han desarrollado sistemas para empresas con estándares de seguridad extremos y reguladores sectoriales.",
+    "heroPhrase": "→ EggOn Technology",
+    "heroDropdownOption": "IA Explicable",
+    "heroDropdownOptionDefault": "IA",
+    "heroDropdownLearnAI": "Descubrir la IA",
+    "heroTitle": "Construir una IA explicable, trazable y auditable",
+    "heroSubtitle": "Transformamos la complejidad técnica de la IA en un razonamiento legible e inteligible.",
+    "heroCta": "Descubrir la tecnología",
+    "title": "N.O.G.: Orquestación Anidada y Gobernanza",
+    "intro1": "EggOn Technology desarrolla N.O.G., una tecnología pensada para el usuario, que facilita la comprensión del razonamiento de la IA, haciendo la trazabilidad accesible y conforme a los estándares y regulaciones más estrictos.",
+    "intro2": "Nuestra misión: dar a los profesionales el control total sobre las decisiones de la IA en sus oficios, asegurando explicabilidad y auditabilidad.",
+    "intro3": "Cada tarea ejecutada está documentada y es reproducible, transformando la IA en un partner comprensible.",
     "legitimacy": {
-      "title": "La Legitimidad como Fundamento Ético",
-      "paragraph1": "La velocidad de avance de la IA contrasta con su falta de transparencia operativa, generando riesgos sistémicos.",
-      "paragraph2": "Esta opacidad resulta inaceptable en justicia y salud, donde las decisiones afectan derechos fundamentales y vidas humanas.",
-      "paragraph3": "Cada fallo judicial y diagnóstico médico requiere no solo precisión técnica sino procesos percibidos como legítimos por ciudadanos.",
-      "paragraph4": "La sociedad merece sistemas donde ningún resultado crucial dependa de cajas negras algorítmicas inescrutables.",
-      "paragraph5": "El desafío central es eliminar la duda razonable sobre el funcionamiento de sistemas automatizados en ámbitos sensibles."
+      "title": "La legitimidad de la IA reposa sobre la explicabilidad",
+      "paragraph1": "Nuestra innovación nos permite encapsular los procesos de la IA y transformarlos en información legible y reproducible.",
+      "paragraph2": "Este enfoque garantiza que la IA no solo es performante, sino verificable y conforme a las exigencias regulatorias.",
+      "paragraph3": "Los sectores sensibles como el derecho o las finanzas deben beneficiarse de un control total de sus sistemas, incluida la IA."
     },
     "aiForEveryone": {
-      "title": "Democratización de la IA Confiable",
-      "paragraph1": "El conocimiento sobre el funcionamiento interno de los agentes de IA debe ser accesible, no propiedad exclusiva de laboratorios.",
-      "paragraph2": "La opacidad frena innovación en sectores críticos e imposibilita modelos de seguros para aplicaciones de IA de alto riesgo.",
-      "paragraph3": "N.O.G (Orquestación Anidada y Gobernanza) proporciona el marco tecnológico para certificar, auditar y explicar agentes autónomos."
+      "title": "Una IA comprensible y adaptable",
+      "paragraph1": "Nuestra tecnología hace que la IA sea fácilmente explicable y por lo tanto utilizable, incluso sin expertise técnica.",
+      "paragraph2": "Cada decisión de la IA puede ser examinada, verificada y ajustada según las necesidades.",
+      "paragraph3": "La IA se convierte en un partner transparente."
     },
     "principles": {
-      "title": "Principios Fundamentales",
+      "title": "Nuestros valores",
       "explicability": {
-        "title": "Transparencia Radical",
-        "description": "Cada decisión algorítmica debe acompañarse de su cadena de razonamiento completa y evidencias verificables."
+        "title": "Transparencia y explicabilidad",
+        "description": "Cada etapa del razonamiento de la IA es comprensible, verificable y auditable."
       },
       "accessibility": {
-        "title": "Acceso Equitativo",
-        "description": "Las explicaciones técnicas deben traducirse en formatos comprensibles para todos los stakeholders afectados."
+        "title": "Accesibilidad universal",
+        "description": "La IA debe ser utilizable y comprendida por todos los profesionales, no solo por los expertos."
       },
       "recall": {
-        "title": "Reversibilidad Garantizada",
-        "description": "Mecanismos de contingencia deben permitir desactivación inmediata y reversión de decisiones cuando se detecten anomalías."
+        "title": "Reversibilidad",
+        "description": "Cada error puede ser rastreado, comprendido y corregido rápidamente, garantizando un control completo."
       },
-      "speed": {
-        "title": "Eficiencia Operacional",
-        "description": "Los requisitos de transparencia ne deben comprometer el rendimiento. La IA confiable debe ser competitiva en velocidad y costo."
+      "security": {
+        "title": "Seguridad y conformidad",
+        "description": "Los datos y comunicaciones están protegidos, y cada acción respeta los estándares regulatorios e industriales."
       }
     },
-    "growth": {
-      "title": "Camino a la Certificación Global",
-      "paragraph1": "Adoptamos metodologías ágiles donde implementaciones piloto con socios estratégicos retroalimentan nuestro desarrollo continuo.",
-      "paragraph2": "Nuestro enfoque iterativo prioritiza aprendizaje empírico mediante pruebas rigurosas en entornos operativos reales.",
-      "paragraph3": "Contribuimos al ecosistema mediante: (1) hardening de seguridad, (2) marcos de gobernanza abiertos, y (3) estándares de certificación pioneros.",
-      "paragraph4": "Técnicas como red-teaming adversarial y monitoreo de deriva algorítmica generan aprendizajes para futuros sistemas autónomos."
+    "science": {
+      "title": "Rigor y performance",
+      "paragraph1": "Nuestros protocolos y métodos de I+D garantizan la robustez, fiabilidad y conformidad de los sistemas de IA.",
+      "paragraph2": "La innovación se concentra en la transparencia y la seguridad en entornos profesionales sensibles."
+    },
+    "learning": {
+      "title": "Aprender practicando",
+      "paragraph1": "Nuestros agentes de IA son testados y ajustados en interacción con profesionales para maximizar la explicabilidad y la fiabilidad.",
+      "paragraph2": "Cada experiencia permite reforzar la confianza y la auditabilidad de los sistemas.",
+      "paragraph3": "Este enfoque empírico aborda los desafíos humanos y societales de la IA explicable."
+    },
+    "machineLearning": {
+      "title": "Innovación aplicada",
+      "paragraph1": "Explotamos técnicas avanzadas como la Ingeniería Inversa de Prompts (RPE) y la trazabilidad multi-agente para hacer la IA explicable y auditable.",
+      "paragraph2": "El objetivo: combinar performance, transparencia y conformidad para cada usuario."
+    },
+    "assurance": {
+      "title": "Confianza por diseño",
+      "paragraph1": "Nuestra IA reposa sobre cuatro pilares:",
+      "dataPrivacy": "Respeto: la confidencialidad de los datos está garantizada en cada etapa.",
+      "security": "Robustez: sistemas resistentes a los ataques y a las anomalías.",
+      "reliability": "Reproducibilidad: cada resultado puede ser reproducido y verificado, incluso si las salidas no son deterministas.",
+      "accountability": "Responsabilidad: el humano conserva el control final."
     },
     "measure": {
-      "title": "Métrica Centrada en el Impacto",
-      "description": "Medimos éxito por nuestra capacidad para generar confianza verificable en sistemas autónomos, no solo por indicadores técnicos aislados."
+      "title": "Medir lo que importa",
+      "description": "El éxito se mide por la confianza, la comprensión y la auditabilidad, no solo por las performances técnicas."
     },
     "partners": {
-      "title": "Programa de Socios Fundadores",
-      "description": "Organizaciones pioneras en implementar IA certificada pueden acceder a beneficios exclusivos: ",
-      "link": "Descargar Dossier"
+      "title": "Únase a la concepción",
+      "description": "Participe en nuestra misión para una IA explicable, trazable y segura, y contribuya a definir los estándares de confianza para la IA profesional.",
+      "link": "Únase a la concepción"
     }
   },
   "ragArchitecture": {
