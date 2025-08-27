@@ -26,7 +26,7 @@
       "caseLawResearch": {
         "title": "Agent de Stratégie Basé sur les Précédents",
         "context": "Juridique / Recherche",
-        "body": "Améliore la recherche juridique en identifiant et récupérant dynamiquement des précédents pertinents, des textes de loi et des doctrines, pour fournir aux avocats des recommandations stratégiques fondées sur l'analyse jurisprudentielle et le contexte juridictionnel."
+        "body": "Améliore la recherche juridique en identifiant et récupérant dynamiquement des précédents pertinents, des textes de loi et des doctrines, pour provide aux avocats des recommandations stratégiques fondées sur l'analyse jurisprudentielle et le contexte juridictionnel."
       },
       "meetingPrep": {
         "title": "Agent de Réunion",
@@ -207,7 +207,7 @@
       "ongoing": "En cours",
       "enroll": "S'inscrire"
     }
-  {
+  },
   "noglab": {
     "heroPhrase": "→ EggOn Technology",
     "heroDropdownOption": "IA Explicable",
@@ -223,14 +223,14 @@
     "legitimacy": {
       "title": "La légitimité de l'IA repose sur l'explicabilité",
       "paragraph1": "Chaque tâche est enregistrée avec ses prompts, outils, résultats intermédiaires et validations de conformité.",
-      "paragraph2": "Cette approche garantit que l’IA est non seulement performante, mais **vérifiable et conforme** aux exigences réglementaires.",
+      "paragraph2": "Cette approche garantît que l’IA est non seulement performante, mais **vérifiable et conforme** aux exigences réglementaires.",
       "paragraph3": "Les secteurs sensibles comme le droit, la finance ou la santé bénéficient ainsi d’un contrôle total et d’une traçabilité complète."
     },
     "aiForEveryone": {
       "title": "Une IA compréhensible et adaptable",
       "paragraph1": "Notre technologie rend l’IA explicable et utilisable par tous les professionnels, même sans expertise technique.",
       "paragraph2": "Chaque décision de l’IA peut être examinée, vérifiée et ajustée selon les besoins spécifiques du métier.",
-      "paragraph3": "L’IA devient un partenaire transparent, rejouable et utile dans chaque contexte d’usage."
+      "paragraph3": "L’IA devient un partenaire transparent, rejouable et utile dans chaque contexte d'usage."
     },
     "principles": {
       "title": "Nos valeurs",
@@ -284,8 +284,6 @@
       "description": "Participez à notre mission pour une IA explicable, traçable et sécurisée, et contribuez à définir les standards de confiance pour l’IA professionnelle.",
       "link": "Rejoignez la conception"
     }
-  }
-}
   },
   "nog": {
     "intro": "Actuellement, les clients demandent à eggon de:",
