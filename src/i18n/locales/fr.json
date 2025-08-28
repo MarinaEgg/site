@@ -36,7 +36,7 @@
       "wikiBuilder": {
         "title": "Agent de Gestion des Connaissances Internes",
         "context": "Entreprise / Gestion des Connaissances",
-        "body": "Crée et met à jour un "Wikipedia" interne privé en analysant les documents internes et les échanges publics autorisés. Attribue automatiquement des étiquettes et des catégories aux contenus."
+        "body": "Crée et met à jour un \"Wikipedia\" interne privé en analysant les documents internes et les échanges publics autorisés. Attribue automatiquement des étiquettes et des catégories aux contenus."
       },
       "auditTrail": {
         "title": "Agent d'Amélioration de prompts IA",
@@ -169,52 +169,52 @@
     "heroAcademyLink": "EggOn IA Academie — Le programme qui forme les avocats à l'IA, des fondamentaux aux applications pratiques."
   },
   "academie": {
-  "sectionLabel": "IA ACADÉMIE",
-  "mainTitle": "Formez-vous dès aujourd’hui. Façonnez le droit de demain.",
-  "intro": {
-    "left": "Des ingénieurs IA spécialisés pour le domaine du droit, forts de 10 ans d’expérience dans les cabinets d’avocats et l’implémentation de legaltech comme iManage, partagent leur savoir-faire. Notre IA Académie est conçue pour donner aux avocats les clés d’une pratique juridique augmentée.",
-    "right": "EggOn Technology, bénéficiaire du programme Startup Microsoft (Fabric & Azure), développe et déploie des solutions d’IA juridique de nouvelle génération. Nous explorons, testons et construisons avec les cabinets pour transformer la pratique du droit grâce à l’IA."
-  },
-  "categories": {
-    "foundations": "Fondamentaux",
-    "promptEngineering": "Ingénierie de Prompts",
-    "caseStudies": "Études de Cas",
-    "securityGovernance": "Sécurité & Gouvernance",
-    "advancedIA": "IA Avancée"
-  },
-  "courses": {
-    "foundations": {
-      "introIA": "Introduction à l'IA dans la Pratique Juridique",
-      "limitesLLM": "Comprendre les Limites des LLM",
-      "depasserLimites": "Dépasser les Limites de l'IA"
+    "sectionLabel": "IA ACADÉMIE",
+    "mainTitle": "Formez-vous dès aujourd'hui. Façonnez le droit de demain.",
+    "intro": {
+      "left": "Des ingénieurs IA spécialisés pour le domaine du droit, forts de 10 ans d'expérience dans les cabinets d'avocats et l'implémentation de legaltech comme iManage, partagent leur savoir-faire. Notre IA Académie est conçue pour donner aux avocats les clés d'une pratique juridique augmentée.",
+      "right": "EggOn Technology, bénéficiaire du programme Startup Microsoft (Fabric & Azure), développe et déploie des solutions d'IA juridique de nouvelle génération. Nous explorons, testons et construisons avec les cabinets pour transformer la pratique du droit grâce à l'IA."
     },
-    "promptEngineering": {
-      "promptsInitiation": "Fondamentaux des Prompts pour Avocats",
-      "promptsJuridiques": "Ingénierie de Prompts Juridiques Avancée",
-      "promptsSystemes": "Prompts Système pour Workflows Juridiques",
-      "optimisationPrompts": "Optimisation & Itération des Prompts",
-      "reversePrompting": "Reverse Prompt Engineering pour Cabinets d'Avocats"
+    "categories": {
+      "foundations": "Fondamentaux",
+      "promptEngineering": "Ingénierie de Prompts",
+      "caseStudies": "Études de Cas",
+      "securityGovernance": "Sécurité & Gouvernance",
+      "advancedIA": "IA Avancée"
     },
-    "caseStudies": {
-      "affaireWeber": "Analyse de l'Affaire Weber",
-      "ragAgentique": "RAG Agentique appliqué au Droit"
+    "courses": {
+      "foundations": {
+        "introIA": "Introduction à l'IA dans la Pratique Juridique",
+        "limitesLLM": "Comprendre les Limites des LLM",
+        "depasserLimites": "Dépasser les Limites de l'IA"
+      },
+      "promptEngineering": {
+        "promptsInitiation": "Fondamentaux des Prompts pour Avocats",
+        "promptsJuridiques": "Ingénierie de Prompts Juridiques Avancée",
+        "promptsSystemes": "Prompts Système pour Workflows Juridiques",
+        "optimisationPrompts": "Optimisation & Itération des Prompts",
+        "reversePrompting": "Reverse Prompt Engineering pour Cabinets d'Avocats"
+      },
+      "caseStudies": {
+        "affaireWeber": "Analyse de l'Affaire Weber",
+        "ragAgentique": "RAG Agentique appliqué au Droit"
+      },
+      "securityGovernance": {
+        "aiRiskManagement": "Gestion des Risques IA en Pratique Juridique",
+        "aiActCompliance": "AI Act & Conformité pour Cabinets d'Avocats",
+        "auditabilityExplainability": "Auditabilité & Explicabilité pour Agents IA Juridiques"
+      },
+      "advancedIA": {
+        "fineTuningJuridique": "Fine-Tuning et Spécialisation IA pour Cabinets",
+        "agentsIntelligents": "Agents IA et Automatisation Juridique",
+        "retrievalRag": "Mise en place d'un RAG Juridique Sécurisé"
+      }
     },
-    "securityGovernance": {
-      "aiRiskManagement": "Gestion des Risques IA en Pratique Juridique",
-      "aiActCompliance": "AI Act & Conformité pour Cabinets d'Avocats",
-      "auditabilityExplainability": "Auditabilité & Explicabilité pour Agents IA Juridiques"
-    },
-    "advancedIA": {
-      "fineTuningJuridique": "Fine-Tuning et Spécialisation IA pour Cabinets",
-      "agentsIntelligents": "Agents IA et Automatisation Juridique",
-      "retrievalRag": "Mise en place d’un RAG Juridique Sécurisé"
-    }
-  },
-  "buttons": {
-    "completed": "Terminé",
-    "catchUp": "Rattrapage",
-    "ongoing": "En cours",
-    "enroll": "S'inscrire"
+    "buttons": {
+      "completed": "Terminé",
+      "catchUp": "Rattrapage",
+      "ongoing": "En cours",
+      "enroll": "S'inscrire"
     }
   },
   "noglab": {
@@ -227,19 +227,19 @@
     "heroCta": "Découvrir la technologie",
     "title": "N.O.G. : Nested Orchestration & Governance",
     "intro1": "EggOn Technology développe N.O.G., une technologie pensée pour l'utilisateur, qui facilite la compréhension du raisonnement de l'IA, rendant la traçabilité accessible et conforme aux standards et réglementations les plus stricts.",
-    "intro2": "Notre mission : donner aux professionnels le contrôle total sur les décisions de l’IA dans leurs métiers, en assurant explicabilité et auditabilité.",
-    "intro3": "Chaque tâche exécutée est documentée et rejouable, transformant l’IA en un partenaire compréhensible.",
+    "intro2": "Notre mission : donner aux professionnels le contrôle total sur les décisions de l'IA dans leurs métiers, en assurant explicabilité et auditabilité.",
+    "intro3": "Chaque tâche exécutée est documentée et rejouable, transformant l'IA en un partenaire compréhensible.",
     "legitimacy": {
       "title": "La légitimité de l'IA repose sur l'explicabilité",
       "paragraph1": "Notre innovation nous permet d'encapsuler les processus de l'IA et les transforme en informations lisibles et rejouables.",
-      "paragraph2": "Cette approche garantît que l’IA est non seulement performante, mais vérifiable et conforme aux exigences réglementaires.",
-      "paragraph3": "Les secteurs sensibles comme le droit ou la finance doivent bénéficier d’un contrôle total de leurs systèmes dont l'IA."
+      "paragraph2": "Cette approche garantît que l'IA est non seulement performante, mais vérifiable et conforme aux exigences réglementaires.",
+      "paragraph3": "Les secteurs sensibles comme le droit ou la finance doivent bénéficier d'un contrôle total de leurs systèmes dont l'IA."
     },
     "aiForEveryone": {
       "title": "Une IA compréhensible et adaptable",
-      "paragraph1": "Notre technologie rend l’IA facilement explicable et donc utilisable, même sans expertise technique.",
-      "paragraph2": "Chaque décision de l’IA peut être examinée, vérifiée et ajustée selon les besoins.",
-      "paragraph3": "L’IA devient un partenaire transparent."
+      "paragraph1": "Notre technologie rend l'IA facilement explicable et donc utilisable, même sans expertise technique.",
+      "paragraph2": "Chaque décision de l'IA peut être examinée, vérifiée et ajustée selon les besoins.",
+      "paragraph3": "L'IA devient un partenaire transparent."
     },
     "principles": {
       "title": "Nos valeurs",
@@ -249,7 +249,7 @@
       },
       "accessibility": {
         "title": "Accessibilité universelle",
-        "description": "L’IA doit être utilisable et comprise par tous les professionnels, pas seulement par les experts."
+        "description": "L'IA doit être utilisable et comprise par tous les professionnels, pas seulement par les experts."
       },
       "recall": {
         "title": "Réversibilité",
@@ -263,18 +263,18 @@
     "science": {
       "title": "Rigueur et performance",
       "paragraph1": "Nos protocoles et méthodes de R&D garantissent la robustesse, la fiabilité et la conformité des systèmes IA.",
-      "paragraph2": "L’innovation se concentre sur la transparence et la sécurité dans des environnements professionnels sensibles."
+      "paragraph2": "L'innovation se concentre sur la transparence et la sécurité dans des environnements professionnels sensibles."
     },
     "learning": {
       "title": "Apprendre en pratiquant",
-      "paragraph1": "Nos agents IA sont testés et ajustés en interaction avec des professionnels pour maximiser l’explicabilité et la fiabilité.",
-      "paragraph2": "Chaque expérience permet de renforcer la confiance et l’auditabilité des systèmes.",
-      "paragraph3": "Cette approche empirique adresse les défis humains et sociétaux de l’IA explicable."
+      "paragraph1": "Nos agents IA sont testés et ajustés en interaction avec des professionnels pour maximiser l'explicabilité et la fiabilité.",
+      "paragraph2": "Chaque expérience permet de renforcer la confiance et l'auditabilité des systèmes.",
+      "paragraph3": "Cette approche empirique adresse les défis humains et sociétaux de l'IA explicable."
     },
     "machineLearning": {
       "title": "Innovation appliquée",
-      "paragraph1": "Nous exploitons des techniques avancées comme le Reverse Prompt Engineering (RPE) et la traçabilité multi-agents pour rendre l’IA explicable et auditable.",
-      "paragraph2": "L’objectif : combiner performance, transparence et conformité pour chaque utilisateur."
+      "paragraph1": "Nous exploitons des techniques avancées comme le Reverse Prompt Engineering (RPE) et la traçabilité multi-agents pour rendre l'IA explicable et auditable.",
+      "paragraph2": "L'objectif : combiner performance, transparence et conformité pour chaque utilisateur."
     },
     "assurance": {
       "title": "Confiance par conception",
@@ -282,15 +282,15 @@
       "dataPrivacy": "Respect : la confidentialité des données est garantie à chaque étape.",
       "security": "Robustesse : des systèmes résistants aux attaques et aux anomalies.",
       "reliability": "Rejouabilité : chaque résultat peut être reproduit et vérifié, même si les sorties ne sont pas déterministes.",
-      "accountability": "Responsabilité : l’humain conserve le contrôle final."
+      "accountability": "Responsabilité : l'humain conserve le contrôle final."
     },
     "measure": {
       "title": "Mesurer ce qui compte",
-      "description": "Le succès se mesure à la confiance, à la compréhension et à l’auditabilité, pas seulement aux performances techniques."
+      "description": "Le succès se mesure à la confiance, à la compréhension et à l'auditabilité, pas seulement aux performances techniques."
     },
     "partners": {
       "title": "Rejoignez la conception",
-      "description": "Participez à notre mission pour une IA explicable, traçable et sécurisée, et contribuez à définir les standards de confiance pour l’IA professionnelle.",
+      "description": "Participez à notre mission pour une IA explicable, traçable et sécurisée, et contribuez à définir les standards de confiance pour l'IA professionnelle.",
       "link": "Rejoignez la conception"
     }
   },
