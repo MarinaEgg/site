@@ -690,12 +690,12 @@ const RAGArchitectureDiagram = () => {
             className="rag-cards-grid"
             style={{
               display: 'flex',
-              alignItems: 'stretch',
-              justifyContent: 'space-between',
+              alignItems: 'center',
+              justifyContent: 'center',
               gap: 'clamp(0.8rem, 1.5vw, 1.2rem)',
               width: '100%',
               marginTop: '1.5rem',
-              flexWrap: 'wrap'
+              flexWrap: 'nowrap'
             }}
           >
             {ragCards.map((card, index) => {
@@ -711,7 +711,7 @@ const RAGArchitectureDiagram = () => {
                       border: '1px solid var(--rag-card-border, rgba(47, 47, 46, 0.15))',
                       backdropFilter: 'blur(20px)',
                       borderRadius: '1rem',
-                      padding: isReducedCard ? 'clamp(0.8rem, 1.5vw, 1.2rem)' : 'clamp(1.5rem, 2.5vw, 2rem)',
+                      padding: isReducedCard ? 'clamp(1.2rem, 2vw, 1.5rem)' : 'clamp(1.5rem, 2.5vw, 2rem)',
                       boxShadow: 'var(--rag-card-shadow, 0 8px 32px rgba(47, 47, 46, 0.2))',
                       transition: 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
                       cursor: 'pointer',
@@ -720,12 +720,12 @@ const RAGArchitectureDiagram = () => {
                       display: 'flex',
                       flexDirection: 'column',
                       alignItems: 'center',
-                      justifyContent: isReducedCard ? 'flex-start' : 'flex-start',
-                      minHeight: isReducedCard ? 'auto' : 'initial',
-                      maxHeight: 'none',
-                      flex: isReducedCard ? '1.2' : '1',
-                      minWidth: isReducedCard ? '200px' : '180px',
-                      maxWidth: isReducedCard ? '350px' : 'none'
+                      justifyContent: isReducedCard ? 'center' : 'flex-start',
+                      minHeight: isReducedCard ? '180px' : 'initial',
+                      maxHeight: isReducedCard ? '220px' : 'none',
+                      flex: isReducedCard ? '1.5' : '0.8',
+                      minWidth: isReducedCard ? '220px' : '160px',
+                      maxWidth: isReducedCard ? '320px' : '200px'
                     }}
                     whileHover={{
                       y: -8,
@@ -738,14 +738,14 @@ const RAGArchitectureDiagram = () => {
                     <h3
                       className="rag-card-title-enhanced"
                       style={{
-                        fontSize: isReducedCard ? 'clamp(0.7rem, 1.1vw, 0.85rem)' : 'clamp(0.9rem, 1.4vw, 1.1rem)',
+                        fontSize: isReducedCard ? 'clamp(0.75rem, 1.2vw, 0.9rem)' : 'clamp(0.9rem, 1.4vw, 1.1rem)',
                         fontWeight: '700',
                         color: '#2f2f2e',
-                        marginBottom: isReducedCard ? '0.8rem' : '1.5rem',
+                        marginBottom: isReducedCard ? '1rem' : '1.5rem',
                         textAlign: 'center',
                         textTransform: 'uppercase',
                         letterSpacing: '0.05em',
-                        lineHeight: '1.2',
+                        lineHeight: '1.3',
                         hyphens: 'auto',
                         wordBreak: 'break-word'
                       }}
@@ -794,11 +794,27 @@ const RAGArchitectureDiagram = () => {
 
           {/* Styles responsive améliorés */}
           <style jsx>{`
+            @media (max-width: 1200px) {
+              .rag-cards-grid {
+                gap: 1rem !important;
+              }
+              
+              .rag-card-enhanced {
+                min-width: 180px !important;
+              }
+            }
+
             @media (max-width: 1024px) {
               .rag-cards-grid {
                 flex-wrap: wrap !important;
                 justify-content: center !important;
                 gap: 1rem !important;
+              }
+              
+              .rag-card-enhanced {
+                flex: 1 1 calc(50% - 0.5rem) !important;
+                min-width: 200px !important;
+                max-width: 300px !important;
               }
             }
 
@@ -818,6 +834,8 @@ const RAGArchitectureDiagram = () => {
                 min-width: 100% !important;
                 max-width: 100% !important;
                 flex: none !important;
+                min-height: auto !important;
+                max-height: none !important;
               }
             }
 
@@ -828,12 +846,13 @@ const RAGArchitectureDiagram = () => {
 
               .rag-card-enhanced {
                 padding: 1rem !important;
+                min-height: auto !important;
               }
 
               .rag-card-title-enhanced {
                 font-size: 0.75rem !important;
-                line-height: 1.1 !important;
-                margin-bottom: 0.6rem !important;
+                line-height: 1.2 !important;
+                margin-bottom: 0.8rem !important;
               }
             }
           `}</style>
