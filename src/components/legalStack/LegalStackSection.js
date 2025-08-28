@@ -215,48 +215,50 @@ const RAGArchitectureDiagram = () => {
         <div style={{
           display: 'flex',
           alignItems: 'center',
-          gap: '0.6rem',
+          gap: 'clamp(0.4rem, 1vw, 0.6rem)',
           justifyContent: 'space-between',
-          width: '100%'
+          width: '100%',
+          flexWrap: 'wrap'
         }}>
           <div style={{
             display: 'flex',
             flexDirection: 'column',
-            gap: '0.6rem',
-            flex: '1'
+            gap: 'clamp(0.4rem, 0.8vw, 0.6rem)',
+            flex: '1',
+            minWidth: '80px'
           }}>
             <div style={{
-              padding: '0.6rem',
+              padding: 'clamp(0.4rem, 0.8vw, 0.6rem)',
               background: 'rgba(47, 47, 46, 0.12)',
               border: '1px solid rgba(47, 47, 46, 0.25)',
               borderRadius: '6px',
               textAlign: 'center',
-              fontSize: 'clamp(0.65rem, 1vw, 0.75rem)',
+              fontSize: 'clamp(0.55rem, 0.9vw, 0.7rem)',
               fontWeight: '600',
-              color: '#2f2f2e'
+              color: '#2f2f2e',
+              lineHeight: '1.1'
             }}>
               Multimodal<br />Extraction
             </div>
 
             <div style={{
-              padding: '0.6rem',
+              padding: 'clamp(0.4rem, 0.8vw, 0.6rem)',
               background: 'rgba(47, 47, 46, 0.12)',
               border: '1px solid rgba(47, 47, 46, 0.25)',
               borderRadius: '6px',
               textAlign: 'center',
-              fontSize: 'clamp(0.65rem, 1vw, 0.75rem)',
+              fontSize: 'clamp(0.55rem, 0.9vw, 0.7rem)',
               fontWeight: '600',
-              color: '#2f2f2e'
+              color: '#2f2f2e',
+              lineHeight: '1.1'
             }}>
               Continuous<br />Ingestion
             </div>
           </div>
 
-
-
           <div style={{
-            width: '32px',
-            height: '32px',
+            width: 'clamp(24px, 5vw, 32px)',
+            height: 'clamp(24px, 5vw, 32px)',
             borderRadius: '50%',
             background: 'rgba(47, 47, 46, 0.12)',
             backdropFilter: 'blur(10px)',
@@ -267,8 +269,8 @@ const RAGArchitectureDiagram = () => {
             flexShrink: 0
           }}>
             <svg
-              width="12"
-              height="12"
+              width="clamp(10px, 2.5vw, 12px)"
+              height="clamp(10px, 2.5vw, 12px)"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -281,18 +283,19 @@ const RAGArchitectureDiagram = () => {
           </div>
 
           <div style={{
-            padding: '0.4rem 0.3rem',
+            padding: 'clamp(0.3rem, 0.6vw, 0.4rem) clamp(0.2rem, 0.5vw, 0.3rem)',
             background: 'rgba(47, 47, 46, 0.12)',
             border: '1px solid rgba(47, 47, 46, 0.25)',
             borderRadius: '6px',
             textAlign: 'center',
-            fontSize: 'clamp(0.55rem, 0.9vw, 0.65rem)',
+            fontSize: 'clamp(0.5rem, 0.8vw, 0.65rem)',
             fontWeight: '600',
             color: '#2f2f2e',
             flex: '1',
             alignSelf: 'center',
-            minWidth: '50px',
-            maxWidth: '80px'
+            minWidth: '60px',
+            maxWidth: '90px',
+            lineHeight: '1.1'
           }}>
             Datastore
           </div>
@@ -317,31 +320,30 @@ const RAGArchitectureDiagram = () => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            gap: '0.5rem',
-            marginBottom: '1.5rem',
-            width: '100%'
+            gap: 'clamp(0.3rem, 0.8vw, 0.5rem)',
+            marginBottom: 'clamp(1rem, 2vw, 1.5rem)',
+            width: '100%',
+            flexWrap: 'wrap'
           }}>
             <div style={{
-              padding: 'clamp(0.3rem, 0.8vw, 0.5rem)',
+              padding: 'clamp(0.25rem, 0.6vw, 0.4rem)',
               background: 'rgba(47, 47, 46, 0.18)',
               border: '1px solid rgba(47, 47, 46, 0.3)',
               borderRadius: '6px',
               textAlign: 'center',
-              fontSize: 'clamp(0.55rem, 0.9vw, 0.65rem)',
+              fontSize: 'clamp(0.45rem, 0.75vw, 0.6rem)',
               fontWeight: '600',
               color: '#2f2f2e',
               flex: '1',
-              minWidth: '60px',
+              minWidth: '50px',
               lineHeight: '1.1'
             }}>
-              <span style={{ whiteSpace: 'nowrap' }}>Mixture</span>{' '}
-              <span style={{ whiteSpace: 'nowrap' }}>of</span>{' '}
-              <span style={{ whiteSpace: 'nowrap' }}>retrievers</span>
+              Mixture of retrievers
             </div>
 
             <div style={{
-              width: '20px',
-              height: '20px',
+              width: 'clamp(16px, 3vw, 20px)',
+              height: 'clamp(16px, 3vw, 20px)',
               borderRadius: '50%',
               background: 'rgba(47, 47, 46, 0.2)',
               display: 'flex',
@@ -350,8 +352,8 @@ const RAGArchitectureDiagram = () => {
               flexShrink: 0
             }}>
               <svg
-                width="8"
-                height="8"
+                width="clamp(6px, 1.5vw, 8px)"
+                height="clamp(6px, 1.5vw, 8px)"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -364,24 +366,24 @@ const RAGArchitectureDiagram = () => {
             </div>
 
             <div style={{
-              padding: 'clamp(0.3rem, 0.8vw, 0.5rem)',
+              padding: 'clamp(0.25rem, 0.6vw, 0.4rem)',
               background: 'rgba(47, 47, 46, 0.18)',
               border: '1px solid rgba(47, 47, 46, 0.3)',
               borderRadius: '6px',
               textAlign: 'center',
-              fontSize: 'clamp(0.55rem, 0.9vw, 0.65rem)',
+              fontSize: 'clamp(0.45rem, 0.75vw, 0.6rem)',
               fontWeight: '600',
               color: '#2f2f2e',
               flex: '1',
-              minWidth: '60px',
+              minWidth: '50px',
               lineHeight: '1.1'
             }}>
-              <span style={{ whiteSpace: 'nowrap' }}>Reranker</span>
+              Reranker
             </div>
 
             <div style={{
-              width: '20px',
-              height: '20px',
+              width: 'clamp(16px, 3vw, 20px)',
+              height: 'clamp(16px, 3vw, 20px)',
               borderRadius: '50%',
               background: 'rgba(47, 47, 46, 0.2)',
               display: 'flex',
@@ -390,8 +392,8 @@ const RAGArchitectureDiagram = () => {
               flexShrink: 0
             }}>
               <svg
-                width="8"
-                height="8"
+                width="clamp(6px, 1.5vw, 8px)"
+                height="clamp(6px, 1.5vw, 8px)"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -404,46 +406,44 @@ const RAGArchitectureDiagram = () => {
             </div>
 
             <div style={{
-              padding: 'clamp(0.3rem, 0.8vw, 0.5rem)',
+              padding: 'clamp(0.25rem, 0.6vw, 0.4rem)',
               background: 'rgba(47, 47, 46, 0.18)',
               border: '1px solid rgba(47, 47, 46, 0.3)',
               borderRadius: '6px',
               textAlign: 'center',
-              fontSize: 'clamp(0.55rem, 0.9vw, 0.65rem)',
+              fontSize: 'clamp(0.45rem, 0.75vw, 0.6rem)',
               fontWeight: '600',
               color: '#2f2f2e',
               flex: '1',
-              minWidth: '60px',
+              minWidth: '50px',
               lineHeight: '1.1'
             }}>
-              <span style={{ whiteSpace: 'nowrap' }}>Grounded</span>{' '}
-              <span style={{ whiteSpace: 'nowrap' }}>Language</span>{' '}
-              <span style={{ whiteSpace: 'nowrap' }}>Model</span>
+              Grounded Language Model
             </div>
           </div>
 
           <div style={{
             borderTop: '1px solid rgba(47, 47, 46, 0.2)',
-            paddingTop: '1rem',
-            fontSize: 'clamp(0.65rem, 1vw, 0.75rem)',
+            paddingTop: 'clamp(0.6rem, 1.2vw, 1rem)',
+            fontSize: 'clamp(0.55rem, 0.9vw, 0.7rem)',
             color: 'rgba(47, 47, 46, 0.9)'
           }}>
             <div style={{
               display: 'flex',
               alignItems: 'flex-start',
-              gap: '0.4rem',
-              marginBottom: '0.5rem'
+              gap: '0.3rem',
+              marginBottom: 'clamp(0.3rem, 0.6vw, 0.5rem)'
             }}>
-              <span style={{ color: '#2f2f2e', flexShrink: 0 }}>✓</span>
-              <span>Components jointly optimized with RAG 2.0</span>
+              <span style={{ color: '#2f2f2e', flexShrink: 0, fontSize: '0.8em' }}>✓</span>
+              <span style={{ lineHeight: '1.2' }}>Components jointly optimized with RAG 2.0</span>
             </div>
             <div style={{
               display: 'flex',
               alignItems: 'flex-start',
-              gap: '0.4rem'
+              gap: '0.3rem'
             }}>
-              <span style={{ color: '#2f2f2e', flexShrink: 0 }}>✓</span>
-              <span>Tuning and alignment to specialize to use case</span>
+              <span style={{ color: '#2f2f2e', flexShrink: 0, fontSize: '0.8em' }}>✓</span>
+              <span style={{ lineHeight: '1.2' }}>Tuning and alignment to specialize to use case</span>
             </div>
           </div>
         </>
@@ -662,21 +662,24 @@ const RAGArchitectureDiagram = () => {
             </p>
           </motion.div>
 
-          {/* Label PLATFORM simplifié */}
+          {/* Label PLATFORM amélioré */}
           <div style={{
             width: '100%',
-            margin: '2rem 0 3rem 0',
+            margin: '1rem 0 2rem 0',
             display: 'flex',
             justifyContent: 'center'
           }}>
             <div style={{
               background: 'transparent',
-              padding: '0.5rem 1.5rem',
-              fontSize: 'clamp(0.8rem, 1.4vw, 1rem)',
-              fontWeight: '700',
+              padding: '0.8rem 2rem',
+              fontSize: 'clamp(1.2rem, 2.5vw, 1.8rem)',
+              fontWeight: '900',
               color: '#2f2f2e',
               textTransform: 'uppercase',
-              letterSpacing: '0.1em'
+              letterSpacing: '0.15em',
+              textAlign: 'center',
+              borderTop: '2px solid rgba(47, 47, 46, 0.2)',
+              borderBottom: '2px solid rgba(47, 47, 46, 0.2)'
             }}>
               PLATFORM
             </div>
@@ -687,11 +690,11 @@ const RAGArchitectureDiagram = () => {
             className="rag-cards-grid"
             style={{
               display: 'flex',
-              alignItems: 'center',
+              alignItems: 'stretch',
               justifyContent: 'space-between',
-              gap: 'clamp(1rem, 2vw, 1.5rem)',
+              gap: 'clamp(0.8rem, 1.5vw, 1.2rem)',
               width: '100%',
-              marginTop: '2rem',
+              marginTop: '1.5rem',
               flexWrap: 'wrap'
             }}
           >
@@ -708,7 +711,7 @@ const RAGArchitectureDiagram = () => {
                       border: '1px solid var(--rag-card-border, rgba(47, 47, 46, 0.15))',
                       backdropFilter: 'blur(20px)',
                       borderRadius: '1rem',
-                      padding: isReducedCard ? 'clamp(1.2rem, 2vw, 1.5rem) clamp(1.2rem, 2vw, 1.5rem) clamp(2rem, 3vw, 2.5rem) clamp(1.2rem, 2vw, 1.5rem)' : 'clamp(1.5rem, 2.5vw, 2rem)',
+                      padding: isReducedCard ? 'clamp(0.8rem, 1.5vw, 1.2rem)' : 'clamp(1.5rem, 2.5vw, 2rem)',
                       boxShadow: 'var(--rag-card-shadow, 0 8px 32px rgba(47, 47, 46, 0.2))',
                       transition: 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
                       cursor: 'pointer',
@@ -717,11 +720,12 @@ const RAGArchitectureDiagram = () => {
                       display: 'flex',
                       flexDirection: 'column',
                       alignItems: 'center',
-                      justifyContent: isReducedCard ? 'center' : 'flex-start',
-                      minHeight: isReducedCard ? '150px' : 'initial',
-                      maxHeight: isReducedCard ? '200px' : 'auto',
-                      flex: '1',
-                      minWidth: '250px'
+                      justifyContent: isReducedCard ? 'flex-start' : 'flex-start',
+                      minHeight: isReducedCard ? 'auto' : 'initial',
+                      maxHeight: 'none',
+                      flex: isReducedCard ? '1.2' : '1',
+                      minWidth: isReducedCard ? '200px' : '180px',
+                      maxWidth: isReducedCard ? '350px' : 'none'
                     }}
                     whileHover={{
                       y: -8,
@@ -734,14 +738,16 @@ const RAGArchitectureDiagram = () => {
                     <h3
                       className="rag-card-title-enhanced"
                       style={{
-                        fontSize: 'clamp(0.9rem, 1.4vw, 1.1rem)',
+                        fontSize: isReducedCard ? 'clamp(0.7rem, 1.1vw, 0.85rem)' : 'clamp(0.9rem, 1.4vw, 1.1rem)',
                         fontWeight: '700',
                         color: '#2f2f2e',
-                        marginBottom: isReducedCard ? '1rem' : '1.5rem',
+                        marginBottom: isReducedCard ? '0.8rem' : '1.5rem',
                         textAlign: 'center',
                         textTransform: 'uppercase',
                         letterSpacing: '0.05em',
-                        lineHeight: '1.3'
+                        lineHeight: '1.2',
+                        hyphens: 'auto',
+                        wordBreak: 'break-word'
                       }}
                     >
                       {card.title}
@@ -786,17 +792,48 @@ const RAGArchitectureDiagram = () => {
             })}
           </div>
 
-          {/* Version mobile en colonne */}
+          {/* Styles responsive améliorés */}
           <style jsx>{`
+            @media (max-width: 1024px) {
+              .rag-cards-grid {
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+                gap: 1rem !important;
+              }
+            }
+
             @media (max-width: 768px) {
               .rag-cards-grid {
                 flex-direction: column !important;
                 align-items: stretch !important;
+                gap: 1.5rem !important;
               }
 
               .rag-cards-grid > div:nth-child(2n) {
                 transform: rotate(90deg) !important;
                 margin: 1rem 0 !important;
+              }
+
+              .rag-card-enhanced {
+                min-width: 100% !important;
+                max-width: 100% !important;
+                flex: none !important;
+              }
+            }
+
+            @media (max-width: 480px) {
+              .rag-cards-grid {
+                gap: 1rem !important;
+              }
+
+              .rag-card-enhanced {
+                padding: 1rem !important;
+              }
+
+              .rag-card-title-enhanced {
+                font-size: 0.75rem !important;
+                line-height: 1.1 !important;
+                margin-bottom: 0.6rem !important;
               }
             }
           `}</style>
