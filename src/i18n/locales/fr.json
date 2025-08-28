@@ -329,6 +329,26 @@
       "error": "Échec de l'envoi du message. Veuillez réessayer."
     }
   },
+  "whyEggon": {
+    "sectionLabel": "POURQUOI EGGON ?",
+    "title": "Conçu pour votre univers",
+    "subtitle": "Nous comprenons vos défis car nous avons créé des solutions dans votre secteur. Du legaltech au fintech, nous parlons votre langue.",
+    "points": {
+      "connects": {
+        "title": "Se connecte à votre univers",
+        "description": "EggOn s'intègre avec vos documents et outils pour des interactions naturelles et contextuelles. Nous venons du legaltech, insurtech et fintech—votre environnement nous est familier."
+      },
+      "solves": {
+        "title": "Résout vos défis les plus complexes",
+        "description": "Notre IA agentique rédige des documents, exécute des actions et livre des résultats qui prenaient autrefois des heures. Le ROI apparaît rapidement."
+      },
+      "augments": {
+        "title": "Augmente votre activité",
+        "description": "Automatisez les processus clés avec des agents IA autonomes. Livraison plus rapide, valeur client renforcée."
+      }
+    },
+    "cta": "Découvrir nos solutions"
+  },
   "footer": {
     "copyright": "© EggOn Technology 2025",
     "whyEggon": "Pourquoi EggOn",
