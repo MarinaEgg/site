@@ -58,128 +58,26 @@
         "context": "Estrategia / Inteligencia de Mercado",
         "body": "Monitorea en tiempo real movimientos estratégicos de competidores: nuevos nombramientos, alianzas, lanzamientos y expansiones geográficas. Analiza patrones de precios e identifica oportunidades en mercados emergentes."
       },
-      "techIntelligence": {
-        "title": "Agente de Vigilancia Tecnológica",
-        "context": "I+D / Estrategia",
-        "body": "Produce informes semanales de inteligencia tecnológica con análisis de tendencias, innovaciones disruptivas y actualizaciones regulatorias en sectores específicos. Incluye evaluación de impacto y recomendaciones estratégicas."
-      },
-      "rfpDrafting": {
-        "title": "Agente de Gestión de Gastos Jurídicos",
-        "context": "Departamento Jurídico / Finanzas",
-        "body": "Analiza y revisa facturas, verifica el cumplimiento de las normas de honorarios y tarifas acordadas, detecta anomalías de facturación, realiza seguimiento presupuestario y prevé provisiones por servicios jurídicos pendientes de facturar. Genera recomendaciones de ajuste e informes de conformidad."
-      },
-      "esgCompliance": {
-        "title": "Agente de Reportes Financieros Interactivos",
-        "context": "Finanzas / Gestión del Rendimiento",
-        "body": "Despliega dashboards dinámicos con análisis de rentabilidad por caso, profesional o cliente. Permite consultas en lenguaje natural (ej: 'Muestra margen en casos litigiosos desde enero') con integración PowerBI/Tableau."
-      },
-      "dataPrivacyAudit": {
-        "title": "Agente de Cumplimiento Fiscal",
-        "context": "Cumplimiento / Fiscalidad",
-        "body": "Ayuda a los profesionales fiscales a gestionar regulaciones fiscales complejas y cambiantes en múltiples jurisdicciones, asegurando el cumplimiento y detectando oportunidades de optimización."
-      }
-    },
-    "deployment": {
-      "sectionLabel": "OPCIONES DE DESPLIEGUE",
-      "title": "Despliega en nuestra nube o la tuya",
-      "subtitle": "Elige el modelo de despliegue que mejor se adapte a tus necesidades de seguridad, cumplimiento e infraestructura.",
-      "cards": [
-        {
-          "title": "Nube EggOn",
-          "description": "Aprovecha una oferta SaaS completamente gestionada y altamente segura en la infraestructura EggOn",
-          "icon": "cloud"
-        },
-        {
-          "title": "Nube Privada Azure",
-          "description": "Despliega dentro de tu nube privada virtual (entorno Azure)",
-          "icon": "azure"
-        },
-        {
-          "title": "Instalación Local",
-          "description": "Despliega dentro de tu entorno local",
-          "icon": "server"
-        }
-      ]
-    },
-    "benefits": {
-      "title": "Nuestros Beneficios",
-      "item1": "Contextualizar un modelo de lenguaje avanzado (GPT, etc.) con los datos de su empresa (RAG / Ingeniería de contexto).",
-      "item2": "Agentes de IA especializados para tareas específicas, diseñados para lograr un retorno de inversión rápido (IA Agentica).",
-      "item3": "Integraciones para conectar sus sistemas de información y eliminar los silos, respetando los derechos y normativas vigentes.",
-      "item4": "Confidencialidad y cumplimiento: sus datos permanecen en su entorno seguro.",
-      "item5": "Soporte experto y acompañamiento personalizado durante toda su transformación hacia la IA, proporcionados por equipos con experiencia en su sector (legaltech, fintech, etc.)."
-    },
-    "modal": {
-      "placeholder": "Personaliza esta instrucción según tus necesidades...",
-      "cancel": "Cancelar",
-      "submit": "Quiero este Agente IA"
-    }
-  },
-  "legalStack": {
-    "subtitle": "POR QUÉ EGGON",
-    "title": "Desbloquea el Poder de la IA Contextual",
-    "description": "Aprovecha una plataforma de IA de vanguardia con experiencia legal y financiera para generar resultados medibles y beneficios operativos.",
-    "stackTitle": "LA PLATAFORMA DE IA CONTEXTUAL",
-    "benefits": [
-      {
-        "title": "Experiencia integrada al dominio",
-        "description": "IA, agentes de IA y flujos de trabajo diseñados por expertos en legaltech y fintech, ya familiarizados con tu entorno tecnológico y requisitos de seguridad."
-      },
-      {
-        "title": "Contextualización de tu IA",
-        "description": "Arquitectura RAG especializada por dominio que reduce las alucinaciones y mejora la relevancia del modelo de IA usando tus datos y nuestra ingeniería de contexto y de prompts."
-      },
-      {
-        "title": "De Piloto a Producción",
-        "description": "Soporte operativo y despliegue en producción a tu lado, además de desarrollar, configurar y probar."
-      },
-      {
-        "title": "Seguridad y Gobernanza de Nivel Empresarial",
-        "description": "Cumplimiento y trazabilidad integrados — SOC 2, control de acceso por rol, cifrado de extremo a extremo y registros auditables para cada salida de IA."
-      }
-    ],
-    "stackComponents": [
-      {
-        "badge": "RAG",
-        "title": "Conexión de Bases de Datos con Modelos de Lenguaje",
-        "description": "Integramos expedientes, contratos y repositorios legales directamente con modelos de IA. Datos confidenciales protegidos mientras accedes a respuestas precisas desde tu conocimiento corporativo completo."
-      },
-      {
-        "badge": "AGENTES IA",
-        "title": "Desarrollo de Agentes Inteligentes",
-        "description": "Creamos agentes especializados (en Azure Studio o tu entorno) que gestionan flujos legales específicos. Procesamiento de documentos sensibles con modelos que nunca abandonan tu infraestructura."
-      },
-      {
-        "badge": "SISTEMAS MULTI-AGENTE",
-        "title": "Orquestación de Agentes Colaborativos",
-        "description": "Automatiza procesos legales complejos mediante múltiples agentes coordinados. Delega tareas secuenciales desde revisión documental hasta redacción legal e investigación jurisprudencial."
-      },
-      {
-        "badge": "IA PRIVADA",
-        "title": "Interfaz Conversacional & Conectividad API",
-        "description": "Consulta en lenguaje natural y obtén respuestas instantáneas desde todos tus repositorios. Análisis automático de contratos, procesamiento de documentos legales e investigación asistida, totalmente integrado con tus sistemas."
-      }
-    ]
-  },
   "learn": {
     "heroPhrase": "→ EggOn Learn —",
     "heroTitle": "Domina la IA para fortalecer tu práctica legal",
     "heroSubtitle": "Aprende a usar la IA para aumentar la eficiencia, asegurar tus análisis y crear nuevas oportunidades en tu profesión.",
     "heroCta": "Comenzar a aprender",
-    "heroAcademyLink": "EggOn Academy — El programa que capacita a abogados en IA, desde los fundamentos hasta aplicaciones prácticas adaptadas a su práctica."
+    "heroAcademyLink": "EggOn IA Academia — El programa que forma a abogados en IA, desde fundamentos hasta aplicaciones prácticas."
   },
   "academie": {
     "sectionLabel": "IA ACADEMIA",
-    "mainTitle": "SÉ PARTE DEL VIAJE DE APRENDIZAJE",
+    "mainTitle": "Fórmate hoy. Da forma al derecho del mañana.",
     "intro": {
-      "left": "Estamos aquí para crear e inspirar a través de la innovación legal y la IA. Nuestra IA Academia es solo el comienzo – creemos en experimentar con todas las formas de práctica legal, digital o física.",
-      "right": "Mientras la IA evoluciona en el campo legal, estamos emocionados de explorar y adoptar nuevas ideas. La colaboración está en el corazón de nuestro enfoque, y estamos ansiosos de trabajar en equipo con abogados en proyectos innovadores."
+      "left": "Ingenieros de IA especializados en el ámbito legal, con 10 años de experiencia en despachos de abogados y en la implementación de legaltech como iManage, comparten su know-how. Nuestra IA Academia está diseñada para dar a los abogados las claves de una práctica legal aumentada.",
+      "right": "EggOn Technology, beneficiaria del programa Startup de Microsoft (Fabric & Azure), desarrolla e implementa soluciones de IA legal de nueva generación. Exploramos, probamos y construimos con los despachos para transformar la práctica del derecho mediante la IA."
     },
     "categories": {
       "foundations": "Fundamentos",
       "promptEngineering": "Ingeniería de Prompts",
       "caseStudies": "Estudios de Caso",
-      "securityGovernance": "Seguridad y Gobernanza"
+      "securityGovernance": "Seguridad y Gobernanza",
+      "advancedIA": "IA Avanzada"
     },
     "courses": {
       "foundations": {
@@ -189,16 +87,24 @@
       },
       "promptEngineering": {
         "promptsInitiation": "Fundamentos de Prompts para Abogados",
-        "promptsJuridiques": "Ingeniería de Prompts Legales",
-        "promptsSystemes": "Prompts de Sistema para Flujos de Trabajo Legales"
+        "promptsJuridiques": "Ingeniería de Prompts Legales Avanzada",
+        "promptsSystemes": "Prompts de Sistema para Flujos de Trabajo Legales",
+        "optimisationPrompts": "Optimización e Iteración de Prompts",
+        "reversePrompting": "Reverse Prompt Engineering para Despachos de Abogados"
       },
       "caseStudies": {
-        "affaireWeber": "Análisis del Caso Weber"
+        "affaireWeber": "Análisis del Caso Weber",
+        "ragAgentique": "RAG Agentico aplicado al Derecho"
       },
       "securityGovernance": {
         "aiRiskManagement": "Gestión de Riesgos de IA en Práctica Legal",
-        "aiActCompliance": "AI Act y Cumplimiento para Firmas Legales",
+        "aiActCompliance": "AI Act y Cumplimiento para Despachos de Abogados",
         "auditabilityExplainability": "Auditabilidad y Explicabilidad para Agentes IA Legales"
+      },
+      "advancedIA": {
+        "fineTuningJuridique": "Fine-Tuning y Especialización IA para Despachos",
+        "agentsIntelligents": "Agentes IA y Automatización Legal",
+        "retrievalRag": "Implementación de un RAG Legal Seguro"
       }
     },
     "buttons": {
@@ -207,21 +113,6 @@
       "ongoing": "En curso",
       "enroll": "Inscribirse"
     }
-  },
-  "nog": {
-    "intro": "Actualmente, nuestros clientes solicitan al equipo EggOn:",
-    "actions": [
-      "Desarrollo de agentes IA personalizados",
-      "Ingeniería avanzada de prompts",
-      "Auditorías de seguridad en IA",
-      "Integración de IA con sistemas legacy",
-      "Programas de capacitación especializada"
-    ],
-    "getExamples": "Ver Casos de Éxito",
-    "useCasesAgent": "Agente de Casos de Uso",
-    "academyProgram": "Programa Academia IA",
-    "useCases": "Casos de uso",
-    "aiAcademy": "Academia de IA"
   },
   "noglab": {
     "heroPhrase": "→ EggOn Technology",
@@ -299,11 +190,6 @@
       "description": "Participe en nuestra misión para una IA explicable, trazable y segura, y contribuya a definir los estándares de confianza para la IA profesional.",
       "link": "Únase a la concepción"
     }
-  },
-  "ragArchitecture": {
-    "subtitle": "LA PLATAFORMA RAG CONTEXTUAL",
-    "title": "ARQUITECTURA DE PRÓXIMA GENERACIÓN PARA AGENTES",
-    "introduction": "Construida por pioneros en RAG, nuestra plataforma te permite integrar agentes de IA con el conocimiento empresarial de forma fluida, ofreciendo una solución completa para diseñar sistemas RAG de vanguardia."
   },
   "contact": {
     "title": "Construyamos el Futury Juntos",
