@@ -107,26 +107,14 @@ const RAGArchitectureDiagram = () => {
         alignItems: 'center'
       }}
     >
-      <div style={{ 
-        color: 'white', 
-        fontSize: '2rem', 
-        textAlign: 'center',
-        padding: '2rem',
-        background: '#0000ff',
-        borderRadius: '10px',
-        margin: '2rem'
-      }}>
-        🔥 SECTION WHY EGGON - JE SUIS VISIBLE ! 🔥
-      </div>
-
       <div
         ref={bentoRef}
         className="bento-container rag-content-container visible"
         style={{
-          background: '#faf2d7',
+          background: 'var(--rag-container-bg, #faf2d7)',
           borderRadius: '3rem',
-          border: '4px solid #2f2f2e',
-          boxShadow: '0 20px 60px rgba(47, 47, 46, 0.3)',
+          border: 'var(--rag-container-border, 4px solid #2f2f2e)',
+          boxShadow: 'var(--rag-container-shadow, 0 20px 60px rgba(47, 47, 46, 0.3))',
           width: '95%',
           maxWidth: '1600px',
           position: 'relative',
@@ -160,7 +148,7 @@ const RAGArchitectureDiagram = () => {
                 background: 'transparent'
               }}
             >
-              POURQUOI EGGON
+              {t('ragArchitecture.subtitle', 'LA PLATEFORME AI CONTEXTUELLE')}
             </h3>
 
             <h2
@@ -174,7 +162,7 @@ const RAGArchitectureDiagram = () => {
                 background: 'transparent'
               }}
             >
-              LIBÉREZ LA PUISSANCE DE L'IA CONTEXTUELLE
+              {t('ragArchitecture.title', 'ARCHITECTURE DE NOUVELLE GÉNÉRATION')}
             </h2>
 
             <p
@@ -191,79 +179,454 @@ const RAGArchitectureDiagram = () => {
                 opacity: 0.9
               }}
             >
-              Exploitez une plateforme d'IA de pointe avec une expertise en droit et finance pour générer des performances mesurables et des gains opérationnels.
+              {t('ragArchitecture.introduction', 'La génération à enrichissement contextuel (RAG) optimise les réponses des modèles de langage en exploitant vos données internes ou externes, sans réentraînement.')}
             </p>
           </div>
 
-          {/* Contenu simplifié pour debug */}
+          {/* Label PLATFORM simplifié */}
           <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '2rem',
-            marginTop: '3rem'
+            width: '100%',
+            margin: '2rem 0 3rem 0',
+            display: 'flex',
+            justifyContent: 'center'
           }}>
             <div style={{
-              background: 'rgba(47, 47, 46, 0.08)',
-              border: '1px solid rgba(47, 47, 46, 0.15)',
-              borderRadius: '1rem',
-              padding: '2rem',
-              textAlign: 'center'
+              background: 'transparent',
+              padding: '0.5rem 1.5rem',
+              fontSize: 'clamp(0.8rem, 1.4vw, 1rem)',
+              fontWeight: '700',
+              color: '#2f2f2e',
+              textTransform: 'uppercase',
+              letterSpacing: '0.1em'
             }}>
-              <h4 style={{ color: '#2f2f2e', marginBottom: '1rem' }}>
-                Expertise intégrée au domaine
-              </h4>
-              <p style={{ color: '#2f2f2e', fontSize: '0.9rem' }}>
-                IA, agents IA et workflows conçus par des experts issus de la legaltech et de la fintech.
-              </p>
-            </div>
-
-            <div style={{
-              background: 'rgba(47, 47, 46, 0.08)',
-              border: '1px solid rgba(47, 47, 46, 0.15)',
-              borderRadius: '1rem',
-              padding: '2rem',
-              textAlign: 'center'
-            }}>
-              <h4 style={{ color: '#2f2f2e', marginBottom: '1rem' }}>
-                Contextualisation de votre IA
-              </h4>
-              <p style={{ color: '#2f2f2e', fontSize: '0.9rem' }}>
-                Architecture RAG spécialisée par domaine réduisant les hallucinations.
-              </p>
-            </div>
-
-            <div style={{
-              background: 'rgba(47, 47, 46, 0.08)',
-              border: '1px solid rgba(47, 47, 46, 0.15)',
-              borderRadius: '1rem',
-              padding: '2rem',
-              textAlign: 'center'
-            }}>
-              <h4 style={{ color: '#2f2f2e', marginBottom: '1rem' }}>
-                Du pilote à la production
-              </h4>
-              <p style={{ color: '#2f2f2e', fontSize: '0.9rem' }}>
-                Accompagnement opérationnel et mise en production à vos côtés.
-              </p>
-            </div>
-
-            <div style={{
-              background: 'rgba(47, 47, 46, 0.08)',
-              border: '1px solid rgba(47, 47, 46, 0.15)',
-              borderRadius: '1rem',
-              padding: '2rem',
-              textAlign: 'center'
-            }}>
-              <h4 style={{ color: '#2f2f2e', marginBottom: '1rem' }}>
-                Sécurité et gouvernance
-              </h4>
-              <p style={{ color: '#2f2f2e', fontSize: '0.9rem' }}>
-                Conformité et traçabilité intégrées — SOC 2, contrôle d'accès par rôle.
-              </p>
+              PLATFORM
             </div>
           </div>
-        </div>
-      </div>
+
+          {/* Grille de cartes RAG avec flèches intégrées */}
+          <div
+            className="rag-cards-grid"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: 'clamp(1rem, 2vw, 1.5rem)',
+              width: '100%',
+              marginTop: '2rem',
+              flexWrap: 'wrap'
+            }}
+          >
+            {/* DATA SOURCES */}
+            <div
+              className="rag-card-enhanced visible"
+              style={{
+                background: 'var(--rag-card-bg, rgba(47, 47, 46, 0.08))',
+                border: '1px solid var(--rag-card-border, rgba(47, 47, 46, 0.15))',
+                backdropFilter: 'blur(20px)',
+                borderRadius: '1rem',
+                padding: 'clamp(1.5rem, 2.5vw, 2rem)',
+                boxShadow: 'var(--rag-card-shadow, 0 8px 32px rgba(47, 47, 46, 0.2))',
+                transition: 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+                cursor: 'pointer',
+                opacity: 1,
+                transform: 'translateY(0px)',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'flex-start',
+                flex: '1',
+                minWidth: '250px'
+              }}
+            >
+              <h3 style={{
+                fontSize: 'clamp(0.9rem, 1.4vw, 1.1rem)',
+                fontWeight: '700',
+                color: '#2f2f2e',
+                marginBottom: '1.5rem',
+                textAlign: 'center',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                lineHeight: '1.3'
+              }}>
+                DATA SOURCES
+              </h3>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
+                <div style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  gap: '0.6rem',
+                  padding: '0.8rem',
+                  background: 'rgba(47, 47, 46, 0.12)',
+                  border: '2px solid rgba(47, 47, 46, 0.25)',
+                  borderRadius: '10px',
+                  textAlign: 'center',
+                  transition: 'all 0.3s ease',
+                  cursor: 'pointer'
+                }}>
+                  <div style={{
+                    width: '40px',
+                    height: '40px',
+                    borderRadius: '50%',
+                    background: 'rgba(47, 47, 46, 0.12)',
+                    backdropFilter: 'blur(10px)',
+                    border: '1px solid rgba(47, 47, 46, 0.2)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexShrink: 0,
+                    transition: 'all 0.3s ease'
+                  }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ color: '#2f2f2e' }}>
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                      <polyline points="14,2 14,8 20,8" />
+                      <line x1="16" y1="13" x2="8" y2="13" />
+                      <line x1="16" y1="17" x2="8" y2="17" />
+                      <polyline points="10,9 9,9 8,9" />
+                    </svg>
+                  </div>
+                  <span style={{
+                    fontSize: 'clamp(0.8rem, 1.3vw, 0.9rem)',
+                    fontWeight: '600',
+                    color: '#2f2f2e',
+                    lineHeight: '1.2'
+                  }}>
+                    Unstructured Data
+                  </span>
+                </div>
+
+                <div style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  gap: '0.6rem',
+                  padding: '0.8rem',
+                  background: 'rgba(47, 47, 46, 0.12)',
+                  border: '2px solid rgba(47, 47, 46, 0.25)',
+                  borderRadius: '10px',
+                  textAlign: 'center',
+                  transition: 'all 0.3s ease',
+                  cursor: 'pointer'
+                }}>
+                  <div style={{
+                    width: '40px',
+                    height: '40px',
+                    borderRadius: '50%',
+                    background: 'rgba(47, 47, 46, 0.12)',
+                    backdropFilter: 'blur(10px)',
+                    border: '1px solid rgba(47, 47, 46, 0.2)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexShrink: 0,
+                    transition: 'all 0.3s ease'
+                  }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ color: '#2f2f2e' }}>
+                      <ellipse cx="12" cy="5" rx="9" ry="3" />
+                      <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                      <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                    </svg>
+                  </div>
+                  <span style={{
+                    fontSize: 'clamp(0.8rem, 1.3vw, 0.9rem)',
+                    fontWeight: '600',
+                    color: '#2f2f2e',
+                    lineHeight: '1.2'
+                  }}>
+                    Structured Data
+                  </span>
+                </div>
+
+                <div style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  gap: '0.6rem',
+                  padding: '0.8rem',
+                  background: 'rgba(47, 47, 46, 0.12)',
+                  border: '2px solid rgba(47, 47, 46, 0.25)',
+                  borderRadius: '10px',
+                  textAlign: 'center',
+                  transition: 'all 0.3s ease',
+                  cursor: 'pointer'
+                }}>
+                  <div style={{
+                    width: '40px',
+                    height: '40px',
+                    borderRadius: '50%',
+                    background: 'rgba(47, 47, 46, 0.12)',
+                    backdropFilter: 'blur(10px)',
+                    border: '1px solid rgba(47, 47, 46, 0.2)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    flexShrink: 0,
+                    transition: 'all 0.3s ease'
+                  }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ color: '#2f2f2e' }}>
+                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                    </svg>
+                  </div>
+                  <span style={{
+                    fontSize: 'clamp(0.8rem, 1.3vw, 0.9rem)',
+                    fontWeight: '600',
+                    color: '#2f2f2e',
+                    lineHeight: '1.2'
+                  }}>
+                    Application APIs
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Flèche 1 */}
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              minWidth: '40px',
+              height: '100%'
+            }}>
+              <svg width="24" height="16" viewBox="0 0 24 16" fill="none" style={{ color: 'rgba(47, 47, 46, 0.6)', flexShrink: 0 }}>
+                <path d="M2 8H22M22 8L16 2M22 8L16 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+
+            {/* CONTEXTUAL DOCUMENT UNDERSTANDING PIPELINE */}
+            <div
+              className="rag-card-enhanced visible"
+              style={{
+                background: 'var(--rag-card-bg, rgba(47, 47, 46, 0.08))',
+                border: '1px solid var(--rag-card-border, rgba(47, 47, 46, 0.15))',
+                backdropFilter: 'blur(20px)',
+                borderRadius: '1rem',
+                padding: 'clamp(1.2rem, 2vw, 1.5rem) clamp(1.2rem, 2vw, 1.5rem) clamp(2rem, 3vw, 2.5rem) clamp(1.2rem, 2vw, 1.5rem)',
+                boxShadow: 'var(--rag-card-shadow, 0 8px 32px rgba(47, 47, 46, 0.2))',
+                transition: 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+                cursor: 'pointer',
+                opacity: 1,
+                transform: 'translateY(0px)',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                minHeight: '150px',
+                maxHeight: '200px',
+                flex: '1',
+                minWidth: '250px'
+              }}
+            >
+              <h3 style={{
+                fontSize: 'clamp(0.9rem, 1.4vw, 1.1rem)',
+                fontWeight: '700',
+                color: '#2f2f2e',
+                marginBottom: '1rem',
+                textAlign: 'center',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                lineHeight: '1.3'
+              }}>
+                CONTEXTUAL DOCUMENT UNDERSTANDING PIPELINE
+              </h3>
+
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.6rem',
+                justifyContent: 'space-between',
+                width: '100%'
+              }}>
+                <div style={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.6rem',
+                  flex: '1'
+                }}>
+                  <div style={{
+                    padding: '0.6rem',
+                    background: 'rgba(47, 47, 46, 0.12)',
+                    border: '1px solid rgba(47, 47, 46, 0.25)',
+                    borderRadius: '6px',
+                    textAlign: 'center',
+                    fontSize: 'clamp(0.65rem, 1vw, 0.75rem)',
+                    fontWeight: '600',
+                    color: '#2f2f2e'
+                  }}>
+                    Multimodal<br />Extraction
+                  </div>
+                  <div style={{
+                    padding: '0.6rem',
+                    background: 'rgba(47, 47, 46, 0.12)',
+                    border: '1px solid rgba(47, 47, 46, 0.25)',
+                    borderRadius: '6px',
+                    textAlign: 'center',
+                    fontSize: 'clamp(0.65rem, 1vw, 0.75rem)',
+                    fontWeight: '600',
+                    color: '#2f2f2e'
+                  }}>
+                    Continuous<br />Ingestion
+                  </div>
+                </div>
+
+                <div style={{
+                  width: '32px',
+                  height: '32px',
+                  borderRadius: '50%',
+                  background: 'rgba(47, 47, 46, 0.12)',
+                  backdropFilter: 'blur(10px)',
+                  border: '1px solid rgba(47, 47, 46, 0.2)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0
+                }}>
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" style={{ color: '#2f2f2e' }}>
+                    <path d="M5 12h14" />
+                    <path d="M12 5l7 7-7 7" />
+                  </svg>
+                </div>
+
+                <div style={{
+                  padding: '0.4rem 0.3rem',
+                  background: 'rgba(47, 47, 46, 0.12)',
+                  border: '1px solid rgba(47, 47, 46, 0.25)',
+                  borderRadius: '6px',
+                  textAlign: 'center',
+                  fontSize: 'clamp(0.55rem, 0.9vw, 0.65rem)',
+                  fontWeight: '600',
+                  color: '#2f2f2e',
+                  flex: '1',
+                  alignSelf: 'center',
+                  minWidth: '50px',
+                  maxWidth: '80px'
+                }}>
+                  Datastore
+                </div>
+              </div>
+            </div>
+
+            {/* Flèche 2 */}
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              minWidth: '40px',
+              height: '100%'
+            }}>
+              <svg width="24" height="16" viewBox="0 0 24 16" fill="none" style={{ color: 'rgba(47, 47, 46, 0.6)', flexShrink: 0 }}>
+                <path d="M2 8H22M22 8L16 2M22 8L16 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+
+            {/* CONTEXTUAL RAG AGENT */}
+            <div
+              className="rag-card-enhanced visible"
+              style={{
+                background: 'var(--rag-card-bg, rgba(47, 47, 46, 0.08))',
+                border: '1px solid var(--rag-card-border, rgba(47, 47, 46, 0.15))',
+                backdropFilter: 'blur(20px)',
+                borderRadius: '1rem',
+                padding: 'clamp(1.2rem, 2vw, 1.5rem) clamp(1.2rem, 2vw, 1.5rem) clamp(2rem, 3vw, 2.5rem) clamp(1.2rem, 2vw, 1.5rem)',
+                boxShadow: 'var(--rag-card-shadow, 0 8px 32px rgba(47, 47, 46, 0.2))',
+                transition: 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+                cursor: 'pointer',
+                opacity: 1,
+                transform: 'translateY(0px)',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
+                minHeight: '150px',
+                maxHeight: '200px',
+                flex: '1',
+                minWidth: '250px'
+              }}
+            >
+              <h3 style={{
+                fontSize: 'clamp(0.9rem, 1.4vw, 1.1rem)',
+                fontWeight: '700',
+                color: '#2f2f2e',
+                marginBottom: '1rem',
+                textAlign: 'center',
+                textTransform: 'uppercase',
+                letterSpacing: '0.05em',
+                lineHeight: '1.3'
+              }}>
+                CONTEXTUAL RAG AGENT
+              </h3>
+
+              <div style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                gap: '0.5rem',
+                marginBottom: '1.5rem',
+                width: '100%'
+              }}>
+                <div style={{
+                  padding: 'clamp(0.3rem, 0.8vw, 0.5rem)',
+                  background: 'rgba(47, 47, 46, 0.18)',
+                  border: '1px solid rgba(47, 47, 46, 0.3)',
+                  borderRadius: '6px',
+                  textAlign: 'center',
+                  fontSize: 'clamp(0.55rem, 0.9vw, 0.65rem)',
+                  fontWeight: '600',
+                  color: '#2f2f2e',
+                  flex: '1',
+                  minWidth: '60px',
+                  lineHeight: '1.1'
+                }}>
+                  <span style={{ whiteSpace: 'nowrap' }}>Mixture</span>{' '}
+                  <span style={{ whiteSpace: 'nowrap' }}>of</span>{' '}
+                  <span style={{ whiteSpace: 'nowrap' }}>retrievers</span>
+                </div>
+
+                <div style={{
+                  width: '20px',
+                  height: '20px',
+                  borderRadius: '50%',
+                  background: 'rgba(47, 47, 46, 0.2)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0
+                }}>
+                  <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" style={{ color: '#2f2f2e' }}>
+                    <path d="M5 12h14" />
+                    <path d="M12 5l7 7-7 7" />
+                  </svg>
+                </div>
+
+                <div style={{
+                  padding: 'clamp(0.3rem, 0.8vw, 0.5rem)',
+                  background: 'rgba(47, 47, 46, 0.18)',
+                  border: '1px solid rgba(47, 47, 46, 0.3)',
+                  borderRadius: '6px',
+                  textAlign: 'center',
+                  fontSize: 'clamp(0.55rem, 0.9vw, 0.65rem)',
+                  fontWeight: '600',
+                  color: '#2f2f2e',
+                  flex: '1',
+                  minWidth: '60px',
+                  lineHeight: '1.1'
+                }}>
+                  <span style={{ whiteSpace: 'nowrap' }}>Reranker</span>
+                </div>
+
+                <div style={{
+                  width: '20px',
+                  height: '20px',
+                  borderRadius: '50%',
+                  background: 'rgba(47, 47, 46, 0.2)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0
+                }}>
+                  <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" style={{ color: '#2f2f2e' }}>
+                    <path d="M5 12h14" />
+                    <path d="M12 5l7 7
     </section>
   );
 };
