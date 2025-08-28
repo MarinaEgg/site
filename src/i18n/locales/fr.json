@@ -36,7 +36,7 @@
       "wikiBuilder": {
         "title": "Agent de Gestion des Connaissances Internes",
         "context": "Entreprise / Gestion des Connaissances",
-        "body": "Crée et met à jour un Wiki interne privé en analysant les documents internes et les échanges publics autorisés. Attribue automatiquement des étiquettes et des catégories aux contenus."
+        "body": "Crée et met à jour un "Wikipedia" interne privé en analysant les documents internes et les échanges publics autorisés. Attribue automatiquement des étiquettes et des catégories aux contenus."
       },
       "auditTrail": {
         "title": "Agent d'Amélioration de prompts IA",
@@ -163,49 +163,58 @@
   },
   "learn": {
     "heroPhrase": "→ EggOn Learn —",
-    "heroTitle": "Maîtrisez l'IA pour renforcer votre pratique juridique",
-    "heroSubtitle": "Apprenez à utiliser l'IA pour accroître votre efficacité, sécuriser vos analyses et créer de nouvelles opportunités dans votre profession.",
+    "heroTitle": "Maîtrisez l'IA pour votre pratique juridique",
+    "heroSubtitle": "Apprenez à utiliser l'IA pour accroître votre efficacité et créer de nouvelles opportunités dans votre profession.",
     "heroCta": "Commencer l'apprentissage",
-    "heroAcademyLink": "EggOn Academy — Le programme qui forme les avocats à l'IA, des fondamentaux aux applications pratiques adaptées à leur métier."
+    "heroAcademyLink": "EggOn IA Academie — Le programme qui forme les avocats à l'IA, des fondamentaux aux applications pratiques."
   },
   "academie": {
-    "sectionLabel": "IA ACADÉMIE",
-    "mainTitle": "REJOIGNEZ LE PARCOURS D'APPRENTISSAGE",
-    "intro": {
-      "left": "Nous sommes là pour créer et inspirer à travers l'innovation juridique et l'IA. Notre IA Académie n'est que le début – nous croyons en l'expérimentation avec toutes les formes de pratique juridique, numérique ou physique.",
-      "right": "Alors que l'IA évolue dans le domaine juridique, nous sommes enthousiastes à l'idée d'explorer et d'adopter de nouvelles idées. La collaboration est au cœur de notre approche, et nous sommes impatients de faire équipe avec des avocats sur des projets innovants."
+  "sectionLabel": "IA ACADÉMIE",
+  "mainTitle": "Formez-vous dès aujourd’hui. Façonnez le droit de demain.",
+  "intro": {
+    "left": "Des ingénieurs IA spécialisés pour le domaine du droit, forts de 10 ans d’expérience dans les cabinets d’avocats et l’implémentation de legaltech comme iManage, partagent leur savoir-faire. Notre IA Académie est conçue pour donner aux avocats les clés d’une pratique juridique augmentée.",
+    "right": "EggOn Technology, bénéficiaire du programme Startup Microsoft (Fabric & Azure), développe et déploie des solutions d’IA juridique de nouvelle génération. Nous explorons, testons et construisons avec les cabinets pour transformer la pratique du droit grâce à l’IA."
+  },
+  "categories": {
+    "foundations": "Fondamentaux",
+    "promptEngineering": "Ingénierie de Prompts",
+    "caseStudies": "Études de Cas",
+    "securityGovernance": "Sécurité & Gouvernance",
+    "advancedIA": "IA Avancée"
+  },
+  "courses": {
+    "foundations": {
+      "introIA": "Introduction à l'IA dans la Pratique Juridique",
+      "limitesLLM": "Comprendre les Limites des LLM",
+      "depasserLimites": "Dépasser les Limites de l'IA"
     },
-    "categories": {
-      "foundations": "Fondamentaux",
-      "promptEngineering": "Ingénierie de Prompts",
-      "caseStudies": "Études de Cas",
-      "securityGovernance": "Sécurité & Gouvernance"
+    "promptEngineering": {
+      "promptsInitiation": "Fondamentaux des Prompts pour Avocats",
+      "promptsJuridiques": "Ingénierie de Prompts Juridiques Avancée",
+      "promptsSystemes": "Prompts Système pour Workflows Juridiques",
+      "optimisationPrompts": "Optimisation & Itération des Prompts",
+      "reversePrompting": "Reverse Prompt Engineering pour Cabinets d'Avocats"
     },
-    "courses": {
-      "foundations": {
-        "introIA": "Introduction à l'IA dans la Pratique Juridique",
-        "limitesLLM": "Comprendre les Limites des LLM",
-        "depasserLimites": "Dépasser les Limites de l'IA"
-      },
-      "promptEngineering": {
-        "promptsInitiation": "Fondamentaux des Prompts pour Avocats",
-        "promptsJuridiques": "Ingénierie de Prompts Juridiques",
-        "promptsSystemes": "Prompts Système pour Workflows Juridiques"
-      },
-      "caseStudies": {
-        "affaireWeber": "Analyse de l'Affaire Weber"
-      },
-      "securityGovernance": {
-        "aiRiskManagement": "Gestion des Risques IA en Pratique Juridique",
-        "aiActCompliance": "AI Act & Conformité pour Cabinets d'Avocats",
-        "auditabilityExplainability": "Auditabilité & Explicabilité pour Agents IA Juridiques"
-      }
+    "caseStudies": {
+      "affaireWeber": "Analyse de l'Affaire Weber",
+      "ragAgentique": "RAG Agentique appliqué au Droit"
     },
-    "buttons": {
-      "completed": "Terminé",
-      "catchUp": "Rattrapage",
-      "ongoing": "En cours",
-      "enroll": "S'inscrire"
+    "securityGovernance": {
+      "aiRiskManagement": "Gestion des Risques IA en Pratique Juridique",
+      "aiActCompliance": "AI Act & Conformité pour Cabinets d'Avocats",
+      "auditabilityExplainability": "Auditabilité & Explicabilité pour Agents IA Juridiques"
+    },
+    "advancedIA": {
+      "fineTuningJuridique": "Fine-Tuning et Spécialisation IA pour Cabinets",
+      "agentsIntelligents": "Agents IA et Automatisation Juridique",
+      "retrievalRag": "Mise en place d’un RAG Juridique Sécurisé"
+    }
+  },
+  "buttons": {
+    "completed": "Terminé",
+    "catchUp": "Rattrapage",
+    "ongoing": "En cours",
+    "enroll": "S'inscrire"
     }
   },
   "noglab": {
