@@ -305,6 +305,26 @@
       "error": "Failed to send message. Please try again."
     }
   },
+  "whyEggon": {
+    "sectionLabel": "WHY EGGON?",
+    "title": "Built for your world",
+    "subtitle": "We understand your challenges because we've built solutions in your industry. From legaltech to fintech, we speak your language.",
+    "points": {
+      "connects": {
+        "title": "Connects to your world",
+        "description": "EggOn integrates with your documents and tools for natural, context-aware interactions. We come from legaltech, insurtech, and fintech—your environment is familiar ground."
+      },
+      "solves": {
+        "title": "Solves your toughest challenges",
+        "description": "Our agentic AI drafts documents, executes actions, and delivers results that once took hours. ROI shows up fast."
+      },
+      "augments": {
+        "title": "Augments your business",
+        "description": "Automate key processes with autonomous AI agents. Faster delivery, stronger client value."
+      }
+    },
+    "cta": "Discover our solutions"
+  },
   "footer": {
     "copyright": "© EggOn Technology 2025",
     "whyEggon": "Why EggOn",
