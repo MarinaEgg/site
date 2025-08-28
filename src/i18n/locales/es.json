@@ -44,7 +44,7 @@
         "body": "Evalúa prompts existentes identificando áreas de mejora en precisión y coherencia. Genera versiones optimizadas mediante técnicas avanzadas de ingeniería de prompts para maximizar la calidad de respuestas de modelos de IA."
       },
       "supplierCompliance": {
-        "title": "Agente de compliance y políticas",
+        "title": "Agente de Cumplimiento y Políticas",
         "context": "Legal / Búsqueda",
         "body": "Los equipos pueden consultar documentos internos y externos para cumplir los requisitos y reducir la dependencia de revisiones manuales por parte de los equipos de cumplimiento."
       },
@@ -58,6 +58,109 @@
         "context": "Estrategia / Inteligencia de Mercado",
         "body": "Monitorea en tiempo real movimientos estratégicos de competidores: nuevos nombramientos, alianzas, lanzamientos y expansiones geográficas. Analiza patrones de precios e identifica oportunidades en mercados emergentes."
       },
+      "techIntelligence": {
+        "title": "Agente de Vigilancia Tecnológica",
+        "context": "I+D / Estrategia",
+        "body": "Proporciona semanalmente un resumen de noticias y tendencias clave en un sector tecnológico elegido, incluyendo fuentes clave, puntos destacados y actualizaciones regulatorias."
+      },
+      "rfpDrafting": {
+        "title": "Agente de Gestión de Gastos Legales",
+        "context": "Dirección Legal / Finanzas",
+        "body": "Analiza y controla facturas, verifica reglas OCG y tarifas horarias, detecta anomalías, realiza seguimiento presupuestario y prevé provisiones. Genera recomendaciones de ajuste e informes de cumplimiento."
+      },
+      "esgCompliance": {
+        "title": "Agente de Informes Financieros Interactivos",
+        "context": "Finanzas / Gestión del Rendimiento",
+        "body": "Produce un panel dinámico que muestra la rentabilidad por caso, abogado o cliente, con capacidad para consultas en lenguaje natural (ej. «Muéstrame el margen de nuestros casos de litigio desde enero»). Integración con Power BI o Tableau, interfaz conversacional LLM."
+      },
+      "dataPrivacyAudit": {
+        "title": "Agente de Cumplimiento Fiscal",
+        "context": "Cumplimiento / Fiscalidad",
+        "body": "Ayuda a profesionales fiscales a navegar regulaciones complejas y en evolución en múltiples jurisdicciones, asegurando el cumplimiento mientras identifica oportunidades de optimización."
+      }
+    },
+    "deployment": {
+      "sectionLabel": "OPCIONES DE IMPLEMENTACIÓN",
+      "title": "Implemente en nuestra nube o en la suya",
+      "subtitle": "Elija el modelo de implementación que mejor se adapte a sus necesidades de seguridad, cumplimiento e infraestructura.",
+      "cards": [
+        {
+          "title": "Nube EggOn",
+          "description": "Disfrute de una oferta SaaS completamente gestionada y altamente segura en la infraestructura EggOn",
+          "icon": "cloud"
+        },
+        {
+          "title": "Nube Privada Azure",
+          "description": "Implemente en su nube privada virtual (entorno Azure)",
+          "icon": "azure"
+        },
+        {
+          "title": "On-Premise",
+          "description": "Implemente en su entorno local",
+          "icon": "server"
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Nuestras Ventajas",
+      "item1": "Contextualizar modelos de lenguaje (GPT...) con sus datos empresariales (RAG / Ingeniería de contexto)",
+      "item2": "Agentes IA especializados para tareas específicas, con objetivo de rápido retorno de inversión (Agentística IA)",
+      "item3": "Integraciones para conectar sus sistemas de información y eliminar silos, respetando derechos y normativas.",
+      "item4": "Confidencialidad y cumplimiento: sus datos permanecen en su entorno seguro.",
+      "item5": "Soporte experto y acompañamiento personalizado durante su transformación IA, con equipos experimentados en su sector (legaltech, fintech...)."
+    },
+    "modal": {
+      "placeholder": "Complete según sus necesidades...",
+      "cancel": "Cancelar",
+      "submit": "Quiero este agente IA"
+    }
+  },
+  "legalStack": {
+    "subtitle": "POR QUÉ EGGON",
+    "title": "Libera el poder de la IA contextual",
+    "description": "Aprovecha una plataforma de IA de vanguardia con experiencia en derecho y finanzas para generar rendimientos medibles y ganancias operativas.",
+    "stackTitle": "LA PLATAFORMA DE IA CONTEXTUAL",
+    "benefits": [
+      {
+        "title": "Experiencia integrada en el dominio",
+        "description": "IA, agentes IA y flujos diseñados por expertos de legaltech y fintech, que conocen su entorno tecnológico y obligaciones de seguridad."
+      },
+      {
+        "title": "Contextualización de su IA",
+        "description": "Arquitectura RAG especializada por dominio que reduce alucinaciones, mejorando la relevancia del modelo IA con sus datos y nuestra ingeniería de contexto."
+      },
+      {
+        "title": "De piloto a producción",
+        "description": "Acompañamiento operativo e implementación a su lado, además de desarrollar, configurar y probar."
+      },
+      {
+        "title": "Seguridad y gobernanza de nivel empresarial",
+        "description": "Cumplimiento y trazabilidad integrados — SOC 2, control de acceso por roles, cifrado end-to-end y logs auditables para cada salida IA."
+      }
+    ],
+    "stackComponents": [
+      {
+        "badge": "RAG",
+        "title": "Conecte sus bases de datos internas a modelos de lenguaje (RAG)",
+        "description": "Conectamos sus archivos de clientes, contratos y bases legales directamente a modelos IA. Sus datos confidenciales permanecen seguros mientras obtiene respuestas precisas de toda su base de conocimiento."
+      },
+      {
+        "badge": "Agentes IA",
+        "title": "Construya sus agentes IA",
+        "description": "Desarrollamos agentes IA — usando Microsoft Azure Studio o su entorno técnico — que gestionan sus flujos legales específicos. Procese documentos sensibles con modelos que nunca salen de su infraestructura."
+      },
+      {
+        "badge": "Multi-Agents IA",
+        "title": "Construya sistemas multi-agente",
+        "description": "Automatice procesos legales complejos con múltiples agentes IA colaborando. Delegue tareas end-to-end, desde revisión documental hasta redacción e investigación legal."
+      },
+      {
+        "badge": "IA Privada",
+        "title": "Interfaz chatbot y conectividad API",
+        "description": "Haga preguntas en lenguaje natural y obtenga respuestas instantáneas de todos sus archivos. Analice contratos automáticamente, procese documentos legales y asista investigaciones — totalmente integrado con sus bases existentes."
+      }
+    ]
+  },
   "learn": {
     "heroPhrase": "→ EggOn Learn —",
     "heroTitle": "Domina la IA para fortalecer tu práctica legal",
@@ -191,8 +294,28 @@
       "link": "Únase a la concepción"
     }
   },
+  "nog": {
+    "intro": "Actualmente, los clientes solicitan a eggon:",
+    "actions": [
+      "Construir agentes de IA",
+      "Ingeniería de prompts",
+      "Consejos en seguridad IA",
+      "Conectar la IA a sus datos",
+      "Formación en IA"
+    ],
+    "useCases": "Casos de Uso",
+    "aiAcademy": "IA Academia",
+    "getExamples": "Ejemplos",
+    "useCasesAgent": "Agentes IA",
+    "academyProgram": "Programa IA Academia"
+  },
+  "ragArchitecture": {
+    "subtitle": "LA PLATAFORMA DE IA CONTEXTUAL",
+    "title": "ARQUITECTURA DE NUEVA GENERACIÓN",
+    "introduction": "La generación aumentada por recuperación (RAG) optimiza las respuestas de los modelos de lenguaje aprovechando sus datos internos o externos, sin necesidad de reentrenamiento."
+  },
   "contact": {
-    "title": "Construyamos el Futury Juntos",
+    "title": "Construyamos el Futuro Juntos",
     "subtitle": "¿Listo para transformar tu organización con agentes de IA estratégicos? Nuestro equipo de expertos espera tu consulta.",
     "form": {
       "name": "Nombre completo",
