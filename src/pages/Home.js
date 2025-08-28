@@ -5,6 +5,7 @@ import { Content } from '../components/content/Content';
 import { makeStyles } from '@material-ui/core/styles';
 import { SpeedDials } from '../components/speedDial/SpeedDial';
 import NOGProjectSection from '../components/nog/NOGProjectSection';
+import WhyEggOnSection from '../components/why-eggon/WhyEggOnSection'; // 🆕 Import de votre nouvelle section
 import CollectionSection from '../components/collection/CollectionSection';
 import LegalStackSection from '../components/legalStack/LegalStackSection';
 import Footer from '../components/footer/Footer';
@@ -57,9 +58,13 @@ export const Home = () => {
         </Hidden>
       </div>
 
-
       <div className={classes.contentSection}>
         <NOGProjectSection />
+      </div>
+
+      {/* 🆕 Nouvelle section WhyEggOn ajoutée ici */}
+      <div className={classes.contentSection}>
+        <WhyEggOnSection />
       </div>
 
       <div className={classes.contentSection}>
