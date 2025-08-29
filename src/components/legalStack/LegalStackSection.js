@@ -665,7 +665,7 @@ const RAGArchitectureDiagram = () => {
           {/* Label PLATFORM amélioré */}
           <div style={{
             width: '100%',
-            margin: '1rem 0 2rem 0',
+            margin: '2.5rem 0 2rem 0',
             display: 'flex',
             justifyContent: 'center'
           }}>
