@@ -297,7 +297,15 @@
       "title": "Rejoignez la conception",
       "description": "Participez à notre mission pour une IA explicable, traçable et sécurisée, et contribuez à définir les standards de confiance pour l'IA professionnelle.",
       "link": "Rejoignez la conception"
-    }
+    },
+    "custodyDoubt": "Aucune famille ne devrait jamais se douter d'avoir perdu une garde d'enfant à cause d'un algorithme mal calibré...",
+    "realIssue": "Le vrai problème n'est pas simplement de savoir si l'IA donne la bonne ou la mauvaise réponse - c'est le doute...",
+    "fasterDeployment": "Déploiement Accéléré",
+    "challengesWeEmbrace": "Défis que nous relevons",
+    "scalingExplainability": "Mettre à l'échelle l'explicabilité dans des systèmes multi-agents complexes n'est pas trivial...",
+    "explainableGoverned": "L'IA explicable n'est qu'une première étape. L'IA gouvernée la rend actionnable...",
+    "leverageAdvancedTechniques": "Nous exploitons des techniques avancées comme le Reverse Prompt Engineering...",
+    "outcomeTransparency": "Le résultat n'est pas seulement la transparence - c'est l'assurabilité, la responsabilité..."
   },
   "nog": {
     "intro": "Actuellement, les clients demandent à eggon de:",
