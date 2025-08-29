@@ -5,40 +5,40 @@ import { useTranslation } from 'react-i18next';
 const WhyEggOnSection = () => {
   const { t } = useTranslation();
 
-  // Icônes pour les trois points
+  // Nouvelle icône pour "Connecter à votre propre monde" - Points connectés
   const ConnectIcon = () => (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M13 2L3 14h9l1 8 10-12h-9l-1-8z"/>
-      <circle cx="12" cy="12" r="3" fill="currentColor"/>
-      <path d="M8 8L4 4"/>
-      <path d="M20 4L16 8"/>
-      <path d="M16 16L20 20"/>
-      <path d="M8 16L4 20"/>
+      <circle cx="5" cy="5" r="2" fill="currentColor"/>
+      <circle cx="19" cy="5" r="2" fill="currentColor"/>
+      <circle cx="12" cy="12" r="2" fill="currentColor"/>
+      <circle cx="5" cy="19" r="2" fill="currentColor"/>
+      <circle cx="19" cy="19" r="2" fill="currentColor"/>
+      <line x1="7" y1="5" x2="10" y2="12"/>
+      <line x1="17" y1="5" x2="14" y2="12"/>
+      <line x1="5" y1="7" x2="5" y2="17"/>
+      <line x1="19" y1="7" x2="19" y2="17"/>
+      <line x1="7" y1="19" x2="10" y2="12"/>
+      <line x1="17" y1="19" x2="14" y2="12"/>
     </svg>
   );
 
+  // Nouvelle icône pour "Résoudre vos défis" - Sablier
   const SolveIcon = () => (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <rect x="2" y="2" width="20" height="8" rx="2" ry="2"/>
-      <rect x="2" y="14" width="20" height="8" rx="2" ry="2"/>
-      <line x1="6" y1="6" x2="6.01" y2="6"/>
-      <line x1="6" y1="18" x2="6.01" y2="18"/>
-      <path d="M8 6h8"/>
-      <path d="M8 18h8"/>
-      <path d="M12 2v20" strokeDasharray="2,2"/>
+      <path d="M6 2h12v6l-6 6 6 6v2H6v-2l6-6-6-6V2z"/>
+      <path d="M6 8h12"/>
+      <path d="M6 16h12"/>
+      <circle cx="12" cy="12" r="1" fill="currentColor"/>
     </svg>
   );
 
+  // Nouvelle icône pour "Augmenter" - Flèche vers le haut
   const AugmentIcon = () => (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z"/>
-      <circle cx="12" cy="12" r="4" fill="currentColor" fillOpacity="0.2"/>
-      <path d="M8 12h8"/>
-      <path d="M12 8v8"/>
-      <circle cx="12" cy="8" r="1" fill="currentColor"/>
-      <circle cx="12" cy="16" r="1" fill="currentColor"/>
-      <circle cx="8" cy="12" r="1" fill="currentColor"/>
-      <circle cx="16" cy="12" r="1" fill="currentColor"/>
+      <path d="M12 2l8 8H4l8-8z" fill="currentColor" fillOpacity="0.2"/>
+      <line x1="12" y1="2" x2="12" y2="22"/>
+      <path d="M8 6l4-4 4 4"/>
+      <path d="M8 10l4-4 4 4"/>
     </svg>
   );
 
@@ -90,11 +90,6 @@ const WhyEggOnSection = () => {
           }
 
           .why-eggon-content-container {
-            background: var(--why-eggon-container-bg, rgba(255, 255, 255, 0.08));
-            backdrop-filter: blur(20px);
-            border: var(--why-eggon-container-border, 1px solid rgba(255, 255, 255, 0.15));
-            border-radius: 3rem;
-            box-shadow: var(--why-eggon-container-shadow, 0 20px 60px rgba(0, 0, 0, 0.3));
             width: 95%;
             max-width: 1400px;
             position: relative;
@@ -102,11 +97,6 @@ const WhyEggOnSection = () => {
             transform: translateY(0);
             opacity: 1;
             transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-          }
-
-          .why-eggon-content-container:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--why-eggon-container-shadow-hover, 0 30px 80px rgba(0, 0, 0, 0.4));
           }
 
           .why-eggon-header {
@@ -153,24 +143,15 @@ const WhyEggOnSection = () => {
           }
 
           .why-eggon-card {
-            background: var(--why-eggon-card-bg, rgba(255, 255, 255, 0.08));
-            border: var(--why-eggon-card-border, 1px solid rgba(255, 255, 255, 0.15));
-            backdrop-filter: blur(20px);
-            border-radius: 1.5rem;
             padding: clamp(2rem, 3vw, 2.5rem);
-            box-shadow: var(--why-eggon-card-shadow, 0 8px 32px rgba(0, 0, 0, 0.3));
             transition: all 0.3s ease;
-            cursor: pointer;
             position: relative;
             overflow: hidden;
             text-align: center;
           }
 
           .why-eggon-card:hover {
-            transform: translateY(-8px);
-            border-color: var(--why-eggon-card-border-hover, rgba(252, 233, 107, 0.3));
-            background: var(--why-eggon-card-bg-hover, rgba(255, 255, 255, 0.12));
-            box-shadow: var(--why-eggon-card-shadow-hover, 0 12px 40px rgba(0, 0, 0, 0.4));
+            transform: translateY(-5px);
           }
 
           .why-eggon-icon {
@@ -178,8 +159,8 @@ const WhyEggOnSection = () => {
             height: 80px;
             margin: 0 auto 2rem auto;
             border-radius: 50%;
-            background: var(--why-eggon-icon-bg, rgba(252, 233, 107, 0.1));
-            border: var(--why-eggon-icon-border, 2px solid rgba(252, 233, 107, 0.2));
+            background: var(--why-eggon-icon-bg, rgba(128, 128, 128, 0.1));
+            border: var(--why-eggon-icon-border, 2px solid rgba(128, 128, 128, 0.2));
             display: flex;
             align-items: center;
             justify-content: center;
@@ -189,13 +170,13 @@ const WhyEggOnSection = () => {
           .why-eggon-icon svg {
             width: 40px;
             height: 40px;
-            color: var(--why-eggon-icon-color, #fce96b);
+            color: var(--why-eggon-icon-color, #888888);
             transition: color 0.8s ease;
           }
 
           .why-eggon-card:hover .why-eggon-icon {
-            background: var(--why-eggon-icon-bg-hover, rgba(252, 233, 107, 0.2));
-            border-color: var(--why-eggon-icon-border-hover, rgba(252, 233, 107, 0.4));
+            background: var(--why-eggon-icon-bg-hover, rgba(128, 128, 128, 0.15));
+            border-color: var(--why-eggon-icon-border-hover, rgba(128, 128, 128, 0.3));
             transform: scale(1.05);
           }
 
@@ -296,23 +277,13 @@ const WhyEggOnSection = () => {
           /* Variables CSS par défaut pour Why EggOn (thème sombre) */
           .why-eggon-section {
             --why-eggon-bg-color: transparent;
-            --why-eggon-container-bg: rgba(255, 255, 255, 0.08);
-            --why-eggon-container-border: 1px solid rgba(255, 255, 255, 0.15);
-            --why-eggon-container-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            --why-eggon-container-shadow-hover: 0 30px 80px rgba(0, 0, 0, 0.4);
             --why-eggon-text-color: rgba(250, 250, 250, 0.9);
             --why-eggon-title-color: #fafafa;
-            --why-eggon-card-bg: rgba(255, 255, 255, 0.08);
-            --why-eggon-card-border: 1px solid rgba(255, 255, 255, 0.15);
-            --why-eggon-card-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-            --why-eggon-card-bg-hover: rgba(255, 255, 255, 0.12);
-            --why-eggon-card-border-hover: rgba(252, 233, 107, 0.3);
-            --why-eggon-card-shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.4);
-            --why-eggon-icon-bg: rgba(252, 233, 107, 0.1);
-            --why-eggon-icon-border: 2px solid rgba(252, 233, 107, 0.2);
-            --why-eggon-icon-color: #fce96b;
-            --why-eggon-icon-bg-hover: rgba(252, 233, 107, 0.2);
-            --why-eggon-icon-border-hover: rgba(252, 233, 107, 0.4);
+            --why-eggon-icon-bg: rgba(128, 128, 128, 0.1);
+            --why-eggon-icon-border: 2px solid rgba(128, 128, 128, 0.2);
+            --why-eggon-icon-color: #888888;
+            --why-eggon-icon-bg-hover: rgba(128, 128, 128, 0.15);
+            --why-eggon-icon-border-hover: rgba(128, 128, 128, 0.3);
             --why-eggon-card-title-color: #fafafa;
             --why-eggon-card-text-color: rgba(250, 250, 250, 0.85);
             --why-eggon-cta-color: #fce96b;
@@ -368,7 +339,6 @@ const WhyEggOnSection = () => {
             .why-eggon-content-container {
               width: 100%;
               padding: 1.5rem 1rem;
-              border-radius: 1.5rem;
             }
             
             .why-eggon-cards-grid {
