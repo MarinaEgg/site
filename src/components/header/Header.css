@@ -57,6 +57,9 @@
 }
 
 .eggon-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   font-size: 1rem;
   font-weight: 500;
   color: rgba(250, 250, 250, 0.9);
@@ -69,6 +72,18 @@
 .eggon-logo:hover {
   opacity: 1;
   color: #fafafa;
+}
+
+.header-logo-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.header-brand-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: inherit;
 }
 
 @media (max-width: 768px) {
