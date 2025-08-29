@@ -90,31 +90,7 @@ const LearnSection = () => {
     }
   ];
 
-  const renderCourseButtons = (status) => {
-    if (status === 'completed') {
-      return (
-        <>
-          <button className="course-btn completed">
-            {t('academie.buttons.completed') || 'Terminé'}
-          </button>
-          <button className="course-btn catch-up">
-            {t('academie.buttons.catchUp') || 'Rattrapage'}
-          </button>
-        </>
-      );
-    } else {
-      return (
-        <>
-          <button className="course-btn ongoing">
-            {t('academie.buttons.ongoing') || 'En cours'}
-          </button>
-          <button className="course-btn enroll">
-            {t('academie.buttons.enroll') || 'S\'inscrire'}
-          </button>
-        </>
-      );
-    }
-  };
+
 
   const renderSocialIcons = () => (
     <div className="social-icons">
@@ -216,9 +192,6 @@ const LearnSection = () => {
                       <h3 className="course-title">
                         {course.title}
                       </h3>
-                    </div>
-                    <div className="course-actions">
-                      {renderCourseButtons(course.status)}
                     </div>
                   </div>
                 ))}
