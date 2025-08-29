@@ -662,29 +662,6 @@ const RAGArchitectureDiagram = () => {
             </p>
           </motion.div>
 
-          {/* Label PLATFORM amélioré */}
-          <div style={{
-            width: '100%',
-            margin: '1rem 0 2rem 0',
-            display: 'flex',
-            justifyContent: 'center'
-          }}>
-            <div style={{
-              background: 'transparent',
-              padding: '0.8rem 2rem',
-              fontSize: 'clamp(1.2rem, 2.5vw, 1.8rem)',
-              fontWeight: '900',
-              color: '#2f2f2e',
-              textTransform: 'uppercase',
-              letterSpacing: '0.15em',
-              textAlign: 'center',
-              borderTop: '2px solid rgba(47, 47, 46, 0.2)',
-              borderBottom: '2px solid rgba(47, 47, 46, 0.2)'
-            }}>
-              PLATFORM
-            </div>
-          </div>
-
           {/* Grille de cartes RAG avec flèches intégrées */}
           <div
             className="rag-cards-grid"
@@ -703,6 +680,38 @@ const RAGArchitectureDiagram = () => {
 
               return (
                 <React.Fragment key={index}>
+                  {/* Afficher le titre PLATFORM avant la deuxième carte */}
+                  {index === 1 && (
+                    <>
+                      {/* Label PLATFORM amélioré */}
+                      <div style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        flexDirection: 'column',
+                        minWidth: '120px',
+                        margin: '0 1rem'
+                      }}>
+                        <div style={{
+                          background: 'transparent',
+                          padding: '0.8rem 1.5rem',
+                          fontSize: 'clamp(1.2rem, 2.5vw, 1.8rem)',
+                          fontWeight: '900',
+                          color: '#2f2f2e',
+                          textTransform: 'uppercase',
+                          letterSpacing: '0.15em',
+                          textAlign: 'center',
+                          borderTop: '2px solid rgba(47, 47, 46, 0.2)',
+                          borderBottom: '2px solid rgba(47, 47, 46, 0.2)',
+                          transform: 'rotate(-90deg)',
+                          whiteSpace: 'nowrap'
+                        }}>
+                          PLATFORM
+                        </div>
+                      </div>
+                    </>
+                  )}
+
                   <motion.div
                     ref={el => cardsRef.current[index] = el}
                     className="rag-card-enhanced"
