@@ -1117,8 +1117,6 @@ const RAGArchitectureDiagram = () => {
           `}</style>
       </div>
     </motion.div>
-
-
     </section >
   );
 };
