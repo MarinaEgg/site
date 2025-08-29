@@ -26,8 +26,15 @@ const useStyles = makeStyles((theme) => ({
         color: '#ffffff',
         textAlign: "center",
         marginBottom: '3rem',
+        padding: '0 2rem',
+        maxWidth: '1200px',
+        margin: '0 auto 3rem auto',
         "@media (max-width: 768px)": {
-            textAlign: "center"
+            textAlign: "center",
+            padding: '0 1rem',
+            fontSize: 'clamp(1.8rem, 8vw, 2.5rem)',
+            lineHeight: '1.2',
+            marginBottom: '2rem'
         }
     }
 }));
