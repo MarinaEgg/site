@@ -166,3 +166,72 @@
 .noglab-design-partner-link {
   color: #007bff;
 }
+/* EggOn CTA Section */
+.eggon-cta-section {
+  margin-top: 4rem !important;
+  padding: 3rem 0 !important;
+  text-align: center !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  display: block !important;
+  visibility: visible !important;
+  width: 100% !important;
+}
+
+.eggon-cta-content {
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  display: block !important;
+  visibility: visible !important;
+}
+
+.eggon-cta-text {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem) !important;
+  line-height: 1.6 !important;
+  color: #ffffff !important;
+  margin-bottom: 2rem !important;
+  font-weight: 400 !important;
+  display: block !important;
+  visibility: visible !important;
+  text-align: center !important;
+}
+
+.eggon-cta-button {
+  background: #FFFF99 !important;
+  color: #1a1a1a !important;
+  border: none !important;
+  padding: 1rem 2rem !important;
+  border-radius: 30px !important;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: clamp(1rem, 1.5vw, 1.2rem) !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  visibility: visible !important;
+}
+
+.eggon-cta-button:hover {
+  background: rgba(255, 255, 153, 0.9) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(255, 255, 153, 0.3) !important;
+}
+
+@media (max-width: 768px) {
+  .eggon-cta-section {
+    margin-top: 3rem !important;
+    padding: 2rem 0 !important;
+  }
+  
+  .eggon-cta-text {
+    font-size: 1.1rem !important;
+    margin-bottom: 1.5rem !important;
+    padding: 0 1rem !important;
+  }
+  
+  .eggon-cta-button {
+    padding: 0.8rem 1.5rem !important;
+    font-size: 1rem !important;
+  }
+}
