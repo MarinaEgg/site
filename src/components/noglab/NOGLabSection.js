@@ -169,6 +169,18 @@ const NOGLabSection = () => {
             <span className="noglab-design-partner-link">{t('noglab.partners.link')}</span>
           </p>
 
+          {/* EggOn CTA Section */}
+          <div className="eggon-cta-section">
+            <div className="eggon-cta-content">
+              <p className="eggon-cta-text">
+                EggOn vous accompagne partout. La contextualisation RAG combinée aux agents IA spécialisés vous apporte un ROI rapidement
+              </p>
+              <button className="eggon-cta-button">
+                → Parler à EggOn →
+              </button>
+            </div>
+          </div>
+
         </div>
       </div>
     </>
