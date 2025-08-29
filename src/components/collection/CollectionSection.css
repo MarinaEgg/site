@@ -1018,7 +1018,34 @@
   }
 
   .cards-row.top {
-    margin-bottom: 3cm;
+    margin-bottom: 2rem !important;
+  }
+
+  /* FIX CRITIQUE: Assurer que les cartes sont visibles en mobile */
+  .cards-container {
+    margin-top: 2rem;
+    overflow: visible !important;
+    height: auto !important;
+    min-height: 400px !important;
+  }
+
+  .cards-row {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .cards-row.top {
+    margin-bottom: 2rem !important;
+    position: static !important;
+  }
+
+  .cards-row.bottom {
+    margin-top: 1rem !important;
+    position: static !important;
   }
 
   .benefits-section {
@@ -1080,16 +1107,35 @@
 @media (max-width: 480px) {
   .cards-row {
     gap: 1.5rem;
+    position: static !important;
+    transform: none !important;
+    animation: none !important;
   }
 
   .prompt-card {
     flex: 0 0 280px;
     padding: 1.5rem;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 
   .cards-row.top {
-    margin-bottom: 2cm;
+    margin-bottom: 2rem !important;
+    position: static !important;
   }
+
+  .cards-row.bottom {
+    margin-top: 1rem !important;
+    position: static !important;
+  }
+
+  /* Force visibility des cartes en très petit écran */
+  .cards-container {
+    overflow: visible !important;
+    height: auto !important;
+    min-height: 500px !important;
+  }
+}
 
   .deployment-section-enhanced,
   .rag-section-enhanced {
