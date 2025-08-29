@@ -79,7 +79,7 @@ const WhyEggOnSection = () => {
           .why-eggon-section {
             position: relative;
             overflow: hidden;
-            padding: 8rem 2rem;
+            padding: 2rem 2rem 8rem 2rem;
             min-height: 100vh;
             width: 100%;
             background: var(--why-eggon-bg-color, transparent);
@@ -112,6 +112,18 @@ const WhyEggOnSection = () => {
             margin-bottom: 1.5rem;
             color: var(--why-eggon-text-color, #fafafa);
             transition: color 0.8s ease;
+            position: relative;
+            display: inline-block;
+          }
+
+          .why-eggon-section-label::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -0.5rem;
+            width: 2rem;
+            height: 1px;
+            background-color: rgba(250, 250, 250, 0.8);
           }
 
           .why-eggon-title {
@@ -143,15 +155,24 @@ const WhyEggOnSection = () => {
           }
 
           .why-eggon-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 1.5rem;
             padding: clamp(2rem, 3vw, 2.5rem);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
             text-align: center;
+            cursor: pointer;
           }
 
           .why-eggon-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            border-color: rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
           }
 
           .why-eggon-icon {
