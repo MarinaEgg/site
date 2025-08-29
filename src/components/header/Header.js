@@ -198,7 +198,12 @@ const Header = () => {
           whileHover={{ scale: 1.05, color: '#fafafa' }}
           transition={{ duration: 0.2 }}
         >
-          EggOn Technology
+          <img 
+            src="/jo.svg" 
+            alt="EggOn Technology Logo" 
+            className="header-logo-icon"
+          />
+          <span className="header-brand-name">EggOn Technology</span>
         </motion.a>
         
         {/* Logo circulaire mobile */}
