@@ -284,11 +284,11 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(128, 128, 128, 0.1);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 2px solid rgba(128, 128, 128, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -304,8 +304,9 @@
 
 .benefits-item:hover .benefit-icon-circle {
   transform: scale(1.1);
-  background: rgba(255, 255, 255, 0.35);
-  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.5);
+  background: rgba(128, 128, 128, 0.15);
+  border-color: rgba(128, 128, 128, 0.3);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.3);
 }
 
 .benefits-item:hover {
