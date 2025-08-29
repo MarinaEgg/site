@@ -1,625 +1,205 @@
-/* CORRECTION CRITIQUE : Reset complet des marges/paddings héritées */
-.learn-section {
-  width: 100vw !important;
-  /* Force la largeur complète */
-  position: relative !important;
-  background: transparent !important;
-  min-height: 100vh !important;
-  z-index: 1 !important;
-  margin: 0 !important;
-  padding: 80px 0 80px 0 !important;
-  color: #ffffff !important;
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  left: 0 !important;
-  /* Force le positionnement à gauche */
-  right: 0 !important;
-  /* Force le positionnement à droite */
-  box-sizing: border-box !important;
-  overflow-x: hidden !important;
-  /* Évite le débordement horizontal */
-}
-
-@media (max-width: 768px) {
-  .learn-section {
-    padding: 70px 0 60px 0 !important;
-  }
-}
-
-/* CORRECTION CRITIQUE : Container parfaitement centré comme NOGLabSection */
-.learn-container {
-  max-width: 1200px !important;
-  width: 100% !important;
-  margin: 0 auto !important;
-  padding: 0 2rem !important;
-  box-sizing: border-box !important;
-  visibility: visible !important;
-  position: relative !important;
-  left: auto !important;
-  /* Reset toute position héritée */
-  right: auto !important;
-  /* Reset toute position héritée */
-  transform: none !important;
-  /* Reset tout transform hérité */
-}
-
-@media (max-width: 768px) {
-  .learn-container {
-    padding: 0 1rem !important;
-    max-width: 100% !important;
-  }
-}
-
-/* CORRECTION : Reset des styles Material-UI qui pourraient interférer */
-.learn-section .MuiContainer-root {
-  max-width: 1200px !important;
-  margin: 0 auto !important;
-  padding-left: 2rem !important;
-  padding-right: 2rem !important;
-}
-
-@media (max-width: 768px) {
-  .learn-section .MuiContainer-root {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
-  }
-}
-
-/* Header Section - Parfaitement centré */
-.academie-header {
-  text-align: center !important;
-  margin-bottom: 4rem !important;
-  display: block !important;
-  visibility: visible !important;
-  width: 100% !important;
-  padding: 0 !important;
-  box-sizing: border-box !important;
-}
-
-.academie-small-title {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif !important;
-  font-size: clamp(0.9rem, 1.5vw, 1.1rem) !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.3em !important;
-  text-transform: uppercase !important;
-  color: #FFFF99 !important;
-  margin-bottom: 1rem !important;
-  opacity: 0.9 !important;
-  display: block !important;
-  visibility: visible !important;
-  text-align: center !important;
-}
-
-.academie-main-title {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif !important;
-  font-weight: 700 !important;
-  font-size: clamp(2rem, 5.2vw, 3.6rem) !important;
-  line-height: 1.1 !important;
-  color: #ffffff !important;
-  margin-bottom: 3rem !important;
-  text-transform: uppercase !important;
-  letter-spacing: -0.02em !important;
-  display: block !important;
-  visibility: visible !important;
-  text-align: center !important;
-  padding: 0 !important;
-}
-
-/* Two Column Introduction - Parfaitement centrée */
-.academie-intro-container {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
-  gap: 3rem !important;
-  margin: 0 auto 4rem auto !important;
-  max-width: 1000px !important;
-  width: 100% !important;
-  visibility: visible !important;
-  padding: 0 !important;
-  box-sizing: border-box !important;
-  position: relative !important;
-  left: auto !important;
-  right: auto !important;
-}
-
-@media (max-width: 768px) {
-  .academie-intro-container {
-    grid-template-columns: 1fr !important;
-    gap: 2rem !important;
-    margin-bottom: 3rem !important;
-    padding: 0 1rem !important;
-  }
-}
-
-.academie-intro-text {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif !important;
-  font-size: clamp(1rem, 1.8vw, 1.125rem) !important;
-  line-height: 1.7 !important;
-  color: rgba(255, 255, 255, 0.85) !important;
-  font-weight: 400 !important;
-  display: block !important;
-  visibility: visible !important;
-  text-align: left !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-@media (max-width: 768px) {
-  .academie-intro-text {
-    text-align: center !important;
-  }
-}
-
-/* Course Roadmap - Parfaitement centrée */
-.academie-roadmap {
-  max-width: 1000px !important;
-  width: 100% !important;
-  margin: 0 auto !important;
-  display: block !important;
-  visibility: visible !important;
-  padding: 0 !important;
-  box-sizing: border-box !important;
-  position: relative !important;
-  left: auto !important;
-  right: auto !important;
-}
-
-@media (max-width: 768px) {
-  .academie-roadmap {
-    padding: 0 1rem !important;
-  }
-}
-
-.course-category {
-  margin-bottom: 3rem !important;
-  display: block !important;
-  visibility: visible !important;
-  width: 100% !important;
-  padding: 0 !important;
-}
-
-.category-header {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif !important;
-  font-size: clamp(1.3rem, 2.2vw, 1.6rem) !important;
-  font-weight: 700 !important;
-  color: #FFFF99 !important;
-  margin-bottom: 1.5rem !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.1em !important;
-  display: block !important;
-  visibility: visible !important;
-  text-align: left !important;
-  padding: 0 !important;
-}
-
-@media (max-width: 768px) {
-  .category-header {
-    text-align: center !important;
-  }
-}
-
-.course-item {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  padding: 1.2rem 0 !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-  transition: all 0.3s ease !important;
-  visibility: visible !important;
-  width: 100% !important;
-  box-sizing: border-box !important;
-  margin: 0 !important;
-}
-
-.course-item:hover {
-  background: rgba(255, 255, 255, 0.02) !important;
-  padding-left: 1rem !important;
-  padding-right: 1rem !important;
-  border-radius: 8px !important;
-}
-
-.course-content {
-  flex: 1 !important;
-  display: flex !important;
-  align-items: center !important;
-  gap: 1.5rem !important;
-  visibility: visible !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.course-number {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif !important;
-  font-size: 1.1rem !important;
-  font-weight: 700 !important;
-  color: rgba(255, 255, 255, 0.6) !important;
-  min-width: 40px !important;
-  display: block !important;
-  visibility: visible !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-.course-title {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif !important;
-  font-size: clamp(1.1rem, 1.8vw, 1.3rem) !important;
-  font-weight: 600 !important;
-  color: #ffffff !important;
-  margin: 0 !important;
-  line-height: 1.3 !important;
-  display: block !important;
-  visibility: visible !important;
-  padding: 0 !important;
-}
-
-.course-actions {
-  display: flex !important;
-  gap: 0.75rem !important;
-  align-items: center !important;
-  margin-left: 2rem !important;
-  visibility: visible !important;
-  padding: 0 !important;
-}
-
-/* Boutons - Styles conservés */
-.course-btn {
-  padding: 0.5rem 1.2rem !important;
-  border: 1px solid !important;
-  border-radius: 20px !important;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif !important;
-  font-size: clamp(0.75rem, 1.2vw, 0.85rem) !important;
-  font-weight: 500 !important;
-  cursor: pointer !important;
-  transition: all 0.3s ease !important;
-  text-decoration: none !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  min-width: 85px !important;
-  white-space: nowrap !important;
-  visibility: visible !important;
-}
-
-.course-btn.completed {
-  background: #FFFF99 !important;
-  color: #1a1a1a !important;
-  border-color: #FFFF99 !important;
-}
-
-.course-btn.completed:hover {
-  background: rgba(255, 255, 153, 0.9) !important;
-  transform: translateY(-1px) !important;
-}
-
-.course-btn.catch-up {
-  background: transparent !important;
-  color: rgba(255, 255, 255, 0.8) !important;
-  border-color: rgba(255, 255, 255, 0.3) !important;
-}
-
-.course-btn.catch-up:hover {
-  background: rgba(255, 255, 255, 0.1) !important;
-  color: #ffffff !important;
-  border-color: rgba(255, 255, 255, 0.5) !important;
-}
-
-.course-btn.ongoing {
-  background: #82855F !important;
-  color: #ffffff !important;
-  border-color: #82855F !important;
-}
-
-.course-btn.ongoing:hover {
-  background: rgba(130, 133, 95, 0.9) !important;
-  transform: translateY(-1px) !important;
-}
-
-.course-btn.enroll {
-  background: transparent !important;
-  color: rgba(255, 255, 255, 0.8) !important;
-  border-color: rgba(255, 255, 255, 0.3) !important;
-}
-
-.course-btn.enroll:hover {
-  background: rgba(255, 255, 255, 0.1) !important;
-  color: #ffffff !important;
-  border-color: rgba(255, 255, 255, 0.5) !important;
-}
-
-/* Social Media Icons - Parfaitement centrés */
-.academie-social-section {
-  margin-top: 4rem !important;
-  text-align: center !important;
-  display: block !important;
-  visibility: visible !important;
-  width: 100% !important;
-  padding: 0 !important;
-}
-
-.social-icons {
-  display: flex !important;
-  justify-content: center !important;
-  gap: 1.5rem !important;
-  margin-top: 2rem !important;
-  visibility: visible !important;
-  padding: 0 !important;
-}
-
-.social-icon {
-  width: 48px !important;
-  height: 48px !important;
-  border-radius: 50% !important;
-  background: rgba(255, 255, 255, 0.1) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  transition: all 0.3s ease !important;
-  cursor: pointer !important;
-  visibility: visible !important;
-}
-
-.social-icon:hover {
-  background: rgba(255, 255, 153, 0.2) !important;
-  border-color: #FFFF99 !important;
-  transform: translateY(-2px) !important;
-}
-
-.social-icon svg {
-  width: 20px !important;
-  height: 20px !important;
-  color: #ffffff !important;
-  transition: color 0.3s ease !important;
-  visibility: visible !important;
-}
-
-.social-icon:hover svg {
-  color: #FFFF99 !important;
-}
-
-.social-icon.more {
-  background: rgba(255, 255, 153, 0.1) !important;
-  border-color: #FFFF99 !important;
-}
-
-.social-icon.more svg {
-  color: #FFFF99 !important;
-}
-
-.social-icon.more:hover {
-  background: rgba(255, 255, 153, 0.2) !important;
-  transform: translateY(-2px) scale(1.1) !important;
-}
-
-/* CORRECTION MOBILE - Responsive Design amélioré */
-@media (max-width: 768px) {
-  .course-item {
-    flex-direction: column !important;
-    align-items: center !important;
-    gap: 1rem !important;
-    padding: 1.5rem 0 !important;
-    text-align: center !important;
-  }
-
-  .course-content {
-    width: 100% !important;
-    justify-content: center !important;
-    text-align: center !important;
-    flex-direction: column !important;
-    gap: 0.5rem !important;
-  }
-
-  .course-number {
-    text-align: center !important;
-  }
-
-  .course-title {
-    text-align: center !important;
-    width: 100% !important;
-  }
-
-  .course-actions {
-    margin-left: 0 !important;
-    width: 100% !important;
-    justify-content: center !important;
-  }
-
-  .course-btn {
-    min-width: 75px !important;
-    padding: 0.4rem 1rem !important;
-    font-size: 0.75rem !important;
-  }
-
-  .social-icons {
-    gap: 1rem !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-  }
-
-  .social-icon {
-    width: 40px !important;
-    height: 40px !important;
-  }
-
-  .social-icon svg {
-    width: 16px !important;
-    height: 16px !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .learn-container {
-    padding: 0 0.5rem !important;
-  }
-
-  .academie-intro-container {
-    padding: 0 0.5rem !important;
-  }
-
-  .academie-roadmap {
-    padding: 0 0.5rem !important;
-  }
-
-  .course-actions {
-    gap: 0.5rem !important;
-  }
-
-  .course-btn {
-    min-width: 70px !important;
-    padding: 0.35rem 0.8rem !important;
-    font-size: 0.7rem !important;
-  }
-}
-
-/* CORRECTION CRITIQUE : Override des styles JSS de Material-UI */
-div[class*="jss"] .learn-container,
-div[class*="makeStyles"] .learn-container {
-  max-width: 1200px !important;
-  margin: 0 auto !important;
-  padding: 0 2rem !important;
-  position: static !important;
-  left: auto !important;
-  right: auto !important;
-  transform: none !important;
-}
-
-/* Animations conservées */
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.course-item {
-  animation: slideInLeft 0.6s ease forwards;
-}
-
-.course-item:nth-child(1) {
-  animation-delay: 0.1s;
-}
-
-.course-item:nth-child(2) {
-  animation-delay: 0.15s;
-}
-
-.course-item:nth-child(3) {
-  animation-delay: 0.2s;
-}
-
-.course-item:nth-child(4) {
-  animation-delay: 0.25s;
-}
-
-.course-item:nth-child(5) {
-  animation-delay: 0.3s;
-}
-
-.course-item:nth-child(6) {
-  animation-delay: 0.35s;
-}
-
-.course-item:nth-child(7) {
-  animation-delay: 0.4s;
-}
-
-.course-item:nth-child(8) {
-  animation-delay: 0.45s;
-}
-
-.course-item:nth-child(9) {
-  animation-delay: 0.5s;
-}
-
-.course-item:nth-child(10) {
-  animation-delay: 0.55s;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .course-item {
-    animation: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-  }
-
-  .course-item,
-  .course-btn,
-  .social-icon {
-    transition: none !important;
-  }
-}
-
-/* EggOn CTA Section */
-.eggon-cta-section {
-  margin-top: 4rem !important;
-  padding: 3rem 0 !important;
-  text-align: center !important;
-  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
-  display: block !important;
-  visibility: visible !important;
-  width: 100% !important;
-}
-
-.eggon-cta-content {
-  max-width: 800px !important;
-  margin: 0 auto !important;
-  display: block !important;
-  visibility: visible !important;
-}
-
-.eggon-cta-text {
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif !important;
-  font-size: clamp(1.2rem, 2.2vw, 1.6rem) !important;
-  line-height: 1.6 !important;
-  color: #ffffff !important;
-  margin-bottom: 2rem !important;
-  font-weight: 400 !important;
-  display: block !important;
-  visibility: visible !important;
-  text-align: center !important;
-}
-
-.eggon-cta-button {
-  background: #FFFF99 !important;
-  color: #1a1a1a !important;
-  border: none !important;
-  padding: 1rem 2rem !important;
-  border-radius: 30px !important;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif !important;
-  font-size: clamp(1rem, 1.5vw, 1.2rem) !important;
-  font-weight: 600 !important;
-  cursor: pointer !important;
-  transition: all 0.3s ease !important;
-  text-decoration: none !important;
-  display: inline-block !important;
-  visibility: visible !important;
-}
-
-.eggon-cta-button:hover {
-  background: rgba(255, 255, 153, 0.9) !important;
-  transform: translateY(-2px) !important;
-  box-shadow: 0 8px 25px rgba(255, 255, 153, 0.3) !important;
-}
-
-@media (max-width: 768px) {
-  .eggon-cta-section {
-    margin-top: 3rem !important;
-    padding: 2rem 0 !important;
-  }
-
-  .eggon-cta-text {
-    font-size: 1.1rem !important;
-    margin-bottom: 1.5rem !important;
-    padding: 0 1rem !important;
-  }
-
-  .eggon-cta-button {
-    padding: 0.8rem 1.5rem !important;
-    font-size: 1rem !important;
-  }
-}
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { makeStyles } from '@material-ui/core/styles';
+import { LearnHero } from './LearnHero';
+import './LearnSection.css';
+
+const useStyles = makeStyles((theme) => ({
+    heroSection: {
+        minHeight: 'calc(100vh - 80px)',
+        display: 'flex',
+        alignItems: 'center',
+        backgroundColor: 'transparent',
+        width: '100%',
+        boxSizing: 'border-box',
+        overflow: 'hidden',
+        '@media (max-width: 768px)': {
+            minHeight: 'calc(100vh - 70px)',
+        },
+    },
+    academySection: {
+        paddingTop: '0',
+    },
+}));
+
+const LearnSection = () => {
+  const { t } = useTranslation();
+  const classes = useStyles();
+
+  // Course data structure
+  const coursesList = [
+    {
+      id: 'intro-ia',
+      category: t('academie.categories.foundations') || 'Fondamentaux',
+      title: t('academie.courses.foundations.introIA') || 'Introduction à l\'IA',
+      status: 'completed'
+    },
+    {
+      id: 'limites-llm',
+      category: t('academie.categories.foundations') || 'Fondamentaux',
+      title: t('academie.courses.foundations.limitesLLM') || 'Limites des LLM',
+      status: 'completed'
+    },
+    {
+      id: 'depasser-limites',
+      category: t('academie.categories.foundations') || 'Fondamentaux',
+      title: t('academie.courses.foundations.depasserLimites') || 'Dépasser les limites',
+      status: 'completed'
+    },
+    {
+      id: 'prompts-initiation',
+      category: t('academie.categories.promptEngineering') || 'Prompt Engineering',
+      title: t('academie.courses.promptEngineering.promptsInitiation') || 'Initiation aux prompts',
+      status: 'completed'
+    },
+    {
+      id: 'prompts-juridiques',
+      category: t('academie.categories.promptEngineering') || 'Prompt Engineering',
+      title: t('academie.courses.promptEngineering.promptsJuridiques') || 'Prompts juridiques',
+      status: 'completed'
+    },
+    {
+      id: 'prompts-systemes',
+      category: t('academie.categories.promptEngineering') || 'Prompt Engineering',
+      title: t('academie.courses.promptEngineering.promptsSystemes') || 'Prompts systèmes',
+      status: 'completed'
+    },
+    {
+      id: 'affaire-weber',
+      category: t('academie.categories.caseStudies') || 'Études de cas',
+      title: t('academie.courses.caseStudies.affaireWeber') || 'Affaire Weber',
+      status: 'completed'
+    },
+    {
+      id: 'ai-risk-management',
+      category: t('academie.categories.securityGovernance') || 'Sécurité & Gouvernance',
+      title: t('academie.courses.securityGovernance.aiRiskManagement') || 'Gestion des risques IA',
+      status: 'ongoing'
+    },
+    {
+      id: 'ai-act-compliance',
+      category: t('academie.categories.securityGovernance') || 'Sécurité & Gouvernance',
+      title: t('academie.courses.securityGovernance.aiActCompliance') || 'Conformité AI Act',
+      status: 'ongoing'
+    },
+    {
+      id: 'auditability-explainability',
+      category: t('academie.categories.securityGovernance') || 'Sécurité & Gouvernance',
+      title: t('academie.courses.securityGovernance.auditabilityExplainability') || 'Auditabilité & Explicabilité',
+      status: 'ongoing'
+    }
+  ];
+
+  const renderCourseButtons = (status) => {
+    if (status === 'completed') {
+      return (
+        <>
+          <button className="course-btn completed">
+            {t('academie.buttons.completed') || 'Terminé'}
+          </button>
+          <button className="course-btn catch-up">
+            {t('academie.buttons.catchUp') || 'Rattrapage'}
+          </button>
+        </>
+      );
+    } else {
+      return (
+        <>
+          <button className="course-btn ongoing">
+            {t('academie.buttons.ongoing') || 'En cours'}
+          </button>
+          <button className="course-btn enroll">
+            {t('academie.buttons.enroll') || 'S\'inscrire'}
+          </button>
+        </>
+      );
+    }
+  };
+
+
+
+  // Group courses by category
+  const groupedCourses = coursesList.reduce((acc, course) => {
+    if (!acc[course.category]) {
+      acc[course.category] = [];
+    }
+    acc[course.category].push(course);
+    return acc;
+  }, {});
+
+  return (
+    <>
+      {/* Hero Section */}
+      <section className={classes.heroSection}>
+        <LearnHero />
+      </section>
+
+      {/* Content Section */}
+      <div className={`learn-section ${classes.academySection}`}>
+        <div className="learn-container">
+          
+          {/* Header Section */}
+          <div className="academie-header">
+            <div className="academie-small-title">
+              {t('academie.sectionLabel') || 'ACADÉMIE'}
+            </div>
+            <h1 className="academie-main-title">
+              {t('academie.mainTitle') || 'IA ACADÉMIE'}
+            </h1>
+          </div>
+
+          {/* Two Column Introduction */}
+          <div className="academie-intro-container">
+            <div className="academie-intro-text">
+              {t('academie.intro.left') || 'Découvrez notre programme complet de formation à l\'intelligence artificielle. Des fondamentaux aux applications avancées, maîtrisez les outils et concepts essentiels pour réussir dans le monde de l\'IA.'}
+            </div>
+            <div className="academie-intro-text">
+              {t('academie.intro.right') || 'Notre approche pédagogique combine théorie et pratique, avec des études de cas réels et des projets concrets. Rejoignez une communauté d\'apprenants passionnés et développez vos compétences IA.'}
+            </div>
+          </div>
+
+          {/* Course Roadmap */}
+          <div className="academie-roadmap">
+            {Object.entries(groupedCourses).map(([category, courses]) => (
+              <div key={category} className="course-category">
+                <h2 className="category-header">
+                  {category}
+                </h2>
+                {courses.map((course, index) => (
+                  <div key={course.id} className="course-item">
+                    <div className="course-content">
+                      <span className="course-number">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                      <h3 className="course-title">
+                        {course.title}
+                      </h3>
+                    </div>
+                    <div className="course-actions">
+                      {renderCourseButtons(course.status)}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+
+          {/* EggOn CTA Section */}
+          <div className="eggon-cta-section">
+            <div className="eggon-cta-content">
+              <p className="eggon-cta-text">
+                EggOn vous accompagne partout. La contextualisation RAG combinée aux agents IA spécialisés vous apporte un ROI rapidement
+              </p>
+              <button className="eggon-cta-button">
+                → Parler à EggOn →
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default LearnSection;
