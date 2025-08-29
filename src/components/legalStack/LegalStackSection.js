@@ -702,7 +702,7 @@ const RAGArchitectureDiagram = () => {
               alignItems: 'center',
               justifyContent: 'center',
               gap: 'clamp(0.8rem, 1.5vw, 1.2rem)',
-              width: '100%',
+              width: '100',
               marginTop: '1.5rem',
               flexWrap: 'nowrap'
             }}
@@ -1049,10 +1049,8 @@ const RAGArchitectureDiagram = () => {
             ))}
           </div>
 
-        </div>
-
-        {/* Styles responsive améliorés */}
-        <style jsx>{`
+          {/* Styles responsive améliorés */}
+          <style jsx>{`
             @media (max-width: 1200px) {
               .rag-cards-grid {
                 gap: 1rem !important;
@@ -1115,9 +1113,9 @@ const RAGArchitectureDiagram = () => {
               }
             }
           `}</style>
-      </div>
-    </motion.div>
-    </section >
+        </div>
+      </motion.div>
+    </section>
   );
 };
 
