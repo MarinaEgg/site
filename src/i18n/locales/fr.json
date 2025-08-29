@@ -238,7 +238,9 @@
       "title": "La légitimité de l'IA repose sur l'explicabilité",
       "paragraph1": "Notre innovation nous permet d'encapsuler les processus de l'IA et les transforme en informations lisibles et rejouables.",
       "paragraph2": "Cette approche garantît que l'IA est non seulement performante, mais vérifiable et conforme aux exigences réglementaires.",
-      "paragraph3": "Les secteurs sensibles comme le droit ou la finance doivent bénéficier d'un contrôle total de leurs systèmes dont l'IA."
+      "paragraph3": "Les secteurs sensibles comme le droit ou la finance doivent bénéficier d'un contrôle total de leurs systèmes dont l'IA.",
+      "paragraph4": "Aucune famille ne devrait jamais se douter d'avoir perdu une garde d'enfant à cause d'un algorithme mal calibré. Aucun patient ne devrait jamais douter que son traitement a été décidé après une véritable évaluation humaine.",
+      "paragraph5": "Le vrai problème n'est pas simplement de savoir si l'IA donne la bonne ou la mauvaise réponse - c'est le doute. Et une fois que le doute s'installe, il érode la confiance et sape la légitimité."
     },
     "aiForEveryone": {
       "title": "Une IA compréhensible et adaptable",
@@ -260,9 +262,9 @@
         "title": "Réversibilité",
         "description": "Chaque erreur peut être retracée, comprise et corrigée rapidement, garantissant un contrôle complet."
       },
-      "security": {
-        "title": "Sécurité et conformité",
-        "description": "Les données et communications sont protégées, et chaque action respecte les standards réglementaires et industriels."
+      "speed": {
+        "title": "Déploiement Accéléré",
+        "description": "L'IA explicable ne vous ralentit pas - elle construit la confiance qui accélère l'adoption dans votre organisation."
       }
     },
     "science": {
@@ -270,11 +272,12 @@
       "paragraph1": "Nos protocoles et méthodes de R&D garantissent la robustesse, la fiabilité et la conformité des systèmes IA.",
       "paragraph2": "L'innovation se concentre sur la transparence et la sécurité dans des environnements professionnels sensibles."
     },
-    "learning": {
-      "title": "Apprendre en pratiquant",
-      "paragraph1": "Nos agents IA sont testés et ajustés en interaction avec des professionnels pour maximiser l'explicabilité et la fiabilité.",
-      "paragraph2": "Chaque expérience permet de renforcer la confiance et l'auditabilité des systèmes.",
-      "paragraph3": "Cette approche empirique adresse les défis humains et sociétaux de l'IA explicable."
+    "growth": {
+      "title": "Défis que nous relevons",
+      "paragraph1": "Mettre à l'échelle l'explicabilité dans des systèmes multi-agents complexes n'est pas trivial. Cela nécessite des frameworks que les équipes non-techniques peuvent réellement utiliser, et des infrastructures qui permettent le rappel, le re-audit et la certification.",
+      "paragraph2": "L'IA explicable n'est qu'une première étape. L'IA gouvernée la rend actionnable. Nos systèmes sont conformes à l'AI Act européen, au NIST AI RMF et à l'ISO 42001, transformant les principes en points de contrôle auditables.",
+      "paragraph3": "Nous exploitons des techniques avancées comme le Reverse Prompt Engineering et l'orchestration imbriquée pour rendre les décisions IA transparentes et auditables. Mais la vraie innovation ? Faire disparaître toute cette complexité derrière un simple scan.",
+      "paragraph4": "Le résultat n'est pas seulement la transparence - c'est l'assurabilité, la responsabilité et la réduction mesurable de l'incertitude. Chaque décision n'est pas seulement explicable mais instantanément vérifiable par quiconque avec un smartphone."
     },
     "machineLearning": {
       "title": "Innovation appliquée",
@@ -298,14 +301,7 @@
       "description": "Participez à notre mission pour une IA explicable, traçable et sécurisée, et contribuez à définir les standards de confiance pour l'IA professionnelle.",
       "link": "Rejoignez la conception"
     },
-    "custodyDoubt": "Aucune famille ne devrait jamais se douter d'avoir perdu une garde d'enfant à cause d'un algorithme mal calibré...",
-    "realIssue": "Le vrai problème n'est pas simplement de savoir si l'IA donne la bonne ou la mauvaise réponse - c'est le doute...",
-    "fasterDeployment": "Déploiement Accéléré",
-    "challengesWeEmbrace": "Défis que nous relevons",
-    "scalingExplainability": "Mettre à l'échelle l'explicabilité dans des systèmes multi-agents complexes n'est pas trivial...",
-    "explainableGoverned": "L'IA explicable n'est qu'une première étape. L'IA gouvernée la rend actionnable...",
-    "leverageAdvancedTechniques": "Nous exploitons des techniques avancées comme le Reverse Prompt Engineering...",
-    "outcomeTransparency": "Le résultat n'est pas seulement la transparence - c'est l'assurabilité, la responsabilité..."
+
   },
   "nog": {
     "intro": "Actuellement, les clients demandent à eggon de:",
