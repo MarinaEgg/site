@@ -113,6 +113,11 @@
       "placeholder": "Complete según sus necesidades...",
       "cancel": "Cancelar",
       "submit": "Quiero este agente IA"
+    },
+    "roi": {
+      "mainTitle": "EggOn va donde tú vas.",
+      "subtitle": "La contextualización RAG combinada con agentes IA específicos te da ROI rápidamente",
+      "cta": "Hablar con EggOn"
     }
   },
   "legalStack": {
