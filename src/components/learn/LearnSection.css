@@ -1,6 +1,7 @@
 /* CORRECTION CRITIQUE : Reset complet des marges/paddings héritées */
 .learn-section {
-  width: 100vw !important; /* Force la largeur complète */
+  width: 100vw !important;
+  /* Force la largeur complète */
   position: relative !important;
   background: transparent !important;
   min-height: 100vh !important;
@@ -11,10 +12,13 @@
   display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
-  left: 0 !important; /* Force le positionnement à gauche */
-  right: 0 !important; /* Force le positionnement à droite */
+  left: 0 !important;
+  /* Force le positionnement à gauche */
+  right: 0 !important;
+  /* Force le positionnement à droite */
   box-sizing: border-box !important;
-  overflow-x: hidden !important; /* Évite le débordement horizontal */
+  overflow-x: hidden !important;
+  /* Évite le débordement horizontal */
 }
 
 @media (max-width: 768px) {
@@ -32,9 +36,12 @@
   box-sizing: border-box !important;
   visibility: visible !important;
   position: relative !important;
-  left: auto !important; /* Reset toute position héritée */
-  right: auto !important; /* Reset toute position héritée */
-  transform: none !important; /* Reset tout transform hérité */
+  left: auto !important;
+  /* Reset toute position héritée */
+  right: auto !important;
+  /* Reset toute position héritée */
+  transform: none !important;
+  /* Reset tout transform hérité */
 }
 
 @media (max-width: 768px) {
@@ -444,11 +451,11 @@
   .learn-container {
     padding: 0 0.5rem !important;
   }
-  
+
   .academie-intro-container {
     padding: 0 0.5rem !important;
   }
-  
+
   .academie-roadmap {
     padding: 0 0.5rem !important;
   }
@@ -482,6 +489,7 @@ div[class*="makeStyles"] .learn-container {
     opacity: 0;
     transform: translateX(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -492,16 +500,45 @@ div[class*="makeStyles"] .learn-container {
   animation: slideInLeft 0.6s ease forwards;
 }
 
-.course-item:nth-child(1) { animation-delay: 0.1s; }
-.course-item:nth-child(2) { animation-delay: 0.15s; }
-.course-item:nth-child(3) { animation-delay: 0.2s; }
-.course-item:nth-child(4) { animation-delay: 0.25s; }
-.course-item:nth-child(5) { animation-delay: 0.3s; }
-.course-item:nth-child(6) { animation-delay: 0.35s; }
-.course-item:nth-child(7) { animation-delay: 0.4s; }
-.course-item:nth-child(8) { animation-delay: 0.45s; }
-.course-item:nth-child(9) { animation-delay: 0.5s; }
-.course-item:nth-child(10) { animation-delay: 0.55s; }
+.course-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.course-item:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.course-item:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.course-item:nth-child(4) {
+  animation-delay: 0.25s;
+}
+
+.course-item:nth-child(5) {
+  animation-delay: 0.3s;
+}
+
+.course-item:nth-child(6) {
+  animation-delay: 0.35s;
+}
+
+.course-item:nth-child(7) {
+  animation-delay: 0.4s;
+}
+
+.course-item:nth-child(8) {
+  animation-delay: 0.45s;
+}
+
+.course-item:nth-child(9) {
+  animation-delay: 0.5s;
+}
+
+.course-item:nth-child(10) {
+  animation-delay: 0.55s;
+}
 
 @media (prefers-reduced-motion: reduce) {
   .course-item {
@@ -509,10 +546,80 @@ div[class*="makeStyles"] .learn-container {
     opacity: 1 !important;
     transform: none !important;
   }
-  
+
   .course-item,
   .course-btn,
   .social-icon {
     transition: none !important;
+  }
+}
+
+/* EggOn CTA Section */
+.eggon-cta-section {
+  margin-top: 4rem !important;
+  padding: 3rem 0 !important;
+  text-align: center !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  display: block !important;
+  visibility: visible !important;
+  width: 100% !important;
+}
+
+.eggon-cta-content {
+  max-width: 800px !important;
+  margin: 0 auto !important;
+  display: block !important;
+  visibility: visible !important;
+}
+
+.eggon-cta-text {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: clamp(1.2rem, 2.2vw, 1.6rem) !important;
+  line-height: 1.6 !important;
+  color: #ffffff !important;
+  margin-bottom: 2rem !important;
+  font-weight: 400 !important;
+  display: block !important;
+  visibility: visible !important;
+  text-align: center !important;
+}
+
+.eggon-cta-button {
+  background: #FFFF99 !important;
+  color: #1a1a1a !important;
+  border: none !important;
+  padding: 1rem 2rem !important;
+  border-radius: 30px !important;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-size: clamp(1rem, 1.5vw, 1.2rem) !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  visibility: visible !important;
+}
+
+.eggon-cta-button:hover {
+  background: rgba(255, 255, 153, 0.9) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(255, 255, 153, 0.3) !important;
+}
+
+@media (max-width: 768px) {
+  .eggon-cta-section {
+    margin-top: 3rem !important;
+    padding: 2rem 0 !important;
+  }
+
+  .eggon-cta-text {
+    font-size: 1.1rem !important;
+    margin-bottom: 1.5rem !important;
+    padding: 0 1rem !important;
+  }
+
+  .eggon-cta-button {
+    padding: 0.8rem 1.5rem !important;
+    font-size: 1rem !important;
   }
 }
