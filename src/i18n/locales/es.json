@@ -238,7 +238,9 @@
       "title": "La legitimidad de la IA reposa sobre la explicabilidad",
       "paragraph1": "Nuestra innovación nos permite encapsular los procesos de la IA y transformarlos en información legible y reproducible.",
       "paragraph2": "Este enfoque garantiza que la IA no solo es performante, sino verificable y conforme a las exigencias regulatorias.",
-      "paragraph3": "Los sectores sensibles como el derecho o las finanzas deben beneficiarse de un control total de sus sistemas, incluida la IA."
+      "paragraph3": "Los sectores sensibles como el derecho o las finanzas deben beneficiarse de un control total de sus sistemas, incluida la IA.",
+      "paragraph4": "Ninguna familia debería jamás dudar si perdió la custodia debido a un algoritmo mal calibrado. Ningún paciente debería jamás dudar que su tratamiento fue decidido después de una evaluación humana genuina.",
+      "paragraph5": "El verdadero problema no es simplemente si la IA da la respuesta correcta o incorrecta - es la duda. Y una vez que la duda se instala, erosiona la confianza y socava la legitimidad."
     },
     "aiForEveryone": {
       "title": "Una IA comprensible y adaptable",
@@ -260,9 +262,9 @@
         "title": "Reversibilidad",
         "description": "Cada error puede ser rastreado, comprendido y corregido rápidamente, garantizando un control completo."
       },
-      "security": {
-        "title": "Seguridad y conformidad",
-        "description": "Los datos y comunicaciones están protegidos, y cada acción respeta los estándares regulatorios e industriales."
+      "speed": {
+        "title": "Despliegue Acelerado",
+        "description": "La IA explicable no te ralentiza - construye la confianza que acelera la adopción en toda tu organización."
       }
     },
     "science": {
@@ -270,11 +272,12 @@
       "paragraph1": "Nuestros protocolos y métodos de I+D garantizan la robustez, fiabilidad y conformidad de los sistemas de IA.",
       "paragraph2": "La innovación se concentra en la transparencia y la seguridad en entornos profesionales sensibles."
     },
-    "learning": {
-      "title": "Aprender practicando",
-      "paragraph1": "Nuestros agentes de IA son testados y ajustados en interacción con profesionales para maximizar la explicabilidad y la fiabilidad.",
-      "paragraph2": "Cada experiencia permite reforzar la confianza y la auditabilidad de los sistemas.",
-      "paragraph3": "Este enfoque empírico aborda los desafíos humanos y societales de la IA explicable."
+    "growth": {
+      "title": "Desafíos que abrazamos",
+      "paragraph1": "Escalar la explicabilidad en sistemas multi-agente complejos no es trivial. Requiere marcos que los equipos no técnicos puedan realmente usar, e infraestructuras que permitan el recall, la re-auditoría y la certificación.",
+      "paragraph2": "La IA explicable es solo el primer paso. La IA gobernada la hace accionable. Nuestros sistemas cumplen con el AI Act europeo, NIST AI RMF e ISO 42001, transformando principios en puntos de control auditables.",
+      "paragraph3": "Aprovechamos técnicas avanzadas como la Ingeniería Inversa de Prompts y la orquestación anidada para hacer las decisiones de IA transparentes y auditables. ¿Pero la verdadera innovación? Hacer que toda esa complejidad desaparezca detrás de un simple escaneo.",
+      "paragraph4": "El resultado no es solo transparencia - es asegurabilidad, responsabilidad y reducción medible de la incertidumbre. Cada decisión no solo es explicable sino instantáneamente verificable por cualquiera con un smartphone."
     },
     "machineLearning": {
       "title": "Innovación aplicada",
