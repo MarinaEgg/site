@@ -449,6 +449,32 @@ const CollectionSection = () => {
               </div>
             </div>
           </div>
+
+          {/* NOUVELLE SECTION ROI FINALE */}
+          <div className="roi-section-enhanced">
+            <div className="roi-content-container">
+              <div className="roi-header-enhanced">
+                <h2 className="roi-main-title">
+                  {t('collection.roi.mainTitle', 'EggOn goes where you go.')}
+                </h2>
+                <p className="roi-subtitle">
+                  {t('collection.roi.subtitle', 'The RAG contextualisation combined with specific agents AI give you some ROI quickly')}
+                </p>
+              </div>
+              
+              <div className="roi-cta-container">
+                <button className="roi-cta-button" onClick={() => window.location.href = '/contact'}>
+                  <div className="button-content">
+                    <span className="arrow-left">→</span>
+                    <span className="button-text">
+                      {t('collection.roi.cta', 'Talk to EggOn')}
+                      <span className="arrow-right">→</span>
+                    </span>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Modal Dialog avec animations - ORIGINAL CONSERVÉ */}
