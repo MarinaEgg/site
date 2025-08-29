@@ -30,10 +30,14 @@ const useStyles = makeStyles((theme) => ({
             paddingLeft: "4rem",
         },
         "@media (max-width: 768px)": {
-            paddingLeft: "0",
-            paddingRight: "0",
+            paddingLeft: "1rem",
+            paddingRight: "1rem",
             flex: "1 1 auto",
             textAlign: "center",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
         },
     },
     imageWrapper: {
@@ -91,6 +95,8 @@ const useStyles = makeStyles((theme) => ({
         "@media (max-width: 768px)": {
             fontSize: '0.85rem',
             textAlign: 'center',
+            width: '100%',
+            marginBottom: '1rem',
         },
     },
     dropdownContainer: {
@@ -152,6 +158,7 @@ const useStyles = makeStyles((theme) => ({
         animation: '$shine 5s linear infinite',
         textShadow: '2px 2px 8px rgba(0, 0, 0, 0.6)',
         textAlign: "left",
+        marginBottom: '1.5rem',
         '&.disabled': {
             animation: 'none',
             color: '#fafafa',
@@ -159,6 +166,11 @@ const useStyles = makeStyles((theme) => ({
         },
         "@media (max-width: 768px)": {
             textAlign: "center",
+            fontSize: 'clamp(1.8rem, 8vw, 2.5rem)',
+            lineHeight: '1.2',
+            marginBottom: '1rem',
+            width: '100%',
+            maxWidth: '100%',
         },
     },
     subtitle: {
@@ -171,6 +183,10 @@ const useStyles = makeStyles((theme) => ({
         textAlign: "left",
         "@media (max-width: 768px)": {
             textAlign: "center",
+            fontSize: 'clamp(0.95rem, 4vw, 1.1rem)',
+            lineHeight: '1.5',
+            marginBottom: '1.5rem',
+            width: '100%',
         },
     },
     buttonContainer: {
