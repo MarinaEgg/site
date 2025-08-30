@@ -306,6 +306,19 @@
   }
 }
 
+/* CORRECTION SPÉCIFIQUE POUR LES ICÔNES SVG */
+.rag-icon-outline {
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 1.5 !important;
+}
+
+/* CORRECTION GLOBALE POUR TOUS LES SVG DANS LA SECTION RAG */
+.legal-stack-section svg {
+  fill: none !important;
+  stroke: currentColor !important;
+}
+
 /* RÈGLES POUR EMPÊCHER LE DÉCOUPAGE DES TERMES TECHNIQUES RAG */
 .rag-technical-term {
   white-space: nowrap !important;
