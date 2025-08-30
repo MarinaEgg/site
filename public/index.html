@@ -48,7 +48,7 @@
 
 <meta name="keywords" content="EggOn Technology, explainable AI, AI governance, traceability, compliance, legal tech, insurance tech, fintech AI, orchestration, agents, Paris, France, innovation, laboratory, learning, ethics, regulation, GDPR, audit" />
 
-<!-- STRUCTURED DATA MEGA COMPLET -->
+<!-- STRUCTURED DATA OPTIMISÉ POUR SITELINKS -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -84,26 +84,50 @@
       "sameAs": [
         "https://eggon-technology.com",
         "https://eggon-technology.com/nog-lab",
-        "https://eggon-technology.com/learn"
+        "https://eggon-technology.com/learn",
+        "https://eggon-technology.com/contact"
+      ],
+      "department": [
+        {
+          "@type": "Organization",
+          "name": "NOG Lab",
+          "url": "https://eggon-technology.com/nog-lab",
+          "description": "Innovation laboratory for explainable AI research and development"
+        },
+        {
+          "@type": "Organization", 
+          "name": "EggOn Learn",
+          "url": "https://eggon-technology.com/learn",
+          "description": "AI education and training platform for legal and business professionals"
+        }
       ],
       "hasOfferingCatalog": {
         "@type": "OfferingCatalog",
-        "name": "Services IA EggOn",
+        "name": "EggOn AI Services",
         "itemListElement": [
           {
             "@type": "Offer",
-            "name": "Orchestrateur d'Agents IA",
-            "description": "Plateforme de gouvernance et traçabilité IA"
+            "@id": "https://eggon-technology.com/#ai-orchestrator",
+            "name": "AI Agent Orchestrator",
+            "description": "Explainable AI governance and traceability platform for enterprise deployment",
+            "url": "https://eggon-technology.com/",
+            "category": "AI Platform"
           },
           {
             "@type": "Offer",
-            "name": "Nog Lab",
-            "description": "Laboratoire d'innovation IA"
+            "@id": "https://eggon-technology.com/nog-lab#innovation",
+            "name": "NOG Lab Innovation",
+            "description": "R&D laboratory for explainable AI and agentic systems",
+            "url": "https://eggon-technology.com/nog-lab",
+            "category": "Research & Development"
           },
           {
             "@type": "Offer",
-            "name": "EggOn Learn",
-            "description": "Formation et certification IA"
+            "@id": "https://eggon-technology.com/learn#training",
+            "name": "AI Training & Certification",
+            "description": "Professional AI education for legal, finance, and insurance sectors",
+            "url": "https://eggon-technology.com/learn",
+            "category": "Education"
           }
         ]
       }
@@ -113,9 +137,9 @@
       "@id": "https://eggon-technology.com/#website",
       "url": "https://eggon-technology.com",
       "name": "EggOn Technology",
-      "description": "Official EggOn Technology website - Explainable AI Governance",
+      "description": "Official EggOn Technology website - Explainable AI Governance Platform",
       "publisher": {"@id": "https://eggon-technology.com/#organization"},
-      "inLanguage": "fr-FR",
+      "inLanguage": ["en-US", "fr-FR"],
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
@@ -123,28 +147,73 @@
           "urlTemplate": "https://eggon-technology.com/?search={search_term_string}"
         },
         "query-input": "required name=search_term_string"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": 4,
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "AI Platform",
+            "description": "Explainable AI governance platform for enterprise deployment",
+            "url": "https://eggon-technology.com/"
+          },
+          {
+            "@type": "ListItem", 
+            "position": 2,
+            "name": "NOG Lab",
+            "description": "Innovation laboratory for explainable AI research",
+            "url": "https://eggon-technology.com/nog-lab"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Learn AI",
+            "description": "AI training and certification for professionals",
+            "url": "https://eggon-technology.com/learn"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Contact",
+            "description": "Get in touch with EggOn Technology experts",
+            "url": "https://eggon-technology.com/contact"
+          }
+        ]
       }
     },
     {
       "@type": "BreadcrumbList",
+      "@id": "https://eggon-technology.com/#breadcrumbs",
       "itemListElement": [
         {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://eggon-technology.com/"
+          "item": "https://eggon-technology.com/",
+          "description": "EggOn Technology AI Platform"
         },
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "Nog Lab",
-          "item": "https://eggon-technology.com/nog-lab"
+          "name": "NOG Lab",
+          "item": "https://eggon-technology.com/nog-lab",
+          "description": "Innovation Laboratory"
         },
         {
           "@type": "ListItem",
           "position": 3,
           "name": "Learn",
-          "item": "https://eggon-technology.com/learn"
+          "item": "https://eggon-technology.com/learn",
+          "description": "AI Training & Academy"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Contact",
+          "item": "https://eggon-technology.com/contact", 
+          "description": "Contact EggOn Technology"
         }
       ]
     }
@@ -193,13 +262,17 @@
 <link rel="alternate" hreflang="es" href="https://eggon-technology.com/es/" />
 <link rel="alternate" hreflang="x-default" href="https://eggon-technology.com/" />
 
+<!-- ROUTES ALTERNATIVES POUR SITELINKS -->
+<link rel="alternate" href="https://eggon-technology.com/lab" title="Innovation Lab" />
+<link rel="alternate" href="https://eggon-technology.com/laboratory" title="AI Laboratory" />
+<link rel="alternate" href="https://eggon-technology.com/formation" title="AI Training" />
+<link rel="alternate" href="https://eggon-technology.com/academy" title="AI Academy" />
+<link rel="alternate" href="https://eggon-technology.com/platform" title="AI Platform" />
+<link rel="alternate" href="https://eggon-technology.com/agents" title="AI Agents" />
+
 <!-- FONTS OPTIMISÉS -->
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@400;700&display=swap" /></noscript>
-
-<!-- ICONS & CDN -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.13.0/css/all.min.css" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
 <!-- CUSTOM CSS VARIABLES -->
 <style>
@@ -271,18 +344,52 @@ window.addEventListener('load', function() {
   <!-- React App will mount here -->
 </div>
 
+<!-- NAVIGATION SITELINKS OPTIMISÉE (Invisible pour les utilisateurs, visible pour Google) -->
+<nav aria-label="Main Navigation" itemscope itemtype="https://schema.org/SiteNavigationElement" style="position: absolute; left: -9999px; top: -9999px;">
+  <ul itemscope itemtype="https://schema.org/ItemList">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a itemprop="item" href="https://eggon-technology.com/" itemscope itemtype="https://schema.org/WebPage">
+        <span itemprop="name">AI Platform</span>
+        <meta itemprop="description" content="Explainable AI governance platform for enterprise deployment" />
+      </a>
+      <meta itemprop="position" content="1" />
+    </li>
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a itemprop="item" href="https://eggon-technology.com/nog-lab" itemscope itemtype="https://schema.org/WebPage">
+        <span itemprop="name">NOG Lab</span>
+        <meta itemprop="description" content="Innovation laboratory for explainable AI research" />
+      </a>
+      <meta itemprop="position" content="2" />
+    </li>
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a itemprop="item" href="https://eggon-technology.com/learn" itemscope itemtype="https://schema.org/WebPage">
+        <span itemprop="name">Learn AI</span>
+        <meta itemprop="description" content="AI training and certification for professionals" />
+      </a>
+      <meta itemprop="position" content="3" />
+    </li>
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a itemprop="item" href="https://eggon-technology.com/contact" itemscope itemtype="https://schema.org/WebPage">
+        <span itemprop="name">Contact</span>
+        <meta itemprop="description" content="Get in touch with EggOn Technology experts" />
+      </a>
+      <meta itemprop="position" content="4" />
+    </li>
+  </ul>
+</nav>
+
 <!-- RICH SNIPPETS BREADCRUMBS -->
 <nav aria-label="Breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList" style="display: none;">
   <ol>
     <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
       <a itemprop="item" href="https://eggon-technology.com/">
-        <span itemprop="name">Accueil</span>
+        <span itemprop="name">Home</span>
       </a>
       <meta itemprop="position" content="1" />
     </li>
     <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
       <a itemprop="item" href="https://eggon-technology.com/nog-lab">
-        <span itemprop="name">Lab</span>
+        <span itemprop="name">NOG Lab</span>
       </a>
       <meta itemprop="position" content="2" />
     </li>
@@ -291,6 +398,12 @@ window.addEventListener('load', function() {
         <span itemprop="name">Learn</span>
       </a>
       <meta itemprop="position" content="3" />
+    </li>
+    <li itemprop="itemListElement" itemscope itemType="https://schema.org/ListItem">
+      <a itemprop="item" href="https://eggon-technology.com/contact">
+        <span itemprop="name">Contact</span>
+      </a>
+      <meta itemprop="position" content="4" />
     </li>
   </ol>
 </nav>
