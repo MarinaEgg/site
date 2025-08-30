@@ -111,8 +111,17 @@
     },
     "modal": {
       "placeholder": "Modify this according to your needs...",
-      "cancel": "Cancel", 
-      "submit": "Get this AI Agent"
+      "typewriterText": "I would need my agent to...",
+      "cancel": "Cancel",
+      "contact": "Get contacted",
+      "back": "Back",
+      "validate": "Validate",
+      "sending": "Sending...",
+      "close": "Close",
+      "emailLabel": "Email address for quote delivery",
+      "emailPlaceholder": "your@email.com",
+      "privacyNotice": "We won't send commercial emails, just your personalized quote.",
+      "successMessage": "Your request has been sent successfully!"
     },
     "roi": {
       "mainTitle": "EggOn goes where you go.",
