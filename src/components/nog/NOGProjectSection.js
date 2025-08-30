@@ -24,9 +24,14 @@ const NOGProjectSection = () => {
   }, [actions.length]);
 
   const handleCasUsageClick = () => {
-    const collectionSection = document.getElementById('collection');
-    if (collectionSection) {
-      collectionSection.scrollIntoView({ behavior: 'smooth' });
+    // Rediriger vers la page home avec scroll vers la section collection
+    if (window.location.pathname !== '/') {
+      window.location.href = '/#collection';
+    } else {
+      const collectionSection = document.getElementById('collection');
+      if (collectionSection) {
+        collectionSection.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
