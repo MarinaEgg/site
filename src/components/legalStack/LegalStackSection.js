@@ -147,11 +147,11 @@ const RAGArchitectureDiagram = () => {
               text: 'Application APIs',
               iconPath: (
                 <>
-                  <circle cx="5" cy="5" r="2" fill="currentColor"/>
-                  <circle cx="19" cy="5" r="2" fill="currentColor"/>
-                  <circle cx="12" cy="12" r="2" fill="currentColor"/>
-                  <circle cx="5" cy="19" r="2" fill="currentColor"/>
-                  <circle cx="19" cy="19" r="2" fill="currentColor"/>
+                  <circle cx="5" cy="5" r="2" />
+                  <circle cx="19" cy="5" r="2" />
+                  <circle cx="12" cy="12" r="2" />
+                  <circle cx="5" cy="19" r="2" />
+                  <circle cx="19" cy="19" r="2" />
                   <line x1="7" y1="5" x2="10" y2="12"/>
                   <line x1="17" y1="5" x2="14" y2="12"/>
                   <line x1="5" y1="7" x2="5" y2="17"/>
