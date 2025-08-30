@@ -105,11 +105,14 @@ const RAGArchitectureDiagram = () => {
     {
       title: 'DATA SOURCES',
       icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="rag-icon-outline">
-          <rect x="6" y="4" width="12" height="16" rx="1" ry="1" />
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="rag-icon-outline">
+          <rect x="6" y="4" width="12" height="16" rx="1" ry="1" fill="currentColor" fillOpacity="0.15" />
           <line x1="9" y1="8" x2="15" y2="8" />
           <line x1="9" y1="12" x2="15" y2="12" />
           <line x1="9" y1="16" x2="15" y2="16" />
+          <circle cx="18" cy="6" r="1.5" fill="currentColor" />
+          <circle cx="18" cy="10" r="1" fill="currentColor" />
+          <circle cx="6" cy="18" r="1" fill="currentColor" />
         </svg>
       ),
       content: (
@@ -120,11 +123,14 @@ const RAGArchitectureDiagram = () => {
               text: 'Unstructured Data',
               iconPath: (
                 <>
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                  <polyline points="14,2 14,8 20,8" />
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" fill="currentColor" fillOpacity="0.1" />
+                  <polyline points="14,2 14,8 20,8" fill="currentColor" fillOpacity="0.2" />
                   <line x1="16" y1="13" x2="8" y2="13" />
                   <line x1="16" y1="17" x2="8" y2="17" />
-                  <polyline points="10,9 9,9 8,9" />
+                  <line x1="10" y1="10" x2="14" y2="10" />
+                  <circle cx="8" cy="10" r="1" fill="currentColor" />
+                  <circle cx="16" cy="15" r="0.8" fill="currentColor" />
+                  <circle cx="10" cy="19" r="0.8" fill="currentColor" />
                 </>
               )
             },
@@ -133,9 +139,14 @@ const RAGArchitectureDiagram = () => {
               text: 'Structured Data',
               iconPath: (
                 <>
-                  <ellipse cx="12" cy="5" rx="9" ry="3" />
+                  <ellipse cx="12" cy="5" rx="9" ry="3" fill="currentColor" fillOpacity="0.2" />
+                  <ellipse cx="12" cy="12" rx="9" ry="3" fill="currentColor" fillOpacity="0.15" />
+                  <ellipse cx="12" cy="19" rx="9" ry="3" fill="currentColor" fillOpacity="0.1" />
                   <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
                   <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                  <circle cx="8" cy="5" r="0.8" fill="currentColor" />
+                  <circle cx="16" cy="5" r="0.8" fill="currentColor" />
+                  <circle cx="12" cy="12" r="1" fill="currentColor" />
                 </>
               )
             },
@@ -143,7 +154,14 @@ const RAGArchitectureDiagram = () => {
               icon: 'zap',
               text: 'Application APIs',
               iconPath: (
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                <>
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="currentColor" fillOpacity="0.2" />
+                  <path d="M13 2l-2 8h6l-8 12 2-8H5l8-12z" fill="currentColor" fillOpacity="0.1" />
+                  <circle cx="13" cy="6" r="1" fill="currentColor" />
+                  <circle cx="11" cy="18" r="1" fill="currentColor" />
+                  <circle cx="8" cy="12" r="0.8" fill="currentColor" />
+                  <circle cx="16" cy="12" r="0.8" fill="currentColor" />
+                </>
               )
             }
           ].map((item, index) => (
@@ -182,7 +200,7 @@ const RAGArchitectureDiagram = () => {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  strokeWidth="1.5"
+                  strokeWidth="2"
                   style={{ color: '#2f2f2e' }}
                 >
                   {item.iconPath}
@@ -205,10 +223,14 @@ const RAGArchitectureDiagram = () => {
     {
       title: 'CONTEXTUAL DOCUMENT UNDERSTANDING PIPELINE',
       icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="rag-icon-outline">
-          <rect x="4" y="6" width="6" height="12" rx="1" ry="1" />
-          <rect x="14" y="6" width="6" height="12" rx="1" ry="1" />
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="rag-icon-outline">
+          <rect x="4" y="6" width="6" height="12" rx="1" ry="1" fill="currentColor" fillOpacity="0.2" />
+          <rect x="14" y="6" width="6" height="12" rx="1" ry="1" fill="currentColor" fillOpacity="0.2" />
           <line x1="10" y1="12" x2="14" y2="12" />
+          <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+          <path d="M10 10l2-2 2 2" fill="currentColor" fillOpacity="0.3" />
+          <line x1="6" y1="9" x2="8" y2="9" />
+          <line x1="16" y1="15" x2="18" y2="15" />
         </svg>
       ),
       content: (
@@ -305,11 +327,15 @@ const RAGArchitectureDiagram = () => {
     {
       title: 'CONTEXTUAL RAG AGENT',
       icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="rag-icon-outline">
-          <rect x="6" y="6" width="12" height="12" rx="2" ry="2" />
-          <circle cx="12" cy="12" r="3" />
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="rag-icon-outline">
+          <rect x="6" y="6" width="12" height="12" rx="2" ry="2" fill="currentColor" fillOpacity="0.1" />
+          <circle cx="12" cy="12" r="3" fill="currentColor" fillOpacity="0.2" />
           <line x1="12" y1="9" x2="12" y2="15" />
           <line x1="9" y1="12" x2="15" y2="12" />
+          <circle cx="9" cy="9" r="1" fill="currentColor" />
+          <circle cx="15" cy="9" r="1" fill="currentColor" />
+          <circle cx="9" cy="15" r="1" fill="currentColor" />
+          <circle cx="15" cy="15" r="1" fill="currentColor" />
         </svg>
       ),
       content: (
@@ -450,13 +476,17 @@ const RAGArchitectureDiagram = () => {
     {
       title: 'SPECIALIZED AGENTS BY DOMAIN',
       icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="rag-icon-outline">
-          <circle cx="9" cy="7" r="3" />
-          <circle cx="15" cy="7" r="2" />
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="rag-icon-outline">
+          <circle cx="9" cy="7" r="3" fill="currentColor" fillOpacity="0.2" />
+          <circle cx="15" cy="7" r="2" fill="currentColor" fillOpacity="0.3" />
           <line x1="9" y1="10" x2="9" y2="18" />
           <line x1="15" y1="9" x2="15" y2="18" />
+          <rect x="7" y="15" width="4" height="2" fill="currentColor" fillOpacity="0.15" />
+          <rect x="13" y="16" width="4" height="1" fill="currentColor" fillOpacity="0.15" />
           <line x1="6" y1="18" x2="12" y2="18" />
           <line x1="13" y1="18" x2="17" y2="18" />
+          <circle cx="9" cy="7" r="1" fill="currentColor" />
+          <circle cx="15" cy="7" r="0.8" fill="currentColor" />
         </svg>
       ),
       content: (
@@ -466,7 +496,13 @@ const RAGArchitectureDiagram = () => {
               name: 'Finance',
               iconPath: (
                 <>
-                  <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                  <line x1="12" y1="2" x2="12" y2="22" />
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                  <circle cx="9.5" cy="8.5" r="2.5" fill="currentColor" fillOpacity="0.2" />
+                  <circle cx="14.5" cy="15.5" r="2.5" fill="currentColor" fillOpacity="0.2" />
+                  <circle cx="12" cy="5" r="1" fill="currentColor" />
+                  <circle cx="12" cy="12" r="1.2" fill="currentColor" />
+                  <circle cx="12" cy="19" r="1" fill="currentColor" />
                 </>
               )
             },
@@ -477,6 +513,11 @@ const RAGArchitectureDiagram = () => {
                   <path d="M9 12 6.5 9.5a2.5 2.5 0 0 1 0-3.5 2.5 2.5 0 0 1 3.5 0L12 8l2-2a2.5 2.5 0 0 1 3.5 0 2.5 2.5 0 0 1 0 3.5L15 12" />
                   <path d="M12 12v8" />
                   <path d="M8 21h8" />
+                  <circle cx="8.5" cy="7.5" r="1.8" fill="currentColor" fillOpacity="0.2" />
+                  <circle cx="15.5" cy="7.5" r="1.8" fill="currentColor" fillOpacity="0.2" />
+                  <rect x="10" y="18" width="4" height="2" fill="currentColor" fillOpacity="0.15" />
+                  <circle cx="12" cy="8" r="1" fill="currentColor" />
+                  <circle cx="12" cy="15" r="0.8" fill="currentColor" />
                 </>
               )
             },
@@ -484,10 +525,13 @@ const RAGArchitectureDiagram = () => {
               name: 'Assurance',
               iconPath: (
                 <>
-                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
-                  <path d="M12 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-                  <path d="M8 12h8" />
-                  <path d="M6 15h12" />
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="currentColor" fillOpacity="0.15" />
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <path d="M9 12l2 2 4-4" />
+                  <circle cx="12" cy="8" r="2" fill="currentColor" fillOpacity="0.2" />
+                  <circle cx="12" cy="8" r="1" fill="currentColor" />
+                  <circle cx="8" cy="10" r="0.8" fill="currentColor" />
+                  <circle cx="16" cy="10" r="0.8" fill="currentColor" />
                 </>
               )
             },
@@ -541,7 +585,7 @@ const RAGArchitectureDiagram = () => {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
-                  strokeWidth="1.5"
+                  strokeWidth="2"
                   style={{ color: '#2f2f2e' }}
                 >
                   {item.iconPath}
