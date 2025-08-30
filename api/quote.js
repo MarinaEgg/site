@@ -128,23 +128,23 @@ export default async function handler(req, res) {
       `
     };
 
-    // Fonction d'envoi d'email adaptée
+    // Fonction d'envoi d'email avec Outlook uniquement
     async function sendEmail(emailContent) {
       try {
-        // Choisir le service selon les variables d'environnement
-        if (process.env.SENDGRID_API_KEY) {
-          return await sendEmailWithSendGrid(emailContent);
-        } else if (process.env.SMTP_HOST && process.env.SMTP_USER) {
-          return await sendEmailWithNodemailer(emailContent);
-        } else {
+        // Vérifier que la config Outlook est présente
+        if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
           // Mode développement - simulation
-          console.log('EMAIL SIMULÉ:', {
+          console.log('⚠️ CONFIG EMAIL MANQUANTE - EMAIL SIMULÉ:', {
             to: emailContent.to,
             subject: emailContent.subject,
             timestamp: new Date().toISOString()
           });
           return { success: true, messageId: 'simulated-' + Date.now() };
         }
+
+        // Utiliser Outlook/Nodemailer
+        return await sendEmailWithNodemailer(emailContent);
+        
       } catch (error) {
         console.error('Erreur envoi email:', error);
         return { success: false, error: error.message };
