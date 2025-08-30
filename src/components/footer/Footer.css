@@ -17,8 +17,8 @@
 @media (max-width: 768px) {
   .footer {
     padding: 2.5rem 1rem 1.5rem;
-    /* RÉDUCTION : Hauteur mobile pour bannière plus petite */
-    min-height: 250px;
+    /* AUGMENTÉ : Hauteur mobile pour bannière plus visible */
+    min-height: 300px;
   }
 }
 
@@ -28,7 +28,7 @@
   width: 100%;
 }
 
-/* NOUVEAU : Bannière en arrière-plan - AMÉLIORÉE */
+/* NOUVEAU : Bannière en arrière-plan - OPTIMISÉE POUR VISIBILITÉ */
 .footer-banner {
   position: absolute;
   top: 0;
@@ -39,19 +39,20 @@
   z-index: -1; /* Derrière le footer */
   overflow: hidden;
   display: flex;
-  align-items: center; /* NOUVEAU : Centre verticalement */
-  justify-content: center; /* NOUVEAU : Centre horizontalement */
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-banner img {
-  width: 100%;
-  /* MODIFICATION : Hauteur auto pour conserver les proportions */
-  height: auto;
-  max-height: 100%;
-  object-fit: contain; /* CHANGÉ : contain au lieu de cover */
+  width: 120%; /* AUGMENTÉ : Plus large pour plus d'impact */
+  height: 120%; /* AUGMENTÉ : Plus haut pour plus d'impact */
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover; /* CHANGÉ : cover pour remplir l'espace */
   object-position: center;
-  opacity: 0.8; /* Légère transparence pour l'effet ombre */
+  opacity: 0.95; /* AUGMENTÉ : Plus visible */
   transition: opacity 0.3s ease;
+  transform: scale(1.1); /* NOUVEAU : Légère augmentation de taille */
 }
 
 /* Responsive pour les bannières */
@@ -73,9 +74,10 @@
   }
   
   .footer-banner img {
-    /* MOBILE : Ajustements spécifiques */
-    max-width: 100%;
-    height: auto;
+    /* MOBILE : Ajustements pour plus de visibilité */
+    width: 110%;
+    height: 110%;
+    transform: scale(1.05);
   }
 }
 
@@ -331,7 +333,7 @@
 @media (max-width: 480px) {
   .footer {
     padding: 2rem 1rem 1.5rem;
-    min-height: 200px;
+    min-height: 250px; /* AUGMENTÉ : Plus d'espace pour la bannière */
   }
   
   .footer-container {
