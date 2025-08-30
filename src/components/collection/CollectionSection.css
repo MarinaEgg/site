@@ -1361,3 +1361,59 @@
     transform: translateX(12px);
   }
 }
+/*
+ Agent Cards Section Styles */
+.agent-cards-section {
+  margin: 6rem 0;
+  padding: 0 2rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.agent-cards-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.agent-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  align-items: start;
+}
+
+/* Responsive pour les agent cards */
+@media (max-width: 1200px) {
+  .agent-cards-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .agent-cards-section {
+    padding: 0 1rem;
+    margin: 4rem 0;
+  }
+  
+  .agent-cards-header {
+    margin-bottom: 2rem;
+  }
+  
+  .agent-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .agent-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
