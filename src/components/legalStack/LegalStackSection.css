@@ -354,8 +354,8 @@
   background-color: revert !important;
   border: revert !important;
   color: #2f2f2e !important;
-  fill: #2f2f2e !important;
   stroke: #2f2f2e !important;
+  /* Pas de fill forcé - laisse les SVG gérer leur propre fill */
 }
 
 /* Forcer le style du conteneur principal */
@@ -376,8 +376,8 @@
 /* Forcer les couleurs des SVG dans le rectangle clair */
 .legal-stack-section .rag-platform-container svg {
   color: #2f2f2e !important;
-  fill: #2f2f2e !important;
   stroke: #2f2f2e !important;
+  /* Pas de fill forcé - laisse les SVG gérer leur propre fill */
 }
 
 /* NOUVELLE SECTION RAG avec transitions identiques à deployment */
@@ -497,8 +497,8 @@
 .rag-content-container p,
 .rag-content-container svg {
   color: var(--rag-text-color, #2f2f2e) !important;
-  fill: var(--rag-text-color, #2f2f2e) !important;
   stroke: var(--rag-text-color, #2f2f2e) !important;
+  /* Pas de fill forcé - laisse les SVG gérer leur propre fill */
 }
 
 /* Grille de cartes RAG */
