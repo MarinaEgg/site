@@ -111,8 +111,17 @@
     },
     "modal": {
       "placeholder": "Complétez selon vos besoins...",
+      "typewriterText": "j'aurais besoin que mon agent...",
       "cancel": "Annuler",
-      "submit": "Je veux cet agent IA"
+      "contact": "Être contacté",
+      "back": "Retour",
+      "validate": "Valider",
+      "sending": "Envoi en cours...",
+      "close": "Fermer",
+      "emailLabel": "Adresse email de destination du devis",
+      "emailPlaceholder": "votre@email.com",
+      "privacyNotice": "Nous n'enverrons pas d'emails commerciaux, simplement votre devis personnalisé.",
+      "successMessage": "Votre demande a été envoyée avec succès !"
     },
     "roi": {
       "mainTitle": "EggOn vous accompagne partout.",
