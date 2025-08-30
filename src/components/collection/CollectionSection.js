@@ -388,7 +388,7 @@ const CollectionSection = () => {
               {t('collection.subtitle')}
             </p>
 
-            <button className="early-access-button">
+            <button className="early-access-button" onClick={() => window.location.href = '/contact'}>
               <div className="button-content">
                 <span className="arrow-left">→</span>
                 <span className="button-text">
