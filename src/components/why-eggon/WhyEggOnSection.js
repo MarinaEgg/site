@@ -441,21 +441,7 @@ const WhyEggOnSection = () => {
             ))}
           </div>
 
-          {/* Bouton CTA */}
-          <div className="why-eggon-cta-container">
-            <button
-              className="why-eggon-cta-button"
-              onClick={handleCtaClick}
-            >
-              <div className="button-content">
-                <span className="arrow-left">→</span>
-                <span className="button-text">
-                  {t('whyEggon.cta')}
-                  <span className="arrow-right">→</span>
-                </span>
-              </div>
-            </button>
-          </div>
+
         </div>
       </section>
     </>
