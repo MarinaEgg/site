@@ -156,6 +156,32 @@ const CollectionSection = () => {
 
     try {
       // Appel API pour envoyer la demande de devis
+      console.log('Envoi de la demande:', {
+        agentTitle: selectedPrompt?.title,
+        userRequirement: userRequirement.trim() || 'Demande de contact standard pour cet agent',
+        clientEmail: clientEmail.trim()
+      });
+
+      // Mode simulation pour le développement si l'API n'est pas disponible
+      if (process.env.NODE_ENV === 'development' && window.location.hostname === 'localhost') {
+        console.log('Mode simulation - API non disponible en développement');
+
+        // Simuler un délai d'envoi
+        await new Promise(resolve => setTimeout(resolve, 1000));
+
+        setShowEmailModal(false);
+        setShowSuccess(true);
+        setClientEmail('');
+
+        // Fermer le modal après 2 secondes
+        setTimeout(() => {
+          setIsDialogOpen(false);
+          setShowSuccess(false);
+        }, 2000);
+
+        return;
+      }
+
       const response = await fetch('/api/quote', {
         method: 'POST',
         headers: {
@@ -181,11 +207,17 @@ const CollectionSection = () => {
           setShowSuccess(false);
         }, 2000);
       } else {
-        throw new Error('Erreur lors de l\'envoi de la demande');
+        // Lire le message d'erreur de l'API
+        const errorData = await response.json().catch(() => ({}));
+        const errorMessage = errorData.message || `Erreur HTTP ${response.status}`;
+        throw new Error(errorMessage);
       }
     } catch (error) {
       console.error('Erreur:', error);
-      alert('Une erreur est survenue. Veuillez réessayer.');
+
+      // Afficher un message d'erreur plus informatif
+      const errorMessage = error.message || 'Une erreur est survenue. Veuillez réessayer.';
+      alert(`Erreur: ${errorMessage}`);
     } finally {
       setIsSubmitting(false);
     }
