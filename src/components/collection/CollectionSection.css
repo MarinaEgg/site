@@ -1395,7 +1395,7 @@
 }
 
 .user-input-textarea::placeholder {
-  color: rgba(252, 233, 107, 0.8);
+  color: #999; /* Placeholder en gris comme demandé */
   font-style: italic;
 }
 
@@ -1420,18 +1420,18 @@
 .email-modal-form .modal-input {
   width: 100%;
   padding: 12px 16px;
-  border: 2px solid #fce96b;
+  border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
   font-size: 16px;
   transition: border-color 0.2s ease;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
   color: #fafafa;
 }
 
 .email-modal-form .modal-input:focus {
   outline: none;
-  border-color: #f0d943;
-  box-shadow: 0 0 0 3px rgba(252, 233, 107, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
 }
 
 .email-modal-form .modal-input::placeholder {
@@ -1441,9 +1441,9 @@
 .privacy-notice-modal {
   margin-top: 15px;
   padding: 12px;
-  background-color: rgba(252, 233, 107, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
   border-radius: 6px;
-  border-left: 3px solid #fce96b;
+  border-left: 3px solid rgba(255, 255, 255, 0.2);
 }
 
 .privacy-text-modal {
