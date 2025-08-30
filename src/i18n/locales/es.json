@@ -118,9 +118,9 @@
       "validate": "Validar",
       "sending": "Enviando...",
       "close": "Cerrar",
-      "emailLabel": "Dirección de email para recibir la cotización",
+      "emailLabel": "Dirección de email",
       "emailPlaceholder": "su@email.com",
-      "privacyNotice": "No enviaremos emails comerciales, solo su cotización personalizada.",
+      "privacyNotice": "Será contactado por un miembro del equipo, sin emails de marketing.",
       "successMessage": "¡Su solicitud ha sido enviada con éxito!"
     },
     "roi": {
