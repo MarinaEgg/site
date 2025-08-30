@@ -326,8 +326,7 @@ export const NOGLabHero = () => {
     };
 
     const handlePartnerClick = () => {
-        // TODO: Ajouter la logique pour le formulaire ou la redirection
-        console.log('Design Partner button clicked');
+        window.location.href = '/contact';
     };
 
     return (
