@@ -1416,4 +1416,166 @@
     grid-template-columns: 1fr;
     gap: 1rem;
   }
+}/
+* Modal Form Styles */
+.modal-form {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fafafa;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.modal-textarea,
+.modal-input {
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.5rem;
+  color: #fafafa;
+  font-size: 0.9rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  resize: vertical;
+}
+
+.modal-textarea {
+  min-height: 80px;
+}
+
+.modal-input {
+  height: 45px;
+}
+
+.modal-textarea:focus,
+.modal-input:focus {
+  outline: none;
+  border-color: #fce96b;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 2px rgba(252, 233, 107, 0.2);
+}
+
+.modal-textarea::placeholder,
+.modal-input::placeholder {
+  color: rgba(250, 250, 250, 0.5);
+  font-style: italic;
+}
+
+.modal-textarea:disabled,
+.modal-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Privacy Notice in Modal */
+.privacy-notice-modal {
+  margin: 0.75rem 0;
+}
+
+.privacy-text-modal {
+  font-size: 0.75rem;
+  color: rgba(250, 250, 250, 0.6);
+  margin: 0;
+  line-height: 1.4;
+  font-style: italic;
+  text-align: center;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 0.25rem;
+  border-left: 2px solid rgba(34, 197, 94, 0.3);
+}
+
+/* Success Message in Modal */
+.success-message-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.success-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(34, 197, 94, 0.15);
+  border: 2px solid rgba(34, 197, 94, 0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #22c55e;
+  font-weight: bold;
+}
+
+.success-text {
+  font-size: 1rem;
+  color: #22c55e;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Enhanced Submit Button */
+.submit-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background: rgba(252, 233, 107, 0.3);
+}
+
+.cancel-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Validation Styles */
+.modal-textarea:invalid,
+.modal-input:invalid {
+  border-color: rgba(239, 68, 68, 0.5);
+}
+
+.modal-textarea:valid,
+.modal-input:valid {
+  border-color: rgba(34, 197, 94, 0.3);
+}
+
+/* Responsive Modal Form */
+@media (max-width: 768px) {
+  .modal-form {
+    gap: 1rem;
+  }
+  
+  .form-label {
+    font-size: 0.8rem;
+  }
+  
+  .modal-textarea,
+  .modal-input {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+  }
+  
+  .privacy-text-modal {
+    font-size: 0.7rem;
+    padding: 0.4rem;
+  }
+  
+  .success-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.25rem;
+  }
 }
