@@ -124,7 +124,6 @@ const CollectionSection = () => {
   };
 
   const handleQuoteRequest = () => {
-    if (!userRequirement.trim()) return;
     setShowEmailModal(true);
   };
 
@@ -143,7 +142,7 @@ const CollectionSection = () => {
         body: JSON.stringify({
           agentTitle: selectedPrompt?.title,
           agentDescription: selectedPrompt?.context + ' - ' + selectedPrompt?.body,
-          userRequirement: userRequirement.trim(),
+          userRequirement: userRequirement.trim() || 'Demande de devis standard pour cet agent',
           clientEmail: clientEmail.trim(),
           timestamp: new Date().toISOString()
         }),
@@ -152,7 +151,6 @@ const CollectionSection = () => {
       if (response.ok) {
         setShowEmailModal(false);
         setShowSuccess(true);
-        setUserRequirement('');
         setClientEmail('');
         
         // Fermer le modal après 2 secondes
@@ -663,7 +661,7 @@ const CollectionSection = () => {
                         <button
                           className="action-button submit-button"
                           onClick={handleQuoteRequest}
-                          disabled={isSubmitting || !userRequirement.trim()}
+                          disabled={isSubmitting}
                         >
                           {t('collection.modal.requestQuote', 'Demander un devis')} →
                         </button>
