@@ -1,7 +1,19 @@
-// API endpoint pour gérer les demandes de devis d'agents IA
-// Ce fichier peut être utilisé avec Next.js API routes ou un serveur Express
+// api/quote.js - API Route pour Vercel
+// Créer ce fichier dans : /api/quote.js (racine du projet)
+
+import { sendEmailWithNodemailer, sendEmailWithSendGrid } from '../src/api/email-config.js';
 
 export default async function handler(req, res) {
+  // Ajouter les headers CORS
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  // Gérer les requêtes OPTIONS (preflight)
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' });
   }
@@ -116,6 +128,29 @@ export default async function handler(req, res) {
       `
     };
 
+    // Fonction d'envoi d'email adaptée
+    async function sendEmail(emailContent) {
+      try {
+        // Choisir le service selon les variables d'environnement
+        if (process.env.SENDGRID_API_KEY) {
+          return await sendEmailWithSendGrid(emailContent);
+        } else if (process.env.SMTP_HOST && process.env.SMTP_USER) {
+          return await sendEmailWithNodemailer(emailContent);
+        } else {
+          // Mode développement - simulation
+          console.log('EMAIL SIMULÉ:', {
+            to: emailContent.to,
+            subject: emailContent.subject,
+            timestamp: new Date().toISOString()
+          });
+          return { success: true, messageId: 'simulated-' + Date.now() };
+        }
+      } catch (error) {
+        console.error('Erreur envoi email:', error);
+        return { success: false, error: error.message };
+      }
+    }
+
     // Envoyer les deux emails
     const [internalEmailResponse, clientEmailResponse] = await Promise.all([
       sendEmail(internalEmailContent),
@@ -145,44 +180,5 @@ export default async function handler(req, res) {
       message: 'Erreur interne du serveur',
       error: process.env.NODE_ENV === 'development' ? error.message : undefined
     });
-  }
-}
-
-// Fonction d'envoi d'email - à adapter selon votre service
-async function sendEmail(emailContent) {
-  try {
-    // Exemple avec Nodemailer (à configurer selon vos besoins)
-    /*
-    const nodemailer = require('nodemailer');
-    
-    const transporter = nodemailer.createTransporter({
-      host: process.env.SMTP_HOST,
-      port: process.env.SMTP_PORT,
-      secure: true,
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS
-      }
-    });
-
-    const info = await transporter.sendMail({
-      from: process.env.FROM_EMAIL,
-      to: emailContent.to,
-      subject: emailContent.subject,
-      html: emailContent.html
-    });
-
-    return { success: true, messageId: info.messageId };
-    */
-
-    // Pour le développement, simuler l'envoi
-    console.log('Email simulé envoyé à:', emailContent.to);
-    console.log('Sujet:', emailContent.subject);
-    
-    return { success: true, messageId: 'simulated-' + Date.now() };
-    
-  } catch (error) {
-    console.error('Erreur envoi email:', error);
-    return { success: false, error: error.message };
   }
 }
