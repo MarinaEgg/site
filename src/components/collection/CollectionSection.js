@@ -285,7 +285,7 @@ const CollectionSection = () => {
       title: t('collection.deployment.vpc.title', 'VPC / Azure'),
       description: t('collection.deployment.vpc.description', 'Your cloud environment'),
       features: ['Your cloud, your rules', 'Network isolation', 'Custom compliance', 'Direct control'],
-      recommended: true
+      recommended: false
     },
     {
       id: 'onprem',
@@ -461,14 +461,9 @@ const CollectionSection = () => {
                 {deploymentOptions.map((option, index) => (
                   <div
                     key={option.id}
-                    className={`deployment-card-dark ${option.recommended ? 'recommended' : ''}`}
+                    className="deployment-card-dark"
                     style={{ transitionDelay: `${index * 0.1}s` }}
                   >
-                    {option.recommended && (
-                      <div className="deployment-badge-dark">
-                        {t('collection.deployment.recommended', 'Recommended')}
-                      </div>
-                    )}
 
                     <div className="deployment-icon-dark">
                       {getDeploymentIcon(option.icon)}
