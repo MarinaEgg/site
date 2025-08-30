@@ -16,6 +16,10 @@ Allow: /formation
 Allow: /academy
 Allow: /platform
 Allow: /agents
+Allow: /rag
+Allow: /ia-contextuelle
+Allow: /traceability
+Allow: /explainable-ai
 
 # Pages multilingues
 Allow: /fr/
