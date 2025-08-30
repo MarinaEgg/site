@@ -1,4 +1,4 @@
-// api/email-config.js - VERSION ULTRA-SIMPLE qui DOIT fonctionner
+// api/email-config.js - VERSION CORRIGÉE avec la bonne méthode
 
 export async function sendEmailWithNodemailer(emailContent) {
   console.log('🔧 === EMAIL SIMPLE VERSION ===');
@@ -6,12 +6,13 @@ export async function sendEmailWithNodemailer(emailContent) {
   try {
     console.log('📦 Import nodemailer simple...');
     
-    // 🚀 MÉTHODE LA PLUS SIMPLE : Require classique dans une fonction async
     const nodemailer = eval('require')('nodemailer');
     console.log('✅ Nodemailer importé via require');
+    console.log('🔍 Méthodes disponibles:', Object.getOwnPropertyNames(nodemailer));
     
+    // 🚀 CORRECTION CRITIQUE : La méthode s'appelle createTransport, pas createTransporter !
     console.log('🚛 Création transporteur...');
-    const transporter = nodemailer.createTransporter({
+    const transporter = nodemailer.createTransport({
       service: 'gmail', // 🔧 Utilisation du service Gmail directement
       auth: {
         user: process.env.SMTP_USER,
@@ -54,7 +55,7 @@ export async function sendEmailWithNodemailer(emailContent) {
   }
 }
 
-// 🔄 VERSION ALTERNATIVE avec import moderne
+// 🔄 VERSION ALTERNATIVE avec import moderne - ÉGALEMENT CORRIGÉE
 export async function sendEmailModern(emailContent) {
   console.log('🔧 === EMAIL MODERN VERSION ===');
   
@@ -62,7 +63,7 @@ export async function sendEmailModern(emailContent) {
     // Import avec await import()
     const nodemailerModule = await import('nodemailer');
     
-    // Essayer différentes façons d'accéder à createTransporter
+    // Essayer différentes façons d'accéder à createTransport (pas createTransporter)
     let nodemailer;
     if (nodemailerModule.default) {
       nodemailer = nodemailerModule.default;
@@ -71,8 +72,10 @@ export async function sendEmailModern(emailContent) {
     }
     
     console.log('✅ Nodemailer loaded');
+    console.log('🔍 Available methods:', Object.getOwnPropertyNames(nodemailer));
     
-    const transporter = nodemailer.createTransporter({
+    // 🚀 CORRECTION : createTransport au lieu de createTransporter
+    const transporter = nodemailer.createTransport({
       host: 'smtp.gmail.com',
       port: 587,
       secure: false,
@@ -98,6 +101,26 @@ export async function sendEmailModern(emailContent) {
     
   } catch (error) {
     console.error('❌ Modern method failed:', error.message);
+    return { success: false, error: error.message };
+  }
+}
+
+// 🧪 VERSION DE TEST POUR DEBUGGING
+export async function debugNodemailer() {
+  console.log('🧪 === DEBUG NODEMAILER ===');
+  
+  try {
+    const nodemailer = eval('require')('nodemailer');
+    console.log('📋 Nodemailer object type:', typeof nodemailer);
+    console.log('📋 Nodemailer keys:', Object.keys(nodemailer));
+    console.log('📋 Nodemailer methods:', Object.getOwnPropertyNames(nodemailer));
+    console.log('📋 Has createTransport?', typeof nodemailer.createTransport);
+    console.log('📋 Has createTransporter?', typeof nodemailer.createTransporter);
+    
+    return { success: true, debug: 'Check logs for details' };
+    
+  } catch (error) {
+    console.error('❌ Debug failed:', error.message);
     return { success: false, error: error.message };
   }
 }
