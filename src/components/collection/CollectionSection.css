@@ -1580,3 +1580,117 @@
     font-size: 1.25rem;
   }
 }
+/* Styles pour le formulaire email modal */
+.email-modal-form {
+  margin: 20px 0;
+}
+
+.email-modal-form .form-group {
+  margin-bottom: 20px;
+}
+
+.email-modal-form .form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #2f2f2e;
+  font-size: 14px;
+}
+
+.email-modal-form .modal-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.2s ease;
+  background-color: #fff;
+}
+
+.email-modal-form .modal-input:focus {
+  outline: none;
+  border-color: #fce96b;
+  box-shadow: 0 0 0 3px rgba(252, 233, 107, 0.1);
+}
+
+.privacy-notice-modal {
+  margin-top: 15px;
+  padding: 12px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border-left: 3px solid #fce96b;
+}
+
+.privacy-text-modal {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Styles pour les actions du modal */
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #e1e5e9;
+}
+
+.action-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 100px;
+}
+
+.cancel-button {
+  background-color: #f8f9fa;
+  color: #666;
+  border: 1px solid #e1e5e9;
+}
+
+.cancel-button:hover:not(:disabled) {
+  background-color: #e9ecef;
+  color: #495057;
+}
+
+.submit-button {
+  background-color: #fce96b;
+  color: #2f2f2e;
+  border: 1px solid #fce96b;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #f0d943;
+  transform: translateY(-1px);
+}
+
+.submit-button:disabled,
+.cancel-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Animation pour le changement de contenu du modal */
+.modal-form,
+.email-modal-form {
+  animation: fadeInUp 0.3s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
