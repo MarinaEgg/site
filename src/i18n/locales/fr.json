@@ -118,9 +118,9 @@
       "validate": "Valider",
       "sending": "Envoi en cours...",
       "close": "Fermer",
-      "emailLabel": "Adresse email de destination du devis",
+      "emailLabel": "Adresse email",
       "emailPlaceholder": "votre@email.com",
-      "privacyNotice": "Nous n'enverrons pas d'emails commerciaux, simplement votre devis personnalisé.",
+      "privacyNotice": "Vous serez recontacté par un membre de l'équipe, sans email marketing.",
       "successMessage": "Votre demande a été envoyée avec succès !"
     },
     "roi": {
