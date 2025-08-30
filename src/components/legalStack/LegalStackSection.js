@@ -121,7 +121,7 @@ const RAGArchitectureDiagram = () => {
               text: 'Unstructured Data',
               iconPath: (
                 <>
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" fill="none" />
                   <polyline points="14,2 14,8 20,8" />
                   <path d="M8 10l2 1-1 2 3-1" />
                   <path d="M8 14l3-1 1 2-2 1" />
@@ -134,7 +134,7 @@ const RAGArchitectureDiagram = () => {
               text: 'Structured Data',
               iconPath: (
                 <>
-                  <rect x="3" y="5" width="18" height="14" rx="2" ry="2" />
+                  <rect x="3" y="5" width="18" height="14" rx="2" ry="2" fill="none" />
                   <line x1="3" y1="10" x2="21" y2="10" />
                   <line x1="3" y1="14" x2="21" y2="14" />
                   <line x1="8" y1="5" x2="8" y2="19" />
@@ -499,7 +499,7 @@ const RAGArchitectureDiagram = () => {
               name: 'Assurance',
               iconPath: (
                 <>
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="none" />
                   <path d="M9 12l2 2 4-4" />
                 </>
               )
@@ -509,8 +509,8 @@ const RAGArchitectureDiagram = () => {
               iconPath: (
                 <>
                   <path d="M3 21h18" />
-                  <path d="M5 21V7l8-4v18" />
-                  <path d="M19 21V11l-6-4" />
+                  <path d="M5 21V7l8-4v18" fill="none" />
+                  <path d="M19 21V11l-6-4" fill="none" />
                   <path d="M9 9v.01" />
                   <path d="M9 12v.01" />
                   <path d="M9 15v.01" />
