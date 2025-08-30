@@ -54,21 +54,59 @@ export const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      // TODO: Remplacer par votre endpointt d'email
       console.log('Form data to send:', formData);
 
-      // Simulation d'envoi
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Mode simulation pour le développement si l'API n'est pas disponible
+      if (process.env.NODE_ENV === 'development' && window.location.hostname === 'localhost') {
+        console.log('Mode simulation - API non disponible en développement');
+        
+        // Simuler un délai d'envoi
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          subject: '',
+          message: ''
+        });
+        return;
+      }
 
-      setSubmitStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        subject: '',
-        message: ''
+      const response = await fetch('/api/quote', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          agentTitle: 'Contact Form',
+          agentDescription: `Contact from: ${formData.name} (${formData.company || 'No company'})`,
+          userRequirement: `Subject: ${formData.subject}\n\nMessage: ${formData.message}`,
+          clientEmail: formData.email,
+          contactName: formData.name,
+          contactCompany: formData.company,
+          contactSubject: formData.subject,
+          timestamp: new Date().toISOString()
+        }),
       });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          subject: '',
+          message: ''
+        });
+      } else {
+        const errorData = await response.json().catch(() => ({}));
+        const errorMessage = errorData.message || `Erreur HTTP ${response.status}`;
+        throw new Error(errorMessage);
+      }
     } catch (error) {
+      console.error('Erreur:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
