@@ -130,38 +130,26 @@ const CollectionSection = () => {
     </svg>
   );
 
-  // Icônes de déploiement avec style "outline rempli"
+  // Icônes de déploiement simplifiées - style "outline rempli" léger
   const DeploymentCloudIcon = () => (
     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" fill="currentColor" fillOpacity="0.15"/>
-      <circle cx="6" cy="14" r="1.5" fill="currentColor"/>
-      <circle cx="18" cy="15" r="1" fill="currentColor"/>
-      <circle cx="12" cy="17" r="0.8" fill="currentColor"/>
-      <path d="M10 12c1-1 3-1 4 0" stroke="currentColor" strokeWidth="1.5"/>
+      <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" fill="currentColor" fillOpacity="0.1"/>
     </svg>
   );
   
   const DeploymentAzureIcon = () => (
     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M5.5 5L8.5 2L16.5 12L13.5 22L5.5 18L2 12L5.5 5Z" fill="currentColor" fillOpacity="0.2"/>
-      <path d="M8.5 2L22 8L18.5 18L13.5 22L16.5 12L8.5 2Z" fill="currentColor" fillOpacity="0.1"/>
-      <circle cx="8.5" cy="6" r="1" fill="currentColor"/>
-      <circle cx="16" cy="10" r="1.2" fill="currentColor"/>
-      <circle cx="12" cy="18" r="0.8" fill="currentColor"/>
-      <line x1="10" y1="8" x2="14" y2="12"/>
+      <path d="M5.5 5L8.5 2L16.5 12L13.5 22L5.5 18L2 12L5.5 5Z" fill="currentColor" fillOpacity="0.15"/>
+      <path d="M8.5 2L22 8L18.5 18L13.5 22L16.5 12L8.5 2Z" fill="currentColor" fillOpacity="0.05"/>
     </svg>
   );
   
   const DeploymentServerIcon = () => (
     <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <rect x="2" y="2" width="20" height="8" rx="2" ry="2" fill="currentColor" fillOpacity="0.15"/>
-      <rect x="2" y="14" width="20" height="8" rx="2" ry="2" fill="currentColor" fillOpacity="0.2"/>
+      <rect x="2" y="2" width="20" height="8" rx="2" ry="2" fill="currentColor" fillOpacity="0.1"/>
+      <rect x="2" y="14" width="20" height="8" rx="2" ry="2" fill="currentColor" fillOpacity="0.1"/>
       <line x1="6" y1="6" x2="6.01" y2="6"/>
       <line x1="6" y1="18" x2="6.01" y2="18"/>
-      <circle cx="6" cy="6" r="1" fill="currentColor"/>
-      <circle cx="6" cy="18" r="1" fill="currentColor"/>
-      <circle cx="18" cy="6" r="0.8" fill="currentColor"/>
-      <circle cx="18" cy="18" r="0.8" fill="currentColor"/>
     </svg>
   );
   
@@ -410,13 +398,7 @@ const CollectionSection = () => {
               <div className="benefits-item">
                 <div className="benefit-icon-circle">
                   <svg className="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z" fill="currentColor" fillOpacity="0.2"/>
-                    <circle cx="12" cy="12" r="2" fill="currentColor" fillOpacity="0.3"/>
-                    <circle cx="12" cy="8" r="1" fill="currentColor"/>
-                    <circle cx="8" cy="10" r="0.8" fill="currentColor"/>
-                    <circle cx="16" cy="10" r="0.8" fill="currentColor"/>
-                    <circle cx="10" cy="16" r="0.8" fill="currentColor"/>
-                    <circle cx="14" cy="16" r="0.8" fill="currentColor"/>
+                    <path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z" fill="currentColor" fillOpacity="0.1"/>
                   </svg>
                 </div>
                 <span>{t('collection.benefits.item1')}</span>
@@ -424,14 +406,10 @@ const CollectionSection = () => {
               <div className="benefits-item">
                 <div className="benefit-icon-circle">
                   <svg className="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <circle cx="9" cy="7" r="4" fill="currentColor" fillOpacity="0.2"/>
-                    <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" fill="currentColor" fillOpacity="0.1"/>
-                    <circle cx="16" cy="11" r="3" fill="currentColor" fillOpacity="0.15"/>
+                    <circle cx="9" cy="7" r="4" fill="currentColor" fillOpacity="0.1"/>
+                    <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
+                    <circle cx="16" cy="11" r="3" fill="currentColor" fillOpacity="0.1"/>
                     <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-                    <circle cx="9" cy="7" r="1.5" fill="currentColor"/>
-                    <circle cx="16" cy="11" r="1" fill="currentColor"/>
-                    <circle cx="7" cy="19" r="0.8" fill="currentColor"/>
-                    <circle cx="11" cy="19" r="0.8" fill="currentColor"/>
                   </svg>
                 </div>
                 <span>{t('collection.benefits.item2')}</span>
@@ -439,14 +417,9 @@ const CollectionSection = () => {
               <div className="benefits-item">
                 <div className="benefit-icon-circle">
                   <svg className="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" fill="currentColor" fillOpacity="0.15"/>
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" fill="currentColor" fillOpacity="0.1"/>
                     <circle cx="12" cy="16" r="1"/>
-                    <path d="M7 11V7A5 5 0 0 1 17 7V11" fill="currentColor" fillOpacity="0.1"/>
-                    <circle cx="12" cy="16" r="2" fill="currentColor" fillOpacity="0.2"/>
-                    <circle cx="12" cy="16" r="1" fill="currentColor"/>
-                    <circle cx="8" cy="19" r="0.8" fill="currentColor"/>
-                    <circle cx="16" cy="19" r="0.8" fill="currentColor"/>
-                    <circle cx="12" cy="7" r="1" fill="currentColor"/>
+                    <path d="M7 11V7A5 5 0 0 1 17 7V11"/>
                   </svg>
                 </div>
                 <span>{t('collection.benefits.item3')}</span>
@@ -454,12 +427,7 @@ const CollectionSection = () => {
               <div className="benefits-item">
                 <div className="benefit-icon-circle">
                   <svg className="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="currentColor" fillOpacity="0.2"/>
-                    <path d="M13 6l-2 4h4l-1 4" fill="currentColor" fillOpacity="0.1"/>
-                    <circle cx="13" cy="6" r="1" fill="currentColor"/>
-                    <circle cx="11" cy="18" r="1" fill="currentColor"/>
-                    <circle cx="8" cy="12" r="0.8" fill="currentColor"/>
-                    <circle cx="16" cy="12" r="0.8" fill="currentColor"/>
+                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="currentColor" fillOpacity="0.1"/>
                   </svg>
                 </div>
                 <span>{t('collection.benefits.item4')}</span>
@@ -475,12 +443,7 @@ const CollectionSection = () => {
                     <path d="M18 12H22"/>
                     <path d="M4.93 19.07L7.76 16.24"/>
                     <path d="M16.24 7.76L19.07 4.93"/>
-                    <circle cx="12" cy="12" r="3" fill="currentColor" fillOpacity="0.2"/>
-                    <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
-                    <circle cx="12" cy="4" r="0.8" fill="currentColor"/>
-                    <circle cx="12" cy="20" r="0.8" fill="currentColor"/>
-                    <circle cx="4" cy="12" r="0.8" fill="currentColor"/>
-                    <circle cx="20" cy="12" r="0.8" fill="currentColor"/>
+                    <circle cx="12" cy="12" r="3" fill="currentColor" fillOpacity="0.1"/>
                   </svg>
                 </div>
                 <span>{t('collection.benefits.item5')}</span>
