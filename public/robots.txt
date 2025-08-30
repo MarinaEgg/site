@@ -1,3 +1,69 @@
-Sitemap: https://jolienhoop.com/sitemap.xml
+# EggOn Technology - Robots.txt optimisé pour Sitelinks Google
+# https://eggon-technology.com/robots.txt
+
 User-agent: *
-Disallow: /test/
+Allow: /
+
+# Pages principales à indexer en priorité
+Allow: /nog-lab
+Allow: /learn
+Allow: /contact
+
+# Routes alternatives autorisées
+Allow: /lab
+Allow: /laboratory
+Allow: /formation
+Allow: /academy
+Allow: /platform
+Allow: /agents
+
+# Pages multilingues
+Allow: /fr/
+Allow: /fr/nog-lab
+Allow: /fr/learn
+Allow: /fr/contact
+
+# Fichiers techniques autorisés
+Allow: /sitemap.xml
+Allow: /manifest.json
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.svg$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.webp$
+
+# Dossiers à exclure
+Disallow: /static/
+Disallow: /build/
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /public/static/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /api/
+Disallow: /tmp/
+Disallow: /.git/
+Disallow: /.env
+
+# Fichiers à exclure
+Disallow: *.json$
+Disallow: *.xml$ 
+Disallow: *.txt$
+Disallow: *.log$
+
+# Exceptions pour les fichiers importants
+Allow: /sitemap.xml
+Allow: /manifest.json
+Allow: /browserconfig.xml
+
+# Crawl-delay pour éviter la surcharge
+Crawl-delay: 1
+
+# Sitemap principal
+Sitemap: https://eggon-technology.com/sitemap.xml
+
+# Sitemaps spécifiques (à ajouter plus tard)
+# Sitemap: https://eggon-technology.com/sitemap-pages.xml
+# Sitemap: https://eggon-technology.com/sitemap-images.xml
