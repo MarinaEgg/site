@@ -118,9 +118,9 @@
       "validate": "Validate",
       "sending": "Sending...",
       "close": "Close",
-      "emailLabel": "Email address for quote delivery",
+      "emailLabel": "Email address",
       "emailPlaceholder": "your@email.com",
-      "privacyNotice": "We won't send commercial emails, just your personalized quote.",
+      "privacyNotice": "You will be contacted by a team member, without marketing emails.",
       "successMessage": "Your request has been sent successfully!"
     },
     "roi": {
