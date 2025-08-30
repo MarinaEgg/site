@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import AgentCard from './AgentCard';
 import './CollectionSection.css';
 
 const CollectionSection = () => {
@@ -326,6 +327,41 @@ const CollectionSection = () => {
                   <div className="card-body">{prompt.body}</div>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* NOUVELLE SECTION AGENT CARDS - Cartes avec demande de devis */}
+          <div className="agent-cards-section">
+            <div className="agent-cards-header">
+              <h3 className="section-label">
+                {t('collection.agentCards.sectionLabel', 'AGENTS IA PERSONNALISABLES')}
+              </h3>
+              <h2 className="collection-title">
+                {t('collection.agentCards.title', 'Créez votre agent sur mesure')}
+              </h2>
+              <p className="collection-intro">
+                {t('collection.agentCards.subtitle', 'Décrivez vos besoins spécifiques et obtenez un devis personnalisé pour votre agent IA.')}
+              </p>
+            </div>
+            
+            <div className="agent-cards-grid">
+              <AgentCard
+                title={t('collection.agentCards.legal.title', 'Agent Juridique Spécialisé')}
+                description={t('collection.agentCards.legal.description', 'Analyse de contrats, recherche jurisprudentielle et conseil juridique automatisé pour votre domaine d\'expertise.')}
+                onQuoteRequest={(data) => console.log('Demande de devis:', data)}
+              />
+              
+              <AgentCard
+                title={t('collection.agentCards.finance.title', 'Agent Financier Intelligent')}
+                description={t('collection.agentCards.finance.description', 'Analyse de risques, reporting automatisé et aide à la décision financière basée sur vos données métier.')}
+                onQuoteRequest={(data) => console.log('Demande de devis:', data)}
+              />
+              
+              <AgentCard
+                title={t('collection.agentCards.compliance.title', 'Agent Conformité Réglementaire')}
+                description={t('collection.agentCards.compliance.description', 'Surveillance réglementaire, audit automatisé et mise en conformité continue selon votre secteur d\'activité.')}
+                onQuoteRequest={(data) => console.log('Demande de devis:', data)}
+              />
             </div>
           </div>
 
