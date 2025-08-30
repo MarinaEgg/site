@@ -1,6 +1,6 @@
 .footer {
   width: 100%;
-  /* MODIFICATION : Même transparence que le headerr */
+  /* MODIFICATION : Même transparence que le header */
   background: rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
