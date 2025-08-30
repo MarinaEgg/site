@@ -1,4 +1,4 @@
-// api/quote.js - API Route corrigée pour Vercel
+// api/quote.js - API Route améliorée avec débogage détaillé
 
 import { sendEmailWithNodemailer } from './email-config.js';
 
@@ -17,12 +17,30 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: 'Method not allowed' });
   }
 
+  // 🔍 LOG INITIAL DE DÉBOGAGE
+  console.log('🚀 === DÉBUT TRAITEMENT DEMANDE QUOTE ===');
+  console.log('📝 Body reçu:', req.body);
+  console.log('🔧 Variables env:', {
+    SMTP_HOST: process.env.SMTP_HOST || 'NON_DEFINI',
+    SMTP_USER: process.env.SMTP_USER || 'NON_DEFINI',
+    SMTP_PASS: process.env.SMTP_PASS ? 'DÉFINI' : 'NON_DEFINI',
+    INTERNAL_EMAIL: process.env.INTERNAL_EMAIL || 'NON_DEFINI',
+    FROM_EMAIL: process.env.FROM_EMAIL || 'NON_DEFINI',
+    FROM_NAME: process.env.FROM_NAME || 'NON_DEFINI',
+    NODE_ENV: process.env.NODE_ENV || 'NON_DEFINI'
+  });
+
   try {
-    // ✅ CORRECTION : Suppression du paramètre "email" qui n'existe pas
     const { agentTitle, agentDescription, userRequirement, clientEmail } = req.body;
 
-    // Validation des données
+    // 📋 VALIDATION DÉTAILLÉE
+    console.log('📋 Validation des données...');
     if (!agentTitle || !userRequirement || !clientEmail) {
+      console.error('❌ Données manquantes:', { 
+        agentTitle: !!agentTitle, 
+        userRequirement: !!userRequirement, 
+        clientEmail: !!clientEmail 
+      });
       return res.status(400).json({ 
         message: 'Données manquantes: agentTitle, userRequirement et clientEmail sont requis' 
       });
@@ -31,17 +49,20 @@ export default async function handler(req, res) {
     // Validation format email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(clientEmail)) {
+      console.error('❌ Format email invalide:', clientEmail);
       return res.status(400).json({ 
         message: 'Format d\'email client invalide' 
       });
     }
 
-    // ✅ CORRECTION : Utiliser INTERNAL_EMAIL depuis les variables d'environnement
+    console.log('✅ Validation réussie');
+
     const internalEmail = process.env.INTERNAL_EMAIL || 'm.jacquet@eggon-technology.com';
+    console.log('📧 Email interne:', internalEmail);
 
     // Email pour l'équipe EggOn (notification interne)
     const internalEmailContent = {
-      to: internalEmail, // ✅ CORRIGÉ
+      to: internalEmail,
       subject: `🤖 Nouvelle demande de devis - Agent IA: ${agentTitle}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -142,13 +163,17 @@ export default async function handler(req, res) {
       `
     };
 
-    // Fonction d'envoi d'email simplifiée
-    async function sendEmail(emailContent) {
+    // 🚀 FONCTION D'ENVOI AMÉLIORÉE AVEC LOGS DÉTAILLÉS
+    async function sendEmailSafely(emailContent, type) {
+      console.log(`📤 === Tentative envoi ${type} ===`);
+      console.log(`📧 Destinataire: ${emailContent.to}`);
+      console.log(`📌 Sujet: ${emailContent.subject}`);
+
       try {
-        // Vérifier la configuration
+        // Vérifier la configuration AVANT d'appeler sendEmailWithNodemailer
         if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASS) {
-          console.log('⚠️ Configuration email manquante - Mode simulation');
-          console.log('EMAIL SIMULÉ:', {
+          console.log(`⚠️ Configuration SMTP manquante - Mode simulation pour ${type}`);
+          console.log(`📋 EMAIL SIMULÉ (${type}):`, {
             to: emailContent.to,
             subject: emailContent.subject,
             timestamp: new Date().toISOString()
@@ -156,47 +181,105 @@ export default async function handler(req, res) {
           return { success: true, messageId: 'simulated-' + Date.now(), simulated: true };
         }
 
-        // Envoi réel
-        return await sendEmailWithNodemailer(emailContent);
+        console.log(`🔌 Configuration SMTP OK, tentative envoi réel ${type}...`);
+        
+        // Envoi réel avec la fonction externe
+        const result = await sendEmailWithNodemailer(emailContent);
+        
+        if (result.success) {
+          console.log(`✅ ${type} envoyé avec succès!`, result.messageId);
+        } else {
+          console.error(`❌ Échec ${type}:`, result.error);
+        }
+        
+        return result;
         
       } catch (error) {
-        console.error('Erreur envoi email:', error);
+        console.error(`💥 Exception lors de l'envoi ${type}:`, error.message);
+        console.error(`🔍 Stack trace:`, error.stack);
         return { success: false, error: error.message };
       }
     }
 
-    // Envoyer les deux emails en parallèle
-    console.log('📧 Envoi des emails en cours...');
+    // 📬 ENVOI DES EMAILS
+    console.log('📬 === DÉBUT ENVOI DES EMAILS ===');
     
-    const [internalEmailResponse, clientEmailResponse] = await Promise.all([
-      sendEmail(internalEmailContent),
-      sendEmail(clientEmailContent)
+    const [internalEmailResponse, clientEmailResponse] = await Promise.allSettled([
+      sendEmailSafely(internalEmailContent, 'EMAIL INTERNE'),
+      sendEmailSafely(clientEmailContent, 'EMAIL CLIENT')
     ]);
-    
-    if (internalEmailResponse.success && clientEmailResponse.success) {
+
+    // 📊 ANALYSE DES RÉSULTATS
+    console.log('📊 === RÉSULTATS ENVOI ===');
+    console.log('Internal result:', internalEmailResponse);
+    console.log('Client result:', clientEmailResponse);
+
+    const internalSuccess = internalEmailResponse.status === 'fulfilled' && internalEmailResponse.value.success;
+    const clientSuccess = clientEmailResponse.status === 'fulfilled' && clientEmailResponse.value.success;
+
+    if (internalSuccess && clientSuccess) {
+      console.log('🎉 === SUCCÈS COMPLET ===');
       console.log('✅ Demande de devis traitée avec succès:', {
         agentTitle,
         clientEmail,
         timestamp: new Date().toISOString(),
-        simulated: internalEmailResponse.simulated || false
+        simulated: internalEmailResponse.value.simulated || clientEmailResponse.value.simulated || false
       });
 
       return res.status(200).json({ 
         message: 'Demande de devis envoyée avec succès',
         success: true,
-        simulated: internalEmailResponse.simulated || false
+        simulated: internalEmailResponse.value.simulated || clientEmailResponse.value.simulated || false
       });
     } else {
-      throw new Error('Erreur lors de l\'envoi des emails');
+      // 📝 LOG DÉTAILLÉ DES ERREURS
+      console.error('💥 === ÉCHEC ENVOI ===');
+      if (!internalSuccess) {
+        console.error('❌ Email interne failed:', 
+          internalEmailResponse.status === 'rejected' 
+            ? internalEmailResponse.reason 
+            : internalEmailResponse.value
+        );
+      }
+      if (!clientSuccess) {
+        console.error('❌ Email client failed:', 
+          clientEmailResponse.status === 'rejected' 
+            ? clientEmailResponse.reason 
+            : clientEmailResponse.value
+        );
+      }
+
+      const errorMessage = !internalSuccess && !clientSuccess 
+        ? 'Erreur lors de l\'envoi des deux emails'
+        : !internalSuccess 
+          ? 'Erreur lors de l\'envoi de l\'email interne'
+          : 'Erreur lors de l\'envoi de l\'email client';
+
+      throw new Error(errorMessage);
     }
 
   } catch (error) {
-    console.error('❌ Erreur API quote:', error);
+    console.error('💥 === ERREUR GÉNÉRALE API ===');
+    console.error('Message:', error.message);
+    console.error('Stack:', error.stack);
+    
+    const isDev = process.env.NODE_ENV === 'development';
+    
     return res.status(500).json({ 
       message: 'Erreur lors du traitement de votre demande',
       success: false,
-      error: process.env.NODE_ENV === 'development' ? error.message : 'Erreur interne'
+      error: isDev ? error.message : 'Erreur interne',
+      // 🔍 Infos de debug en développement
+      debug: isDev ? {
+        timestamp: new Date().toISOString(),
+        stack: error.stack,
+        env: {
+          SMTP_HOST: process.env.SMTP_HOST || 'NON_DEFINI',
+          SMTP_USER: process.env.SMTP_USER || 'NON_DEFINI',
+          hasPass: !!process.env.SMTP_PASS,
+          INTERNAL_EMAIL: process.env.INTERNAL_EMAIL || 'NON_DEFINI'
+        }
+      } : undefined
     });
   }
 }
-
