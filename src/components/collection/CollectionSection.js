@@ -10,6 +10,7 @@ const CollectionSection = () => {
   const [selectedPrompt, setSelectedPrompt] = useState(null);
   const [editedPrompt, setEditedPrompt] = useState('');
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [showEmailModal, setShowEmailModal] = useState(false);
   const [clientEmail, setClientEmail] = useState('');
   const [userRequirement, setUserRequirement] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -102,19 +103,33 @@ const CollectionSection = () => {
     setClientEmail('');
     setUserRequirement('');
     setShowSuccess(false);
+    setShowEmailModal(false);
     setIsDialogOpen(true);
   };
 
   const handleCloseDialog = () => {
     setIsDialogOpen(false);
+    setShowEmailModal(false);
     setTimeout(() => {
       setSelectedPrompt(null);
       setEditedPrompt('');
+      setClientEmail('');
+      setUserRequirement('');
     }, 300);
   };
 
-  const handleSubmit = async () => {
-    if (!clientEmail.trim() || !userRequirement.trim()) return;
+  const handleCancel = () => {
+    setUserRequirement('');
+    setShowEmailModal(false);
+  };
+
+  const handleQuoteRequest = () => {
+    if (!userRequirement.trim()) return;
+    setShowEmailModal(true);
+  };
+
+  const handleEmailSubmit = async () => {
+    if (!clientEmail.trim()) return;
     
     setIsSubmitting(true);
     
@@ -130,12 +145,12 @@ const CollectionSection = () => {
           agentDescription: selectedPrompt?.context + ' - ' + selectedPrompt?.body,
           userRequirement: userRequirement.trim(),
           clientEmail: clientEmail.trim(),
-          timestamp: new Date().toISOString(),
-          email: 'm.jacquet@eggon.fr'
+          timestamp: new Date().toISOString()
         }),
       });
 
       if (response.ok) {
+        setShowEmailModal(false);
         setShowSuccess(true);
         setUserRequirement('');
         setClientEmail('');
@@ -586,7 +601,7 @@ const CollectionSection = () => {
                     />
                   </div>
                   
-                  {!showSuccess ? (
+                  {!showSuccess && !showEmailModal ? (
                     <div className="modal-form">
                       <div className="form-group">
                         <label className="form-label">
@@ -601,10 +616,12 @@ const CollectionSection = () => {
                           disabled={isSubmitting}
                         />
                       </div>
-                      
+                    </div>
+                  ) : showEmailModal && !showSuccess ? (
+                    <div className="email-modal-form">
                       <div className="form-group">
                         <label className="form-label">
-                          {t('collection.modal.emailLabel', 'Votre adresse email')}
+                          {t('collection.modal.emailLabel', 'Adresse email de destination du devis')}
                         </label>
                         <input
                           type="email"
@@ -614,6 +631,7 @@ const CollectionSection = () => {
                           className="modal-input"
                           disabled={isSubmitting}
                           required
+                          autoFocus
                         />
                       </div>
                       
@@ -633,23 +651,53 @@ const CollectionSection = () => {
                   )}
                   
                   <div className="modal-actions">
-                    <button
-                      className="action-button cancel-button"
-                      onClick={handleCloseDialog}
-                      disabled={isSubmitting}
-                    >
-                      {t('collection.modal.cancel', 'Annuler')}
-                    </button>
-                    {!showSuccess && (
+                    {!showSuccess && !showEmailModal && (
+                      <>
+                        <button
+                          className="action-button cancel-button"
+                          onClick={handleCancel}
+                          disabled={isSubmitting}
+                        >
+                          {t('collection.modal.cancel', 'Annuler')}
+                        </button>
+                        <button
+                          className="action-button submit-button"
+                          onClick={handleQuoteRequest}
+                          disabled={isSubmitting || !userRequirement.trim()}
+                        >
+                          {t('collection.modal.requestQuote', 'Demander un devis')} →
+                        </button>
+                      </>
+                    )}
+                    
+                    {showEmailModal && !showSuccess && (
+                      <>
+                        <button
+                          className="action-button cancel-button"
+                          onClick={() => setShowEmailModal(false)}
+                          disabled={isSubmitting}
+                        >
+                          {t('collection.modal.back', 'Retour')}
+                        </button>
+                        <button
+                          className="action-button submit-button"
+                          onClick={handleEmailSubmit}
+                          disabled={isSubmitting || !clientEmail.trim()}
+                        >
+                          {isSubmitting 
+                            ? t('collection.modal.sending', 'Envoi en cours...') 
+                            : t('collection.modal.validate', 'Valider')
+                          } →
+                        </button>
+                      </>
+                    )}
+                    
+                    {showSuccess && (
                       <button
                         className="action-button submit-button"
-                        onClick={handleSubmit}
-                        disabled={isSubmitting || !clientEmail.trim() || !userRequirement.trim()}
+                        onClick={handleCloseDialog}
                       >
-                        {isSubmitting 
-                          ? t('collection.modal.sending', 'Envoi en cours...') 
-                          : t('collection.modal.requestQuote', 'Demande devis')
-                        } →
+                        {t('collection.modal.close', 'Fermer')}
                       </button>
                     )}
                   </div>
