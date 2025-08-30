@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import AgentCard from './AgentCard';
 import './CollectionSection.css';
 
 const CollectionSection = () => {
@@ -11,6 +10,10 @@ const CollectionSection = () => {
   const [selectedPrompt, setSelectedPrompt] = useState(null);
   const [editedPrompt, setEditedPrompt] = useState('');
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [clientEmail, setClientEmail] = useState('');
+  const [userRequirement, setUserRequirement] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
   
   // Refs et état pour la section déploiement avec nouvel effet ACCÉLÉRÉ
   const deploymentContentRef = useRef(null);
@@ -96,6 +99,9 @@ const CollectionSection = () => {
   const handleCardClick = (prompt) => {
     setSelectedPrompt(prompt);
     setEditedPrompt(prompt.body);
+    setClientEmail('');
+    setUserRequirement('');
+    setShowSuccess(false);
     setIsDialogOpen(true);
   };
 
@@ -107,14 +113,47 @@ const CollectionSection = () => {
     }, 300);
   };
 
-  const handleSubmit = () => {
-    // Save the modified prompt
-    console.log('Modified prompt:', editedPrompt);
+  const handleSubmit = async () => {
+    if (!clientEmail.trim() || !userRequirement.trim()) return;
     
-    // Redirect to hub
-    window.location.href = '/hub'; // Adjust URL according to your routing
+    setIsSubmitting(true);
     
-    handleCloseDialog();
+    try {
+      // Appel API pour envoyer la demande de devis
+      const response = await fetch('/api/quote', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          agentTitle: selectedPrompt?.title,
+          agentDescription: selectedPrompt?.context + ' - ' + selectedPrompt?.body,
+          userRequirement: userRequirement.trim(),
+          clientEmail: clientEmail.trim(),
+          timestamp: new Date().toISOString(),
+          email: 'm.jacquet@eggon.fr'
+        }),
+      });
+
+      if (response.ok) {
+        setShowSuccess(true);
+        setUserRequirement('');
+        setClientEmail('');
+        
+        // Fermer le modal après 2 secondes
+        setTimeout(() => {
+          setIsDialogOpen(false);
+          setShowSuccess(false);
+        }, 2000);
+      } else {
+        throw new Error('Erreur lors de l\'envoi de la demande');
+      }
+    } catch (error) {
+      console.error('Erreur:', error);
+      alert('Une erreur est survenue. Veuillez réessayer.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const PromptIcon = () => (
@@ -327,41 +366,6 @@ const CollectionSection = () => {
                   <div className="card-body">{prompt.body}</div>
                 </div>
               ))}
-            </div>
-          </div>
-
-          {/* NOUVELLE SECTION AGENT CARDS - Cartes avec demande de devis */}
-          <div className="agent-cards-section">
-            <div className="agent-cards-header">
-              <h3 className="section-label">
-                {t('collection.agentCards.sectionLabel', 'AGENTS IA PERSONNALISABLES')}
-              </h3>
-              <h2 className="collection-title">
-                {t('collection.agentCards.title', 'Créez votre agent sur mesure')}
-              </h2>
-              <p className="collection-intro">
-                {t('collection.agentCards.subtitle', 'Décrivez vos besoins spécifiques et obtenez un devis personnalisé pour votre agent IA.')}
-              </p>
-            </div>
-            
-            <div className="agent-cards-grid">
-              <AgentCard
-                title={t('collection.agentCards.legal.title', 'Agent Juridique Spécialisé')}
-                description={t('collection.agentCards.legal.description', 'Analyse de contrats, recherche jurisprudentielle et conseil juridique automatisé pour votre domaine d\'expertise.')}
-                onQuoteRequest={(data) => console.log('Demande de devis:', data)}
-              />
-              
-              <AgentCard
-                title={t('collection.agentCards.finance.title', 'Agent Financier Intelligent')}
-                description={t('collection.agentCards.finance.description', 'Analyse de risques, reporting automatisé et aide à la décision financière basée sur vos données métier.')}
-                onQuoteRequest={(data) => console.log('Demande de devis:', data)}
-              />
-              
-              <AgentCard
-                title={t('collection.agentCards.compliance.title', 'Agent Conformité Réglementaire')}
-                description={t('collection.agentCards.compliance.description', 'Surveillance réglementaire, audit automatisé et mise en conformité continue selon votre secteur d\'activité.')}
-                onQuoteRequest={(data) => console.log('Demande de devis:', data)}
-              />
             </div>
           </div>
 
@@ -578,23 +582,76 @@ const CollectionSection = () => {
                       value={editedPrompt}
                       onChange={(e) => setEditedPrompt(e.target.value)}
                       placeholder={t('collection.modal.placeholder')}
-                      autoFocus
+                      disabled
                     />
                   </div>
+                  
+                  {!showSuccess ? (
+                    <div className="modal-form">
+                      <div className="form-group">
+                        <label className="form-label">
+                          {t('collection.modal.customTitle', 'Description de l\'agent souhaité si différent')}
+                        </label>
+                        <textarea
+                          value={userRequirement}
+                          onChange={(e) => setUserRequirement(e.target.value)}
+                          placeholder={t('collection.modal.requirementPlaceholder', 'j\'ai besoin que mon agent...')}
+                          className="modal-textarea"
+                          rows="3"
+                          disabled={isSubmitting}
+                        />
+                      </div>
+                      
+                      <div className="form-group">
+                        <label className="form-label">
+                          {t('collection.modal.emailLabel', 'Votre adresse email')}
+                        </label>
+                        <input
+                          type="email"
+                          value={clientEmail}
+                          onChange={(e) => setClientEmail(e.target.value)}
+                          placeholder={t('collection.modal.emailPlaceholder', 'votre@email.com')}
+                          className="modal-input"
+                          disabled={isSubmitting}
+                          required
+                        />
+                      </div>
+                      
+                      <div className="privacy-notice-modal">
+                        <p className="privacy-text-modal">
+                          {t('collection.modal.privacyNotice', 'Nous n\'enverrons pas d\'emails commerciaux, simplement votre devis personnalisé.')}
+                        </p>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="success-message-modal">
+                      <div className="success-icon">✓</div>
+                      <p className="success-text">
+                        {t('collection.modal.successMessage', 'Votre demande a été envoyée avec succès !')}
+                      </p>
+                    </div>
+                  )}
                   
                   <div className="modal-actions">
                     <button
                       className="action-button cancel-button"
                       onClick={handleCloseDialog}
+                      disabled={isSubmitting}
                     >
-                      {t('collection.modal.cancel')}
+                      {t('collection.modal.cancel', 'Annuler')}
                     </button>
-                    <button
-                      className="action-button submit-button"
-                      onClick={handleSubmit}
-                    >
-                      {t('collection.modal.submit')} →
-                    </button>
+                    {!showSuccess && (
+                      <button
+                        className="action-button submit-button"
+                        onClick={handleSubmit}
+                        disabled={isSubmitting || !clientEmail.trim() || !userRequirement.trim()}
+                      >
+                        {isSubmitting 
+                          ? t('collection.modal.sending', 'Envoi en cours...') 
+                          : t('collection.modal.requestQuote', 'Demande devis')
+                        } →
+                      </button>
+                    )}
                   </div>
                 </div>
               </motion.div>
