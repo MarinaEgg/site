@@ -123,11 +123,9 @@ const RAGArchitectureDiagram = () => {
                 <>
                   <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
                   <polyline points="14,2 14,8 20,8" />
-                  <path d="M8 13l2-2 2 2 2-2" />
-                  <path d="M8 17l1.5-1.5 1.5 1.5 1.5-1.5 1.5 1.5" />
-                  <circle cx="9" cy="10" r="0.5" fill="currentColor"/>
-                  <circle cx="11" cy="9.5" r="0.5" fill="currentColor"/>
-                  <circle cx="13" cy="10.5" r="0.5" fill="currentColor"/>
+                  <path d="M8 10l2 1-1 2 3-1" />
+                  <path d="M8 14l3-1 1 2-2 1" />
+                  <path d="M8 18l1-1 2 1 1-1" />
                 </>
               )
             },
@@ -141,9 +139,6 @@ const RAGArchitectureDiagram = () => {
                   <line x1="3" y1="14" x2="21" y2="14" />
                   <line x1="8" y1="5" x2="8" y2="19" />
                   <line x1="13" y1="5" x2="13" y2="19" />
-                  <circle cx="5.5" cy="7.5" r="0.5" fill="currentColor"/>
-                  <circle cx="10.5" cy="7.5" r="0.5" fill="currentColor"/>
-                  <circle cx="15.5" cy="7.5" r="0.5" fill="currentColor"/>
                 </>
               )
             },
@@ -485,12 +480,8 @@ const RAGArchitectureDiagram = () => {
               name: 'Finance',
               iconPath: (
                 <>
-                  <path d="M3 17l6-6 4 4 8-8" />
-                  <path d="M21 9v8h-8" />
-                  <circle cx="7" cy="7" r="1" fill="currentColor"/>
-                  <circle cx="12" cy="12" r="1" fill="currentColor"/>
-                  <circle cx="18" cy="6" r="1" fill="currentColor"/>
-                  <path d="M12 2v2M12 20v2M17 5H9.5" />
+                  <line x1="12" y1="2" x2="12" y2="22" />
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
                 </>
               )
             },
@@ -501,8 +492,6 @@ const RAGArchitectureDiagram = () => {
                   <path d="M9 12l-2.5-2.5a2.5 2.5 0 0 1 0-3.5 2.5 2.5 0 0 1 3.5 0L12 8l2-2a2.5 2.5 0 0 1 3.5 0 2.5 2.5 0 0 1 0 3.5L15 12" />
                   <path d="M12 12v8" />
                   <path d="M8 21h8" />
-                  <circle cx="12" cy="6" r="1" fill="currentColor"/>
-                  <path d="M10 20h4" />
                 </>
               )
             },
@@ -510,10 +499,8 @@ const RAGArchitectureDiagram = () => {
               name: 'Assurance',
               iconPath: (
                 <>
-                  <path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7l3-7z" />
-                  <circle cx="12" cy="12" r="3" />
-                  <path d="M12 9v6" />
-                  <path d="M9 12h6" />
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <path d="M9 12l2 2 4-4" />
                 </>
               )
             },
@@ -524,11 +511,10 @@ const RAGArchitectureDiagram = () => {
                   <path d="M3 21h18" />
                   <path d="M5 21V7l8-4v18" />
                   <path d="M19 21V11l-6-4" />
-                  <rect x="7" y="9" width="2" height="2" />
-                  <rect x="7" y="12" width="2" height="2" />
-                  <rect x="7" y="15" width="2" height="2" />
-                  <rect x="15" y="13" width="2" height="2" />
-                  <rect x="15" y="16" width="2" height="2" />
+                  <path d="M9 9v.01" />
+                  <path d="M9 12v.01" />
+                  <path d="M9 15v.01" />
+                  <path d="M9 18v.01" />
                 </>
               )
             }
