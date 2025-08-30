@@ -1416,8 +1416,9 @@
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-}/
-* Modal Form Styles */
+}
+
+/* Modal Form Styles */
 .modal-form {
   margin: 1.5rem 0;
   display: flex;
