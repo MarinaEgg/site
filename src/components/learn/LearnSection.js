@@ -90,14 +90,57 @@ const LearnSection = () => {
     }
   ];
 
-  const renderCourseButtons = (status) => {
+  const handleCourseAction = async (courseTitle, actionType) => {
+    try {
+      console.log(`Action ${actionType} pour le cours: ${courseTitle}`);
+
+      // Mode simulation pour le développement si l'API n'est pas disponible
+      if (process.env.NODE_ENV === 'development' && window.location.hostname === 'localhost') {
+        console.log('Mode simulation - API non disponible en développement');
+        alert(`Demande envoyée pour ${actionType} du cours: ${courseTitle}`);
+        return;
+      }
+
+      const response = await fetch('/api/quote', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          agentTitle: 'Course Registration',
+          agentDescription: `Course action request: ${actionType}`,
+          userRequirement: `Demande de ${actionType} pour le cours: ${courseTitle}`,
+          clientEmail: 'course-request@eggon.ai', // Email par défaut ou demander à l'utilisateur
+          courseTitle: courseTitle,
+          actionType: actionType,
+          timestamp: new Date().toISOString()
+        }),
+      });
+
+      if (response.ok) {
+        alert(`Demande envoyée avec succès pour ${actionType} du cours: ${courseTitle}`);
+      } else {
+        const errorData = await response.json().catch(() => ({}));
+        const errorMessage = errorData.message || `Erreur HTTP ${response.status}`;
+        throw new Error(errorMessage);
+      }
+    } catch (error) {
+      console.error('Erreur:', error);
+      alert(`Erreur lors de l'envoi de la demande: ${error.message}`);
+    }
+  };
+
+  const renderCourseButtons = (status, courseTitle) => {
     if (status === 'completed') {
       return (
         <>
           <button className="course-btn completed">
             {t('academie.buttons.completed') || 'Terminé'}
           </button>
-          <button className="course-btn catch-up">
+          <button 
+            className="course-btn catch-up"
+            onClick={() => handleCourseAction(courseTitle, 'rattrapage')}
+          >
             {t('academie.buttons.catchUp') || 'Rattrapage'}
           </button>
         </>
@@ -108,7 +151,10 @@ const LearnSection = () => {
           <button className="course-btn ongoing">
             {t('academie.buttons.ongoing') || 'En cours'}
           </button>
-          <button className="course-btn enroll">
+          <button 
+            className="course-btn enroll"
+            onClick={() => handleCourseAction(courseTitle, 'inscription')}
+          >
             {t('academie.buttons.enroll') || 'S\'inscrire'}
           </button>
         </>
@@ -176,7 +222,7 @@ const LearnSection = () => {
                       </h3>
                     </div>
                     <div className="course-actions">
-                      {renderCourseButtons(course.status)}
+                      {renderCourseButtons(course.status, course.title)}
                     </div>
                   </div>
                 ))}
@@ -184,6 +230,31 @@ const LearnSection = () => {
             ))}
           </div>
 
+          {/* EggOn CTA Section - Format uniforme */}
+          <div className="roi-section-enhanced">
+            <div className="roi-content-container">
+              <div className="roi-header-enhanced">
+                <h2 className="roi-main-title">
+                  EggOn vous accompagne partout.
+                </h2>
+                <p className="roi-subtitle">
+                  La contextualisation RAG combinée aux agents IA spécialisés vous apporte un ROI rapidement
+                </p>
+              </div>
+
+              <div className="roi-cta-container">
+                <button className="roi-cta-button" onClick={() => window.location.href = '/contact'}>
+                  <div className="button-content">
+                    <span className="arrow-left">→</span>
+                    <span className="button-text">
+                      Parler à EggOn
+                      <span className="arrow-right">→</span>
+                    </span>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>
