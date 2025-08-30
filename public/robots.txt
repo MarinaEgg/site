@@ -5,6 +5,7 @@ User-agent: *
 Allow: /
 
 # Pages principales à indexer en priorité
+Allow: /
 Allow: /nog-lab
 Allow: /learn
 Allow: /contact
