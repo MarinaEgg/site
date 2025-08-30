@@ -105,5 +105,35 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
+  
+  <!-- Routes RAG et IA Contextuelle -->
+  <url>
+    <loc>https://eggon-technology.com/rag</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://eggon-technology.com/ia-contextuelle</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Routes NOG Lab spécialisées -->
+  <url>
+    <loc>https://eggon-technology.com/traceability</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://eggon-technology.com/explainable-ai</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
 </urlset>
