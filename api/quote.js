@@ -1,6 +1,6 @@
 // api/quote.js - API Route corrigée pour Vercel
 
-import { sendEmailWithNodemailer } from '../src/api/email-config.js';
+import { sendEmailWithNodemailer } from './email-config.js';
 
 export default async function handler(req, res) {
   // Headers CORS
@@ -199,3 +199,4 @@ export default async function handler(req, res) {
     });
   }
 }
+
