@@ -111,8 +111,17 @@
     },
     "modal": {
       "placeholder": "Complete según sus necesidades...",
+      "typewriterText": "necesitaría que mi agente...",
       "cancel": "Cancelar",
-      "submit": "Quiero este agente IA"
+      "contact": "Ser contactado",
+      "back": "Volver",
+      "validate": "Validar",
+      "sending": "Enviando...",
+      "close": "Cerrar",
+      "emailLabel": "Dirección de email para recibir la cotización",
+      "emailPlaceholder": "su@email.com",
+      "privacyNotice": "No enviaremos emails comerciales, solo su cotización personalizada.",
+      "successMessage": "¡Su solicitud ha sido enviada con éxito!"
     },
     "roi": {
       "mainTitle": "EggOn va donde tú vas.",
