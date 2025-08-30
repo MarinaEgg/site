@@ -105,13 +105,11 @@ const RAGArchitectureDiagram = () => {
     {
       title: 'DATA SOURCES',
       icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2f2f2e" strokeWidth="1.5">
-          <g fill="none" stroke="#2f2f2e" strokeWidth="1.5">
-            <rect x="6" y="4" width="12" height="16" rx="1" ry="1" />
-            <line x1="9" y1="8" x2="15" y2="8" />
-            <line x1="9" y1="12" x2="15" y2="12" />
-            <line x1="9" y1="16" x2="15" y2="16" />
-          </g>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="rag-icon-outline">
+          <rect x="6" y="4" width="12" height="16" rx="1" ry="1" />
+          <line x1="9" y1="8" x2="15" y2="8" />
+          <line x1="9" y1="12" x2="15" y2="12" />
+          <line x1="9" y1="16" x2="15" y2="16" />
         </svg>
       ),
       content: (
@@ -207,12 +205,10 @@ const RAGArchitectureDiagram = () => {
     {
       title: 'CONTEXTUAL DOCUMENT UNDERSTANDING PIPELINE',
       icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2f2f2e" strokeWidth="1.5">
-          <g fill="none" stroke="#2f2f2e" strokeWidth="1.5">
-            <rect x="4" y="6" width="6" height="12" rx="1" ry="1" />
-            <rect x="14" y="6" width="6" height="12" rx="1" ry="1" />
-            <line x1="10" y1="12" x2="14" y2="12" />
-          </g>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="rag-icon-outline">
+          <rect x="4" y="6" width="6" height="12" rx="1" ry="1" />
+          <rect x="14" y="6" width="6" height="12" rx="1" ry="1" />
+          <line x1="10" y1="12" x2="14" y2="12" />
         </svg>
       ),
       content: (
@@ -309,13 +305,11 @@ const RAGArchitectureDiagram = () => {
     {
       title: 'CONTEXTUAL RAG AGENT',
       icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2f2f2e" strokeWidth="1.5">
-          <g fill="none" stroke="#2f2f2e" strokeWidth="1.5">
-            <rect x="6" y="6" width="12" height="12" rx="2" ry="2" />
-            <circle cx="12" cy="12" r="3" />
-            <line x1="12" y1="9" x2="12" y2="15" />
-            <line x1="9" y1="12" x2="15" y2="12" />
-          </g>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="rag-icon-outline">
+          <rect x="6" y="6" width="12" height="12" rx="2" ry="2" />
+          <circle cx="12" cy="12" r="3" />
+          <line x1="12" y1="9" x2="12" y2="15" />
+          <line x1="9" y1="12" x2="15" y2="12" />
         </svg>
       ),
       content: (
@@ -456,15 +450,13 @@ const RAGArchitectureDiagram = () => {
     {
       title: 'SPECIALIZED AGENTS BY DOMAIN',
       icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2f2f2e" strokeWidth="1.5">
-          <g fill="none" stroke="#2f2f2e" strokeWidth="1.5">
-            <circle cx="9" cy="7" r="3" />
-            <circle cx="15" cy="7" r="2" />
-            <line x1="9" y1="10" x2="9" y2="18" />
-            <line x1="15" y1="9" x2="15" y2="18" />
-            <line x1="6" y1="18" x2="12" y2="18" />
-            <line x1="13" y1="18" x2="17" y2="18" />
-          </g>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="rag-icon-outline">
+          <circle cx="9" cy="7" r="3" />
+          <circle cx="15" cy="7" r="2" />
+          <line x1="9" y1="10" x2="9" y2="18" />
+          <line x1="15" y1="9" x2="15" y2="18" />
+          <line x1="6" y1="18" x2="12" y2="18" />
+          <line x1="13" y1="18" x2="17" y2="18" />
         </svg>
       ),
       content: (
