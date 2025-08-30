@@ -313,6 +313,89 @@
   stroke-width: 1.5 !important;
 }
 
+/* SOLUTION DÉFINITIVE POUR LES ICÔNES SVG */
+/* Règle avec la spécificité la plus élevée possible pour forcer les SVG */
+.legal-stack-section .rag-content-container .rag-card-enhanced svg,
+.legal-stack-section .bento-container .rag-card-enhanced svg,
+section.legal-stack-section div.rag-content-container div.rag-card-enhanced svg {
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 1.5 !important;
+  color: #2f2f2e !important;
+}
+
+/* Force pour tous les éléments path, circle, rect, etc. dans les SVG */
+.legal-stack-section .rag-card-enhanced svg *,
+.legal-stack-section .rag-card-enhanced svg path,
+.legal-stack-section .rag-card-enhanced svg circle,
+.legal-stack-section .rag-card-enhanced svg rect,
+.legal-stack-section .rag-card-enhanced svg line,
+.legal-stack-section .rag-card-enhanced svg ellipse,
+.legal-stack-section .rag-card-enhanced svg polygon,
+.legal-stack-section .rag-card-enhanced svg polyline {
+  fill: none !important;
+  stroke: inherit !important;
+}
+
+/* Exception pour les flèches de navigation qui doivent rester remplies */
+.legal-stack-section svg[viewBox*="24 16"],
+.legal-stack-section svg[viewBox*="40 24"] {
+  fill: currentColor !important;
+  stroke: none !important;
+}
+
+.legal-stack-section svg[viewBox*="24 16"] *,
+.legal-stack-section svg[viewBox*="40 24"] * {
+  fill: currentColor !important;
+  stroke: currentColor !important;
+}
+
+/* Force absolue avec la spécificité maximale */
+html body section.legal-stack-section div.bento-container.rag-content-container div.rag-card-enhanced svg {
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 1.5 !important;
+  color: #2f2f2e !important;
+}
+
+/* Force tous les enfants des SVG */
+html body section.legal-stack-section div.bento-container.rag-content-container div.rag-card-enhanced svg * {
+  fill: none !important;
+  stroke: inherit !important;
+}
+
+/* RÈGLES ULTRA-SPÉCIFIQUES POUR LES CONTENEURS D'ICÔNES */
+/* Pour les icônes dans les cartes de données sources */
+.legal-stack-section div[style*="background: rgba(47, 47, 46, 0.08)"] svg,
+.legal-stack-section div[style*="background: rgba(47, 47, 46, 0.12)"] svg,
+.legal-stack-section div[style*="background: rgba(47, 47, 46, 0.15)"] svg {
+  fill: none !important;
+  stroke: #2f2f2e !important;
+  stroke-width: 1.5 !important;
+}
+
+/* Pour tous les éléments SVG enfants */
+.legal-stack-section div[style*="background: rgba(47, 47, 46, 0.08)"] svg *,
+.legal-stack-section div[style*="background: rgba(47, 47, 46, 0.12)"] svg *,
+.legal-stack-section div[style*="background: rgba(47, 47, 46, 0.15)"] svg * {
+  fill: none !important;
+  stroke: inherit !important;
+}
+
+/* Pour les cercles d'icônes spécifiquement */
+.legal-stack-section div[style*="border-radius: 50%"] svg,
+.legal-stack-section div[style*="borderRadius"] svg {
+  fill: none !important;
+  stroke: #2f2f2e !important;
+  stroke-width: 1.5 !important;
+}
+
+.legal-stack-section div[style*="border-radius: 50%"] svg *,
+.legal-stack-section div[style*="borderRadius"] svg * {
+  fill: none !important;
+  stroke: inherit !important;
+}
+
 /* CORRECTION GLOBALE POUR TOUS LES SVG DANS LA SECTION RAG */
 .legal-stack-section svg {
   fill: none !important;
