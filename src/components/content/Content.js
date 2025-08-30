@@ -372,7 +372,7 @@ export const Content = () => {
                     {t('hero.subtitle')}
                 </Typography>
                 <div className={classes.buttonContainer}>
-                    <button className={classes.primaryButton}>
+                    <button className={classes.primaryButton} onClick={() => window.location.href = '/contact'}>
                         <div className="button-content">
                             <span className="arrow-left">→</span>
                             <span className="button-text">
