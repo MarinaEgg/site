@@ -45,7 +45,7 @@ const NOGLabSection = () => {
 
   return (
     <>
-      {/* Hero Section - Utilise le nouveau composant NOGLabHero */}
+      {/* Hero Section - Utiliser le nouveau composant NOGLabHero */}
       <section className={classes.heroSection}>
         <NOGLabHero />
       </section>
