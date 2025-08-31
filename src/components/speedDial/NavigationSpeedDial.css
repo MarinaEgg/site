@@ -11,6 +11,8 @@ button[class*="MuiSpeedDial-root"] {
   transform: none !important;
   left: auto !important;
   bottom: auto !important;
+  /* SOLUTION RADICALE : Ignore tous les conteneurs parents */
+  inset: 12px 12px auto auto !important;
 }
 
 /* Spécifique au NavigationSpeedDial avec maximum de spécificité */
