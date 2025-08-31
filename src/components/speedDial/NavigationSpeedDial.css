@@ -1,76 +1,89 @@
-/* CORRECTION ULTRA-SPÉCIFIQUE : Force le SpeedDial à rester en haut à droite */
-.MuiSpeedDial-root.navigation-speed-dial,
-.MuiSpeedDial-root,
-div[class*="MuiSpeedDial-root"],
-button[class*="MuiSpeedDial-root"] {
-  position: fixed !important;
-  top: 12px !important;
-  right: 12px !important;
-  z-index: 10000 !important;
-  margin: 0 !important;
-  transform: none !important;
-  left: auto !important;
-  bottom: auto !important;
-  /* SOLUTION RADICALE : Ignore tous les conteneurs parents */
-  inset: 12px 12px auto auto !important;
-}
+/* SOLUTION ULTRA-RENFORCÉE POUR FORCER LE SPEEDDIAL EN HAUT À DROITE */
 
-/* Spécifique au NavigationSpeedDial avec maximum de spécificité */
+/* 1. SOLUTION BRUTALE - Force tous les SpeedDial existants */
+*[class*="MuiSpeedDial"],
+*[aria-label*="Navigation SpeedDial"],
+*[class*="speedDial"],
 .navigation-speed-dial,
-div.navigation-speed-dial,
-button.navigation-speed-dial,
-[class*="navigation-speed-dial"] {
-  position: fixed !important;
-  top: 12px !important;
-  right: 12px !important;
-  z-index: 10000 !important;
-  margin: 0 !important;
-  transform: none !important;
-  left: auto !important;
-  bottom: auto !important;
-}
-
-/* Force absolue avec sélecteurs ultra-spécifiques */
-html body div.navigation-speed-dial,
-html body button.navigation-speed-dial,
-html body [class*="MuiSpeedDial-root"].navigation-speed-dial {
-  position: fixed !important;
-  top: 12px !important;
-  right: 12px !important;
-  z-index: 10000 !important;
-  margin: 0 !important;
-  transform: none !important;
-  left: auto !important;
-  bottom: auto !important;
-}
-
-/* Wrapper pour forcer la position */
 .navigation-speed-dial-wrapper {
   position: fixed !important;
   top: 12px !important;
   right: 12px !important;
-  z-index: 10000 !important;
+  left: auto !important;
+  bottom: auto !important;
   margin: 0 !important;
   padding: 0 !important;
   transform: none !important;
-  pointer-events: auto !important;
-  /* SOLUTION RADICALE : Sortir de tout conteneur */
-  width: auto !important;
-  height: auto !important;
-  max-width: none !important;
-  max-height: none !important;
-  overflow: visible !important;
+  z-index: 99999 !important;
+  inset: 12px 12px auto auto !important;
 }
 
-/* Sur tablette et plus grand, on cache complètement */
+/* 2. CIBLAGE ULTRA-SPÉCIFIQUE avec tous les sélecteurs possibles */
+html body div[class*="MuiSpeedDial-root"],
+html body button[class*="MuiSpeedDial-root"],
+html body div[class*="jss"][class*="speedDial"],
+html body [class*="makeStyles-speedDial"],
+html body [class*="useStyles-speedDial"] {
+  position: fixed !important;
+  top: 12px !important;
+  right: 12px !important;
+  left: auto !important;
+  bottom: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: none !important;
+  z-index: 99999 !important;
+  inset: 12px 12px auto auto !important;
+}
+
+/* 3. FORCE LA POSITION AVEC UN CONTENEUR WRAPPER ABSOLU */
+.navigation-speed-dial-wrapper {
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  pointer-events: none !important;
+  z-index: 99999 !important;
+  margin: 0 !important;
+  padding: 12px !important;
+  box-sizing: border-box !important;
+}
+
+.navigation-speed-dial-wrapper > * {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  left: auto !important;
+  bottom: auto !important;
+  margin: 0 !important;
+  transform: none !important;
+  pointer-events: auto !important;
+}
+
+/* 4. OVERRIDE BRUTAL DE TOUS LES STYLES MATERIAL-UI */
+.MuiSpeedDial-root,
+[class*="MuiSpeedDial-root"] {
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  left: auto !important;
+  bottom: auto !important;
+  margin: 0 !important;
+  transform: none !important;
+  pointer-events: auto !important;
+}
+
+/* 5. CACHE SUR DESKTOP */
 @media (min-width: 960px) {
-  .MuiSpeedDial-root,
-  .navigation-speed-dial-wrapper {
+  .navigation-speed-dial-wrapper,
+  *[class*="MuiSpeedDial"],
+  *[aria-label*="Navigation SpeedDial"] {
     display: none !important;
   }
 }
 
-/* Styles pour les tooltips (garder ceux existants) */
+/* 6. STYLES POUR LES TOOLTIPS */
 .MuiTooltip-tooltip {
   color: #000000 !important;
   background-color: rgba(255, 255, 255, 0.95) !important;
@@ -87,4 +100,12 @@ html body [class*="MuiSpeedDial-root"].navigation-speed-dial {
   color: #000000 !important;
   background-color: rgba(255, 255, 255, 0.95) !important;
   font-weight: 500 !important;
+}
+
+/* 7. SOLUTION DE DERNIER RECOURS - JAVASCRIPT INLINE STYLES */
+[style*="position"][style*="fixed"][aria-label*="Navigation SpeedDial"] {
+  top: 12px !important;
+  right: 12px !important;
+  left: auto !important;
+  bottom: auto !important;
 }
