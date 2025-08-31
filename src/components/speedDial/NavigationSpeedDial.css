@@ -52,9 +52,12 @@ html body [class*="MuiSpeedDial-root"].navigation-speed-dial {
   padding: 0 !important;
   transform: none !important;
   pointer-events: auto !important;
-  /* DEBUG: bordure rouge temporaire pour voir où est le composant */
-  border: 2px solid red !important;
-  background: rgba(255, 0, 0, 0.1) !important;
+  /* SOLUTION RADICALE : Sortir de tout conteneur */
+  width: auto !important;
+  height: auto !important;
+  max-width: none !important;
+  max-height: none !important;
+  overflow: visible !important;
 }
 
 /* Sur tablette et plus grand, on cache complètement */
