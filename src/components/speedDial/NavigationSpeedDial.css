@@ -1,27 +1,66 @@
-/* CORRECTION CRITIQUE : Force le SpeedDial à rester en haut à droite */
+/* CORRECTION ULTRA-SPÉCIFIQUE : Force le SpeedDial à rester en haut à droite */
 .MuiSpeedDial-root.navigation-speed-dial,
-.MuiSpeedDial-root {
+.MuiSpeedDial-root,
+div[class*="MuiSpeedDial-root"],
+button[class*="MuiSpeedDial-root"] {
   position: fixed !important;
   top: 12px !important;
   right: 12px !important;
   z-index: 10000 !important;
   margin: 0 !important;
   transform: none !important;
+  left: auto !important;
+  bottom: auto !important;
 }
 
-/* Spécifique au NavigationSpeedDial pour éviter les conflits */
-.navigation-speed-dial {
+/* Spécifique au NavigationSpeedDial avec maximum de spécificité */
+.navigation-speed-dial,
+div.navigation-speed-dial,
+button.navigation-speed-dial,
+[class*="navigation-speed-dial"] {
   position: fixed !important;
   top: 12px !important;
   right: 12px !important;
   z-index: 10000 !important;
   margin: 0 !important;
   transform: none !important;
+  left: auto !important;
+  bottom: auto !important;
+}
+
+/* Force absolue avec sélecteurs ultra-spécifiques */
+html body div.navigation-speed-dial,
+html body button.navigation-speed-dial,
+html body [class*="MuiSpeedDial-root"].navigation-speed-dial {
+  position: fixed !important;
+  top: 12px !important;
+  right: 12px !important;
+  z-index: 10000 !important;
+  margin: 0 !important;
+  transform: none !important;
+  left: auto !important;
+  bottom: auto !important;
+}
+
+/* Wrapper pour forcer la position */
+.navigation-speed-dial-wrapper {
+  position: fixed !important;
+  top: 12px !important;
+  right: 12px !important;
+  z-index: 10000 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  transform: none !important;
+  pointer-events: auto !important;
+  /* DEBUG: bordure rouge temporaire pour voir où est le composant */
+  border: 2px solid red !important;
+  background: rgba(255, 0, 0, 0.1) !important;
 }
 
 /* Sur tablette et plus grand, on cache complètement */
 @media (min-width: 960px) {
-  .MuiSpeedDial-root {
+  .MuiSpeedDial-root,
+  .navigation-speed-dial-wrapper {
     display: none !important;
   }
 }
