@@ -1,1594 +1,759 @@
-/* Collection Section Styles - STYLES ORIGINAUX CONSERVÉS */
-.collection-section {
-  min-height: 100vh;
-  background-color: transparent;
-  padding: 6rem 0;
-  overflow: hidden;
-  position: relative;
-  width: 100vw;
-  color: #fafafa;
-}
-
-.collection-content {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.collection-header {
-  margin-bottom: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.section-label {
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: rgba(250, 250, 250, 0.8);
-  margin: 0;
-  font-weight: 500;
-  position: relative;
-  display: inline-block;
-}
-
-.section-label::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -0.5rem;
-  width: 2rem;
-  height: 1px;
-  background-color: rgba(250, 250, 250, 0.8);
-}
-
-.collection-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 700;
-  margin: 2rem 0;
-  line-height: 1.2;
-  color: #fafafa;
-}
-
-.collection-intro {
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  max-width: 600px;
-  margin-bottom: 2rem;
-  line-height: 1.6;
-  color: rgba(250, 250, 250, 0.9);
-}
-
-.early-access-button {
-  padding: 0.6rem 1.5rem;
-  font-size: 0.85rem;
-  font-weight: 700;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-  letter-spacing: 0.1em;
-  text-transform: none;
-  background: transparent;
-  color: #fce96b;
-  border: 1px solid #fce96b;
-  border-radius: 50px;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.4s ease-out;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 180px;
-  height: 40px;
-}
-
-.early-access-button .button-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  transition: all 0.4s ease-out;
-  transform: translateX(0);
-}
-
-.early-access-button .button-text {
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-}
-
-.early-access-button .arrow-right {
-  margin-left: 8px;
-  opacity: 1;
-  transition: all 0.4s ease-out;
-}
-
-.early-access-button .arrow-left {
-  margin-right: 8px;
-  opacity: 0;
-  transition: all 0.4s ease-out;
-}
-
-.early-access-button:hover {
-  background: #fce96b;
-  color: #2f2f2e;
-}
-
-.early-access-button:hover .button-content {
-  transform: translateX(12px);
-}
-
-.early-access-button:hover .arrow-right {
-  opacity: 0;
-}
-
-.early-access-button:hover .arrow-left {
-  opacity: 1;
-}
-
-.early-access-button:active {
-  transform: translateY(-1px);
-}
-
-.cards-container {
-  margin-top: 4rem;
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.cards-row {
-  display: flex;
-  gap: 2rem;
-  margin: 1rem 0;
-  position: relative;
-  padding: 0.5rem 0;
-  width: max-content;
-}
-
-.cards-row.top {
-  animation: scrollRight 60s linear infinite;
-  margin-bottom: 5cm;
-}
-
-.cards-row.bottom {
-  animation: scrollLeft 60s linear infinite;
-  margin-top: 0;
-}
-
-.prompt-card {
-  flex: 0 0 400px;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 1rem;
-  padding: 2rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  opacity: 0.6;
-  transition: all 0.3s ease-out;
-  cursor: pointer;
-}
-
-.prompt-card:hover {
-  opacity: 1;
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-  border-color: rgba(255, 255, 255, 0.25);
-}
-
-.card-context {
-  font-size: 0.875rem;
-  color: rgba(250, 250, 250, 0.6);
-  margin-bottom: 1rem;
-}
-
-.card-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  color: #fafafa;
-}
-
-.card-body {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: rgba(250, 250, 250, 0.85);
-  max-height: 120px;
-  overflow-y: auto;
-}
-
-/* Time Indicator */
-.time-indicator {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  z-index: 10;
-}
-
-.year-text {
-  font-size: clamp(3rem, 8vw, 6rem);
-  font-weight: 900;
-  color: #fafafa;
-  margin: 0;
-  line-height: 1;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
-}
-
-.last-update-text {
-  font-size: clamp(0.875rem, 2vw, 1.125rem);
-  color: rgba(250, 250, 250, 0.6);
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  margin: 0.5rem 0 0 0;
-  font-weight: 500;
-}
-
-/* Benefits Section - CONSERVÉE */
-.benefits-section {
-  margin: 6rem auto;
-  max-width: 900px;
-  padding: 0 3rem;
-}
-
-.benefits-title-line {
-  position: relative;
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.benefits-title-line::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.2);
-  z-index: 1;
-}
-
-.benefits-title {
-  background-color: #2f2f2e;
-  padding: 0 2rem;
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: #fafafa;
-  position: relative;
-  z-index: 2;
-}
-
-.benefits-list {
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.benefits-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  font-size: clamp(1rem, 1.8vw, 1.125rem);
-  line-height: 1.6;
-  color: rgba(250, 250, 250, 0.85);
-  margin-bottom: 1.5rem;
-  transition: all 0.3s ease-out;
-  text-align: left;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.benefit-icon-circle {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: rgba(128, 128, 128, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 2px solid rgba(128, 128, 128, 0.2);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition: all 0.3s ease-out;
-}
-
-.benefit-icon {
-  width: 20px;
-  height: 20px;
-  color: #fafafa;
-}
-
-.benefits-item:hover .benefit-icon-circle {
-  transform: scale(1.1);
-  background: rgba(128, 128, 128, 0.15);
-  border-color: rgba(128, 128, 128, 0.3);
-  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.3);
-}
-
-.benefits-item:hover {
-  color: #fafafa;
-  transform: translateX(4px);
-}
-
-.benefits-item:hover .benefit-icon {
-  transform: scale(1.1);
-}
-
-/* Modal styles - CONSERVÉS */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(8px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  padding: 1rem;
-}
-
-.modal-content {
-  background: rgba(47, 47, 46, 0.95);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 16px;
-  width: 100%;
-  max-width: 800px;
-  max-height: 80vh;
-  overflow: hidden;
-  position: relative;
-}
-
-.modal-header {
-  padding: 24px 24px 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.modal-title-section {
-  flex: 1;
-}
-
-.modal-context {
-  font-size: 0.875rem;
-  color: rgba(250, 250, 250, 0.6);
-  margin-bottom: 8px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.modal-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #fafafa;
-  margin: 0;
-}
-
-.close-button {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #fafafa;
-  padding: 8px;
-  margin-left: 16px;
-  border-radius: 4px;
-  transition: background-color 0.2s;
-}
-
-.close-button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.modal-body {
-  padding: 24px;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-}
-
-.prompt-textarea-container {
-  position: relative;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.prompt-icon {
-  color: rgba(250, 250, 250, 0.6);
-  margin-bottom: 0.5rem;
-}
-
-.prompt-textarea {
-  flex: 1;
-  width: 100%;
-  resize: none;
-  border: none;
-  outline: none;
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #fafafa;
-  background: transparent;
-  padding: 0;
-}
-
-.prompt-textarea::placeholder {
-  color: rgba(250, 250, 250, 0.5);
-}
-
-.modal-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.action-button {
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 8px;
-  font-size: 0.875rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.cancel-button {
-  background: rgba(255, 255, 255, 0.1);
-  color: rgba(250, 250, 250, 0.8);
-}
-
-.cancel-button:hover {
-  background: rgba(255, 255, 255, 0.2);
-  color: #fafafa;
-}
-
-.submit-button {
-  background: #fce96b;
-  color: #2f2f2e;
-}
-
-.submit-button:hover {
-  background: rgba(252, 233, 107, 0.9);
-}
-
-/* Animations - CONSERVÉES */
-@keyframes scrollRight {
-  from { transform: translateX(0); }
-  to { transform: translateX(calc(-100% + 100vw)); }
-}
-
-@keyframes scrollLeft {
-  from { transform: translateX(calc(-100% + 100vw)); }
-  to { transform: translateX(0); }
-}
-
-.cards-row:hover {
-  animation-play-state: paused;
-}
-
-/* SECTION DEPLOYMENT - Transition très ralentie */
-.deployment-section-enhanced {
-  position: relative;
-  overflow: hidden;
-  padding: 8rem 2rem;
-  min-height: 100vh;
-  width: 100%;
-  background: var(--deployment-bg-color, transparent);
-  transition: background-color 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.deployment-content-container {
-  background: var(--deployment-container-bg, #faf2d7);
-  border-radius: 3rem;
-  border: var(--deployment-container-border, 4px solid #2f2f2e);
-  box-shadow: var(--deployment-container-shadow, 0 20px 60px rgba(47, 47, 46, 0.3));
-  width: 95%;
-  max-width: 1600px;
-  position: relative;
-  padding: clamp(3rem, 5vh, 4rem) clamp(2rem, 4vw, 3rem);
-  transform: translateY(50px);
-  opacity: 0;
-  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.deployment-content-container.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.deployment-content-container:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--deployment-container-shadow-hover, 0 30px 80px rgba(47, 47, 46, 0.4));
-}
-
-.deployment-header-dark {
-  text-align: center;
-  margin-bottom: clamp(4rem, 8vh, 6rem);
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.deployment-header-dark.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.deployment-subtitle-dark {
-  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-  text-decoration: underline;
-  color: var(--deployment-text-color, #2f2f2e);
-  transition: color 0.8s ease;
-}
-
-.deployment-title-dark {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  font-weight: 900;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-  color: var(--deployment-title-color, #2f2f2e);
-  transition: color 0.8s ease;
-}
-
-.deployment-intro-dark {
-  font-size: clamp(1rem, 2vw, 1.3rem);
-  font-weight: 400;
-  line-height: 1.6;
-  margin: 0 auto 2rem auto;
-  max-width: 900px;
-  text-align: center;
-  color: var(--deployment-text-color, #2f2f2e);
-  transition: color 0.8s ease;
-}
-
-.deployment-cards-grid-dark {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: clamp(1.5rem, 3vw, 2.5rem);
-  margin-top: 2rem;
-  width: 100%;
-}
-
-.deployment-card-dark {
-  background: var(--deployment-card-bg, rgba(47, 47, 46, 0.08));
-  border: 1px solid var(--deployment-card-border, rgba(47, 47, 46, 0.15));
-  backdrop-filter: blur(20px);
-  border-radius: 1rem;
-  padding: clamp(1.5rem, 2.5vw, 2rem);
-  box-shadow: var(--deployment-card-shadow, 0 8px 32px rgba(47, 47, 46, 0.2));
-  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.deployment-card-dark.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.deployment-card-dark:hover {
-  transform: translateY(-8px) scale(1.02);
-  border-color: var(--deployment-card-border-hover, rgba(47, 47, 46, 0.25));
-  background: var(--deployment-card-bg-hover, rgba(47, 47, 46, 0.12));
-  box-shadow: var(--deployment-card-shadow-hover, 0 12px 40px rgba(47, 47, 46, 0.3));
-}
-
-.deployment-icon-dark {
-  width: 64px;
-  height: 64px;
-  margin: 0 auto 1.5rem auto;
-  border-radius: 50%;
-  background: var(--deployment-icon-bg, rgba(47, 47, 46, 0.12));
-  border: 2px solid var(--deployment-icon-border, rgba(47, 47, 46, 0.2));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-}
-
-.deployment-icon-dark svg {
-  color: var(--deployment-icon-color, #2f2f2e);
-  transition: color 0.8s ease;
-}
-
-.deployment-card-dark:hover .deployment-icon-dark {
-  background: var(--deployment-icon-bg-hover, rgba(47, 47, 46, 0.18));
-  border-color: var(--deployment-icon-border-hover, rgba(47, 47, 46, 0.3));
-  transform: scale(1.05);
-}
-
-.deployment-card-title-dark {
-  font-size: clamp(1.1rem, 2vw, 1.4rem);
-  font-weight: 700;
-  margin-bottom: 1rem;
-  text-align: center;
-  line-height: 1.3;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--deployment-card-title-color, #2f2f2e);
-  transition: color 0.8s ease;
-}
-
-.deployment-card-description-dark {
-  font-size: clamp(0.9rem, 1.6vw, 1rem);
-  line-height: 1.6;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: var(--deployment-card-text-color, #2f2f2e);
-  transition: color 0.8s ease;
-}
-
-.deployment-features-dark {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.deployment-feature-dark {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-  font-size: clamp(0.8rem, 1.4vw, 0.9rem);
-  margin-bottom: 0.8rem;
-  line-height: 1.4;
-  color: var(--deployment-card-text-color, #2f2f2e);
-  transition: color 0.8s ease;
-}
-
-.deployment-feature-dark::before {
-  content: '✓';
-  font-weight: 700;
-  flex-shrink: 0;
-  margin-top: 0.1rem;
-  color: var(--deployment-check-color, #c4940a);
-  transition: color 0.8s ease;
-}
-
-.deployment-card-dark.recommended {
-  border-color: var(--deployment-recommended-border, rgba(196, 148, 10, 0.6));
-  background: var(--deployment-recommended-bg, rgba(196, 148, 10, 0.08));
-}
-
-.deployment-card-dark.recommended:hover {
-  border-color: var(--deployment-recommended-border-hover, rgba(196, 148, 10, 0.8));
-  background: var(--deployment-recommended-bg-hover, rgba(196, 148, 10, 0.12));
-}
-
-.deployment-badge-dark {
-  position: absolute;
-  top: -8px;
-  right: 16px;
-  background: var(--deployment-badge-bg, #c4940a);
-  color: var(--deployment-badge-color, #faf2d7);
-  padding: 0.3rem 0.8rem;
-  border-radius: 12px;
-  font-size: 0.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  transition: all 0.8s ease;
-}
-
-/* VARIABLES CSS POUR LES TRANSITIONS RAPIDES - Déploiement INVERSÉES */
-.deployment-bg-dark-start {
-  --deployment-bg-color: #2f2f2e;
-  --deployment-container-bg: rgba(255, 255, 255, 0.08);
-  --deployment-container-border: 4px solid rgba(255, 255, 255, 0.15);
-  --deployment-container-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  --deployment-container-shadow-hover: 0 30px 80px rgba(0, 0, 0, 0.4);
-  --deployment-text-color: #fafafa;
-  --deployment-title-color: #fafafa;
-  --deployment-card-bg: rgba(255, 255, 255, 0.08);
-  --deployment-card-border: rgba(255, 255, 255, 0.15);
-  --deployment-card-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  --deployment-card-bg-hover: rgba(255, 255, 255, 0.12);
-  --deployment-card-border-hover: rgba(255, 255, 255, 0.25);
-  --deployment-card-shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.4);
-  --deployment-icon-bg: rgba(255, 255, 255, 0.12);
-  --deployment-icon-border: rgba(255, 255, 255, 0.2);
-  --deployment-icon-color: #fafafa;
-  --deployment-icon-bg-hover: rgba(255, 255, 255, 0.18);
-  --deployment-icon-border-hover: rgba(255, 255, 255, 0.3);
-  --deployment-card-title-color: #fafafa;
-  --deployment-card-text-color: rgba(250, 250, 250, 0.85);
-  --deployment-check-color: #fce96b;
-  --deployment-recommended-border: rgba(252, 233, 107, 0.6);
-  --deployment-recommended-bg: rgba(252, 233, 107, 0.08);
-  --deployment-recommended-border-hover: rgba(252, 233, 107, 0.8);
-  --deployment-recommended-bg-hover: rgba(252, 233, 107, 0.12);
-  --deployment-badge-bg: rgba(252, 233, 107, 0.9);
-  --deployment-badge-color: #2f2f2e;
-}
-
-.deployment-bg-dark-middle {
-  --deployment-bg-color: #2f2f2e;
-  --deployment-container-bg: #faf2d7;
-  --deployment-container-border: 4px solid #2f2f2e;
-  --deployment-container-shadow: 0 20px 60px rgba(47, 47, 46, 0.3);
-  --deployment-container-shadow-hover: 0 30px 80px rgba(47, 47, 46, 0.4);
-  --deployment-text-color: #2f2f2e;
-  --deployment-title-color: #2f2f2e;
-  --deployment-card-bg: rgba(47, 47, 46, 0.12);
-  --deployment-card-border: rgba(47, 47, 46, 0.2);
-  --deployment-card-shadow: 0 10px 36px rgba(47, 47, 46, 0.15);
-  --deployment-card-bg-hover: rgba(47, 47, 46, 0.18);
-  --deployment-card-border-hover: rgba(47, 47, 46, 0.3);
-  --deployment-card-shadow-hover: 0 15px 45px rgba(47, 47, 46, 0.25);
-  --deployment-icon-bg: rgba(47, 47, 46, 0.15);
-  --deployment-icon-border: rgba(47, 47, 46, 0.25);
-  --deployment-icon-color: #2f2f2e;
-  --deployment-icon-bg-hover: rgba(47, 47, 46, 0.22);
-  --deployment-icon-border-hover: rgba(47, 47, 46, 0.35);
-  --deployment-card-title-color: #2f2f2e;
-  --deployment-card-text-color: #2f2f2e;
-  --deployment-check-color: #c4940a;
-  --deployment-recommended-border: rgba(196, 148, 10, 0.7);
-  --deployment-recommended-bg: rgba(196, 148, 10, 0.12);
-  --deployment-recommended-border-hover: rgba(196, 148, 10, 0.9);
-  --deployment-recommended-bg-hover: rgba(196, 148, 10, 0.18);
-  --deployment-badge-bg: #c4940a;
-  --deployment-badge-color: #faf2d7;
-}
-
-.deployment-bg-dark-end {
-  --deployment-bg-color: transparent;
-  --deployment-container-bg: #faf2d7;
-  --deployment-container-border: 4px solid #2f2f2e;
-  --deployment-container-shadow: 0 20px 60px rgba(47, 47, 46, 0.3);
-  --deployment-container-shadow-hover: 0 30px 80px rgba(47, 47, 46, 0.4);
-  --deployment-text-color: #2f2f2e;
-  --deployment-title-color: #2f2f2e;
-  --deployment-card-bg: rgba(47, 47, 46, 0.08);
-  --deployment-card-border: rgba(47, 47, 46, 0.15);
-  --deployment-card-shadow: 0 8px 32px rgba(47, 47, 46, 0.2);
-  --deployment-card-bg-hover: rgba(47, 47, 46, 0.12);
-  --deployment-card-border-hover: rgba(47, 47, 46, 0.25);
-  --deployment-card-shadow-hover: 0 12px 40px rgba(47, 47, 46, 0.3);
-  --deployment-icon-bg: rgba(47, 47, 46, 0.12);
-  --deployment-icon-border: rgba(47, 47, 46, 0.2);
-  --deployment-icon-color: #2f2f2e;
-  --deployment-icon-bg-hover: rgba(47, 47, 46, 0.18);
-  --deployment-icon-border-hover: rgba(47, 47, 46, 0.3);
-  --deployment-card-title-color: #2f2f2e;
-  --deployment-card-text-color: #2f2f2e;
-  --deployment-check-color: #c4940a;
-  --deployment-recommended-border: rgba(196, 148, 10, 0.6);
-  --deployment-recommended-bg: rgba(196, 148, 10, 0.08);
-  --deployment-recommended-border-hover: rgba(196, 148, 10, 0.8);
-  --deployment-recommended-bg-hover: rgba(196, 148, 10, 0.12);
-  --deployment-badge-bg: #c4940a;
-  --deployment-badge-color: #faf2d7;
-}
-
-/* NOUVELLE SECTION RAG avec même style et transitions très ralentie */
-.rag-section-enhanced {
-  position: relative;
-  overflow: hidden;
-  padding: 8rem 2rem;
-  min-height: 100vh;
-  width: 100%;
-  background: var(--rag-bg-color, transparent);
-  transition: background-color 2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.rag-content-container {
-  background: var(--rag-container-bg, #faf2d7);
-  border-radius: 3rem;
-  border: var(--rag-container-border, 4px solid #2f2f2e);
-  box-shadow: var(--rag-container-shadow, 0 20px 60px rgba(47, 47, 46, 0.3));
-  width: 95%;
-  max-width: 1600px;
-  position: relative;
-  padding: clamp(3rem, 5vh, 4rem) clamp(2rem, 4vw, 3rem);
-  transform: translateY(50px);
-  opacity: 0;
-  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.rag-content-container.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.rag-content-container:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--rag-container-shadow-hover, 0 30px 80px rgba(47, 47, 46, 0.4));
-}
-
-/* Correction globale RENFORCÉE pour les couleurs RAG */
-.rag-content-container,
-.rag-content-container *,
-.rag-content-container *::before,
-.rag-content-container *::after,
-.rag-content-container div,
-.rag-content-container span,
-.rag-content-container h3,
-.rag-content-container h2,
-.rag-content-container p,
-.rag-content-container svg {
-  color: var(--rag-text-color, #2f2f2e) !important;
-  fill: var(--rag-text-color, #2f2f2e) !important;
-  stroke: var(--rag-text-color, #2f2f2e) !important;
-}
-
-.rag-header-enhanced {
-  text-align: center;
-  margin-bottom: clamp(4rem, 8vh, 6rem);
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.rag-header-enhanced.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.rag-subtitle-enhanced {
-  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
-  text-decoration: underline;
-  color: var(--rag-text-color, #2f2f2e);
-  transition: color 0.8s ease;
-}
-
-.rag-title-enhanced {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  font-weight: 900;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-  color: var(--rag-title-color, #2f2f2e);
-  transition: color 0.8s ease;
-}
-
-.rag-intro-enhanced {
-  font-size: clamp(1rem, 2vw, 1.3rem);
-  font-weight: 400;
-  line-height: 1.6;
-  margin: 0 auto 2rem auto;
-  max-width: 900px;
-  text-align: center;
-  color: var(--rag-text-color, #2f2f2e);
-  transition: color 0.8s ease;
-}
-
-.rag-diagram-container {
-  background: var(--rag-diagram-bg, rgba(47, 47, 46, 0.08));
-  border: var(--rag-diagram-border, 3px solid rgba(47, 47, 46, 0.2));
-  border-radius: 24px;
-  padding: clamp(2rem, 4vw, 3rem);
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.8s ease;
-}
-
-.rag-platform-label {
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--rag-label-bg, rgba(47, 47, 46, 0.15));
-  border: var(--rag-label-border, 2px solid rgba(47, 47, 46, 0.3));
-  border-radius: 12px;
-  padding: 0.5rem 1.5rem;
-  font-size: clamp(0.8rem, 1.4vw, 1rem);
-  font-weight: 700;
-  color: var(--rag-text-color, #2f2f2e);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  transition: all 0.8s ease;
-}
-
-.rag-flow-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: clamp(1rem, 2vw, 2rem);
-  margin-top: 2rem;
-  flex-wrap: wrap;
-}
-
-.rag-flow-step {
-  background: var(--rag-step-bg, rgba(47, 47, 46, 0.12));
-  border: var(--rag-step-border, 2px solid rgba(47, 47, 46, 0.2));
-  border-radius: 16px;
-  padding: clamp(1.5rem, 2.5vw, 2rem);
-  flex: 1;
-  min-width: 200px;
-  max-width: 280px;
-  transition: all 0.8s ease;
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.rag-flow-step.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.rag-flow-step:hover {
-  transform: translateY(-8px) scale(1.02);
-  border-color: var(--rag-step-border-hover, rgba(47, 47, 46, 0.3));
-  background: var(--rag-step-bg-hover, rgba(47, 47, 46, 0.18));
-}
-
-/* VARIABLES CSS POUR LES TRANSITIONS RAPIDES - RAG INVERSÉES */
-.rag-bg-enhanced-start {
-  --rag-bg-color: #2f2f2e;
-  --rag-container-bg: rgba(255, 255, 255, 0.08);
-  --rag-container-border: 4px solid rgba(255, 255, 255, 0.15);
-  --rag-container-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  --rag-container-shadow-hover: 0 30px 80px rgba(0, 0, 0, 0.4);
-  --rag-text-color: #fafafa;
-  --rag-title-color: #fafafa;
-  --rag-diagram-bg: rgba(255, 255, 255, 0.08);
-  --rag-diagram-border: 3px solid rgba(255, 255, 255, 0.2);
-  --rag-label-bg: rgba(255, 255, 255, 0.15);
-  --rag-label-border: 2px solid rgba(255, 255, 255, 0.3);
-  --rag-step-bg: rgba(255, 255, 255, 0.12);
-  --rag-step-border: 2px solid rgba(255, 255, 255, 0.2);
-  --rag-step-bg-hover: rgba(255, 255, 255, 0.18);
-  --rag-step-border-hover: rgba(255, 255, 255, 0.3);
-}
-
-.rag-bg-enhanced-middle {
-  --rag-bg-color: #2f2f2e;
-  --rag-container-bg: #faf2d7;
-  --rag-container-border: 4px solid #2f2f2e;
-  --rag-container-shadow: 0 20px 60px rgba(47, 47, 46, 0.3);
-  --rag-container-shadow-hover: 0 30px 80px rgba(47, 47, 46, 0.4);
-  --rag-text-color: #2f2f2e;
-  --rag-title-color: #2f2f2e;
-  --rag-diagram-bg: rgba(47, 47, 46, 0.12);
-  --rag-diagram-border: 3px solid rgba(47, 47, 46, 0.25);
-  --rag-label-bg: rgba(47, 47, 46, 0.18);
-  --rag-label-border: 2px solid rgba(47, 47, 46, 0.35);
-  --rag-step-bg: rgba(47, 47, 46, 0.15);
-  --rag-step-border: 2px solid rgba(47, 47, 46, 0.25);
-  --rag-step-bg-hover: rgba(47, 47, 46, 0.22);
-  --rag-step-border-hover: rgba(47, 47, 46, 0.35);
-}
-
-.rag-bg-enhanced-end {
-  --rag-bg-color: transparent;
-  --rag-container-bg: #faf2d7;
-  --rag-container-border: 4px solid #2f2f2e;
-  --rag-container-shadow: 0 20px 60px rgba(47, 47, 46, 0.3);
-  --rag-container-shadow-hover: 0 30px 80px rgba(47, 47, 46, 0.4);
-  --rag-text-color: #2f2f2e;
-  --rag-title-color: #2f2f2e;
-  --rag-diagram-bg: rgba(47, 47, 46, 0.08);
-  --rag-diagram-border: 3px solid rgba(47, 47, 46, 0.2);
-  --rag-label-bg: rgba(47, 47, 46, 0.15);
-  --rag-label-border: 2px solid rgba(47, 47, 46, 0.3);
-  --rag-step-bg: rgba(47, 47, 46, 0.12);
-  --rag-step-border: 2px solid rgba(47, 47, 46, 0.2);
-  --rag-step-bg-hover: rgba(47, 47, 46, 0.18);
-  --rag-step-border-hover: rgba(47, 47, 46, 0.3);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .early-access-button {
-    min-width: 160px;
-    font-size: 0.8rem;
-  }
-  
-  .early-access-button:hover .button-text {
-    transform: translateX(16px);
-  }
-
-  .collection-section {
-    padding: 4rem 0;
-  }
-
-  .collection-content {
-    padding: 0 1rem;
-  }
-
-  .prompt-card {
-    flex: 0 0 300px;
-  }
-
-  .cards-row.top {
-    margin-bottom: 2rem !important;
-  }
-
-  /* FIX CRITIQUE: Assurer que les cartes sont visibles en mobile */
-  .cards-container {
-    margin-top: 2rem;
-    overflow: visible !important;
-    height: auto !important;
-    min-height: 400px !important;
-  }
-
-  .cards-row {
-    display: flex !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    position: relative !important;
-    transform: none !important;
-    animation: none !important;
-    overflow-x: auto !important;
-    scroll-behavior: smooth !important;
-    -webkit-overflow-scrolling: touch !important;
-    scrollbar-width: thin !important;
-    scrollbar-color: rgba(255, 255, 255, 0.3) transparent !important;
-  }
-  
-  .cards-row::-webkit-scrollbar {
-    height: 6px !important;
-  }
-  
-  .cards-row::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1) !important;
-    border-radius: 3px !important;
-  }
-  
-  .cards-row::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3) !important;
-    border-radius: 3px !important;
-  }
-  
-  .cards-row::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.5) !important;
-  }
-  
-  /* Correction pour l'indicateur temporel en mobile */
-  .time-indicator {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    transform: none !important;
-    margin: 2rem 0 !important;
-    z-index: 10 !important;
-  }
-  
-  .year-text {
-    font-size: clamp(2rem, 6vw, 3rem) !important;
-  }
-
-  .cards-row.top {
-    margin-bottom: 2rem !important;
-    position: static !important;
-  }
-
-  .cards-row.bottom {
-    margin-top: 1rem !important;
-    position: static !important;
-  }
-
-  .benefits-section {
-    margin: 4rem auto;
-    padding: 0 2rem;
-  }
-
-  .benefits-title {
-    padding: 0 1rem;
-    font-size: 1rem;
-  }
-
-  .modal-content {
-    margin: 1rem;
-    max-width: calc(100vw - 2rem);
-  }
-
-  .modal-body {
-    height: 300px;
-  }
-
-  .deployment-section-enhanced,
-  .rag-section-enhanced {
-    padding: clamp(3rem, 6vh, 4rem) clamp(0.5rem, 2vw, 1rem);
-  }
-  
-  .deployment-content-container,
-  .rag-content-container {
-    width: 98%;
-    padding: clamp(2rem, 4vh, 2.5rem) clamp(1rem, 3vw, 1.5rem);
-  }
-  
-  .deployment-cards-grid-dark {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .deployment-card-dark {
-    padding: 1.5rem;
-  }
-  
-  .deployment-icon-dark {
-    width: 56px;
-    height: 56px;
-    margin-bottom: 1rem;
-  }
-
-  .rag-flow-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .rag-flow-step {
-    max-width: 100%;
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .cards-row {
-    gap: 1.5rem;
-    position: static !important;
-    transform: none !important;
-    animation: none !important;
-  }
-
-  .prompt-card {
-    flex: 0 0 280px;
-    padding: 1.5rem;
-    opacity: 1 !important;
-    visibility: visible !important;
-  }
-
-  .cards-row.top {
-    margin-bottom: 2rem !important;
-    position: static !important;
-  }
-
-  .cards-row.bottom {
-    margin-top: 1rem !important;
-    position: static !important;
-  }
-
-  /* Force visibility des cartes en très petit écran */
-  .cards-container {
-    overflow: visible !important;
-    height: auto !important;
-    min-height: 500px !important;
-  }
-}
-
-  .deployment-section-enhanced,
-  .rag-section-enhanced {
-    padding: clamp(2rem, 4vh, 3rem) 1rem;
-  }
-  
-  .deployment-content-container,
-  .rag-content-container {
-    width: 100%;
-    padding: 1.5rem 1rem;
-    border-radius: 1.5rem;
-    border-width: 3px;
-  }
-  
-  .deployment-cards-grid-dark {
-    gap: 1rem;
-  }
-  
-  .deployment-card-dark {
-    padding: 1.2rem;
-  }
-  
-  .deployment-icon-dark {
-    width: 48px;
-    height: 48px;
-  }
-
-  .rag-flow-step {
-    padding: 1.2rem;
-  }
-
-@media (prefers-reduced-motion: reduce) {
-  .cards-row {
-    animation: none;
-    transform: none;
-  }
-  
-  .prompt-card,
-  .benefits-item {
-    transition: none;
-  }
-
-  .early-access-button {
-    transition: none;
-  }
-
-  .deployment-section-enhanced *,
-  .deployment-section-enhanced *::before,
-  .deployment-section-enhanced *::after,
-  .rag-section-enhanced *,
-  .rag-section-enhanced *::before,
-  .rag-section-enhanced *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .deployment-section-enhanced,
-  .rag-section-enhanced {
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    perspective: 1000px;
-  }
-}
-/* NOUVELLE SECTION ROI FINALE */
-.roi-section-enhanced {
-  margin: 6rem auto 4rem auto;
-  max-width: 1200px;
-  padding: 0 2rem;
-  text-align: center;
-}
-
-.roi-content-container {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 2rem;
-  padding: clamp(3rem, 5vh, 4rem) clamp(2rem, 4vw, 3rem);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.roi-content-container:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
-  border-color: rgba(255, 255, 255, 0.25);
-}
-
-.roi-header-enhanced {
-  margin-bottom: 3rem;
-}
-
-.roi-main-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 700;
-  margin: 0 0 1.5rem 0;
-  line-height: 1.2;
-  color: #fafafa;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-}
-
-.roi-subtitle {
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.6;
-  color: rgba(250, 250, 250, 0.9);
-}
-
-.roi-cta-container {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.roi-cta-button {
-  padding: 1rem 2.5rem;
-  font-size: 1rem;
-  font-weight: 700;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-  letter-spacing: 0.1em;
-  background: transparent;
-  color: #fce96b;
-  border: 2px solid #fce96b;
-  border-radius: 50px;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.4s ease-out;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 220px;
-  height: 56px;
-}
-
-.roi-cta-button .button-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  transition: all 0.4s ease-out;
-  transform: translateX(0);
-}
-
-.roi-cta-button .button-text {
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-}
-
-.roi-cta-button .arrow-right {
-  margin-left: 12px;
-  opacity: 1;
-  transition: all 0.4s ease-out;
-}
-
-.roi-cta-button .arrow-left {
-  margin-right: 12px;
-  opacity: 0;
-  transition: all 0.4s ease-out;
-}
-
-.roi-cta-button:hover {
-  background: #fce96b;
-  color: #2f2f2e;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(252, 233, 107, 0.4);
-}
-
-.roi-cta-button:hover .button-content {
-  transform: translateX(16px);
-}
-
-.roi-cta-button:hover .arrow-right {
-  opacity: 0;
-}
-
-.roi-cta-button:hover .arrow-left {
-  opacity: 1;
-}
-
-.roi-cta-button:active {
-  transform: translateY(-1px);
-}
-
-/* Responsive pour la section ROI */
-@media (max-width: 768px) {
-  .roi-section-enhanced {
-    margin: 4rem auto 3rem auto;
-    padding: 0 1rem;
-  }
-  
-  .roi-content-container {
-    padding: clamp(2rem, 4vh, 2.5rem) clamp(1rem, 3vw, 1.5rem);
-    border-radius: 1.5rem;
-  }
-  
-  .roi-cta-button {
-    min-width: 200px;
-    height: 52px;
-    padding: 0.9rem 2rem;
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .roi-content-container {
-    padding: 1.5rem 1rem;
-    border-radius: 1rem;
-  }
-  
-  .roi-cta-button {
-    min-width: 180px;
-    height: 48px;
-    padding: 0.8rem 1.5rem;
-    font-size: 0.85rem;
-  }
-  
-  .roi-cta-button:hover .button-content {
-    transform: translateX(12px);
-  }
-}
-/* Styles pour le nouveau formulaire utilisateur dans le modal */
-.modal-form {
-  margin: 20px 0;
-  animation: fadeInUp 0.3s ease-out;
-}
-
-.user-input-container {
-  position: relative;
-  margin-bottom: 20px;
-}
-
-.user-input-textarea {
-  width: 100%;
-  min-height: 80px;
-  padding: 12px 16px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-  font-size: 16px;
-  line-height: 1.5;
-  background-color: rgba(255, 255, 255, 0.05);
-  color: #999; /* Texte en gris comme demandé */
-  resize: vertical;
-  font-family: inherit;
-  transition: all 0.2s ease;
-}
-
-.user-input-textarea:focus {
-  outline: none;
-  border-color: #fce96b;
-  box-shadow: 0 0 0 3px rgba(252, 233, 107, 0.2);
-  color: #fafafa; /* Texte normal quand focus */
-}
-
-.user-input-textarea::placeholder {
-  color: #999; /* Placeholder en gris comme demandé */
-  font-style: italic;
-}
-
-/* Styles pour le formulaire email */
-.email-modal-form {
-  margin: 20px 0;
-  animation: fadeInUp 0.3s ease-out;
-}
-
-.email-modal-form .form-group {
-  margin-bottom: 20px;
-}
-
-.email-modal-form .form-label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: 600;
-  color: #fafafa;
-  font-size: 14px;
-}
-
-.email-modal-form .modal-input {
-  width: 100%;
-  padding: 12px 16px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
-  font-size: 16px;
-  transition: border-color 0.2s ease;
-  background-color: rgba(255, 255, 255, 0.05);
-  color: #fafafa;
-}
-
-.email-modal-form .modal-input:focus {
-  outline: none;
-  border-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.1);
-}
-
-.email-modal-form .modal-input::placeholder {
-  color: rgba(250, 250, 250, 0.5);
-}
-
-.privacy-notice-modal {
-  margin-top: 15px;
-  padding: 12px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 6px;
-  border-left: 3px solid rgba(255, 255, 255, 0.2);
-}
-
-.privacy-text-modal {
-  margin: 0;
-  font-size: 12px;
-  color: rgba(250, 250, 250, 0.7);
-  line-height: 1.4;
-}
-
-/* Success Message */
-.success-message-modal {
-  text-align: center;
-  padding: 20px;
-  animation: fadeInUp 0.3s ease-out;
-}
-
-.success-icon {
-  font-size: 48px;
-  color: #fce96b;
-  margin-bottom: 16px;
-}
-
-.success-text {
-  font-size: 16px;
-  color: #fafafa;
-  margin: 0;
-  font-weight: 500;
-}
-
-/* Nouveaux styles pour les boutons du modal - Style arrondi comme early-access-button */
-.modal-actions .action-button {
-  padding: 0.6rem 1.5rem;
-  font-size: 0.85rem;
-  font-weight: 700;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-  letter-spacing: 0.1em;
-  text-transform: none;
-  border-radius: 50px; /* Boutons arrondis comme early-access-button */
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.4s ease-out;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 140px;
-  height: 40px;
-  border: 1px solid;
-}
-
-.modal-actions .cancel-button {
-  background: transparent;
-  color: rgba(250, 250, 250, 0.8);
-  border-color: rgba(255, 255, 255, 0.3);
-}
-
-.modal-actions .cancel-button:hover:not(:disabled) {
-  background: rgba(255, 255, 255, 0.1);
-  color: #fafafa;
-  border-color: rgba(255, 255, 255, 0.5);
-  transform: translateY(-1px);
-}
-
-.modal-actions .submit-button {
-  background: transparent;
-  color: #fce96b;
-  border-color: #fce96b;
-}
-
-.modal-actions .submit-button:hover:not(:disabled) {
-  background: #fce96b;
-  color: #2f2f2e;
-  transform: translateY(-1px);
-}
-
-.modal-actions .submit-button:disabled,
-.modal-actions .cancel-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  transform: none;
-}
-
-/* Animation pour le changement de contenu du modal */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive pour le modal */
-@media (max-width: 768px) {
-  .user-input-textarea,
-  .email-modal-form .modal-input {
-    font-size: 16px; /* Évite le zoom sur iOS */
-  }
-  
-  .modal-actions {
-    flex-direction: column-reverse;
-    gap: 8px;
-  }
-  
-  .modal-actions .action-button {
-    width: 100%;
-    min-width: auto;
-  }
-}
+import React, { useEffect, useRef, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
+import './CollectionSection.css';
+
+const CollectionSection = () => {
+  const { t } = useTranslation();
+  const sectionRef = useRef(null);
+  const [uniqueId] = useState(() => `collection-${Math.random().toString(36).substr(2, 9)}`);
+  const [selectedPrompt, setSelectedPrompt] = useState(null);
+  const [editedPrompt, setEditedPrompt] = useState('');
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [userRequirement, setUserRequirement] = useState('');
+  const [clientEmail, setClientEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [showEmailModal, setShowEmailModal] = useState(false);
+  const [placeholderText, setPlaceholderText] = useState('');
+
+  // Animation machine à écrire pour le placeholder
+  const typewriterText = t('collection.modal.typewriterText', "j'aurais besoin que mon agent...");
+
+  useEffect(() => {
+    let currentIndex = 0;
+    const interval = setInterval(() => {
+      if (currentIndex <= typewriterText.length) {
+        setPlaceholderText(typewriterText.slice(0, currentIndex));
+        currentIndex++;
+      } else {
+        // Recommencer l'animation après une pause
+        setTimeout(() => {
+          currentIndex = 0;
+          setPlaceholderText('');
+        }, 2000);
+      }
+    }, 100);
+
+    return () => clearInterval(interval);
+  }, [typewriterText]);
+
+  // Refs et état pour la section déploiement avec nouvel effet ACCÉLÉRÉ
+  const deploymentContentRef = useRef(null);
+  const deploymentSectionRef = useRef(null);
+  const [deploymentScrollProgress, setDeploymentScrollProgress] = useState(0);
+
+  const legalPrompts = [
+    // LEGAL
+    {
+      title: t('collection.prompts.contractAnalysis.title'),
+      context: t('collection.prompts.contractAnalysis.context'),
+      body: t('collection.prompts.contractAnalysis.body')
+    },
+    {
+      title: t('collection.prompts.caseLawResearch.title'),
+      context: t('collection.prompts.caseLawResearch.context'),
+      body: t('collection.prompts.caseLawResearch.body')
+    },
+
+    // PRODUCTIVITY
+    {
+      title: t('collection.prompts.meetingPrep.title'),
+      context: t('collection.prompts.meetingPrep.context'),
+      body: t('collection.prompts.meetingPrep.body')
+    },
+    {
+      title: t('collection.prompts.wikiBuilder.title'),
+      context: t('collection.prompts.wikiBuilder.context'),
+      body: t('collection.prompts.wikiBuilder.body')
+    },
+
+    // COMPLIANCE
+    {
+      title: t('collection.prompts.auditTrail.title'),
+      context: t('collection.prompts.auditTrail.context'),
+      body: t('collection.prompts.auditTrail.body')
+    },
+    {
+      title: t('collection.prompts.supplierCompliance.title'),
+      context: t('collection.prompts.supplierCompliance.context'),
+      body: t('collection.prompts.supplierCompliance.body')
+    },
+
+    // BUSINESS OPS
+    {
+      title: t('collection.prompts.quotationAgent.title'),
+      context: t('collection.prompts.quotationAgent.context'),
+      body: t('collection.prompts.quotationAgent.body')
+    },
+    {
+      title: t('collection.prompts.clientOnboarding.title'),
+      context: t('collection.prompts.clientOnboarding.context'),
+      body: t('collection.prompts.clientOnboarding.body')
+    },
+
+    // STRATEGY / R&D
+    {
+      title: t('collection.prompts.techIntelligence.title'),
+      context: t('collection.prompts.techIntelligence.context'),
+      body: t('collection.prompts.techIntelligence.body')
+    },
+
+    // PUBLIC SECTOR / TENDERS
+    {
+      title: t('collection.prompts.rfpDrafting.title'),
+      context: t('collection.prompts.rfpDrafting.context'),
+      body: t('collection.prompts.rfpDrafting.body')
+    },
+
+    // ADDITIONAL
+    {
+      title: t('collection.prompts.esgCompliance.title'),
+      context: t('collection.prompts.esgCompliance.context'),
+      body: t('collection.prompts.esgCompliance.body')
+    },
+    {
+      title: t('collection.prompts.dataPrivacyAudit.title'),
+      context: t('collection.prompts.dataPrivacyAudit.context'),
+      body: t('collection.prompts.dataPrivacyAudit.body')
+    }
+  ];
+
+  const handleCardClick = (prompt) => {
+    setSelectedPrompt(prompt);
+    setEditedPrompt(prompt.body);
+    setUserRequirement('');
+    setClientEmail('');
+    setShowSuccess(false);
+    setShowEmailModal(false);
+    setIsDialogOpen(true);
+  };
+
+  const handleCloseDialog = () => {
+    setIsDialogOpen(false);
+    setShowEmailModal(false);
+    setTimeout(() => {
+      setSelectedPrompt(null);
+      setEditedPrompt('');
+      setUserRequirement('');
+      setClientEmail('');
+    }, 300);
+  };
+
+  const handleCancel = () => {
+    setUserRequirement('');
+    setShowEmailModal(false);
+  };
+
+  const handleContactRequest = () => {
+    setShowEmailModal(true);
+  };
+
+  const handleEmailSubmit = async () => {
+    if (!clientEmail.trim()) return;
+
+    setIsSubmitting(true);
+
+    try {
+      // Appel API pour envoyer la demande de devis
+      console.log('Envoi de la demande:', {
+        agentTitle: selectedPrompt?.title,
+        userRequirement: userRequirement.trim() || 'Demande de contact standard pour cet agent',
+        clientEmail: clientEmail.trim()
+      });
+
+      // Mode simulation pour le développement si l'API n'est pas disponible
+      if (process.env.NODE_ENV === 'development' && window.location.hostname === 'localhost') {
+        console.log('Mode simulation - API non disponible en développement');
+
+        // Simuler un délai d'envoi
+        await new Promise(resolve => setTimeout(resolve, 1000));
+
+        setShowEmailModal(false);
+        setShowSuccess(true);
+        setClientEmail('');
+
+        // Fermer le modal après 2 secondes
+        setTimeout(() => {
+          setIsDialogOpen(false);
+          setShowSuccess(false);
+        }, 2000);
+
+        return;
+      }
+
+      const response = await fetch('/api/quote', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          agentTitle: selectedPrompt?.title,
+          agentDescription: selectedPrompt?.context + ' - ' + selectedPrompt?.body,
+          userRequirement: userRequirement.trim() || 'Demande de contact standard pour cet agent',
+          clientEmail: clientEmail.trim(),
+          timestamp: new Date().toISOString()
+        }),
+      });
+
+      if (response.ok) {
+        setShowEmailModal(false);
+        setShowSuccess(true);
+        setClientEmail('');
+
+        // Fermer le modal après 2 secondes
+        setTimeout(() => {
+          setIsDialogOpen(false);
+          setShowSuccess(false);
+        }, 2000);
+      } else {
+        // Lire le message d'erreur de l'API
+        const errorData = await response.json().catch(() => ({}));
+        const errorMessage = errorData.message || `Erreur HTTP ${response.status}`;
+        throw new Error(errorMessage);
+      }
+    } catch (error) {
+      console.error('Erreur:', error);
+
+      // Afficher un message d'erreur plus informatif
+      const errorMessage = error.message || 'Une erreur est survenue. Veuillez réessayer.';
+      alert(`Erreur: ${errorMessage}`);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const PromptIcon = () => (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      className="prompt-icon"
+    >
+      <path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z" />
+    </svg>
+  );
+
+  // Icônes de déploiement avec nouveau design
+  const DeploymentCloudIcon = () => (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+    </svg>
+  );
+
+  const DeploymentAzureIcon = () => (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+      <path d="M5.5 5L8.5 2L16.5 12L13.5 22L5.5 18L2 12L5.5 5Z" fill="currentColor" />
+      <path d="M8.5 2L22 8L18.5 18L13.5 22L16.5 12L8.5 2Z" fill="currentColor" opacity="0.7" />
+    </svg>
+  );
+
+  const DeploymentServerIcon = () => (
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+      <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+      <line x1="6" y1="6" x2="6.01" y2="6" />
+      <line x1="6" y1="18" x2="6.01" y2="18" />
+    </svg>
+  );
+
+  const getDeploymentIcon = (iconType) => {
+    switch (iconType) {
+      case 'cloud': return <DeploymentCloudIcon />;
+      case 'azure': return <DeploymentAzureIcon />;
+      case 'server': return <DeploymentServerIcon />;
+      default: return <DeploymentCloudIcon />;
+    }
+  };
+
+  // Données de déploiement pour la nouvelle section
+  const deploymentOptions = [
+    {
+      id: 'saas',
+      icon: 'cloud',
+      title: t('collection.deployment.saas.title', 'SaaS Cloud'),
+      description: t('collection.deployment.saas.description', 'Fully managed solution'),
+      features: ['Instant deployment', 'Automatic updates', 'Pay-as-you-scale', 'SOC2 certified'],
+      recommended: false
+    },
+    {
+      id: 'vpc',
+      icon: 'azure',
+      title: t('collection.deployment.vpc.title', 'VPC / Azure'),
+      description: t('collection.deployment.vpc.description', 'Your cloud environment'),
+      features: ['Your cloud, your rules', 'Network isolation', 'Custom compliance', 'Direct control'],
+      recommended: false
+    },
+    {
+      id: 'onprem',
+      icon: 'server',
+      title: t('collection.deployment.onprem.title', 'On-Premise'),
+      description: t('collection.deployment.onprem.description', 'Complete control'),
+      features: ['Air-gapped deployment', 'Maximum security', 'Custom infrastructure', 'Regulatory compliance'],
+      recommended: false
+    }
+  ];
+
+  // useEffect pour gérer l'effet de transition de scroll ACCÉLÉRÉ sur la section déploiement
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!deploymentSectionRef.current) return;
+
+      const element = deploymentSectionRef.current;
+      const rect = element.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      const elementHeight = rect.height;
+
+      // NOUVEAU CALCUL ACCÉLÉRÉ : commence plus tôt et progresse plus vite
+      const startPoint = windowHeight * 0.8; // Commence quand la section est visible à 80%
+      const endPoint = -elementHeight * 0.2; // Finit quand la section est sortie à 20%
+
+      let progress;
+      if (rect.top > startPoint) {
+        progress = 0;
+      } else if (rect.top < endPoint) {
+        progress = 1;
+      } else {
+        progress = (startPoint - rect.top) / (startPoint - endPoint);
+      }
+
+      // Fonction d'accélération pour une transition plus rapide
+      progress = Math.pow(progress, 0.7); // Courbe d'accélération
+
+      setDeploymentScrollProgress(progress);
+
+      // Appliquer les classes de transition de couleur avec seuils ACCÉLÉRÉS
+      if (progress < 0.15) { // Commence plus tôt (était 0.3)
+        element.className = element.className.replace(/deployment-bg-dark-\w+/g, '') + ' deployment-bg-dark-start';
+      } else if (progress < 0.45) { // Transition plus rapide (était 0.7)
+        element.className = element.className.replace(/deployment-bg-dark-\w+/g, '') + ' deployment-bg-dark-middle';
+      } else {
+        element.className = element.className.replace(/deployment-bg-dark-\w+/g, '') + ' deployment-bg-dark-end';
+      }
+    };
+
+    // Observer d'intersection pour les animations d'apparition
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+
+        // Animer les cartes individuellement avec délai
+        const cards = entry.target.querySelectorAll('.deployment-card-dark');
+        cards.forEach((card, index) => {
+          setTimeout(() => {
+            card.classList.add('visible');
+          }, index * 100);
+        });
+
+        // Animer le header
+        const header = entry.target.querySelector('.deployment-header-dark');
+        if (header) header.classList.add('visible');
+      }
+    }, {
+      threshold: 0.05, // Plus sensible (était 0.1)
+      rootMargin: '0px 0px -30px 0px' // Moins restrictif (était -50px)
+    });
+
+    // Observer le container de contenu pour les animations
+    if (deploymentContentRef.current) {
+      observer.observe(deploymentContentRef.current);
+    }
+
+    // Ajouter l'écouteur de scroll
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll(); // Appel initial
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  return (
+    <>
+      <section ref={sectionRef} className="collection-section">
+        <div className="collection-content">
+          {/* Header de la section collection - ORIGINAL CONSERVÉ */}
+          <div className="collection-header">
+            <h3 className="section-label">{t('collection.sectionLabel')}</h3>
+
+            <h2 className="collection-title">
+              {t('collection.title')}
+            </h2>
+
+            <p className="collection-intro">
+              {t('collection.subtitle')}
+            </p>
+
+            <button className="early-access-button" onClick={() => window.location.href = '/contact'}>
+              <div className="button-content">
+                <span className="arrow-left">→</span>
+                <span className="button-text">
+                  {t('collection.cta')}
+                  <span className="arrow-right">→</span>
+                </span>
+              </div>
+            </button>
+          </div>
+
+          {/* Container des cartes avec animations - ORIGINAL CONSERVÉ */}
+          <div className="cards-container">
+            <div className="cards-row top">
+              {legalPrompts.slice(0, 6).map((prompt, index) => (
+                <div
+                  key={index}
+                  className="prompt-card"
+                  onClick={() => handleCardClick(prompt)}
+                >
+                  <div className="card-context">{prompt.context}</div>
+                  <h3 className="card-title">{prompt.title}</h3>
+                  <div className="card-body">{prompt.body}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* Indicateur temporel - ORIGINAL CONSERVÉ */}
+            <div className="time-indicator">
+              <div className="year-text">2025</div>
+              <div className="last-update-text">{t('collection.lastUpdate')}</div>
+            </div>
+
+            <div className="cards-row bottom">
+              {legalPrompts.slice(6, 12).map((prompt, index) => (
+                <div
+                  key={index}
+                  className="prompt-card"
+                  onClick={() => handleCardClick(prompt)}
+                >
+                  <div className="card-context">{prompt.context}</div>
+                  <h3 className="card-title">{prompt.title}</h3>
+                  <div className="card-body">{prompt.body}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* NOUVELLE SECTION DEPLOYMENT avec transition de scroll ACCÉLÉRÉE */}
+          <div
+            ref={deploymentSectionRef}
+            className="deployment-section-enhanced deployment-bg-dark-start"
+          >
+            <div
+              ref={deploymentContentRef}
+              className="deployment-content-container"
+            >
+              <div className="deployment-header-dark">
+                <h3 className="deployment-subtitle-dark">
+                  {t('collection.deployment.sectionLabel', 'DEPLOYMENT OPTIONS')}
+                </h3>
+                <h2 className="deployment-title-dark">
+                  {t('collection.deployment.title', 'Deploy in our cloud or yours')}
+                </h2>
+                <p className="deployment-intro-dark">
+                  {t('collection.deployment.subtitle', 'Choose the deployment model that best fits your security, compliance, and infrastructure needs.')}
+                </p>
+              </div>
+
+              <div className="deployment-cards-grid-dark">
+                {deploymentOptions.map((option, index) => (
+                  <div
+                    key={option.id}
+                    className="deployment-card-dark"
+                    style={{ transitionDelay: `${index * 0.1}s` }}
+                  >
+
+                    <div className="deployment-icon-dark">
+                      {getDeploymentIcon(option.icon)}
+                    </div>
+
+                    <h3 className="deployment-card-title-dark">
+                      {option.title}
+                    </h3>
+
+                    <p className="deployment-card-description-dark">
+                      {option.description}
+                    </p>
+
+                    <ul className="deployment-features-dark">
+                      {option.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="deployment-feature-dark">
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Section des bénéfices - ORIGINAL CONSERVÉ */}
+          <div className="benefits-section">
+            <div className="benefits-title-line">
+              <span className="benefits-title">{t('collection.benefits.title')}</span>
+            </div>
+
+            <div className="benefits-list">
+              <div className="benefits-item">
+                <div className="benefit-icon-circle">
+                  <svg className="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 2L15.09 8.26L22 9L17 14L18.18 21L12 17.77L5.82 21L7 14L2 9L8.91 8.26L12 2Z" />
+                  </svg>
+                </div>
+                <span>{t('collection.benefits.item1')}</span>
+              </div>
+              <div className="benefits-item">
+                <div className="benefit-icon-circle">
+                  <svg className="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
+                    <circle cx="16" cy="11" r="3" />
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                  </svg>
+                </div>
+                <span>{t('collection.benefits.item2')}</span>
+              </div>
+              <div className="benefits-item">
+                <div className="benefit-icon-circle">
+                  <svg className="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                    <circle cx="12" cy="16" r="1" />
+                    <path d="M7 11V7A5 5 0 0 1 17 7V11" />
+                  </svg>
+                </div>
+                <span>{t('collection.benefits.item3')}</span>
+              </div>
+              <div className="benefits-item">
+                <div className="benefit-icon-circle">
+                  <svg className="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" />
+                  </svg>
+                </div>
+                <span>{t('collection.benefits.item4')}</span>
+              </div>
+              <div className="benefits-item">
+                <div className="benefit-icon-circle">
+                  <svg className="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 2V6" />
+                    <path d="M12 18V22" />
+                    <path d="M4.93 4.93L7.76 7.76" />
+                    <path d="M16.24 16.24L19.07 19.07" />
+                    <path d="M2 12H6" />
+                    <path d="M18 12H22" />
+                    <path d="M4.93 19.07L7.76 16.24" />
+                    <path d="M16.24 7.76L19.07 4.93" />
+                  </svg>
+                </div>
+                <span>{t('collection.benefits.item5')}</span>
+              </div>
+            </div>
+          </div>
+
+          {/* NOUVELLE SECTION ROI FINALE */}
+          <div className="roi-section-enhanced">
+            <div className="roi-content-container">
+              <div className="roi-header-enhanced">
+                <h2 className="roi-main-title">
+                  {t('collection.roi.mainTitle', 'EggOn goes where you go.')}
+                </h2>
+                <p className="roi-subtitle">
+                  {t('collection.roi.subtitle', 'The RAG contextualisation combined with specific agents AI give you some ROI quickly')}
+                </p>
+              </div>
+
+              <div className="roi-cta-container">
+                <button className="roi-cta-button" onClick={() => window.location.href = '/contact'}>
+                  <div className="button-content">
+                    <span className="arrow-left">→</span>
+                    <span className="button-text">
+                      {t('collection.roi.cta', 'Talk to EggOn')}
+                      <span className="arrow-right">→</span>
+                    </span>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Modal Dialog avec animations - ORIGINAL CONSERVÉ */}
+        <AnimatePresence>
+          {isDialogOpen && selectedPrompt && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="modal-overlay"
+              onClick={handleCloseDialog}
+            >
+              <motion.div
+                initial={{
+                  opacity: 0,
+                  scale: 0.3,
+                  x: '-50%',
+                  y: '-50%'
+                }}
+                animate={{
+                  opacity: 1,
+                  scale: 1,
+                  x: 0,
+                  y: 0
+                }}
+                exit={{
+                  opacity: 0,
+                  scale: 0.3,
+                  x: '-50%',
+                  y: '-50%'
+                }}
+                transition={{
+                  type: 'spring',
+                  bounce: 0.05,
+                  duration: 0.4
+                }}
+                className="modal-content"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <div className="modal-header">
+                  <div className="modal-title-section">
+                    <div className="modal-context">
+                      {selectedPrompt.context}
+                    </div>
+                    <h2 className="modal-title">
+                      {selectedPrompt.title}
+                    </h2>
+                  </div>
+                  <button
+                    className="close-button"
+                    onClick={handleCloseDialog}
+                    aria-label="close"
+                  >
+                    ×
+                  </button>
+                </div>
+
+                <div className="modal-body">
+                  <div className="prompt-textarea-container">
+                    <PromptIcon />
+                    <textarea
+                      className="prompt-textarea"
+                      value={editedPrompt}
+                      onChange={(e) => setEditedPrompt(e.target.value)}
+                      placeholder={t('collection.modal.placeholder')}
+                      disabled
+                    />
+                  </div>
+
+                  {!showSuccess && !showEmailModal ? (
+                    <div className="modal-form">
+                      <div className="form-group">
+                        <div className="user-input-container">
+                          <textarea
+                            value={userRequirement}
+                            onChange={(e) => setUserRequirement(e.target.value)}
+                            placeholder={placeholderText}
+                            className="user-input-textarea"
+                            rows="3"
+                            disabled={isSubmitting}
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  ) : showEmailModal && !showSuccess ? (
+                    <div className="email-modal-form">
+                      <div className="form-group">
+                        <label className="form-label">
+                          {t('collection.modal.emailLabel', 'Adresse email de destination du devis')}
+                        </label>
+                        <input
+                          type="email"
+                          value={clientEmail}
+                          onChange={(e) => setClientEmail(e.target.value)}
+                          placeholder={t('collection.modal.emailPlaceholder', 'votre@email.com')}
+                          className="modal-input"
+                          disabled={isSubmitting}
+                          required
+                          autoFocus
+                        />
+                      </div>
+
+                      <div className="privacy-notice-modal">
+                        <p className="privacy-text-modal">
+                          {t('collection.modal.privacyNotice', 'Nous n\'enverrons pas d\'emails commerciaux, simplement votre devis personnalisé.')}
+                        </p>
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="success-message-modal">
+                      <div className="success-icon">✓</div>
+                      <p className="success-text">
+                        {t('collection.modal.successMessage', 'Votre demande a été envoyée avec succès !')}
+                      </p>
+                    </div>
+                  )}
+
+                  <div className="modal-actions">
+                    {!showSuccess && !showEmailModal && (
+                      <>
+                        <button
+                          className="action-button cancel-button"
+                          onClick={handleCancel}
+                          disabled={isSubmitting}
+                        >
+                          {t('collection.modal.cancel', 'Annuler')}
+                        </button>
+                        <button
+                          className="action-button submit-button"
+                          onClick={handleContactRequest}
+                          disabled={isSubmitting}
+                        >
+                          {t('collection.modal.contact', 'Être contacté')} →
+                        </button>
+                      </>
+                    )}
+
+                    {showEmailModal && !showSuccess && (
+                      <>
+                        <button
+                          className="action-button cancel-button"
+                          onClick={() => setShowEmailModal(false)}
+                          disabled={isSubmitting}
+                        >
+                          {t('collection.modal.back', 'Retour')}
+                        </button>
+                        <button
+                          className="action-button submit-button"
+                          onClick={handleEmailSubmit}
+                          disabled={isSubmitting || !clientEmail.trim()}
+                        >
+                          {isSubmitting
+                            ? t('collection.modal.sending', 'Envoi en cours...')
+                            : t('collection.modal.validate', 'Valider')
+                          } →
+                        </button>
+                      </>
+                    )}
+
+                    {showSuccess && (
+                      <button
+                        className="action-button submit-button"
+                        onClick={handleCloseDialog}
+                      >
+                        {t('collection.modal.close', 'Fermer')}
+                      </button>
+                    )}
+                  </div>
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </section>
+    </>
+  );
+};
+
+export default CollectionSection;
