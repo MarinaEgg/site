@@ -1,4 +1,4 @@
-/* SOLUTION ULTRA-RENFORCÉE POUR FORCER LE SPEEDDIAL EN HAUT À DROITE */
+/* SOLUTION ULTRA-RENFORCÉE POUR FORCER LE SPEEDDIiAL EN HAUT À DROITE */
 
 /* 1. SOLUTION BRUTALE - Force tous les SpeedDial existants */
 *[class*="MuiSpeedDial"],
@@ -124,3 +124,4 @@ html body [class*="useStyles-speedDial"] {
   left: auto !important;
   bottom: auto !important;
 }
+
