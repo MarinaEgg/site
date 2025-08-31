@@ -1,33 +1,25 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { SpeedDial, SpeedDialIcon, SpeedDialAction } from "@material-ui/lab";
 import { useTranslation } from 'react-i18next';
-import './NavigationSpeedDial.css';
 
+// STYLES ULTRA-SIMPLIFIÉS POUR ÉVITER LES CONFLITS
 const useStyles = makeStyles((theme) => ({
-    speedDial: {
-        position: "absolute !important", // Changé de fixed à absolute
-        top: "0 !important",
-        right: "0 !important",
-        zIndex: "99999 !important",
-        margin: "0 !important",
-        transform: "none !important",
+    speedDialContainer: {
+        position: 'fixed',
+        top: 12,
+        right: 12,
+        zIndex: 9999,
         [theme.breakpoints.up('md')]: {
-            display: 'none !important',
+            display: 'none',
         },
+    },
+    speedDial: {
+        // Styles minimaux, laisse Material-UI faire son travail
         '& .MuiSpeedDialAction-staticTooltipLabel': {
-            color: '#000000 !important',
-            backgroundColor: 'rgba(255, 255, 255, 0.95) !important',
-            fontWeight: '500 !important',
-        },
-        '& .MuiTooltip-tooltip': {
-            color: '#000000 !important',
-            backgroundColor: 'rgba(255, 255, 255, 0.95) !important',
-            fontWeight: '500 !important',
-            fontSize: '0.875rem !important',
-        },
-        '& .MuiTooltip-arrow': {
-            color: 'rgba(255, 255, 255, 0.95) !important',
+            color: '#000000',
+            backgroundColor: 'rgba(255, 255, 255, 0.95)',
+            fontWeight: '500',
         },
     },
     iconColor: {
@@ -39,59 +31,8 @@ const useStyles = makeStyles((theme) => ({
 export const NavigationSpeedDial = () => {
     const classes = useStyles();
     const { t } = useTranslation();
-    const speedDialRef = useRef(null);
 
     const [open, setOpen] = React.useState(false);
-
-    // FORCE LA POSITION AVEC JAVASCRIPT
-    useEffect(() => {
-        const forcePosition = () => {
-            if (speedDialRef.current) {
-                const speedDialElement = speedDialRef.current.querySelector('[class*="MuiSpeedDial-root"]');
-                if (speedDialElement) {
-                    speedDialElement.style.position = 'absolute';
-                    speedDialElement.style.top = '0px';
-                    speedDialElement.style.right = '0px';
-                    speedDialElement.style.left = 'auto';
-                    speedDialElement.style.bottom = 'auto';
-                    speedDialElement.style.margin = '0';
-                    speedDialElement.style.transform = 'none';
-                    speedDialElement.style.zIndex = '99999';
-                }
-
-                // CORRECTION : Force aussi les actions à rester alignées à droite
-                const actionsElement = speedDialRef.current.querySelector('[class*="MuiSpeedDial-actions"]');
-                if (actionsElement) {
-                    actionsElement.style.position = 'absolute';
-                    actionsElement.style.top = '0px';
-                    actionsElement.style.right = '0px';
-                    actionsElement.style.left = 'auto';
-                    actionsElement.style.transform = 'none';
-                    actionsElement.style.transformOrigin = 'top right';
-                    actionsElement.style.margin = '0';
-                }
-            }
-        };
-
-        // Force au montage
-        forcePosition();
-
-        // Force après un délai pour s'assurer que Material-UI a fini de s'initialiser
-        const timeout = setTimeout(forcePosition, 100);
-
-        // Force à chaque resize (au cas où)
-        window.addEventListener('resize', forcePosition);
-
-        // NOUVEAU : Force aussi quand le SpeedDial s'ouvre
-        const forceOnOpen = () => {
-            setTimeout(forcePosition, 50);
-        };
-
-        return () => {
-            clearTimeout(timeout);
-            window.removeEventListener('resize', forcePosition);
-        };
-    }, [open]); // MODIFICATION : Dépend aussi de l'état 'open'
 
     const handleClose = () => {
         setOpen(false);
@@ -99,22 +40,6 @@ export const NavigationSpeedDial = () => {
 
     const handleOpen = () => {
         setOpen(true);
-        
-        // CORRECTION : Force l'alignement quand le menu s'ouvre
-        setTimeout(() => {
-            if (speedDialRef.current) {
-                const actionsElement = speedDialRef.current.querySelector('[class*="MuiSpeedDial-actions"]');
-                if (actionsElement) {
-                    actionsElement.style.position = 'absolute';
-                    actionsElement.style.top = '0px';
-                    actionsElement.style.right = '0px';
-                    actionsElement.style.left = 'auto';
-                    actionsElement.style.transform = 'none';
-                    actionsElement.style.transformOrigin = 'top right';
-                    actionsElement.style.margin = '0';
-                }
-            }
-        }, 10);
     };
 
     // Navigation links avec icônes
@@ -154,42 +79,15 @@ export const NavigationSpeedDial = () => {
     ));
 
     return (
-        <div
-            ref={speedDialRef}
-            className="navigation-speed-dial-wrapper"
-            style={{
-                position: 'fixed',
-                top: '12px',
-                right: '12px',
-                width: 'auto',
-                height: 'auto',
-                zIndex: 99999,
-                margin: 0,
-                padding: 0,
-                transform: 'none',
-                pointerEvents: 'auto' // CORRECTION: Changé de 'none' à 'auto'
-            }}
-        >
+        <div className={classes.speedDialContainer}>
             <SpeedDial
                 ariaLabel="Navigation SpeedDial"
-                className={`${classes.speedDial} navigation-speed-dial`}
-                hidden={false}
+                className={classes.speedDial}
                 icon={<SpeedDialIcon />}
                 onClose={handleClose}
                 onOpen={handleOpen}
                 open={open}
                 direction="down"
-                style={{
-                    position: 'absolute',
-                    top: '0px',
-                    right: '0px',
-                    left: 'auto',
-                    bottom: 'auto',
-                    zIndex: 99999,
-                    margin: 0,
-                    transform: 'none',
-                    pointerEvents: 'auto'
-                }}
             >
                 {actionIcons}
             </SpeedDial>
