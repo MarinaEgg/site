@@ -1,4 +1,4 @@
-/* SOLUTION ULTRA-RENFORCÉE POUR FORCER LE SPEEDDIiAL EN HAUT À DROITE */
+/* SOLUTION ULTRA-RENFORCÉE POUR FORCER LE SPEEDDIAL EN HAUT À DROITE */
 
 /* 1. SOLUTION BRUTALE - Force tous les SpeedDial existants */
 *[class*="MuiSpeedDial"],
@@ -78,7 +78,12 @@ html body [class*="useStyles-speedDial"] {
 .MuiSpeedDial-actions,
 [class*="MuiSpeedDial-actions"] {
   pointer-events: auto !important;
-  position: relative !important;
+  position: absolute !important;
+  top: 0 !important;
+  right: 0 !important;
+  left: auto !important;
+  transform: none !important;
+  margin: 0 !important;
   z-index: inherit !important;
 }
 
@@ -87,6 +92,31 @@ html body [class*="useStyles-speedDial"] {
   pointer-events: auto !important;
   position: relative !important;
   z-index: inherit !important;
+}
+
+/* CORRECTION SPÉCIFIQUE : Force les actions à rester alignées à droite */
+.navigation-speed-dial .MuiSpeedDial-actions {
+  right: 0 !important;
+  left: auto !important;
+  transform: none !important;
+  transform-origin: top right !important;
+}
+
+/* CORRECTION : Centre le "+" dans son cercle */
+.MuiSpeedDial-fab,
+[class*="MuiSpeedDial-fab"] {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.MuiSpeedDialIcon-root,
+[class*="MuiSpeedDialIcon-root"] {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 /* 5. CACHE SUR DESKTOP */
@@ -124,4 +154,3 @@ html body [class*="useStyles-speedDial"] {
   left: auto !important;
   bottom: auto !important;
 }
-
