@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { SpeedDial, SpeedDialIcon, SpeedDialAction } from "@material-ui/lab";
 import { useTranslation } from 'react-i18next';
@@ -6,22 +6,22 @@ import './NavigationSpeedDial.css';
 
 const useStyles = makeStyles((theme) => ({
     speedDial: {
-        position: "fixed !important", // IMPORTANT: garder fixed
-        top: "12px !important",
-        right: "12px !important",
-        zIndex: "10000 !important", // Plus élevé que 9999
+        position: "absolute !important", // Changé de fixed à absolute
+        top: "0 !important",
+        right: "0 !important",
+        zIndex: "99999 !important",
         margin: "0 !important",
         transform: "none !important",
         [theme.breakpoints.up('md')]: {
             display: 'none !important',
         },
         '& .MuiSpeedDialAction-staticTooltipLabel': {
-            color: '#000000 !important', // Tooltips en noir
+            color: '#000000 !important',
             backgroundColor: 'rgba(255, 255, 255, 0.95) !important',
             fontWeight: '500 !important',
         },
         '& .MuiTooltip-tooltip': {
-            color: '#000000 !important', // Texte des tooltips en noir
+            color: '#000000 !important',
             backgroundColor: 'rgba(255, 255, 255, 0.95) !important',
             fontWeight: '500 !important',
             fontSize: '0.875rem !important',
@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     iconColor: {
-        color: theme.palette.grey[600], // Même couleur grise que les icônes actuelles
+        color: theme.palette.grey[600],
         fontSize: '1.2rem',
     },
 }));
@@ -39,8 +39,42 @@ const useStyles = makeStyles((theme) => ({
 export const NavigationSpeedDial = () => {
     const classes = useStyles();
     const { t } = useTranslation();
+    const speedDialRef = useRef(null);
 
     const [open, setOpen] = React.useState(false);
+
+    // FORCE LA POSITION AVEC JAVASCRIPT
+    useEffect(() => {
+        const forcePosition = () => {
+            if (speedDialRef.current) {
+                const speedDialElement = speedDialRef.current.querySelector('[class*="MuiSpeedDial-root"]');
+                if (speedDialElement) {
+                    speedDialElement.style.position = 'absolute';
+                    speedDialElement.style.top = '0px';
+                    speedDialElement.style.right = '0px';
+                    speedDialElement.style.left = 'auto';
+                    speedDialElement.style.bottom = 'auto';
+                    speedDialElement.style.margin = '0';
+                    speedDialElement.style.transform = 'none';
+                    speedDialElement.style.zIndex = '99999';
+                }
+            }
+        };
+
+        // Force au montage
+        forcePosition();
+
+        // Force après un délai pour s'assurer que Material-UI a fini de s'initialiser
+        const timeout = setTimeout(forcePosition, 100);
+
+        // Force à chaque resize (au cas où)
+        window.addEventListener('resize', forcePosition);
+
+        return () => {
+            clearTimeout(timeout);
+            window.removeEventListener('resize', forcePosition);
+        };
+    }, []);
 
     const handleClose = () => {
         setOpen(false);
@@ -88,16 +122,19 @@ export const NavigationSpeedDial = () => {
 
     return (
         <div
+            ref={speedDialRef}
             className="navigation-speed-dial-wrapper"
             style={{
                 position: 'fixed',
                 top: '12px',
                 right: '12px',
-                zIndex: 10000,
+                width: 'auto',
+                height: 'auto',
+                zIndex: 99999,
                 margin: 0,
                 padding: 0,
                 transform: 'none',
-                pointerEvents: 'auto'
+                pointerEvents: 'none'
             }}
         >
             <SpeedDial
@@ -110,12 +147,15 @@ export const NavigationSpeedDial = () => {
                 open={open}
                 direction="down"
                 style={{
-                    position: 'fixed',
-                    top: '12px',
-                    right: '12px',
-                    zIndex: 10000,
+                    position: 'absolute',
+                    top: '0px',
+                    right: '0px',
+                    left: 'auto',
+                    bottom: 'auto',
+                    zIndex: 99999,
                     margin: 0,
-                    transform: 'none'
+                    transform: 'none',
+                    pointerEvents: 'auto'
                 }}
             >
                 {actionIcons}
