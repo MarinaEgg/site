@@ -12,6 +12,11 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.up('md')]: {
             display: 'none', // Caché sur desktop
         },
+        '& .MuiSpeedDialAction-staticTooltipLabel': {
+            color: '#000000 !important', // Tooltips en noir
+            backgroundColor: 'rgba(255, 255, 255, 0.95) !important',
+            fontWeight: '500 !important',
+        },
     },
     iconColor: {
         color: theme.palette.grey[600], // Même couleur grise que les icônes actuelles
