@@ -3,13 +3,12 @@ import Header from '../components/header/Header';
 import { LogoLink } from '../components/logo/LogoLink';
 import { Content } from '../components/content/Content';
 import { makeStyles } from '@material-ui/core/styles';
-import { SpeedDials } from '../components/speedDial/SpeedDial';
 import NOGProjectSection from '../components/nog/NOGProjectSection';
 import WhyEggOnSection from '../components/why-eggon/WhyEggOnSection'; // 🆕 Import de votre nouvelle section
 import CollectionSection from '../components/collection/CollectionSection';
 import LegalStackSection from '../components/legalStack/LegalStackSection';
 import Footer from '../components/footer/Footer';
-import { Hidden } from '@material-ui/core';
+// Hidden import supprimé car plus nécessaire
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -53,9 +52,7 @@ export const Home = () => {
       <div className={classes.homeSection}>
         <LogoLink />
         <Content />
-        <Hidden mdUp>
-          <SpeedDials />
-        </Hidden>
+
       </div>
 
       <div className={classes.contentSection}>
