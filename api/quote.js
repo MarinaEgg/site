@@ -1,6 +1,7 @@
-// api/quote.js - API Route améliorée avec débogage détaillé
+// api/quote.js - API Route avec eval('require') pour compatibilité Vercel
 
-import { sendEmailWithNodemailer } from './email-config.js';
+// 🔧 Import avec eval('require') au lieu d'import ES6
+const { sendEmailWithNodemailer } = eval('require')('./email-config.js');
 
 export default async function handler(req, res) {
   // Headers CORS
@@ -138,7 +139,7 @@ export default async function handler(req, res) {
               </div>
             </div>
             
-            <div style="background: #317039; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #317039;">
+            <div style="background: #d4edda; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #28a745;">
               <h3 style="color: #2f2f2e; margin: 0 0 15px 0;">Prochaines étapes:</h3>
               <div style="color: #333; line-height: 1.8;">
                 <p style="margin: 8px 0;">✅ Notre équipe technique analyse vos besoins</p>
@@ -283,5 +284,3 @@ export default async function handler(req, res) {
     });
   }
 }
-
-
