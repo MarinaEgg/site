@@ -13,7 +13,7 @@
         "@testing-library/jest-dom": "^4.2.4",
         "@testing-library/react": "^9.3.2",
         "@testing-library/user-event": "^7.1.2",
-        "@vercel/speed-insights": "^1.0.0",
+        "@vercel/speed-insights": "^0.2.5",
         "classnames": "^2.2.6",
         "framer-motion": "^4.1.17",
         "i18next": "^21.10.0",
