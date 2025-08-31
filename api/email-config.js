@@ -27,11 +27,11 @@ export async function sendEmailWithNodemailer(emailContent) {
     
     console.log('📧 Préparation email...');
     const mailOptions = {
-      from: `"${process.env.FROM_NAME || 'EggOn Technology'}" <${process.env.FROM_EMAIL || 'contact@eggon-technology.com'}>`,
+      from: `"${process.env.FROM_NAME || 'EggOn Technology'}" <${process.env.FROM_EMAIL || 'eggoncontact@gmail.com'}>`,
       to: emailContent.to,
       subject: emailContent.subject,
       html: emailContent.html,
-      replyTo: process.env.FROM_EMAIL || 'contact@eggon-technology.com'
+      replyTo: process.env.FROM_EMAIL || 'eggoncontact@gmail.com'
     };
 
     console.log('🚀 Envoi email...');
