@@ -682,7 +682,8 @@ const RAGArchitectureDiagram = () => {
                 lineHeight: '1.1',
                 marginBottom: '1.5rem',
                 textShadow: 'none',
-                background: 'transparent'
+                background: 'transparent',
+                textAlign: 'center'
               }}
             >
               {t('ragArchitecture.title', 'NEXT-GEN ARCHITECTURE FOR AGENTS')}
