@@ -390,6 +390,7 @@ export const NOGLabHero = () => {
                     className={classes.heroImage}
                 />
             </div>
+        
         </Container>
     );
 };
