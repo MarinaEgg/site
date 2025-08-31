@@ -61,7 +61,7 @@ export const NavigationSpeedDial = () => {
             }
         };
 
-        // Force au montage
+        // Force le montage
         forcePosition();
 
         // Force après un délai pour s'assurer que Material-UI a fini de s'initialiser
@@ -163,3 +163,4 @@ export const NavigationSpeedDial = () => {
         </div>
     );
 };
+
