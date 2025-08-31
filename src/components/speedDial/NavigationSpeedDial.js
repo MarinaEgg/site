@@ -1,4 +1,5 @@
 import React from "react";
+import ReactDOM from "react-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import { SpeedDial, SpeedDialIcon, SpeedDialAction } from "@material-ui/lab";
 import { useTranslation } from 'react-i18next';
@@ -41,6 +42,22 @@ export const NavigationSpeedDial = () => {
     const { t } = useTranslation();
 
     const [open, setOpen] = React.useState(false);
+    const speedDialRef = React.useRef(null);
+
+    // Force le repositionnement après le rendu
+    React.useEffect(() => {
+        if (speedDialRef.current) {
+            const speedDialElement = speedDialRef.current.querySelector('.MuiSpeedDial-root');
+            if (speedDialElement) {
+                speedDialElement.style.position = 'fixed';
+                speedDialElement.style.top = '12px';
+                speedDialElement.style.right = '12px';
+                speedDialElement.style.zIndex = '10000';
+                speedDialElement.style.transform = 'none';
+                speedDialElement.style.margin = '0';
+            }
+        }
+    }, []);
 
     const handleClose = () => {
         setOpen(false);
@@ -86,8 +103,10 @@ export const NavigationSpeedDial = () => {
         />
     ));
 
-    return (
+    // Utiliser un portail pour rendre le SpeedDial directement dans le body
+    return ReactDOM.createPortal(
         <div
+            ref={speedDialRef}
             className="navigation-speed-dial-wrapper"
             style={{
                 position: 'fixed',
@@ -120,6 +139,7 @@ export const NavigationSpeedDial = () => {
             >
                 {actionIcons}
             </SpeedDial>
-        </div>
+        </div>,
+        document.body
     );
 };
