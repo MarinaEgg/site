@@ -94,7 +94,7 @@ const LearnSection = () => {
     try {
       console.log(`Action ${actionType} pour le cours: ${courseTitle}`);
 
-      // Mode simulation pour le développement si l'API n'est pas disponible
+      // Mode simulation pour le développement si l'API est indisponible
       if (process.env.NODE_ENV === 'development' && window.location.hostname === 'localhost') {
         console.log('Mode simulation - API non disponible en développement');
         alert(`Demande envoyée pour ${actionType} du cours: ${courseTitle}`);
