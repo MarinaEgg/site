@@ -6,12 +6,14 @@ import './NavigationSpeedDial.css';
 
 const useStyles = makeStyles((theme) => ({
     speedDial: {
-        position: "fixed",
-        top: theme.spacing(2),
-        right: theme.spacing(2),
-        zIndex: 9999, // Z-index très élevé pour être au-dessus de tout
+        position: "fixed !important", // IMPORTANT: garder fixed
+        top: "12px !important",
+        right: "12px !important",
+        zIndex: "10000 !important", // Plus élevé que 9999
+        margin: "0 !important",
+        transform: "none !important",
         [theme.breakpoints.up('md')]: {
-            display: 'none', // Caché sur desktop
+            display: 'none !important',
         },
         '& .MuiSpeedDialAction-staticTooltipLabel': {
             color: '#000000 !important', // Tooltips en noir
@@ -87,7 +89,7 @@ export const NavigationSpeedDial = () => {
     return (
         <SpeedDial
             ariaLabel="Navigation SpeedDial"
-            className={classes.speedDial}
+            className={`${classes.speedDial} navigation-speed-dial`}
             hidden={false}
             icon={<SpeedDialIcon />}
             onClose={handleClose}
