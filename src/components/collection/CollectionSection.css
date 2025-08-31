@@ -1037,28 +1037,26 @@
     transform: none !important;
     animation: none !important;
     overflow-x: auto !important;
+    overflow-y: hidden !important;
     scroll-behavior: smooth !important;
     -webkit-overflow-scrolling: touch !important;
-    scrollbar-width: thin !important;
-    scrollbar-color: rgba(255, 255, 255, 0.3) transparent !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    gap: 0 !important;
+    padding-bottom: 10px !important;
   }
   
   .cards-row::-webkit-scrollbar {
-    height: 6px !important;
+    height: 0px !important; /* Masquer la scrollbar */
+    background: transparent !important;
   }
   
   .cards-row::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1) !important;
-    border-radius: 3px !important;
+    background: transparent !important;
   }
   
   .cards-row::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.3) !important;
-    border-radius: 3px !important;
-  }
-  
-  .cards-row::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.5) !important;
+    background: transparent !important;
   }
   
   /* Correction pour l'indicateur temporel en mobile */
@@ -1150,10 +1148,16 @@
   }
 
   .prompt-card {
-    flex: 0 0 280px;
+    flex: 0 0 280px !important;
+    min-width: 280px !important;
     padding: 1.5rem;
     opacity: 1 !important;
     visibility: visible !important;
+    margin-right: 1rem !important;
+  }
+  
+  .prompt-card:last-child {
+    margin-right: 0 !important;
   }
 
   .cards-row.top {
