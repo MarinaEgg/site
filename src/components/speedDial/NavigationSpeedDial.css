@@ -1,0 +1,32 @@
+/* Styles globaux pour le NavigationSpeedDial */
+.MuiSpeedDial-root {
+  position: fixed !important;
+  top: 16px !important;
+  right: 16px !important;
+  z-index: 9999 !important;
+}
+
+@media (min-width: 960px) {
+  .MuiSpeedDial-root {
+    display: none !important;
+  }
+}
+
+/* Styles pour les tooltips */
+.MuiTooltip-tooltip {
+  color: #000000 !important;
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  font-weight: 500 !important;
+  font-size: 0.875rem !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.MuiTooltip-arrow {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.MuiSpeedDialAction-staticTooltipLabel {
+  color: #000000 !important;
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  font-weight: 500 !important;
+}
