@@ -39,14 +39,14 @@ html body [class*="useStyles-speedDial"] {
 /* 3. FORCE LA POSITION AVEC UN CONTENEUR WRAPPER ABSOLU */
 .navigation-speed-dial-wrapper {
   position: fixed !important;
-  top: 0 !important;
-  right: 0 !important;
-  width: 100vw !important;
-  height: 100vh !important;
-  pointer-events: none !important;
+  top: 12px !important;
+  right: 12px !important;
+  width: auto !important;
+  height: auto !important;
+  pointer-events: auto !important; /* CORRECTION: Permet les interactions */
   z-index: 99999 !important;
   margin: 0 !important;
-  padding: 12px !important;
+  padding: 0 !important;
   box-sizing: border-box !important;
 }
 
@@ -72,6 +72,21 @@ html body [class*="useStyles-speedDial"] {
   margin: 0 !important;
   transform: none !important;
   pointer-events: auto !important;
+}
+
+/* CORRECTION: S'assurer que les actions sont visibles et interactives */
+.MuiSpeedDial-actions,
+[class*="MuiSpeedDial-actions"] {
+  pointer-events: auto !important;
+  position: relative !important;
+  z-index: inherit !important;
+}
+
+.MuiSpeedDialAction-fab,
+[class*="MuiSpeedDialAction-fab"] {
+  pointer-events: auto !important;
+  position: relative !important;
+  z-index: inherit !important;
 }
 
 /* 5. CACHE SUR DESKTOP */
