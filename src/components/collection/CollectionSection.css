@@ -995,6 +995,105 @@
 }
 
 /* Responsive Design */
+/* Mobile Carousel System */
+.mobile-carousel-container {
+  display: none;
+}
+
+.mobile-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin: 2rem 0;
+}
+
+.mobile-carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+  padding: 0 1rem;
+}
+
+.mobile-carousel-track.auto-scroll {
+  animation: mobileCarouselScroll 30s linear infinite;
+}
+
+.mobile-carousel-track.paused {
+  animation-play-state: paused;
+}
+
+.mobile-carousel-card {
+  flex: 0 0 280px;
+  min-width: 280px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  opacity: 0.7;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+.mobile-carousel-card.active {
+  opacity: 1;
+  transform: scale(1.05);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.mobile-carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(250, 250, 250, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+  background: #fce96b;
+  transform: scale(1.2);
+}
+
+.mobile-time-indicator {
+  text-align: center;
+  margin: 3rem 0 2rem 0;
+}
+
+.mobile-time-indicator .year-text {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 900;
+  color: #fafafa;
+  margin: 0;
+  line-height: 1;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.mobile-time-indicator .last-update-text {
+  font-size: clamp(0.875rem, 2vw, 1.125rem);
+  color: rgba(250, 250, 250, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin: 0.5rem 0 0 0;
+  font-weight: 500;
+}
+
+@keyframes mobileCarouselScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-280px * var(--total-cards) + 100vw - 2rem)); }
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .early-access-button {
     min-width: 160px;
@@ -1013,12 +1112,14 @@
     padding: 0 1rem;
   }
 
-  .prompt-card {
-    flex: 0 0 300px;
+  /* Masquer le système desktop */
+  .cards-container {
+    display: none;
   }
 
-  .cards-row.top {
-    margin-bottom: 2rem !important;
+  /* Afficher le carousel mobile */
+  .mobile-carousel-container {
+    display: block;
   }
 
   /* FIX CRITIQUE: Assurer que les cartes sont visibles en mobile */
