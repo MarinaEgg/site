@@ -1,3 +1,4 @@
+
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
@@ -16,6 +17,12 @@ const CollectionSection = () => {
   const [showSuccess, setShowSuccess] = useState(false);
   const [showEmailModal, setShowEmailModal] = useState(false);
   const [placeholderText, setPlaceholderText] = useState('');
+  
+  // États pour le carousel mobile
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoScrolling, setIsAutoScrolling] = useState(true);
+  const carouselRef = useRef(null);
+  const autoScrollRef = useRef(null);
 
   // Animation machine à écrire pour le placeholder
   const typewriterText = t('collection.modal.typewriterText', "j'aurais besoin que mon agent...");
@@ -37,6 +44,80 @@ const CollectionSection = () => {
 
     return () => clearInterval(interval);
   }, [typewriterText]);
+
+  // Gestion du carousel mobile
+  useEffect(() => {
+    if (!isAutoScrolling) return;
+
+    const startAutoScroll = () => {
+      autoScrollRef.current = setInterval(() => {
+        setCurrentSlide(prev => (prev + 1) % legalPrompts.length);
+      }, 3000);
+    };
+
+    // Démarrer après un délai initial
+    const initialDelay = setTimeout(startAutoScroll, 2000);
+
+    return () => {
+      clearTimeout(initialDelay);
+      if (autoScrollRef.current) {
+        clearInterval(autoScrollRef.current);
+      }
+    };
+  }, [isAutoScrolling]);
+
+  // Gestion du scroll tactile et centrage
+  useEffect(() => {
+    const carousel = carouselRef.current;
+    if (!carousel) return;
+
+    const handleTouchStart = () => {
+      setIsAutoScrolling(false);
+      if (autoScrollRef.current) {
+        clearInterval(autoScrollRef.current);
+      }
+    };
+
+    const handleTouchEnd = () => {
+      // Reprendre l'auto-scroll après 5 secondes d'inactivité
+      setTimeout(() => {
+        setIsAutoScrolling(true);
+      }, 5000);
+    };
+
+    carousel.addEventListener('touchstart', handleTouchStart);
+    carousel.addEventListener('touchend', handleTouchEnd);
+
+    return () => {
+      carousel.removeEventListener('touchstart', handleTouchStart);
+      carousel.removeEventListener('touchend', handleTouchEnd);
+    };
+  }, []);
+
+  // Mise à jour de la position du carousel
+  useEffect(() => {
+    const carousel = carouselRef.current;
+    if (!carousel) return;
+
+    const cardWidth = 280 + 24; // largeur carte + gap
+    const containerWidth = window.innerWidth;
+    const offset = (containerWidth - 280) / 2 - 16; // centrer la carte
+    
+    const translateX = -currentSlide * cardWidth + offset;
+    carousel.style.transform = `translateX(${translateX}px)`;
+  }, [currentSlide]);
+
+  const handleDotClick = (index) => {
+    setCurrentSlide(index);
+    setIsAutoScrolling(false);
+    if (autoScrollRef.current) {
+      clearInterval(autoScrollRef.current);
+    }
+    // Reprendre l'auto-scroll après 5 secondes
+    setTimeout(() => {
+      setIsAutoScrolling(true);
+    }, 5000);
+  };
 
   // Refs et état pour la section déploiement avec nouvel effet ACCÉLÉRÉ
   const deploymentContentRef = useRef(null);
@@ -433,6 +514,46 @@ const CollectionSection = () => {
                   <div className="card-body">{prompt.body}</div>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* NOUVEAU: Carousel Mobile */}
+          <div className="mobile-carousel-container">
+            <div className="mobile-carousel-wrapper">
+              <div 
+                ref={carouselRef}
+                className="mobile-carousel-track"
+              >
+                {legalPrompts.map((prompt, index) => (
+                  <div
+                    key={index}
+                    className={`mobile-carousel-card ${index === currentSlide ? 'active' : ''}`}
+                    onClick={() => handleCardClick(prompt)}
+                  >
+                    <div className="card-context">{prompt.context}</div>
+                    <h3 className="card-title">{prompt.title}</h3>
+                    <div className="card-body">{prompt.body}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Indicateurs carousel */}
+            <div className="mobile-carousel-indicators">
+              {legalPrompts.map((_, index) => (
+                <button
+                  key={index}
+                  className={`carousel-dot ${index === currentSlide ? 'active' : ''}`}
+                  onClick={() => handleDotClick(index)}
+                  aria-label={`Slide ${index + 1}`}
+                />
+              ))}
+            </div>
+
+            {/* Indicateur temporel mobile */}
+            <div className="mobile-time-indicator">
+              <div className="year-text">2025</div>
+              <div className="last-update-text">{t('collection.lastUpdate')}</div>
             </div>
           </div>
 
