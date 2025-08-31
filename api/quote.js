@@ -63,10 +63,10 @@ export default async function handler(req, res) {
     // Email pour l'équipe EggOn (notification interne)
     const internalEmailContent = {
       to: internalEmail,
-      subject: `🤖 Nouvelle demande de devis - Agent IA: ${agentTitle}`,
+      subject: `Nouvelle demande d'information - Agent IA: ${agentTitle}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <div style="background: linear-gradient(135deg, #fce96b 0%, #f0d943 100%); padding: 30px; text-align: center;">
+          <div style="background: linear-gradient(135deg, #f1be49 0%, #f0d943 100%); padding: 30px; text-align: center;">
             <h1 style="color: #2f2f2e; margin: 0; font-size: 24px;">EggOn Technology</h1>
             <p style="color: #2f2f2e; margin: 5px 0 0 0; opacity: 0.8;">Nouvelle demande de devis</p>
           </div>
@@ -81,12 +81,12 @@ export default async function handler(req, res) {
               </div>
             ` : ''}
             
-            <div style="background: #fff3cd; padding: 20px; border-radius: 8px; border-left: 4px solid #fce96b; margin: 20px 0;">
+            <div style="background: #fff1d4; padding: 20px; border-radius: 8px; border-left: 4px solid #f1be49; margin: 20px 0;">
               <h3 style="color: #2f2f2e; margin: 0 0 10px 0;">Besoins spécifiques du client:</h3>
               <p style="font-style: italic; color: #333; margin: 0;">"${userRequirement}"</p>
             </div>
             
-            <div style="background: #d1ecf1; padding: 20px; border-radius: 8px; border-left: 4px solid #17a2b8; margin: 20px 0;">
+            <div style="background: #d1ecf1; padding: 20px; border-radius: 8px; border-left: 4px solid #f1be49; margin: 20px 0;">
               <h3 style="color: #2f2f2e; margin: 0 0 10px 0;">Informations client:</h3>
               <p style="margin: 0; color: #333;">
                 <strong>Email:</strong> ${clientEmail}<br>
@@ -115,7 +115,7 @@ export default async function handler(req, res) {
       subject: `Confirmation de votre demande - Agent IA: ${agentTitle}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <div style="background: linear-gradient(135deg, #fce96b 0%, #f0d943 100%); padding: 30px; text-align: center;">
+          <div style="background: linear-gradient(135deg, #fce96b 0%, #f1be49 100%); padding: 30px; text-align: center;">
             <h1 style="color: #2f2f2e; margin: 0; font-size: 28px;">EggOn Technology</h1>
             <p style="color: #2f2f2e; margin: 5px 0 0 0; font-size: 14px; opacity: 0.8;">Explainable AI Governance</p>
           </div>
@@ -138,18 +138,18 @@ export default async function handler(req, res) {
               </div>
             </div>
             
-            <div style="background: #d4edda; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #28a745;">
+            <div style="background: #317039; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #317039;">
               <h3 style="color: #2f2f2e; margin: 0 0 15px 0;">Prochaines étapes:</h3>
               <div style="color: #333; line-height: 1.8;">
                 <p style="margin: 8px 0;">✅ Notre équipe technique analyse vos besoins</p>
-                <p style="margin: 8px 0;">✅ Nous préparons un devis personnalisé</p>
-                <p style="margin: 8px 0;">✅ Vous recevrez notre proposition sous 48h ouvrées</p>
+                <p style="margin: 8px 0;">✅ Nous préparons un retour personnalisé</p>
+                <p style="margin: 8px 0;">✅ Vous recevrez une réponse sous 48h ouvrées</p>
               </div>
             </div>
             
             <div style="text-align: center; margin: 30px 0; padding: 20px; background: #fff3cd; border-radius: 8px;">
               <p style="margin: 0 0 15px 0; color: #333; font-size: 16px;"><strong>Une question ?</strong></p>
-              <a href="mailto:contact@eggon-technology.com" style="background: #2f2f2e; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+              <a href="mailto:eggoncontact@gmail.com" style="background: #2f2f2e; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold;">
                 Nous contacter
               </a>
             </div>
@@ -283,3 +283,4 @@ export default async function handler(req, res) {
     });
   }
 }
+
