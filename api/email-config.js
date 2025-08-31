@@ -1,12 +1,13 @@
-// api/email-config.js - VERSION VERCEL COMPATIBLE (ES6)
-
-import nodemailer from 'nodemailer';
+// api/email-config.js - VERSION CORRIGÉE avec la bonne méthode
 
 export async function sendEmailWithNodemailer(emailContent) {
-  console.log('🔧 === EMAIL VERCEL VERSION ===');
+  console.log('🔧 === EMAIL SIMPLE VERSION ===');
   
   try {
-    console.log('📦 Nodemailer importé (ES6)...');
+    console.log('📦 Import nodemailer simple...');
+    
+    const nodemailer = eval('require')('nodemailer');
+    console.log('✅ Nodemailer importé via require');
     console.log('🔍 Méthodes disponibles:', Object.getOwnPropertyNames(nodemailer));
     
     console.log('🚛 Création transporteur...');
@@ -58,7 +59,18 @@ export async function sendEmailModern(emailContent) {
   console.log('🔧 === EMAIL MODERN VERSION ===');
   
   try {
-    console.log('✅ Nodemailer loaded (ES6)');
+    // Import avec await import()
+    const nodemailerModule = await import('nodemailer');
+    
+    // Essayer différentes façons d'accéder à createTransport
+    let nodemailer;
+    if (nodemailerModule.default) {
+      nodemailer = nodemailerModule.default;
+    } else {
+      nodemailer = nodemailerModule;
+    }
+    
+    console.log('✅ Nodemailer loaded');
     console.log('🔍 Available methods:', Object.getOwnPropertyNames(nodemailer));
     
     const transporter = nodemailer.createTransport({
@@ -93,9 +105,10 @@ export async function sendEmailModern(emailContent) {
 
 // 🧪 VERSION DE TEST POUR DEBUGGING
 export async function debugNodemailer() {
-  console.log('🧪 === DEBUG NODEMAILER ES6 ===');
+  console.log('🧪 === DEBUG NODEMAILER ===');
   
   try {
+    const nodemailer = eval('require')('nodemailer');
     console.log('📋 Nodemailer object type:', typeof nodemailer);
     console.log('📋 Nodemailer keys:', Object.keys(nodemailer));
     console.log('📋 Nodemailer methods:', Object.getOwnPropertyNames(nodemailer));
