@@ -1,4 +1,4 @@
-# EggOn Technology - Robots.txt optimisé pour Sitelinks Google
+# EggOn Technology - Robots.txt optimise pour Sitelinks Google
 # https://eggon-technology.com/robots.txt
 
 User-agent: *
