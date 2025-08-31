@@ -1,6 +1,5 @@
-// api/email-config.js - VERSION VERCEL COMPATIBLE
+// api/email-config.js - VERSION VERCEL COMPATIBLE (ES6)
 
-// Import ES6 standard pour Vercel
 import nodemailer from 'nodemailer';
 
 export async function sendEmailWithNodemailer(emailContent) {
@@ -54,13 +53,18 @@ export async function sendEmailWithNodemailer(emailContent) {
   }
 }
 
-// Version simplifiée pour test
-export async function sendTestEmail() {
-  console.log('🧪 === TEST EMAIL SIMPLE ===');
+// 🔄 VERSION ALTERNATIVE avec import moderne
+export async function sendEmailModern(emailContent) {
+  console.log('🔧 === EMAIL MODERN VERSION ===');
   
   try {
+    console.log('✅ Nodemailer loaded (ES6)');
+    console.log('🔍 Available methods:', Object.getOwnPropertyNames(nodemailer));
+    
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: 'smtp.gmail.com',
+      port: 587,
+      secure: false,
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS
@@ -68,19 +72,39 @@ export async function sendTestEmail() {
     });
 
     await transporter.verify();
-    console.log('✅ Connexion OK');
+    console.log('✅ Connection verified');
     
     const info = await transporter.sendMail({
       from: `"${process.env.FROM_NAME}" <${process.env.FROM_EMAIL}>`,
-      to: process.env.INTERNAL_EMAIL,
-      subject: 'Test EggOn - Configuration Vercel',
-      html: '<h2>Test réussi!</h2><p>Configuration email fonctionnelle sur Vercel.</p>'
+      to: emailContent.to,
+      subject: emailContent.subject,
+      html: emailContent.html
     });
+    
+    console.log('✅ Email sent:', info.messageId);
     
     return { success: true, messageId: info.messageId };
     
   } catch (error) {
-    console.error('❌ Test failed:', error);
+    console.error('❌ Modern method failed:', error.message);
+    return { success: false, error: error.message };
+  }
+}
+
+// 🧪 VERSION DE TEST POUR DEBUGGING
+export async function debugNodemailer() {
+  console.log('🧪 === DEBUG NODEMAILER ES6 ===');
+  
+  try {
+    console.log('📋 Nodemailer object type:', typeof nodemailer);
+    console.log('📋 Nodemailer keys:', Object.keys(nodemailer));
+    console.log('📋 Nodemailer methods:', Object.getOwnPropertyNames(nodemailer));
+    console.log('📋 Has createTransport?', typeof nodemailer.createTransport);
+    
+    return { success: true, debug: 'Check logs for details' };
+    
+  } catch (error) {
+    console.error('❌ Debug failed:', error.message);
     return { success: false, error: error.message };
   }
 }
