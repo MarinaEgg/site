@@ -87,17 +87,39 @@ export const NavigationSpeedDial = () => {
     ));
 
     return (
-        <SpeedDial
-            ariaLabel="Navigation SpeedDial"
-            className={`${classes.speedDial} navigation-speed-dial`}
-            hidden={false}
-            icon={<SpeedDialIcon />}
-            onClose={handleClose}
-            onOpen={handleOpen}
-            open={open}
-            direction="down"
+        <div
+            className="navigation-speed-dial-wrapper"
+            style={{
+                position: 'fixed',
+                top: '12px',
+                right: '12px',
+                zIndex: 10000,
+                margin: 0,
+                padding: 0,
+                transform: 'none',
+                pointerEvents: 'auto'
+            }}
         >
-            {actionIcons}
-        </SpeedDial>
+            <SpeedDial
+                ariaLabel="Navigation SpeedDial"
+                className={`${classes.speedDial} navigation-speed-dial`}
+                hidden={false}
+                icon={<SpeedDialIcon />}
+                onClose={handleClose}
+                onOpen={handleOpen}
+                open={open}
+                direction="down"
+                style={{
+                    position: 'relative',
+                    top: 0,
+                    right: 0,
+                    zIndex: 1,
+                    margin: 0,
+                    transform: 'none'
+                }}
+            >
+                {actionIcons}
+            </SpeedDial>
+        </div>
     );
 };
