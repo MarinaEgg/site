@@ -58,10 +58,22 @@ export const NavigationSpeedDial = () => {
                     speedDialElement.style.transform = 'none';
                     speedDialElement.style.zIndex = '99999';
                 }
+
+                // CORRECTION : Force aussi les actions à rester alignées à droite
+                const actionsElement = speedDialRef.current.querySelector('[class*="MuiSpeedDial-actions"]');
+                if (actionsElement) {
+                    actionsElement.style.position = 'absolute';
+                    actionsElement.style.top = '0px';
+                    actionsElement.style.right = '0px';
+                    actionsElement.style.left = 'auto';
+                    actionsElement.style.transform = 'none';
+                    actionsElement.style.transformOrigin = 'top right';
+                    actionsElement.style.margin = '0';
+                }
             }
         };
 
-        // Force le montage
+        // Force au montage
         forcePosition();
 
         // Force après un délai pour s'assurer que Material-UI a fini de s'initialiser
@@ -70,11 +82,16 @@ export const NavigationSpeedDial = () => {
         // Force à chaque resize (au cas où)
         window.addEventListener('resize', forcePosition);
 
+        // NOUVEAU : Force aussi quand le SpeedDial s'ouvre
+        const forceOnOpen = () => {
+            setTimeout(forcePosition, 50);
+        };
+
         return () => {
             clearTimeout(timeout);
             window.removeEventListener('resize', forcePosition);
         };
-    }, []);
+    }, [open]); // MODIFICATION : Dépend aussi de l'état 'open'
 
     const handleClose = () => {
         setOpen(false);
@@ -82,6 +99,22 @@ export const NavigationSpeedDial = () => {
 
     const handleOpen = () => {
         setOpen(true);
+        
+        // CORRECTION : Force l'alignement quand le menu s'ouvre
+        setTimeout(() => {
+            if (speedDialRef.current) {
+                const actionsElement = speedDialRef.current.querySelector('[class*="MuiSpeedDial-actions"]');
+                if (actionsElement) {
+                    actionsElement.style.position = 'absolute';
+                    actionsElement.style.top = '0px';
+                    actionsElement.style.right = '0px';
+                    actionsElement.style.left = 'auto';
+                    actionsElement.style.transform = 'none';
+                    actionsElement.style.transformOrigin = 'top right';
+                    actionsElement.style.margin = '0';
+                }
+            }
+        }, 10);
     };
 
     // Navigation links avec icônes
@@ -163,4 +196,3 @@ export const NavigationSpeedDial = () => {
         </div>
     );
 };
-
