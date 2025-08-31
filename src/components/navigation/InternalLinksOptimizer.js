@@ -63,3 +63,4 @@ export const InternalLinksOptimizer = ({ children, currentPage }) => {
     </div>
   );
 };
+
