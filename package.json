@@ -4,7 +4,7 @@
     "homepage": "https://eggon-technology.com",
     "description": "EggOn Technology.",
     "repository": "https://github.com/xxx/personal-website-react",
-    "author": "EGGON TECH <eggoncontact@gmail.com>",
+    "author": "EGGON TECHNOLOGY <eggoncontact@gmail.com>",
     "license": "UNLICENSED",
     "dependencies": {
         "@material-ui/core": "^4.11.0",
