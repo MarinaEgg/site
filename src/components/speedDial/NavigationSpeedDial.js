@@ -134,7 +134,7 @@ export const NavigationSpeedDial = () => {
                 margin: 0,
                 padding: 0,
                 transform: 'none',
-                pointerEvents: 'none'
+                pointerEvents: 'auto' // CORRECTION: Changé de 'none' à 'auto'
             }}
         >
             <SpeedDial
