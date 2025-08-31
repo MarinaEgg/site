@@ -1,7 +1,6 @@
 {
     "name": "eggon-website-react",
     "version": "0.2.0",
-    "type": "module",
     "homepage": "https://eggon-technology.com",
     "description": "EggOn Technology.",
     "repository": "https://github.com/xxx/personal-website-react",
