@@ -48,3 +48,4 @@ export const BreadcrumbsOptimized = ({ currentPage, items = [] }) => {
     </Breadcrumbs>
   );
 };
+
