@@ -29,3 +29,4 @@ const ParallaxSection = ({
 };
 
 export default ParallaxSection;
+
