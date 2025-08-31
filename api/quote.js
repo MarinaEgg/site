@@ -219,7 +219,7 @@ export default async function handler(req, res) {
 
     if (internalSuccess && clientSuccess) {
       console.log('🎉 === SUCCÈS COMPLET ===');
-      console.log('✅ Demande de devis traitée avec succès:', {
+      console.log('✅ Demande d'informations traitée avec succès:', {
         agentTitle,
         clientEmail,
         timestamp: new Date().toISOString(),
@@ -227,7 +227,7 @@ export default async function handler(req, res) {
       });
 
       return res.status(200).json({ 
-        message: 'Demande de devis envoyée avec succès',
+        message: 'Demande d'informations envoyée avec succès',
         success: true,
         simulated: internalEmailResponse.value.simulated || clientEmailResponse.value.simulated || false
       });
@@ -283,4 +283,5 @@ export default async function handler(req, res) {
     });
   }
 }
+
 
