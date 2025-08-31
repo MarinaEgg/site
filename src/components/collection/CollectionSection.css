@@ -1036,6 +1036,43 @@
     position: relative !important;
     transform: none !important;
     animation: none !important;
+    overflow-x: auto !important;
+    scroll-behavior: smooth !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent !important;
+  }
+  
+  .cards-row::-webkit-scrollbar {
+    height: 6px !important;
+  }
+  
+  .cards-row::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-radius: 3px !important;
+  }
+  
+  .cards-row::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3) !important;
+    border-radius: 3px !important;
+  }
+  
+  .cards-row::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5) !important;
+  }
+  
+  /* Correction pour l'indicateur temporel en mobile */
+  .time-indicator {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin: 2rem 0 !important;
+    z-index: 10 !important;
+  }
+  
+  .year-text {
+    font-size: clamp(2rem, 6vw, 3rem) !important;
   }
 
   .cards-row.top {
