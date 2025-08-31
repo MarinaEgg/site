@@ -1,134 +1,14 @@
-/* SOLUTION ULTRA-RENFORCÉE POUR FORCER LE SPEEDDIAL EN HAUT À DROITE */
+/* VERSION DE DÉPANNAGE - STYLES MINIMAUX */
 
-/* 1. SOLUTION BRUTALE - Force tous les SpeedDial existants */
-*[class*="MuiSpeedDial"],
-*[aria-label*="Navigation SpeedDial"],
-*[class*="speedDial"],
-.navigation-speed-dial,
-.navigation-speed-dial-wrapper {
-  position: fixed !important;
-  top: 12px !important;
-  right: 12px !important;
-  left: auto !important;
-  bottom: auto !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  transform: none !important;
-  z-index: 99999 !important;
-  inset: 12px 12px auto auto !important;
-}
-
-/* 2. CIBLAGE ULTRA-SPÉCIFIQUE avec tous les sélecteurs possibles */
-html body div[class*="MuiSpeedDial-root"],
-html body button[class*="MuiSpeedDial-root"],
-html body div[class*="jss"][class*="speedDial"],
-html body [class*="makeStyles-speedDial"],
-html body [class*="useStyles-speedDial"] {
-  position: fixed !important;
-  top: 12px !important;
-  right: 12px !important;
-  left: auto !important;
-  bottom: auto !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  transform: none !important;
-  z-index: 99999 !important;
-  inset: 12px 12px auto auto !important;
-}
-
-/* 3. FORCE LA POSITION AVEC UN CONTENEUR WRAPPER ABSOLU */
-.navigation-speed-dial-wrapper {
-  position: fixed !important;
-  top: 12px !important;
-  right: 12px !important;
-  width: auto !important;
-  height: auto !important;
-  pointer-events: auto !important; /* CORRECTION: Permet les interactions */
-  z-index: 99999 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  box-sizing: border-box !important;
-}
-
-.navigation-speed-dial-wrapper > * {
-  position: absolute !important;
-  top: 0 !important;
-  right: 0 !important;
-  left: auto !important;
-  bottom: auto !important;
-  margin: 0 !important;
-  transform: none !important;
-  pointer-events: auto !important;
-}
-
-/* 4. OVERRIDE BRUTAL DE TOUS LES STYLES MATERIAL-UI */
-.MuiSpeedDial-root,
-[class*="MuiSpeedDial-root"] {
-  position: absolute !important;
-  top: 0 !important;
-  right: 0 !important;
-  left: auto !important;
-  bottom: auto !important;
-  margin: 0 !important;
-  transform: none !important;
-  pointer-events: auto !important;
-}
-
-/* CORRECTION: S'assurer que les actions sont visibles et interactives */
-.MuiSpeedDial-actions,
-[class*="MuiSpeedDial-actions"] {
-  pointer-events: auto !important;
-  position: absolute !important;
-  top: 0 !important;
-  right: 0 !important;
-  left: auto !important;
-  transform: none !important;
-  margin: 0 !important;
-  z-index: inherit !important;
-}
-
-.MuiSpeedDialAction-fab,
-[class*="MuiSpeedDialAction-fab"] {
-  pointer-events: auto !important;
-  position: relative !important;
-  z-index: inherit !important;
-}
-
-/* CORRECTION SPÉCIFIQUE : Force les actions à rester alignées à droite */
-.navigation-speed-dial .MuiSpeedDial-actions {
-  right: 0 !important;
-  left: auto !important;
-  transform: none !important;
-  transform-origin: top right !important;
-}
-
-/* CORRECTION : Centre le "+" dans son cercle */
-.MuiSpeedDial-fab,
-[class*="MuiSpeedDial-fab"] {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-}
-
-.MuiSpeedDialIcon-root,
-[class*="MuiSpeedDialIcon-root"] {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 100% !important;
-  height: 100% !important;
-}
-
-/* 5. CACHE SUR DESKTOP */
+/* Cache sur desktop */
 @media (min-width: 960px) {
-  .navigation-speed-dial-wrapper,
-  *[class*="MuiSpeedDial"],
-  *[aria-label*="Navigation SpeedDial"] {
+  .MuiSpeedDial-root,
+  [class*="MuiSpeedDial"] {
     display: none !important;
   }
 }
 
-/* 6. STYLES POUR LES TOOLTIPS */
+/* Styles pour les tooltips seulement */
 .MuiTooltip-tooltip {
   color: #000000 !important;
   background-color: rgba(255, 255, 255, 0.95) !important;
@@ -145,12 +25,4 @@ html body [class*="useStyles-speedDial"] {
   color: #000000 !important;
   background-color: rgba(255, 255, 255, 0.95) !important;
   font-weight: 500 !important;
-}
-
-/* 7. SOLUTION DE DERNIER RECOURS - JAVASCRIPT INLINE STYLES */
-[style*="position"][style*="fixed"][aria-label*="Navigation SpeedDial"] {
-  top: 12px !important;
-  right: 12px !important;
-  left: auto !important;
-  bottom: auto !important;
 }
