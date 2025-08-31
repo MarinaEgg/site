@@ -2,13 +2,14 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { SpeedDial, SpeedDialIcon, SpeedDialAction } from "@material-ui/lab";
 import { useTranslation } from 'react-i18next';
+import './NavigationSpeedDial.css';
 
 const useStyles = makeStyles((theme) => ({
     speedDial: {
         position: "fixed",
         top: theme.spacing(2),
         right: theme.spacing(2),
-        zIndex: 1002, // Plus élevé que le header
+        zIndex: 9999, // Z-index très élevé pour être au-dessus de tout
         [theme.breakpoints.up('md')]: {
             display: 'none', // Caché sur desktop
         },
@@ -16,6 +17,15 @@ const useStyles = makeStyles((theme) => ({
             color: '#000000 !important', // Tooltips en noir
             backgroundColor: 'rgba(255, 255, 255, 0.95) !important',
             fontWeight: '500 !important',
+        },
+        '& .MuiTooltip-tooltip': {
+            color: '#000000 !important', // Texte des tooltips en noir
+            backgroundColor: 'rgba(255, 255, 255, 0.95) !important',
+            fontWeight: '500 !important',
+            fontSize: '0.875rem !important',
+        },
+        '& .MuiTooltip-arrow': {
+            color: 'rgba(255, 255, 255, 0.95) !important',
         },
     },
     iconColor: {
