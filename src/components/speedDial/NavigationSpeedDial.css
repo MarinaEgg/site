@@ -1,18 +1,32 @@
-/* Styles globaux pour le NavigationSpeedDial */
+/* CORRECTION CRITIQUE : Force le SpeedDial à rester en haut à droite */
+.MuiSpeedDial-root.navigation-speed-dial,
 .MuiSpeedDial-root {
   position: fixed !important;
-  top: 16px !important;
-  right: 16px !important;
-  z-index: 9999 !important;
+  top: 12px !important;
+  right: 12px !important;
+  z-index: 10000 !important;
+  margin: 0 !important;
+  transform: none !important;
 }
 
+/* Spécifique au NavigationSpeedDial pour éviter les conflits */
+.navigation-speed-dial {
+  position: fixed !important;
+  top: 12px !important;
+  right: 12px !important;
+  z-index: 10000 !important;
+  margin: 0 !important;
+  transform: none !important;
+}
+
+/* Sur tablette et plus grand, on cache complètement */
 @media (min-width: 960px) {
   .MuiSpeedDial-root {
     display: none !important;
   }
 }
 
-/* Styles pour les tooltips */
+/* Styles pour les tooltips (garder ceux existants) */
 .MuiTooltip-tooltip {
   color: #000000 !important;
   background-color: rgba(255, 255, 255, 0.95) !important;
