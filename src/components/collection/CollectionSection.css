@@ -653,6 +653,8 @@
   line-height: 1.4;
   color: var(--deployment-card-text-color, #2f2f2e);
   transition: color 0.8s ease;
+  text-align: center;
+  justify-content: center;
 }
 
 .deployment-feature-dark::before {
@@ -662,6 +664,7 @@
   margin-top: 0.1rem;
   color: var(--deployment-check-color, #c4940a);
   transition: color 0.8s ease;
+  margin-right: 0.3rem;
 }
 
 .deployment-card-dark.recommended {
