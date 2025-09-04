@@ -327,9 +327,9 @@
     "academyProgram": "Programme IA Academie"
   },
   "ragArchitecture": {
-    "subtitle": "LA PLATEFORME AI CONTEXTUELLE",
+    "subtitle": "LA PLATEFORME IA CONTEXTUELLE",
     "title": "ARCHITECTURE DE NOUVELLE GÉNÉRATION",
-    "introduction": "La génération à enrichissement contextuel (RAG) optimise les réponses des modèles de langage en exploitant vos données internes ou externes, sans réentraînement."
+    "introduction": "Notre technologie d’IA contextuelle (RAG) permet à vos modèles de langage (GPT,...) de répondre avec pertinence en s’appuyant directement sur vos propres données pour générer un contenu adapté à votre contexte, sans réentraînement complexe."
   },
   "contact": {
     "title": "Prendre contact",
@@ -360,7 +360,7 @@
         "description": "En mettant en place une IA agentique qui exécute des tâches, rédige vos documents et délivre en quelques minutes ce qui vous prenait des heures."
       },
       "augments": {
-        "title": "Accompagne votre équipe",
+        "title": "Accompagner votre équipe",
         "description": "En vous conseillant dans le choix et la mise en place des solutions d’IA et d’agents IA adaptées à vos besoins."
       }
     },
