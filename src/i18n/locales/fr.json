@@ -102,12 +102,12 @@
       ]
     },
     "benefits": {
-      "title": "Nos Avantages",
-      "item1": "Contextualiser un grand modèle de langage (GPT...) avec vos données d'entreprise (RAG / Ingénierie du contexte)",
-      "item2": "Agents IA spécialisés pour des tâches ciblées, avec pour objectif un retour sur investissement rapide (Agentique IA)",
-      "item3": "Intégrations pour connecter vos systèmes d'information et éliminer les silos, tout en respectant les droits et règles en place.",
-      "item4": "Confidentialité et conformité : vos données demeurent dans votre environnement sécurisé.",
-      "item5": "Support expert et accompagnement personnalisé tout au long de votre transformation IA, assurés par des équipes expérimentées dans votre domaine (legaltech, fintech...)."
+      "title": "Bénéfices de votre IA",
+      "item1": "Personalisée aux besoins de votre entreprise.",
+      "item2": "Performante avec un retour sur investissement rapide et avéré ",
+      "item3": "Elimine les silos de connaissances internes, pour une meilleure communication et restitution.",
+      "item4": "Conforme à vos régles de sécurité et de compliance.",
+      "item5": "Réduit le taux d'erreur dans les processus automatisés de jusqu'à 94 %, améliorant ainsi la conformité réglementaire (source arXiv:2506.01423)."
     },
     "modal": {
       "placeholder": "Complétez selon vos besoins...",
