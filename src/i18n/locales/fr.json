@@ -312,13 +312,13 @@
     }
   },
   "nog": {
-    "intro": "Actuellement, les clients demandent à eggon de:",
+    "intro": "Actuellement, les clients demandent à EggOn :",
     "actions": [
-      "Construire des agents IA",
-      "Conception d’instructions IA",
-      "Conseils en sécurité IA",
-      "Connecter l'IA à vos données",
-      "Former en IA"
+      "la construction d'agents IA",
+      "la conception d’instructions IA",
+      "des conseils en sécurité IA",
+      "de connecter l'IA à vos données",
+      "des formations en IA"
     ],
     "useCases": "Cas Concrets",
     "aiAcademy": "IA Académie",
