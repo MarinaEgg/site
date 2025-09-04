@@ -6,9 +6,9 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Faites des agents IA votre avantage concurrentiel",
-    "subtitle": "Connectez l'IA aux connaissances de votre entreprise en toute sécurité.",
-    "cta": "Commencer",
+    "title": "Faire des agents IA un avantage concurrentiel",
+    "subtitle": "Connecter l'IA aux connaissances de votre entreprise en toute sécurité.",
+    "cta": "Créer vos agents",
     "labLink": "EggOn Lab — L'équipe dédiée à l'explicabilité des agents IA."
   },
   "collection": {
@@ -315,9 +315,9 @@
     "intro": "Actuellement, les clients demandent à eggon de:",
     "actions": [
       "Construire des agents IA",
-      "Prompt engineering",
+      "Conception d’instructions IA",
       "Conseils en sécurité IA",
-      "Connecter l'IA à leurs données",
+      "Connecter l'IA à vos données",
       "Former en IA"
     ],
     "useCases": "Cas Concrets",
@@ -348,20 +348,20 @@
   },
   "whyEggon": {
     "sectionLabel": "POURQUOI EGGON ?",
-    "title": "Conçu pour votre univers",
-    "subtitle": "Nous comprenons vos défis car nous avons créé des solutions dans votre secteur. Du legaltech au fintech, nous parlons votre langue.",
+    "title": "Adapté à votre domaine d'activité",
+    "subtitle": "Nous comprenons vos défis, nous avons les solutions. Du juridique à la finance, notre équipe est expérimentée dans ces technologies depuis plus de 10 ans.",
     "points": {
       "connects": {
-        "title": "Se connecte à votre univers",
-        "description": "EggOn s'intègre avec vos documents et outils pour des interactions naturelles et contextuelles. Nous venons du legaltech, insurtech et fintech—votre environnement nous est familier."
+        "title": "Mettre en place les intégrations",
+        "description": "En connectant rapidement l'IA à vos systèmes, grâce à notre expérience, pour des interactions contextuelles."
       },
       "solves": {
-        "title": "Résout vos défis les plus complexes",
-        "description": "Notre IA agentique rédige des documents, exécute des actions et livre des résultats qui prenaient autrefois des heures. Le ROI apparaît rapidement."
+        "title": "Résoudre vos défis les plus complexes",
+        "description": "En mettant en place une IA agentique qui exécute des tâches, rédige vos documents et délivre en quelques minutes ce qui vous prenait des heures."
       },
       "augments": {
-        "title": "Augmente votre activité",
-        "description": "Automatisez les processus clés avec des agents IA autonomes. Livraison plus rapide, valeur client renforcée."
+        "title": "Accompagne votre équipe",
+        "description": "En vous conseillant dans le choix et la mise en place des solutions d’IA et d’agents IA adaptées à vos besoins."
       }
     },
     "cta": "Découvrir nos solutions"
