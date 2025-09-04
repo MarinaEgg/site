@@ -14,54 +14,54 @@
   "collection": {
     "sectionLabel": "CAS D'USAGES",
     "title": "Collection d'Agents IA",
-    "subtitle": "Découvrez notre collection d'agents IA conçus pour les professionnels du juridique, de la finance et des entreprises.",
-    "cta": "Prendre RDV",
+    "subtitle": "Découvrez notre collection d'agents IA déjà devellopée pour des entreprises du domaine juridique et financier.
+    "cta": "Démarrer votre projet",
     "lastUpdate": "Dernière mise à jour",
     "prompts": {
       "contractAnalysis": {
         "title": "Agent d'Analyse de Risques Contractuels",
         "context": "Juridique / Révision des Risques",
-        "body": "Analysez les contrats et accords juridiques pour identifier les clauses clés, les risques potentiels et les incohérences dans plusieurs documents, dans le cadre de fusions, d'acquisitions et d'autres transactions. Fournissez un résumé clair avec des explications et des recommandations exploitables."
+        "body": "Analyse les contrats et accords juridiques pour identifier les clauses clés, les risques potentiels et les incohérences dans plusieurs documents, dans le cadre de fusions, d'acquisitions et d'autres transactions. Fournit un résultat d'analyse clair avec des explications et des recommandations exploitables."
       },
       "caseLawResearch": {
         "title": "Agent de Stratégie Basé sur les Précédents",
         "context": "Juridique / Recherche",
-        "body": "Améliore la recherche juridique en identifiant et récupérant dynamiquement des précédents pertinents, des textes de loi et des doctrines, pour provide aux avocats des recommandations stratégiques fondées sur l'analyse jurisprudentielle et le contexte juridictionnel."
+        "body": "Améliore la recherche juridique en identifiant et récupérant dynamiquement des précédents pertinents, des textes de loi, etc, pour apporter aux avocats des recommandations stratégiques fondées sur l'analyse jurisprudentielle et le contexte juridictionnel."
       },
       "meetingPrep": {
         "title": "Agent de Réunion",
-        "context": "Entreprise / Gestion courante",
-        "body": "Analyser les notes d'une réunion, extraire les points clés et transformer automatiquement les décisions et discussions en tâches actionnables avec responsables et échéances."
+        "context": "Entreprise / Organisationnel",
+        "body": "Analyse les notes de réunion, identifie les points clés et transforme automatiquement décisions et discussions en tâches actionnables, avec attribution des responsables et définition des échéances."
       },
       "wikiBuilder": {
         "title": "Agent de Gestion des Connaissances Internes",
         "context": "Entreprise / Gestion des Connaissances",
-        "body": "Crée et met à jour un \"Wikipedia\" interne privé en analysant les documents internes et les échanges publics autorisés. Attribue automatiquement des étiquettes et des catégories aux contenus."
+        "body": "Crée et met à jour un type de wikipedia interne privé en analysant les documents internes et les échanges autorisés, tout en attribuant automatiquement des étiquettes et des catégories aux contenus web internes."
       },
       "auditTrail": {
-        "title": "Agent d'Amélioration de prompts IA",
+        "title": "Agent d'Amélioration de Conception d’instructions IA",
         "context": "IA / Amélioration Continue",
-        "body": "Analyser les prompts utilisés, identifier les points faibles et générer des versions optimisées pour améliorer la précision, la clarté et la cohérence des réponses des modèles IA."
+        "body": "Analyse les intructions d'IA utilisées, identifie les points faibles et génére des versions optimisées pour améliorer la précision, la clarté et la cohérence des réponses des modèles IA."
       },
       "supplierCompliance": {
-        "title": "Agent Conformité et politiques",
+        "title": "Agent de Conformité et politiques",
         "context": "Juridique / Recherche",
-        "body": "Les équipes peuvent consulter les documents internes et externes pour respecter les obligations et réduire leur dépendance aux relectures manuelles des équipes de conformité."
+        "body": "Consulte les documents internes et externes pour garantir le respect des obligations et réduire le temps des équipes dédié aux relectures manuelles."
       },
       "quotationAgent": {
         "title": "Agent de Génération de Devis",
         "context": "Ventes / Devis B2B",
-        "body": "Générer et envoyer des devis professionnels prêts à être transmis au client, à partir de configurations produit, règles tarifaires et données client."
+        "body": "Génère et envoie des devis professionnels prêts à être transmis aux clients, en se basant sur les règles tarifaires définies et les informations clients."
       },
       "clientOnboarding": {
         "title": "Agent de Veille Concurrentielle",
         "context": "Stratégie / Intelligence Marché",
-        "body": "Surveiller automatiquement l'activité des concurrents (nominations, nouvelles spécialités, partenariats), analyser les stratégies tarifaires et offres innovantes, et identifier les opportunités sur de nouveaux marchés ou technologies émergentes."
+        "body": "Surveille vos concurrents, analyse leurs stratégies et offres, et identifie les opportunités de marché pour générer un rapport clair et exploitable."
       },
       "techIntelligence": {
         "title": "Agent de Veille Technologique",
         "context": "R&D / Stratégie",
-        "body": "Fournir chaque semaine un résumé des nouvelles et tendances clés dans un secteur technologique choisi, incluant sources clés, points saillants et mises à jour réglementaires."
+        "body": "Fournit chaque semaine un résumé des actualités et tendances clés dans le secteur technologique choisi, incluant les sources principales, points saillants et mises à jour réglementaires."
       },
       "rfpDrafting": {
         "title": "Agent de Gestion des Dépenses Juridiques",
