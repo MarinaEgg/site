@@ -65,13 +65,13 @@
       },
       "rfpDrafting": {
         "title": "Agent de Gestion des Dépenses Juridiques",
-        "context": "Direction Juridique / Finance",
-        "body": "Analyse et contrôle des factures, vérification des règles OCG et des taux horaires, détection d'anomalies, suivi budgétaire et prévision des accruals. Génère des recommandations d'ajustement et des rapports de conformité."
+        "context": "Direction Juridique Suisse / Finance",
+        "body": "Analyse et contrôle des factures : vérification de la conformité avec l’Ordonnance suisse sur la comptabilité et la présentation des comptes (OCG), contrôle des taux horaires, détection d’anomalies, suivi budgétaire et prévision des charges. Production de recommandations et de rapports de conformité."
       },
       "esgCompliance": {
         "title": "Agent de Reporting Financier Interactif",
         "context": "Finance / Pilotage de Performance",
-        "body": "Produire un tableau de bord dynamique affichant la rentabilité par dossier, avocat ou client, avec possibilité de requêtes en langage naturel (ex. « Montre-moi la marge sur nos dossiers de contentieux depuis janvier »). Intégration avec Power BI ou Tableau, interface conversationnelle LLM."
+        "body": "Fournit un tableau de bord dynamique permettant d’évaluer la rentabilité par dossier, avocat ou client. Offre une interface conversationnelle en langage naturel (LLM) pour formuler des requêtes directes sur les données (ex. “Montre-moi la marge sur nos dossiers de contentieux depuis janvier”). L’agent s’intègre avec Power BI ou Tableau et s’inscrit dans un dispositif de pilotage de la performance financière et ESG."
       },
       "dataPrivacyAudit": {
         "title": "Agent de Conformité Fiscale",
